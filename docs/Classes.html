@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Classes  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Section/Classes" class="dashAnchor"></a>
+    <a title="Classes  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">BlinkEReceipt extension SDK Docs</a></p>
+        <p class="header-right"><a href="https://github.com/BlinkReceipt/blinkereceipt-ios"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">BlinkEReceipt extension SDK Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Classes  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="e-receipt-parsing.html">E-Receipt Parsing</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/BRAmazonManager.html">BRAmazonManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BREReceiptManager.html">BREReceiptManager</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/BRAmazonError.html">BRAmazonError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/BREReceiptProvider.html">BREReceiptProvider</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Classes</h1>
+            <p>The following classes are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BRAmazonManager"></a>
+                    <a name="//apple_ref/objc/Class/BRAmazonManager" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BRAmazonManager">BRAmazonManager</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Use this interface to manage Amazon parsing. Here are the basic steps to integrate:</p>
+
+<ol>
+<li>Implement UI to capture the user&rsquo;s Amazon email and password</li>
+<li>Store these using <code><a href="Classes/BRAmazonManager.html#/c:objc(cs)BRAmazonManager(im)storeCredentials:password:">-[BRAmazonManager storeCredentials:password:]</a></code></li>
+<li>Call <code><a href="Classes/BRAmazonManager.html#/c:objc(cs)BRAmazonManager(im)verifyAmazonAccount:">-[BRAmazonManager verifyAmazonAccount:]</a></code> to ensure the credentials are valid</li>
+<li>If validation succeeds, call <code><a href="Classes/BRAmazonManager.html#/c:objc(cs)BRAmazonManager(im)grabNewAmazonOrders:">-[BRAmazonManager grabNewAmazonOrders:]</a></code></li>
+<li>The callback to this method will return all Amazon order details available since the most recent successful invocation</li>
+</ol>
+
+                        <a href="Classes/BRAmazonManager.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">BRAmazonManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BRAmazonManager</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.1/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L35-L133">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BREReceiptManager"></a>
+                    <a name="//apple_ref/objc/Class/BREReceiptManager" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BREReceiptManager">BREReceiptManager</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This class is the interface to manage e-receipt parsing</p>
+
+                        <a href="Classes/BREReceiptManager.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">BREReceiptManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BREReceiptManager</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.1/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L25-L180">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2019-06-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
