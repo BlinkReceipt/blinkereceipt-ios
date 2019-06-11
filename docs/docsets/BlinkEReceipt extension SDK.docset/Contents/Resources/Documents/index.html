@@ -92,6 +92,12 @@
 </span></code></pre>
 
 <ul>
+<li>It is recommended to instantiate the <code><a href="Classes/BRAmazonManager.html">BRAmazonManager</a></code> as early as possible to give it time to download the most recent Amazon parsing specs. Add the following line to your application delegate&rsquo;s <code>didFinishLaunchingWithOptions:</code> method:</li>
+</ul>
+<pre class="highlight objective_c"><code><span class="p">[</span><span class="n">BRAmazonManager</span> <span class="nf">shared</span><span class="p">];</span>
+</code></pre>
+
+<ul>
 <li>In order to use email receipt parsing functionality add the following header:</li>
 </ul>
 <pre class="highlight objective_c"><code><span class="cp">#import &lt;BlinkEReceipt/BREReceiptManager.h&gt;
