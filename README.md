@@ -31,6 +31,12 @@ After editing your Podfile, run `pod install` and then make sure to open the `.x
 #import <BlinkEReceipt/BRAmazonManager.h>
 ```
 
+- It is recommended to instantiate the `BRAmazonManager` as early as possible to give it time to download the most recent Amazon parsing specs. Add the following line to your application delegate's `didFinishLaunchingWithOptions:` method:
+
+```obj-c
+[BRAmazonManager shared];
+```
+
 - In order to use email receipt parsing functionality add the following header:
 
 ```obj-c
