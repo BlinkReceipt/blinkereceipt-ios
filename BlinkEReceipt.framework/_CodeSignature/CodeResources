@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>BlinkReceipt_Classifier_general_5.4.0.strop</key>
+		<data>
+		89tuRodbHEOV2jQsfIr3958AVLc=
+		</data>
 		<key>GoogleSignIn.bundle/Info.plist</key>
 		<data>
 		BfmsbcfBh93cy6vWTriZJESBAgw=
@@ -348,10 +352,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>Headers/.DS_Store</key>
-		<data>
-		3y++sUAKzaCQmjLBz2v0kvESHgc=
-		</data>
 		<key>Headers/BRAmazonManager.h</key>
 		<data>
 		3GN63dpJu3OoB7CXtdW49NhlYG4=
@@ -364,9 +364,24 @@
 		<data>
 		Rxk0yiy5PjCajHKTi2b3QAi3coY=
 		</data>
+		<key>merchant-names-all.csv</key>
+		<data>
+		6VYvInYr+8QOm47gDcs/2FM1+/Q=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>BlinkReceipt_Classifier_general_5.4.0.strop</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			89tuRodbHEOV2jQsfIr3958AVLc=
+			</data>
+			<key>hash2</key>
+			<data>
+			jsRpizMdpV+li9jlvN6KBQgcbrzivC997PXorgrtCkY=
+			</data>
+		</dict>
 		<key>GoogleSignIn.bundle/Info.plist</key>
 		<dict>
 			<key>hash</key>
@@ -910,6 +925,17 @@
 			<key>hash2</key>
 			<data>
 			CRBETKqUmV6yfooJEiQxUeaV7fbquzG49QlB0Mdq3Vs=
+			</data>
+		</dict>
+		<key>merchant-names-all.csv</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6VYvInYr+8QOm47gDcs/2FM1+/Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			DTxHWpZWkYEuIMY52szn0fYsGe1nOamYwUMlxnN25dI=
 			</data>
 		</dict>
 	</dict>
