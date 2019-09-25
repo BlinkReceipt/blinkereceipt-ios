@@ -710,12 +710,13 @@ You will then obtain the Client ID and Client Secret</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getEReceiptsWithCompletion</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="p">))</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getEReceiptsWithCompletion</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">BRScanResults</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">,</span>
+                                             <span class="n">NSError</span> <span class="o">*</span><span class="p">))</span><span class="n">completion</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getEReceipts</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="p">(([</span><span class="kt">Any</span><span class="p">]?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getEReceipts</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="p">(([</span><span class="kt">BRScanResults</span><span class="p">]?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
