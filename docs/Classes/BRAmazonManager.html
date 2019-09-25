@@ -123,7 +123,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.2/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L46">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.4/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L46">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -171,7 +171,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.2/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L52">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.4/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L52">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -207,12 +207,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">grabNewAmazonOrders</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">,</span> <span class="n"><a href="../Enums/BRAmazonError.html">BRAmazonError</a></span><span class="p">))</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">grabNewAmazonOrders</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="kt">int</span> <span class="o">*</span><span class="p">,</span> <span class="n"><a href="../Enums/BRAmazonError.html">BRAmazonError</a></span><span class="p">,</span>
+                                      <span class="n">NSInteger</span><span class="p">))</span><span class="n">completion</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">grabNewAmazonOrders</span><span class="p">(</span><span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(([</span><span class="kt">Any</span><span class="p">]?,</span> <span class="kt"><a href="../Enums/BRAmazonError.html">BRAmazonError</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">grabNewAmazonOrders</span><span class="p">(</span><span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">Int32</span><span class="o">&gt;</span><span class="p">?,</span> <span class="kt"><a href="../Enums/BRAmazonError.html">BRAmazonError</a></span><span class="p">,</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -228,15 +229,16 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>This callback is invoked when parsing the user&rsquo;s Amazon account has completed</p>
+                                  <p>This callback is invoked separately for each incremental order found in the user&rsquo;s Amazon account</p>
 
 <ul>
-<li><p><code>NSArray&lt;BRScanResults*&gt; *orders</code> - An array of <code>BRScanResults</code> objects representing all the Amazon orders found. You can expect the following order-level properties to be populated:</p>
+<li><p><code>BRScanResults *order</code> - The current incremental order. You can expect the following order-level properties to be populated:</p>
 
 <ul>
 <li><code>BRScanResults.total</code></li>
 <li><code>BRScanResults.receiptDate</code></li>
 <li><code>BRScanResults.ereceiptOrderNum</code></li>
+<li><code>BRScanResults.ereceiptPurchaseType</code> - If this was not a regular Amazon order, this property will indicate the type such as <q>fresh</q>, <q>primenow</q>, <q>pantry</q></li>
 <li><code>BRScanResults.shipments</code> - An array of <code>BRShipment</code> objects. Each shipment contains a status and an array of products.</li>
 </ul>
 
@@ -263,6 +265,7 @@
 <li><p><code>BRAmazonError error</code> - <code>BRAmazonErrorNone</code> on success, otherwise indicates the type of error.</p>
 
 <p><code>BRAmazonErrorVerificationNeeded</code> indicates the user needs to manually log in to Amazon via a mobile web page, for this see the  <code><a href="../Classes/BRAmazonManager.html#/c:objc(cs)BRAmazonManager(im)showBrowserFromViewController:withCompletion:">-[BRAmazonManager showBrowserFromViewController:withCompletion:]</a></code> method below</p></li>
+<li><p><code>NSInteger ordersRemaining</code> - Indicates how many more orders are left to parse</p></li>
 </ul>
                                 </div>
                               </td>
@@ -271,7 +274,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.2/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L91">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.4/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L94">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -306,7 +309,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.2/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L96">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.4/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L99">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -341,7 +344,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.2/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L101">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.4/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L104">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -376,7 +379,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.2/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L106">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.4/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L109">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -411,7 +414,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.2/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L111">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.4/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L114">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -470,7 +473,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.2/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L121">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.4/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L124">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -541,7 +544,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.2/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L131">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.4/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L134">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -551,7 +554,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2019-06-11)</p>
+          <p>&copy; 2019 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2019-09-25)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
