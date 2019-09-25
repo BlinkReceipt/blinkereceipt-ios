@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import <BlinkReceipt/BRScanResults.h>
+#import "BRScanResults.h"
 
 typedef NS_ENUM(NSUInteger, BRAmazonError) {
     BRAmazonErrorNone = 0,
@@ -58,13 +58,14 @@ typedef NS_ENUM(NSUInteger, BRAmazonError) {
 /**
  *  This method grabs any incremental orders found on the user's Amazon account. An incremental order is defined as an order that has not been previously returned, or an order previously returned but with a new status (i.e. if the status of any items changes from "Processing" to "Shipped")
  
- *  @param completion   This callback is invoked when parsing the user's Amazon account has completed
+ *  @param completion   This callback is invoked separately for each incremental order found in the user's Amazon account
  *
- *      * `NSArray<BRScanResults*> *orders` - An array of `BRScanResults` objects representing all the Amazon orders found. You can expect the following order-level properties to be populated:
+ *      * `BRScanResults *order` - The current incremental order. You can expect the following order-level properties to be populated:
  *
  *          * `BRScanResults.total`
  *          * `BRScanResults.receiptDate`
  *          * `BRScanResults.ereceiptOrderNum`
+ *          * `BRScanResults.ereceiptPurchaseType` - If this was not a regular Amazon order, this property will indicate the type such as "fresh", "primenow", "pantry"
  *          * `BRScanResults.shipments` - An array of `BRShipment` objects. Each shipment contains a status and an array of products.
  *
  *          For products in an Amazon order, you can expect the following properties to be populated:
@@ -87,8 +88,10 @@ typedef NS_ENUM(NSUInteger, BRAmazonError) {
  *      * `BRAmazonError error` - `BRAmazonErrorNone` on success, otherwise indicates the type of error.
  *
  *          `BRAmazonErrorVerificationNeeded` indicates the user needs to manually log in to Amazon via a mobile web page, for this see the  `-[BRAmazonManager showBrowserFromViewController:withCompletion:]` method below
+ *
+ *      * `NSInteger ordersRemaining` - Indicates how many more orders are left to parse
  */
-- (void)grabNewAmazonOrders:(void(^)(NSArray<BRScanResults*> *orders, BRAmazonError error))completion;
+- (void)grabNewAmazonOrders:(void(^)(BRScanResults *order, BRAmazonError error, NSInteger ordersRemaining))completion;
 
 /**
  *  Store the user's Amazon credentials in the keychain
