@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import "BRScanResults.h"
+#import <BlinkReceipt/BRScanResults.h>
 
 typedef NS_ENUM(NSUInteger, BRAmazonError) {
     BRAmazonErrorNone = 0,
