@@ -1,3 +1,6 @@
+# 0.0.6
+- Fix hang for accounts that have no Prime Now history
+
 # 0.0.5
 - Fix issue with Prime Now order parsing
 - Speed up parsing of all pages
