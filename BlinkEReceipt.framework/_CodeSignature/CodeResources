@@ -4,9 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>BlinkReceipt_Ocr_inverted_text_6.0.0.strop</key>
+		<key>BlinkReceipt_Detector_general_6.0.1.strop</key>
 		<data>
-		ilWwtXTF8cr2mS+4qRxSwyTQ/Qc=
+		YCDsZl5GcdegZsU15FzlJRk4p28=
+		</data>
+		<key>BlinkReceipt_Filter_general_6.0.0.strop</key>
+		<data>
+		JSPgr5mL03iCwONqdsvn7BFRESc=
 		</data>
 		<key>GoogleSignIn.bundle/Info.plist</key>
 		<data>
@@ -362,24 +366,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		/VDApeid7PVOFrX5Nxwwwx8tR20=
-		</data>
-		<key>merchant-names-all.alp</key>
-		<data>
-		QA2UibUZY7N1g+lEOj0TgthGhNk=
+		RtXXbH49dGYr6U5PIfg6Eo2Hbpk=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>BlinkReceipt_Ocr_inverted_text_6.0.0.strop</key>
+		<key>BlinkReceipt_Detector_general_6.0.1.strop</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ilWwtXTF8cr2mS+4qRxSwyTQ/Qc=
+			YCDsZl5GcdegZsU15FzlJRk4p28=
 			</data>
 			<key>hash2</key>
 			<data>
-			mMWaGnod7TKcBPIff2B8Gi1PijM7hCH0KtQi0jcyrQs=
+			zc25R/umvfip2vkMTtNLgW/NengZHVPKxlseYuWZXAg=
+			</data>
+		</dict>
+		<key>BlinkReceipt_Filter_general_6.0.0.strop</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			JSPgr5mL03iCwONqdsvn7BFRESc=
+			</data>
+			<key>hash2</key>
+			<data>
+			Ki793YgakLRA5Z5FyNEg/BerFF4IWVnrQA1thn8Nayc=
 			</data>
 		</dict>
 		<key>GoogleSignIn.bundle/Info.plist</key>
@@ -925,17 +936,6 @@
 			<key>hash2</key>
 			<data>
 			CRBETKqUmV6yfooJEiQxUeaV7fbquzG49QlB0Mdq3Vs=
-			</data>
-		</dict>
-		<key>merchant-names-all.alp</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			QA2UibUZY7N1g+lEOj0TgthGhNk=
-			</data>
-			<key>hash2</key>
-			<data>
-			swc+Q3xuYztUWSebTPDcWoUcYZxImJ6c8noG0KAsF80=
 			</data>
 		</dict>
 	</dict>

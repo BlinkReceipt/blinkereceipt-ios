@@ -1,3 +1,6 @@
+# 0.0.7
+- Fix crash due to null values
+
 # 0.0.6
 - Fix hang for accounts that have no Prime Now history
 
