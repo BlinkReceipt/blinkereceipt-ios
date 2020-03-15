@@ -125,6 +125,13 @@
       "symbol": "BREReceiptProvider.BREReceiptProviderAOL",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "line": 20,
+      "symbol": "BREReceiptProvider.BREReceiptProviderGmailIMAP",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
     }
   ],
   "source_directory": "/Users/dpanzer/Projects/blinkereceipt-ios"

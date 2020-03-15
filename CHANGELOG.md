@@ -1,3 +1,7 @@
+# 0.0.8
+- Update for compatibility with BlinkReceipt SDK 1.8.6
+- Add experimental Gmail IMAP provider
+
 # 0.0.7
 - Fix crash due to null values
 
