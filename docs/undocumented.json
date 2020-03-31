@@ -128,8 +128,36 @@
     },
     {
       "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
-      "line": 20,
-      "symbol": "BREReceiptProvider.BREReceiptProviderGmailIMAP",
+      "line": 22,
+      "symbol": "BREReceiptIMAPError",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "line": 22,
+      "symbol": "BREReceiptIMAPError",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "line": 23,
+      "symbol": "BREReceiptIMAPError.BREReceiptIMAPErrorInvalidCredentials",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "line": 24,
+      "symbol": "BREReceiptIMAPError.BREReceiptIMAPErrorGmailIMAPDisabled",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "line": 25,
+      "symbol": "BREReceiptIMAPError.BREReceiptIMAPErrorGmailTwoFactor",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     }

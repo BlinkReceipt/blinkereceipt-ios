@@ -1,3 +1,9 @@
+# 0.0.9
+- Better detection of IMAP authentication errors
+- Fix bug not clearing Amazon credentials in memory when calling `clearAmazonCredentials`
+- New properties for DKIM/ARC authentication and orders fulfilled by 3rd party
+- Expose `possible_products` in e-receipt results
+
 # 0.0.8
 - Update for compatibility with BlinkReceipt SDK 1.8.6
 - Add experimental Gmail IMAP provider

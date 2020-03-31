@@ -16,8 +16,13 @@ typedef NS_ENUM(NSUInteger, BREReceiptProvider) {
     BREReceiptProviderGmail,
     BREReceiptProviderOutlook,
     BREReceiptProviderYahoo,
-    BREReceiptProviderAOL,
-    BREReceiptProviderGmailIMAP
+    BREReceiptProviderAOL
+};
+
+typedef NS_ENUM(NSUInteger, BREReceiptIMAPError) {
+    BREReceiptIMAPErrorInvalidCredentials = 5,
+    BREReceiptIMAPErrorGmailIMAPDisabled = 6,
+    BREReceiptIMAPErrorGmailTwoFactor = 40
 };
 
 /**
