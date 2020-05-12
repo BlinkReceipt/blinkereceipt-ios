@@ -58,6 +58,9 @@
               <li class="nav-group-task">
                 <a href="Enums/BREReceiptProvider.html">BREReceiptProvider</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Enums/BRGoogleAccountResult.html">BRGoogleAccountResult</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -71,18 +74,19 @@
 <p>The BlinkReceipt SDK supports parsing e-receipts from a growing list of retailers and a specific set of mail providers: Gmail, Outlook, Yahoo, and AOL. The procedure for integrating each of these providers is slightly different. This guide will outline the steps necessary to integrate and authenticate a user account for each mail provider, and then the common methods that you will use to invoke the e-receipt parsing functionality.</p>
 <h2 id='gmail' class='heading'>Gmail</h2>
 
-<p>Gmail integration requires 2 additional pods in your <code>Podfile</code>:</p>
-<pre class="highlight plaintext"><code>pod 'GoogleAPIClientForREST/Gmail', '~&gt; 1.2.1'
-pod 'GoogleSignIn'
-</code></pre>
-
-<p>You must also create an application in the <a href="https://console.developers.google.com">Google API Console</a>, enable the Gmail API, and obtain a Client ID for your app&rsquo;s bundle identifier</p>
+<ol>
+<li><p>Create a new Project in the <a href="https://console.developers.google.com">Google API Console</a></p></li>
+<li><p>Enable the Gmail API for your project</p></li>
+<li><p>Create new credentials for the API, and choose the iOS option. This should lead you through the process to create an OAuth 2.0 client ID. You will have to complete the setup of an OAuth Consent Screen.</p></li>
+<li><p>Once you have successfully completed the process, find the Client ID for your app&rsquo;s bundle identifier</p></li>
+</ol>
 
 <p><img src="img/gmail.png" alt="Google API Console"></p>
 
-<p>You must provide this Client ID via the <code><a href="Classes/BREReceiptManager.html#/c:objc(cs)BREReceiptManager(py)googleClientId">BREReceiptManager.googleClientId</a></code> property</p>
-
-<p>Gmail uses OAuth to authenticate user accounts via a modal view controller provided by Google&rsquo;s SDK. Here is how you invoke it from within your own view controller:</p>
+<ol>
+<li><p>Provide this Client ID via the <code><a href="Classes/BREReceiptManager.html#/c:objc(cs)BREReceiptManager(py)googleClientId">BREReceiptManager.googleClientId</a></code> property</p></li>
+<li><p>Gmail uses OAuth to authenticate user accounts via a modal view controller provided by Google&rsquo;s SDK. Here is how you invoke it from within your own view controller:</p></li>
+</ol>
 <pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">BREReceiptManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">beginOAuthForProvider</span><span class="p">:</span><span class="n">BREReceiptProviderGmail</span>
                                <span class="nf">withViewController</span><span class="p">:</span><span class="n">self</span>
                                     <span class="n">andCompletion</span><span class="o">:^</span><span class="p">(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
@@ -94,20 +98,40 @@ pod 'GoogleSignIn'
                                         <span class="p">}</span>
                                     <span class="p">}];</span>
 </code></pre>
-<h2 id='outlook' class='heading'>Outlook</h2>
 
-<p>Outlook integration requires 2 additional pods in your <code>Podfile</code>:</p>
-<pre class="highlight plaintext"><code>pod 'MSGraphSDK'
-pod 'MSGraphSDK-NXOAuth2Adapter'
+<ol>
+<li>In order to handle the response from the OAuth process, you need to add the following to your app delegate:</li>
+</ol>
+<pre class="highlight plaintext"><code>#import &lt;GoogleSignIn/GoogleSignIn.h&gt;
+...
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary *)options
+{
+    return [[GIDSignIn sharedInstance] handleURL:url];
+}
 </code></pre>
 
-<p>You must also register an application in the <a href="https://apps.dev.microsoft.com/">MS Application Registration Portal</a>, add a Native Application platform, and obtain an Application ID</p>
+<ol>
+<li>Lastly, follow <a href="https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project">Google&rsquo;s instructions</a> to add the necessary URL scheme to your app</li>
+</ol>
+<h2 id='outlook' class='heading'>Outlook</h2>
+
+<ol>
+<li><p>Go to the <a href="https://portal.azure.com/">Azure Portal</a>, choose Manage Azure Active Directory, then App Registrations from the left menu, and click New Registration.</p></li>
+<li><p>Enter a name for your app, choose the option to support accounts in any Azure AD directory as well as personal Microsoft accounts, and choose <q>Public client/native</q> for the Redirect URI type. Don&rsquo;t worry about the field value. Click Register.</p></li>
+<li><p>This will generate an Application (client) ID which you should note for later.</p></li>
+</ol>
 
 <p><img src="img/outlook.png" alt="MS Portal"></p>
 
-<p>You must provide this Application ID via the <code><a href="Classes/BREReceiptManager.html#/c:objc(cs)BREReceiptManager(py)outlookClientId">BREReceiptManager.outlookClientId</a></code> property</p>
-
-<p>Outlook uses OAuth to authenticate user accounts via a modal view controller provided by Microsoft&rsquo;s SDK. Here is how you invoke it from within your own view controller:</p>
+<ol>
+<li><p>Now click <q>Add a Redirect URI</q> on the right side</p></li>
+<li><p>Click <q>Add a Platform</q> and choose <q>iOS / MacOS</q></p></li>
+<li><p>Enter your app&rsquo;s bundle ID and click <q>Configure</q> and then click <q>Done</q></p></li>
+<li><p>In your code, set the Client ID into the <code><a href="Classes/BREReceiptManager.html#/c:objc(cs)BREReceiptManager(py)outlookClientId">BREReceiptManager.outlookClientId</a></code> property</p></li>
+<li><p>Outlook uses OAuth to authenticate user accounts via a modal view controller provided by Microsoft&rsquo;s SDK. Here is how you invoke it from within your own view controller:</p></li>
+</ol>
 <pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">BREReceiptManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">beginOAuthForProvider</span><span class="p">:</span><span class="n">BREReceiptProviderOutlook</span>
                                <span class="nf">withViewController</span><span class="p">:</span><span class="n">self</span>
                                     <span class="n">andCompletion</span><span class="o">:^</span><span class="p">(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
@@ -119,20 +143,29 @@ pod 'MSGraphSDK-NXOAuth2Adapter'
                                         <span class="p">}</span>
                                     <span class="p">}];</span>
 </code></pre>
-<h2 id='yahoo-amp-aol' class='heading'>Yahoo &amp; AOL</h2>
 
-<p>Yahoo &amp; AOL are owend by Oath Inc. and thus share the same authentication requirements. All AOL and Yahoo accounts have a setting called <q>Allow apps that use less secure sign in</q>. For accounts created a long time ago (the exact cutoff is unclear), the default value for this setting is ON, whereas accounts created more recently have this setting OFF. Users can toggle this setting at any time.</p>
-
-<p>To support only users that have this setting ON, it is sufficient to complete the simpler IMAP integration.</p>
-
-<p>To also support users that have this setting OFF, you must go through the more tedious OAuth integration.</p>
-<h3 id='imap-integration' class='heading'>IMAP Integration</h3>
-
-<p>Include the following pod in your <code>Podfile</code>:</p>
-<pre class="highlight plaintext"><code>pod 'BRMailCore'
+<ol>
+<li>Add the following to your app delegate:</li>
+</ol>
+<pre class="highlight plaintext"><code>#import &lt;MSAL/MSAL.h&gt;
+...
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary *)options
+{
+    return [MSALPublicClientApplication handleMSALResponse:url
+                                           sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]];
+}
 </code></pre>
 
-<p>For this simpler version, all you need to do is provide UI for the user to enter their e-mail address and password, and set these values into the corresponding properties. You can then verify the credentials are valid as in this example:</p>
+<ol>
+<li><p>Add a URL handler for the scheme <code>msauth.[your_bundle_id]</code> to your app&rsquo;s <code>Info.plist</code> (or via the Target settings interface in XCode)</p></li>
+<li><p>Add an array key to your app&rsquo;s <code>Info.plist</code> file called <code>LSApplicationQueriesSchemes</code> and add 2 string values to it: <code>msauthv2</code> and <code>msauthv3</code></p></li>
+<li><p>Add a Keychain Group to your target (in your target&rsquo;s settings under Signing &amp; Capabilities -&gt; Keychain Sharing in XCode) named <code>com.microsoft.adalcache</code></p></li>
+</ol>
+<h2 id='yahoo-amp-aol-imap-integration' class='heading'>Yahoo &amp; AOL (IMAP Integration)</h2>
+
+<p>Create your own UI for the user to enter their e-mail address and password, and set these values into the corresponding properties in the SDK. You can then verify the credentials are valid as in this example:</p>
 <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">IBAction</span><span class="p">)</span><span class="nf">btnOKTouched</span><span class="p">:(</span><span class="n">id</span><span class="p">)</span><span class="nv">sender</span> <span class="p">{</span>
     <span class="p">[[</span><span class="n">BREReceiptManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">storeImapCredentials</span><span class="p">:</span><span class="n">self</span><span class="p">.</span><span class="n">txtEmail</span><span class="p">.</span><span class="n">text</span>
                                      <span class="nf">andPassword</span><span class="p">:</span><span class="n">self</span><span class="p">.</span><span class="n">txtPassword</span><span class="p">.</span><span class="n">text</span>
@@ -149,42 +182,6 @@ pod 'MSGraphSDK-NXOAuth2Adapter'
     <span class="p">}];</span>
 
 <span class="p">}</span>
-</code></pre>
-<h3 id='oauth-integration' class='heading'>OAuth Integration</h3>
-
-<p>Include the following pods in your <code>Podfile</code>:</p>
-<pre class="highlight plaintext"><code>pod 'GTMOAuth2'
-pod 'BRMailCore'
-</code></pre>
-<div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    If you are also integrating Gmail then you can omit <code>pod &#39;GTMOAuth2&#39;</code> here
-
-</div>
-
-<p>In order to obtain access to all AOL and Yahoo accounts regardless of the above setting, you first need to register a <a href="https://developer.yahoo.com">Yahoo developer account</a> and then contact <a href="mailto:mail-api@oath.com">mail-api@oath.com</a> to request an IMAP ID.</p>
-
-<p>Once you receive an IMAP ID you set it into <code><a href="Classes/BREReceiptManager.html#/c:objc(cs)BREReceiptManager(py)yahooImapId">BREReceiptManager.yahooImapId</a></code></p>
-
-<p>Then you will need to create a new Web Application at <a href="https://developer.yahoo.com">https://developer.yahoo.com</a>. You should set the <code>callback_domain</code> to <q>microblink.com</q></p>
-
-<p>The permissions you need to request are <q>Mail->Read</q> and <q>Profiles->Read/Write Public and Private</q>.</p>
-
-<p><img src="img/yahoo.png" alt="Yahoo Dev Portal"></p>
-
-<p>You should then obtain a Client ID and Client Secret which you set into <code><a href="Classes/BREReceiptManager.html#/c:objc(cs)BREReceiptManager(py)yahooClientId">BREReceiptManager.yahooClientId</a></code> and <code><a href="Classes/BREReceiptManager.html#/c:objc(cs)BREReceiptManager(py)yahooClientSecret">BREReceiptManager.yahooClientSecret</a></code> respectively</p>
-
-<p>At this point you can begin the OAuth authentication process as follows:</p>
-<pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">BREReceiptManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">beginOAuthForProvider</span><span class="p">:</span><span class="n">BREReceiptProviderYahoo</span>
-                               <span class="nf">withViewController</span><span class="p">:</span><span class="n">self</span>
-                                    <span class="n">andCompletion</span><span class="o">:^</span><span class="p">(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
-
-                                        <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">!=</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
-                                            <span class="c1">//Account successfully authenticated</span>
-                                        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                                            <span class="c1">//Failed to authenticate</span>
-                                        <span class="p">}</span>
-                                    <span class="p">}];</span>
 </code></pre>
 <h2 id='retrieving-and-parsing-e-receipts' class='heading'>Retrieving and Parsing E-Receipts</h2>
 
@@ -216,7 +213,7 @@ pod 'BRMailCore'
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2020-03-31)</p>
+          <p>&copy; 2020 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2020-05-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

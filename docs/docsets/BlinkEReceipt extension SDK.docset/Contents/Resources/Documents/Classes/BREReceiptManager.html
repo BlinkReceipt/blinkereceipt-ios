@@ -59,6 +59,9 @@
               <li class="nav-group-task">
                 <a href="../Enums/BREReceiptProvider.html">BREReceiptProvider</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BRGoogleAccountResult.html">BRGoogleAccountResult</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -107,7 +110,7 @@ When you have done so, input the Client ID here before attempting to begin the O
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">googleClientId</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">googleClientId</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -117,7 +120,7 @@ When you have done so, input the Client ID here before attempting to begin the O
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.8/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L41">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.9/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L53">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -135,15 +138,15 @@ When you have done so, input the Client ID here before attempting to begin the O
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>In order to authenticate Outlook accounts, you must register your app at the MS Application Registration Portal (<a href="https://apps.dev.microsoft.com">https://apps.dev.microsoft.com</a>) and add a Native Application platform. This will generate a Client ID
-When you have done so, input the Client ID here before attempting to begin the OAuth process for Outlook</p>
+                        <p>In order to authenticate Outlook accounts, you must register your app at the Azure Portal (<a href="https://portal.azure.com/">https://portal.azure.com/</a>) and add a new App Registration. This will generate an Application (client) ID
+When you have done so, input that id here before attempting to begin the OAuth process for Outlook</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">outlookClientId</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">outlookClientId</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -153,116 +156,7 @@ When you have done so, input the Client ID here before attempting to begin the O
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.8/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L47">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)BREReceiptManager(py)yahooImapId"></a>
-                    <a name="//apple_ref/objc/Property/yahooImapId" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)BREReceiptManager(py)yahooImapId">yahooImapId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>In order to authenticate Yahoo accounts, you must register a Yahoo developer account at <a href="https://developer.yahoo.com">https://developer.yahoo.com</a> and then contact <a href="mailto:mail-api@oath.com">mail-api@oath.com</a> to request an IMAP ID</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">yahooImapId</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">yahooImapId</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.8/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L52">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)BREReceiptManager(py)yahooClientId"></a>
-                    <a name="//apple_ref/objc/Property/yahooClientId" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)BREReceiptManager(py)yahooClientId">yahooClientId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>In order to authenticate Yahoo accounts, after obtaining above IMAP ID, create a new app (type=Web Application, callback_domain=microblink.com) at <a href="https://developer.yahoo.com">https://developer.yahoo.com</a>.
-The permissions you need to request are <q>Mail->Read</q> and <q>Profiles->Read/Write Public and Private</q>
-You will then obtain the Client ID and Client Secret</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">yahooClientId</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">yahooClientId</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.8/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L59">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)BREReceiptManager(py)yahooClientSecret"></a>
-                    <a name="//apple_ref/objc/Property/yahooClientSecret" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)BREReceiptManager(py)yahooClientSecret">yahooClientSecret</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>In order to authenticate Yahoo accounts, after obtaining above IMAP ID, create a new app (type=Web Application, callback_domain=microblink.com) at <a href="https://developer.yahoo.com">https://developer.yahoo.com</a>.
-The permissions you need to request are <q>Mail->Read</q> and <q>Profiles->Read/Write Public and Private</q>
-You will then obtain the Client ID and Client Secret</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">yahooClientSecret</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">yahooClientSecret</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.8/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L66">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.9/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L59">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -287,7 +181,7 @@ You will then obtain the Client ID and Client Secret</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">userHasProvider</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">unsafe_unretained</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">userHasProvider</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -297,7 +191,7 @@ You will then obtain the Client ID and Client Secret</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.8/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L71">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.9/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -322,7 +216,8 @@ You will then obtain the Client ID and Client Secret</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Enums/BREReceiptProvider.html">BREReceiptProvider</a></span> <span class="n">currentProvider</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">unsafe_unretained</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span>
+    <span class="n"><a href="../Enums/BREReceiptProvider.html">BREReceiptProvider</a></span> <span class="n">currentProvider</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -332,7 +227,7 @@ You will then obtain the Client ID and Client Secret</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.8/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L76">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.9/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L69">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -362,7 +257,7 @@ You will then obtain the Client ID and Client Secret</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span>
     <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSDictionary</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">whitelistedSenders</span><span class="p">;</span></code></pre>
 
                         </div>
@@ -373,7 +268,7 @@ You will then obtain the Client ID and Client Secret</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.8/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L86">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.9/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L79">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -400,7 +295,7 @@ You will then obtain the Client ID and Client Secret</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">dayCutoff</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">unsafe_unretained</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">dayCutoff</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -410,7 +305,7 @@ You will then obtain the Client ID and Client Secret</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.8/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L94">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.9/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L87">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -428,14 +323,15 @@ You will then obtain the Client ID and Client Secret</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>If the OAuth provider supports returning the logged-in email, it will be populated into this property after OAuth or silent authentications</p>
+                        <p>If the OAuth provider supports returning the logged-in email, it will be populated into this property after OAuth or silent authentications
+Note: It is not guaranteed to be populated on subsequent app runs</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">userCurrentEmail</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">userCurrentEmail</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -445,7 +341,7 @@ You will then obtain the Client ID and Client Secret</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.8/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L99">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.9/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L93">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -493,7 +389,7 @@ You will then obtain the Client ID and Client Secret</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.8/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L105">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.9/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L99">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -588,7 +484,7 @@ You will then obtain the Client ID and Client Secret</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.8/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L120-L122">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.9/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L114-L116">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -606,7 +502,8 @@ You will then obtain the Client ID and Client Secret</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>For IMAP providers (currently AOL and Yahoo) you must store the credentials prior to calling <code><a href="../Classes/BREReceiptManager.html#/c:objc(cs)BREReceiptManager(im)getEReceiptsWithCompletion:">-[BREReceiptManager getEReceiptsWithCompletion:]</a></code></p>
+                        <p>For IMAP providers (AOL, Yahoo, and Gmail if you prefer to connect to Gmail via IMAP) you must store the credentials prior to calling <code><a href="../Classes/BREReceiptManager.html#/c:objc(cs)BREReceiptManager(im)getEReceiptsWithCompletion:">-[BREReceiptManager getEReceiptsWithCompletion:]</a></code>
+  In the case of Gmail, call this function before calling <code><a href="../Classes/BREReceiptManager.html#/c:objc(cs)BREReceiptManager(im)setupGmailForIMAP:withCompletion:">-[BREReceiptManager setupGmailForIMAP:withCompletion:]</a></code></p>
 
                       </div>
                       <div class="declaration">
@@ -629,7 +526,78 @@ You will then obtain the Client ID and Client Secret</p>
                         <p><code>nil</code> on success, otherwise the error</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.8/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L129-L131">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.9/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L124-L126">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BREReceiptManager(im)setupGmailForIMAP:withCompletion:"></a>
+                    <a name="//apple_ref/objc/Method/-setupGmailForIMAP:withCompletion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BREReceiptManager(im)setupGmailForIMAP:withCompletion:">-setupGmailForIMAP:withCompletion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>To connect to Gmail accounts via IMAP (instead of the native SDK), the user will have to enable certain Gmail account settings. Call this function to start the process</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setupGmailForIMAP</span><span class="p">:(</span><span class="n">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">viewController</span>
+           <span class="nf">withCompletion</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n"><a href="../Enums/BRGoogleAccountResult.html">BRGoogleAccountResult</a></span><span class="p">))</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setupGmail</span><span class="p">(</span><span class="n">forIMAP</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="o">!</span><span class="p">,</span> <span class="n">withCompletion</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt"><a href="../Enums/BRGoogleAccountResult.html">BRGoogleAccountResult</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>viewController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The view controller from which to present the controller that manages the Gmail account settings</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion is invoked after the attempt to configure the account has finished</p>
+
+<ul>
+<li><code>BRGoogleAccountResult result</code> - The result of the attempt to configure the account. A successful result is <code>BRGoogleAccountResultEnabledLSA</code> or <code>BRGoogleAccountResultCreatedAppPassword</code></li>
+</ul>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.9/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L136-L137">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -688,7 +656,7 @@ You will then obtain the Client ID and Client Secret</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.8/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L141">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.9/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L147">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -776,7 +744,7 @@ You will then obtain the Client ID and Client Secret</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.8/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L174">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.9/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L180">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -811,7 +779,7 @@ You will then obtain the Client ID and Client Secret</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.8/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L179">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.9/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L185">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -846,7 +814,7 @@ You will then obtain the Client ID and Client Secret</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.8/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L184">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.9/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L190">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -856,7 +824,7 @@ You will then obtain the Client ID and Client Secret</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2020-03-31)</p>
+          <p>&copy; 2020 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2020-05-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

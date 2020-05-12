@@ -16,13 +16,25 @@ typedef NS_ENUM(NSUInteger, BREReceiptProvider) {
     BREReceiptProviderGmail,
     BREReceiptProviderOutlook,
     BREReceiptProviderYahoo,
-    BREReceiptProviderAOL
+    BREReceiptProviderAOL,
+    BREReceiptProviderGmailIMAP
 };
 
 typedef NS_ENUM(NSUInteger, BREReceiptIMAPError) {
     BREReceiptIMAPErrorInvalidCredentials = 5,
     BREReceiptIMAPErrorGmailIMAPDisabled = 6,
     BREReceiptIMAPErrorGmailTwoFactor = 40
+};
+
+typedef NS_ENUM(NSUInteger, BRGoogleAccountResult) {
+    BRGoogleAccountResultUserCancelled = 0,
+    BRGoogleAccountResultBadEmail,
+    BRGoogleAccountResultBadPassword,
+    BRGoogleAccountResultEnabledLSA,
+    BRGoogleAccountResultRedirectToSafari,
+    BRGoogleAccountResultCreatedAppPassword,
+    BRGoogleAccountResultAdminNeeded,
+    BRGoogleAccountResultUnknownFailure
 };
 
 /**
@@ -41,29 +53,10 @@ typedef NS_ENUM(NSUInteger, BREReceiptIMAPError) {
 @property (nonatomic, strong) NSString *googleClientId;
 
 /**
- *  In order to authenticate Outlook accounts, you must register your app at the MS Application Registration Portal (https://apps.dev.microsoft.com) and add a Native Application platform. This will generate a Client ID
- *  When you have done so, input the Client ID here before attempting to begin the OAuth process for Outlook
+ *  In order to authenticate Outlook accounts, you must register your app at the Azure Portal (https://portal.azure.com/) and add a new App Registration. This will generate an Application (client) ID
+ *  When you have done so, input that id here before attempting to begin the OAuth process for Outlook
  */
 @property (nonatomic, strong) NSString *outlookClientId;
-
-/**
- *  In order to authenticate Yahoo accounts, you must register a Yahoo developer account at https://developer.yahoo.com and then contact mail-api@oath.com to request an IMAP ID
- */
-@property (nonatomic, strong) NSString *yahooImapId;
-
-/**
- *  In order to authenticate Yahoo accounts, after obtaining above IMAP ID, create a new app (type=Web Application, callback_domain=microblink.com) at https://developer.yahoo.com.
- *  The permissions you need to request are "Mail->Read" and "Profiles->Read/Write Public and Private"
- *  You will then obtain the Client ID and Client Secret
- */
-@property (nonatomic, strong) NSString *yahooClientId;
-
-/**
- *  In order to authenticate Yahoo accounts, after obtaining above IMAP ID, create a new app (type=Web Application, callback_domain=microblink.com) at https://developer.yahoo.com.
- *  The permissions you need to request are "Mail->Read" and "Profiles->Read/Write Public and Private"
- *  You will then obtain the Client ID and Client Secret
- */
-@property (nonatomic, strong) NSString *yahooClientSecret;
 
 /**
  *  Whether there is a stored provider
@@ -95,6 +88,7 @@ typedef NS_ENUM(NSUInteger, BREReceiptIMAPError) {
 
 /**
  *  If the OAuth provider supports returning the logged-in email, it will be populated into this property after OAuth or silent authentications
+ *  Note: It is not guaranteed to be populated on subsequent app runs
  */
 @property (strong, nonatomic) NSString *userCurrentEmail;
 
@@ -122,13 +116,25 @@ typedef NS_ENUM(NSUInteger, BREReceiptIMAPError) {
                 andCompletion:(void(^)(NSError *error))completion;
 
 /**
- *  For IMAP providers (currently AOL and Yahoo) you must store the credentials prior to calling `-[BREReceiptManager getEReceiptsWithCompletion:]`
+ *  For IMAP providers (AOL, Yahoo, and Gmail if you prefer to connect to Gmail via IMAP) you must store the credentials prior to calling `-[BREReceiptManager getEReceiptsWithCompletion:]`
+ *  In the case of Gmail, call this function before calling `-[BREReceiptManager setupGmailForIMAP:withCompletion:]`
  *
  *  @return `nil` on success, otherwise the error
  */
 - (NSError *)storeImapCredentials:(NSString*)user
                       andPassword:(NSString*)password
                       forProvider:(BREReceiptProvider)provider;
+
+/**
+*  To connect to Gmail accounts via IMAP (instead of the native SDK), the user will have to enable certain Gmail account settings. Call this function to start the process
+*
+*  @param viewController   The view controller from which to present the controller that manages the Gmail account settings
+*  @param completion       The completion is invoked after the attempt to configure the account has finished
+*
+*      * `BRGoogleAccountResult result` - The result of the attempt to configure the account. A successful result is `BRGoogleAccountResultEnabledLSA` or `BRGoogleAccountResultCreatedAppPassword`
+*/
+- (void)setupGmailForIMAP:(UIViewController*)viewController
+           withCompletion:(void(^)(BRGoogleAccountResult result))completion;
 
 /**
  *  Verifies that stored IMAP credentials are valid

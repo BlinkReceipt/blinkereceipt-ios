@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>BREReceiptProvider Enumeration Reference</title>
+    <title>BRGoogleAccountResult Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/objc/Enum/BREReceiptProvider" class="dashAnchor"></a>
-    <a title="BREReceiptProvider Enumeration Reference"></a>
+    <a name="//apple_ref/objc/Enum/BRGoogleAccountResult" class="dashAnchor"></a>
+    <a title="BRGoogleAccountResult Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">BlinkEReceipt extension SDK Docs</a></p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">BlinkEReceipt extension SDK Reference</a>
         <img id="carat" src="../img/carat.png" />
-        BREReceiptProvider Enumeration Reference
+        BRGoogleAccountResult Enumeration Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -69,16 +69,18 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>BREReceiptProvider</h1>
+            <h1>BRGoogleAccountResult</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">BREReceiptProvider</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">BREReceiptProviderNone</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="n">BREReceiptProviderGmail</span><span class="p">,</span>
-    <span class="n">BREReceiptProviderOutlook</span><span class="p">,</span>
-    <span class="n">BREReceiptProviderYahoo</span><span class="p">,</span>
-    <span class="n">BREReceiptProviderAOL</span><span class="p">,</span>
-    <span class="n">BREReceiptProviderGmailIMAP</span>
+                  <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">BRGoogleAccountResult</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">BRGoogleAccountResultUserCancelled</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">BRGoogleAccountResultBadEmail</span><span class="p">,</span>
+    <span class="n">BRGoogleAccountResultBadPassword</span><span class="p">,</span>
+    <span class="n">BRGoogleAccountResultEnabledLSA</span><span class="p">,</span>
+    <span class="n">BRGoogleAccountResultRedirectToSafari</span><span class="p">,</span>
+    <span class="n">BRGoogleAccountResultCreatedAppPassword</span><span class="p">,</span>
+    <span class="n">BRGoogleAccountResultAdminNeeded</span><span class="p">,</span>
+    <span class="n">BRGoogleAccountResultUnknownFailure</span>
 <span class="p">}</span></code></pre>
 
                 </div>
@@ -91,9 +93,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@BREReceiptProvider@BREReceiptProviderNone"></a>
-                    <a name="//apple_ref/objc/Case/BREReceiptProviderNone" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@BREReceiptProvider@BREReceiptProviderNone">BREReceiptProviderNone</a>
+                    <a name="/c:@E@BRGoogleAccountResult@BRGoogleAccountResultUserCancelled"></a>
+                    <a name="//apple_ref/objc/Case/BRGoogleAccountResultUserCancelled" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@BRGoogleAccountResult@BRGoogleAccountResultUserCancelled">BRGoogleAccountResultUserCancelled</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -107,12 +109,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">BREReceiptProviderNone</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">BRGoogleAccountResultUserCancelled</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="k">none</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">userCancelled</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
 
                         </div>
                       </div>
@@ -125,9 +127,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@BREReceiptProvider@BREReceiptProviderGmail"></a>
-                    <a name="//apple_ref/objc/Case/BREReceiptProviderGmail" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@BREReceiptProvider@BREReceiptProviderGmail">BREReceiptProviderGmail</a>
+                    <a name="/c:@E@BRGoogleAccountResult@BRGoogleAccountResultBadEmail"></a>
+                    <a name="//apple_ref/objc/Case/BRGoogleAccountResultBadEmail" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@BRGoogleAccountResult@BRGoogleAccountResultBadEmail">BRGoogleAccountResultBadEmail</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -141,12 +143,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">BREReceiptProviderGmail</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">BRGoogleAccountResultBadEmail</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">gmail</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">badEmail</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
 
                         </div>
                       </div>
@@ -159,9 +161,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@BREReceiptProvider@BREReceiptProviderOutlook"></a>
-                    <a name="//apple_ref/objc/Case/BREReceiptProviderOutlook" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@BREReceiptProvider@BREReceiptProviderOutlook">BREReceiptProviderOutlook</a>
+                    <a name="/c:@E@BRGoogleAccountResult@BRGoogleAccountResultBadPassword"></a>
+                    <a name="//apple_ref/objc/Case/BRGoogleAccountResultBadPassword" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@BRGoogleAccountResult@BRGoogleAccountResultBadPassword">BRGoogleAccountResultBadPassword</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -175,12 +177,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">BREReceiptProviderOutlook</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">BRGoogleAccountResultBadPassword</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">outlook</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">badPassword</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
 
                         </div>
                       </div>
@@ -193,9 +195,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@BREReceiptProvider@BREReceiptProviderYahoo"></a>
-                    <a name="//apple_ref/objc/Case/BREReceiptProviderYahoo" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@BREReceiptProvider@BREReceiptProviderYahoo">BREReceiptProviderYahoo</a>
+                    <a name="/c:@E@BRGoogleAccountResult@BRGoogleAccountResultEnabledLSA"></a>
+                    <a name="//apple_ref/objc/Case/BRGoogleAccountResultEnabledLSA" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@BRGoogleAccountResult@BRGoogleAccountResultEnabledLSA">BRGoogleAccountResultEnabledLSA</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -209,12 +211,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">BREReceiptProviderYahoo</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">BRGoogleAccountResultEnabledLSA</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">yahoo</span> <span class="o">=</span> <span class="mi">3</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">enabledLSA</span> <span class="o">=</span> <span class="mi">3</span></code></pre>
 
                         </div>
                       </div>
@@ -227,9 +229,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@BREReceiptProvider@BREReceiptProviderAOL"></a>
-                    <a name="//apple_ref/objc/Case/BREReceiptProviderAOL" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@BREReceiptProvider@BREReceiptProviderAOL">BREReceiptProviderAOL</a>
+                    <a name="/c:@E@BRGoogleAccountResult@BRGoogleAccountResultRedirectToSafari"></a>
+                    <a name="//apple_ref/objc/Case/BRGoogleAccountResultRedirectToSafari" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@BRGoogleAccountResult@BRGoogleAccountResultRedirectToSafari">BRGoogleAccountResultRedirectToSafari</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -243,12 +245,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">BREReceiptProviderAOL</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">BRGoogleAccountResultRedirectToSafari</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">AOL</span> <span class="o">=</span> <span class="mi">4</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">redirectToSafari</span> <span class="o">=</span> <span class="mi">4</span></code></pre>
 
                         </div>
                       </div>
@@ -261,9 +263,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@BREReceiptProvider@BREReceiptProviderGmailIMAP"></a>
-                    <a name="//apple_ref/objc/Case/BREReceiptProviderGmailIMAP" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@BREReceiptProvider@BREReceiptProviderGmailIMAP">BREReceiptProviderGmailIMAP</a>
+                    <a name="/c:@E@BRGoogleAccountResult@BRGoogleAccountResultCreatedAppPassword"></a>
+                    <a name="//apple_ref/objc/Case/BRGoogleAccountResultCreatedAppPassword" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@BRGoogleAccountResult@BRGoogleAccountResultCreatedAppPassword">BRGoogleAccountResultCreatedAppPassword</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -277,12 +279,80 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">BREReceiptProviderGmailIMAP</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">BRGoogleAccountResultCreatedAppPassword</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">gmailIMAP</span> <span class="o">=</span> <span class="mi">5</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">createdAppPassword</span> <span class="o">=</span> <span class="mi">5</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.9/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@BRGoogleAccountResult@BRGoogleAccountResultAdminNeeded"></a>
+                    <a name="//apple_ref/objc/Case/BRGoogleAccountResultAdminNeeded" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@BRGoogleAccountResult@BRGoogleAccountResultAdminNeeded">BRGoogleAccountResultAdminNeeded</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">BRGoogleAccountResultAdminNeeded</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">adminNeeded</span> <span class="o">=</span> <span class="mi">6</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/0.0.9/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@BRGoogleAccountResult@BRGoogleAccountResultUnknownFailure"></a>
+                    <a name="//apple_ref/objc/Case/BRGoogleAccountResultUnknownFailure" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@BRGoogleAccountResult@BRGoogleAccountResultUnknownFailure">BRGoogleAccountResultUnknownFailure</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">BRGoogleAccountResultUnknownFailure</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unknownFailure</span> <span class="o">=</span> <span class="mi">7</span></code></pre>
 
                         </div>
                       </div>

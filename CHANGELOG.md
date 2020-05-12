@@ -1,3 +1,8 @@
+# 1.0.0
+- Updated to new Outlook and Gmail SDKs to eliminate dependency on deprecated `UIWebView`
+- Beta support for Gmail IMAP linking
+- Improved logging for Amazon parsing errors
+
 # 0.0.9
 - Better detection of IMAP authentication errors
 - Fix bug not clearing Amazon credentials in memory when calling `clearAmazonCredentials`
