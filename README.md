@@ -23,6 +23,17 @@ end
 
 After editing your Podfile, run `pod install` and then make sure to open the `.xcworkspace` file rather than the `.xcodeproj`
 
+## Installation with Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a lightweight dependency manager for iOS. If you do not have Carthage installed see the [Quick Start](https://github.com/Carthage/Carthage#quick-start)
+
+### Cartfile
+```
+binary "https://raw.githubusercontent.com/BlinkReceipt/blinkereceipt-ios/master/BlinkEReceiptStatic.json" ~> 1.0
+```
+
+After editing your `Cartfile`, run `carthage update` and then add the framework to your project as described in the Quick Start above
+
 ## Integration
 
 - In order to use Amazon order parsing functionality add the following header:
@@ -47,4 +58,4 @@ After editing your Podfile, run `pod install` and then make sure to open the `.x
 
 Please see our documentation at https://blinkreceipt.github.io/blinkereceipt-ios
 
-Copyright (c) 2019 BlinkReceipt. All rights reserved.
+Copyright (c) 2020 BlinkReceipt. All rights reserved.
