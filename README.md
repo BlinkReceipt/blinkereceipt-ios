@@ -1,6 +1,6 @@
 # BlinkEReceipt Integration Instructions
 
-This is a framework which extends the [BlinkReceipt SDK](https://github.com/BlinkReceipt/blinkreceipt-ios) to enable e-receipt parsing functionality
+This is a framework which extends the [BlinkReceipt SDK](https://github.com/BlinkReceipt/blinkreceipt-ios) to enable e-receipt parsing functionality. You must first install the BlinkReceipt framework according to the instructions in that repository.
 
 ## Installation with CocoaPods
 
@@ -8,16 +8,19 @@ This is a framework which extends the [BlinkReceipt SDK](https://github.com/Blin
 
 ### Podfile
 
+Here is a sample barebones `Podfile` which imports the BlinkEReceipt pod:
+
 ```ruby
+#You must include this additional source as the BlinkEReceipt pod is hosted in a private spec repository
 source 'https://github.com/BlinkReceipt/PodSpecRepo.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '8.0'
+platform :ios, '10.0'
 
 target 'YourTarget' do
   use_frameworks!
 
-  pod 'BlinkEReceipt'
+  pod 'BlinkEReceipt', '~> 1.0'
 end
 ```
 
@@ -34,28 +37,29 @@ binary "https://raw.githubusercontent.com/BlinkReceipt/blinkereceipt-ios/master/
 
 After editing your `Cartfile`, run `carthage update` and then add the framework to your project as described in the Quick Start above
 
+## Standalone Installation
+
+If you do not use a dependency manager:
+
+- Download the latest release from the [Releases](https://github.com/BlinkReceipt/blinkereceipt-ios/releases) tab
+- Unzip and drag `BlinkEReceiptStatic.framework` into your XCode project
+- In your target's settings, in the General tab, scroll down to `Frameworks, Libraries, and Embedded Content` and change the `Embed` value for `BlinkEReceiptStatic.framework` to `Embed & Sign`
+
+## Duplicate Symbol Warning
+
+The BlinkEReceipt SDK includes a number of 3rd party dependencies, some of which are provided only as static libraries or depend on static libraries. As such it was not practical to prefix the symbols found in these dependencies, so if your app also includes these dependencies, you will likely encounter duplicate symbol errors during linking. These dependencies are:
+
+- [MailCore](https://github.com/MailCore/mailcore2)
+- [GoogleSignIn](https://developers.google.com/identity/sign-in/ios/)
+- [GTMSessionFetcher](https://github.com/google/gtm-session-fetcher)
+- [GTMAppAuth](https://github.com/google/GTMAppAuth)
+- [AppAuth](https://github.com/openid/AppAuth-iOS)
+- [GoogleAPIClientForREST](https://github.com/google/google-api-objectivec-client-for-rest)
+
+If you need to use these dependencies in your app, you may rely on the BlinkEReceipt SDK to provide the symbols and simply include the appropriate headers in your project for compilation. Be sure to check that the versions imported by the SDK match the headers you are including.
+
 ## Integration
 
-- In order to use Amazon order parsing functionality add the following header:
-
-```obj-c
-#import <BlinkEReceipt/BRAmazonManager.h>
-```
-
-- It is recommended to instantiate the `BRAmazonManager` as early as possible to give it time to download the most recent Amazon parsing specs. Add the following line to your application delegate's `didFinishLaunchingWithOptions:` method:
-
-```obj-c
-[BRAmazonManager shared];
-```
-
-- In order to use email receipt parsing functionality add the following header:
-
-```obj-c
-#import <BlinkEReceipt/BREReceiptManager.h>
-```
-
-## Documentation
-
-Please see our documentation at https://blinkreceipt.github.io/blinkereceipt-ios
+Please see our integration instructions and reference at https://blinkreceipt.github.io/blinkereceipt-ios
 
 Copyright (c) 2020 BlinkReceipt. All rights reserved.
