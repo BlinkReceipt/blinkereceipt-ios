@@ -1,3 +1,6 @@
+# 1.0.1
+- Adjust podspec dependencies to avoid duplicate frameworks
+
 # 1.0.0
 - Updated to new Outlook and Gmail SDKs to eliminate dependency on deprecated `UIWebView`
 - Beta support for Gmail IMAP linking

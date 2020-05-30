@@ -189,4 +189,11 @@ typedef NS_ENUM(NSUInteger, BRGoogleAccountResult) {
  */
 - (void)resetEmailsChecked;
 
+/**
+ *  A passthrough function to be used in your app delegate's `openURL:options:provider:` method
+ */
+- (BOOL)openURL:(NSURL*)url
+        options:(NSDictionary*)options
+       provider:(BREReceiptProvider)provider;
+
 @end
