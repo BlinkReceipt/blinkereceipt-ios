@@ -102,13 +102,15 @@
 <ul>
 <li>In order to handle the response from the OAuth process, you need to add the following to your app delegate:</li>
 </ul>
-<pre class="highlight plaintext"><code>#import &lt;GoogleSignIn/GoogleSignIn.h&gt;
+<pre class="highlight plaintext"><code>#import &lt;BlinkEReceipt/BREReceiptManager.h&gt;
 ...
 - (BOOL)application:(UIApplication *)app
             openURL:(NSURL *)url
             options:(NSDictionary *)options
 {
-    return [[GIDSignIn sharedInstance] handleURL:url];
+    return [[BREReceiptManager shared] openURL:url
+                                       options:options
+                                       provider:BREReceiptProviderGmail];
 }
 </code></pre>
 
@@ -147,14 +149,15 @@
 <ul>
 <li>Add the following to your app delegate:</li>
 </ul>
-<pre class="highlight plaintext"><code>#import &lt;MSAL/MSAL.h&gt;
+<pre class="highlight plaintext"><code>#import &lt;BlinkEReceipt/BREReceiptManager.h&gt;
 ...
 - (BOOL)application:(UIApplication *)app
             openURL:(NSURL *)url
             options:(NSDictionary *)options
 {
-    return [MSALPublicClientApplication handleMSALResponse:url
-                                           sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]];
+    return [[BREReceiptManager shared] openURL:url
+                                       options:options
+                                       provider:BREReceiptProviderOutlook];
 }
 </code></pre>
 
