@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "BlinkEReceipt"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "BlinkEReceipt SDK"
 
   s.description  = <<-DESC
@@ -20,7 +20,7 @@ This is the BlinkEReceipt extension for the BlinkReceipt SDK
 
   s.vendored_frameworks = ["BlinkEReceipt.framework"]
   
-  s.dependency 'BlinkReceipt', '~> 1.8.8'
+  s.dependency 'BlinkReceipt', '~> 1.9.0'
   s.dependency 'GoogleAPIClientForREST/Gmail', '~> 1.3'
 
   # GoogleSignIn pod is a static framework so requiring here would lead to duplicate frameworks, but this pod pulls in other dependencies which are dynamic frameworks like `GTMAppAuth` and `AppAuth` so require them here.
