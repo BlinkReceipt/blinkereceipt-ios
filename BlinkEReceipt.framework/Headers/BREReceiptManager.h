@@ -180,6 +180,17 @@ typedef NS_ENUM(NSUInteger, BRGoogleAccountResult) {
 - (void)getEReceiptsWithCompletion:(void(^)(NSArray<BRScanResults*> *receipts, NSError *error))completion;
 
 /**
+*  For debugging the parsing of e-receipt HTML
+*
+*  @param senderAddress    The email address from which this email originated, must be one of the recognized senders
+*  @param rawHTML          The raw HTML from this email
+*  @param completion       Same as completion for `getEReceiptWithCompletion:` above
+*/
+- (void)parseEReceiptFromSender:(NSString*)senderAddress
+                        rawHTML:(NSString*)rawHTML
+                     completion:(void(^)(NSArray<BRScanResults*> *receipts, NSError *error))completion;
+
+/**
  *  Signs out of any stored email account and stored e-receipt info. For OAuth providers this signs out of the provider and invalidates the access token. For IMAP providers this removes stored credentails.
  */
 - (void)signOut;

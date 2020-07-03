@@ -1,3 +1,9 @@
+# 1.0.3
+- Fix bug due to backwards-incompatible change introduced in BlinkReceipt v1.9.0
+
+# 1.0.2
+- Fix podspec versioning to enable functioning with BlinkReceipt v1.9.x
+
 # 1.0.1
 - Adjust podspec dependencies to avoid duplicate frameworks
 
