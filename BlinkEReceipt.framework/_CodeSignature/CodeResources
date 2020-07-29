@@ -372,11 +372,19 @@
 		</data>
 		<key>Headers/BREReceiptManager.h</key>
 		<data>
-		nlumvq6pi9DMcrBWL6lN+Ao7q/4=
+		i9xju1Yq/CJGNjSLfaUfJy7DJqs=
+		</data>
+		<key>Headers/BlinkEReceipt.h</key>
+		<data>
+		YyGwAAE4gyWHcJyV5dOULeSxr8I=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Uxtg/pzAAtdLe/fmGchkNRMvrT0=
+		N3xLK/wdAKUceS0g2dW2Ot2oKPk=
+		</data>
+		<key>Modules/module.modulemap</key>
+		<data>
+		q4xMsW+409zGnKAdmalmLP3VN3k=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -945,11 +953,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nlumvq6pi9DMcrBWL6lN+Ao7q/4=
+			i9xju1Yq/CJGNjSLfaUfJy7DJqs=
 			</data>
 			<key>hash2</key>
 			<data>
-			M4g6gGBRqSsqBZRENWFuchmG1mxZxVm6ZosAlzRCfGk=
+			vVUhyaju+VVRLOCl8473ZHwcQCcvaWRImBlJqu9rOvY=
+			</data>
+		</dict>
+		<key>Headers/BlinkEReceipt.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			YyGwAAE4gyWHcJyV5dOULeSxr8I=
+			</data>
+			<key>hash2</key>
+			<data>
+			tCcTMyBOE+KARalQblRIjvIBlzfZEZQmswNaS80Pxgo=
+			</data>
+		</dict>
+		<key>Modules/module.modulemap</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			q4xMsW+409zGnKAdmalmLP3VN3k=
+			</data>
+			<key>hash2</key>
+			<data>
+			qwxqIg8+ZtSzzPGOfW1R3OFLy12Y3mpeq56602AKTu8=
 			</data>
 		</dict>
 	</dict>

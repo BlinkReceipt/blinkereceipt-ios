@@ -60,7 +60,7 @@
                 <a href="Enums/BREReceiptProvider.html">BREReceiptProvider</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/BRGoogleAccountResult.html">BRGoogleAccountResult</a>
+                <a href="Enums/BRSetupIMAPResult.html">BRSetupIMAPResult</a>
               </li>
             </ul>
           </li>
@@ -151,7 +151,8 @@
     <span class="n">BREReceiptProviderOutlook</span><span class="p">,</span>
     <span class="n">BREReceiptProviderYahoo</span><span class="p">,</span>
     <span class="n">BREReceiptProviderAOL</span><span class="p">,</span>
-    <span class="n">BREReceiptProviderGmailIMAP</span>
+    <span class="n">BREReceiptProviderGmailIMAP</span><span class="p">,</span>
+    <span class="n">BREReceiptProviderCustomIMAP</span>
 <span class="p">}</span></code></pre>
 
                         </div>
@@ -162,7 +163,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L14-L21">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L14-L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -201,7 +202,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L23-L27">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L24-L28">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -209,9 +210,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@BRGoogleAccountResult"></a>
-                    <a name="//apple_ref/objc/Enum/BRGoogleAccountResult" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@BRGoogleAccountResult">BRGoogleAccountResult</a>
+                    <a name="/c:@E@BRSetupIMAPResult"></a>
+                    <a name="//apple_ref/objc/Enum/BRSetupIMAPResult" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@BRSetupIMAPResult">BRSetupIMAPResult</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -220,32 +221,32 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         
-                        <a href="Enums/BRGoogleAccountResult.html" class="slightly-smaller">See more</a>
+                        <a href="Enums/BRSetupIMAPResult.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">BRGoogleAccountResult</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">BRGoogleAccountResultUserCancelled</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="n">BRGoogleAccountResultBadEmail</span><span class="p">,</span>
-    <span class="n">BRGoogleAccountResultBadPassword</span><span class="p">,</span>
-    <span class="n">BRGoogleAccountResultEnabledLSA</span><span class="p">,</span>
-    <span class="n">BRGoogleAccountResultRedirectToSafari</span><span class="p">,</span>
-    <span class="n">BRGoogleAccountResultCreatedAppPassword</span><span class="p">,</span>
-    <span class="n">BRGoogleAccountResultAdminNeeded</span><span class="p">,</span>
-    <span class="n">BRGoogleAccountResultUnknownFailure</span>
+                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">BRSetupIMAPResult</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">BRSetupIMAPResultUserCancelled</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">BRSetupIMAPResultBadEmail</span><span class="p">,</span>
+    <span class="n">BRSetupIMAPResultBadPassword</span><span class="p">,</span>
+    <span class="n">BRSetupIMAPResultEnabledLSA</span><span class="p">,</span>
+    <span class="n">BRSetupIMAPResultRedirectToSafari</span><span class="p">,</span>
+    <span class="n">BRSetupIMAPResultCreatedAppPassword</span><span class="p">,</span>
+    <span class="n">BRSetupIMAPResultAdminNeeded</span><span class="p">,</span>
+    <span class="n">BRSetupIMAPResultUnknownFailure</span>
 <span class="p">}</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">BRGoogleAccountResult</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">BRSetupIMAPResult</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L29-L38">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L30-L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -255,7 +256,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2020-07-16)</p>
+          <p>&copy; 2020 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2020-07-28)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -1,3 +1,6 @@
+# 1.0.4
+- Add umbrella header for Swift interoperability with `BlinkEReceiptStatic`
+
 # 1.0.3
 - Fix bug due to backwards-incompatible change introduced in BlinkReceipt v1.9.0
 

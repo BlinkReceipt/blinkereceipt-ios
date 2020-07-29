@@ -17,7 +17,8 @@ typedef NS_ENUM(NSUInteger, BREReceiptProvider) {
     BREReceiptProviderOutlook,
     BREReceiptProviderYahoo,
     BREReceiptProviderAOL,
-    BREReceiptProviderGmailIMAP
+    BREReceiptProviderGmailIMAP,
+    BREReceiptProviderCustomIMAP
 };
 
 typedef NS_ENUM(NSUInteger, BREReceiptIMAPError) {
@@ -26,15 +27,15 @@ typedef NS_ENUM(NSUInteger, BREReceiptIMAPError) {
     BREReceiptIMAPErrorGmailTwoFactor = 40
 };
 
-typedef NS_ENUM(NSUInteger, BRGoogleAccountResult) {
-    BRGoogleAccountResultUserCancelled = 0,
-    BRGoogleAccountResultBadEmail,
-    BRGoogleAccountResultBadPassword,
-    BRGoogleAccountResultEnabledLSA,
-    BRGoogleAccountResultRedirectToSafari,
-    BRGoogleAccountResultCreatedAppPassword,
-    BRGoogleAccountResultAdminNeeded,
-    BRGoogleAccountResultUnknownFailure
+typedef NS_ENUM(NSUInteger, BRSetupIMAPResult) {
+    BRSetupIMAPResultUserCancelled = 0,
+    BRSetupIMAPResultBadEmail,
+    BRSetupIMAPResultBadPassword,
+    BRSetupIMAPResultEnabledLSA,
+    BRSetupIMAPResultRedirectToSafari,
+    BRSetupIMAPResultCreatedAppPassword,
+    BRSetupIMAPResultAdminNeeded,
+    BRSetupIMAPResultUnknownFailure
 };
 
 /**
@@ -116,8 +117,10 @@ typedef NS_ENUM(NSUInteger, BRGoogleAccountResult) {
                 andCompletion:(void(^)(NSError *error))completion;
 
 /**
- *  For IMAP providers (AOL, Yahoo, and Gmail if you prefer to connect to Gmail via IMAP) you must store the credentials prior to calling `-[BREReceiptManager getEReceiptsWithCompletion:]`
+ *  For IMAP providers (AOL, Yahoo, Gmail if you prefer to connect to Gmail via IMAP, or a custom IMAP provider) you must store the credentials prior to calling `-[BREReceiptManager getEReceiptsWithCompletion:]`
  *  In the case of Gmail, call this function before calling `-[BREReceiptManager setupGmailForIMAP:withCompletion:]`
+ *
+ *  Note: For a custom IMAP provider, you must call `setCustomIMAPHost:port:useTLS:` before calling this method
  *
  *  @return `nil` on success, otherwise the error
  */
@@ -126,15 +129,28 @@ typedef NS_ENUM(NSUInteger, BRGoogleAccountResult) {
                       forProvider:(BREReceiptProvider)provider;
 
 /**
-*  To connect to Gmail accounts via IMAP (instead of the native SDK), the user will have to enable certain Gmail account settings. Call this function to start the process
+ *  For custom IMAP providers, you must call this method to supply basic information about how to connect to this provider
+ *
+ *  @param host     The IMAP host name
+ *  @param port     The IMAP server port number
+ *  @param useTLS   Whether to connect via TLS
+ *
+ */
+- (void)setCustomIMAPHost:(NSString*)host
+                     port:(NSInteger)port
+                   useTLS:(BOOL)useTLS;
+
+/**
+*  To connect to Gmail, Yahoo, or AOL accounts via IMAP, the user will have to enable certain account settings. Call this function to start the process
 *
-*  @param viewController   The view controller from which to present the controller that manages the Gmail account settings
+*  @param viewController   The view controller from which to present the controller that manages the account settings
 *  @param completion       The completion is invoked after the attempt to configure the account has finished
 *
-*      * `BRGoogleAccountResult result` - The result of the attempt to configure the account. A successful result is `BRGoogleAccountResultEnabledLSA` or `BRGoogleAccountResultCreatedAppPassword`
+*      * `BRSetupIMAPResult result` - The result of the attempt to configure the account. A successful result is `BRSetupIMAPResultEnabledLSA` or `BRSetupIMAPResultCreatedAppPassword`
 */
-- (void)setupGmailForIMAP:(UIViewController*)viewController
-           withCompletion:(void(^)(BRGoogleAccountResult result))completion;
+- (void)setupIMAPForProvider:(BREReceiptProvider)provider
+              viewController:(UIViewController*)viewController
+              withCompletion:(void(^)(BRSetupIMAPResult result))completion;
 
 /**
  *  Verifies that stored IMAP credentials are valid
