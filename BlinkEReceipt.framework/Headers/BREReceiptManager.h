@@ -11,6 +11,7 @@
 
 #import <BlinkReceipt/BRScanResults.h>
 
+///
 typedef NS_ENUM(NSUInteger, BREReceiptProvider) {
     BREReceiptProviderNone = 0,
     BREReceiptProviderGmail,
@@ -21,12 +22,14 @@ typedef NS_ENUM(NSUInteger, BREReceiptProvider) {
     BREReceiptProviderCustomIMAP
 };
 
+///
 typedef NS_ENUM(NSUInteger, BREReceiptIMAPError) {
     BREReceiptIMAPErrorInvalidCredentials = 5,
     BREReceiptIMAPErrorGmailIMAPDisabled = 6,
     BREReceiptIMAPErrorGmailTwoFactor = 40
 };
 
+///
 typedef NS_ENUM(NSUInteger, BRSetupIMAPResult) {
     BRSetupIMAPResultUserCancelled = 0,
     BRSetupIMAPResultBadEmail,
@@ -88,6 +91,14 @@ typedef NS_ENUM(NSUInteger, BRSetupIMAPResult) {
 @property (nonatomic) NSInteger dayCutoff;
 
 /**
+ *  This property is an alternative to `dayCutoff` which allows you to set a specific date/time that serves as the boundary of how far back to search.
+ *  If set, it will override `dayCutoff`
+ *
+ *  Default: nil
+ */
+@property (strong, nonatomic) NSDate *dateCutoff;
+
+/**
  *  If the OAuth provider supports returning the logged-in email, it will be populated into this property after OAuth or silent authentications
  *  Note: It is not guaranteed to be populated on subsequent app runs
  */
@@ -118,7 +129,7 @@ typedef NS_ENUM(NSUInteger, BRSetupIMAPResult) {
 
 /**
  *  For IMAP providers (AOL, Yahoo, Gmail if you prefer to connect to Gmail via IMAP, or a custom IMAP provider) you must store the credentials prior to calling `-[BREReceiptManager getEReceiptsWithCompletion:]`
- *  In the case of Gmail, call this function before calling `-[BREReceiptManager setupGmailForIMAP:withCompletion:]`
+ *  In the case of Gmail, Yahoo, and AOL call this function before calling `-[BREReceiptManager setupGmailForIMAP:withCompletion:]`
  *
  *  Note: For a custom IMAP provider, you must call `setCustomIMAPHost:port:useTLS:` before calling this method
  *
@@ -129,7 +140,7 @@ typedef NS_ENUM(NSUInteger, BRSetupIMAPResult) {
                       forProvider:(BREReceiptProvider)provider;
 
 /**
- *  For custom IMAP providers, you must call this method to supply basic information about how to connect to this provider
+ *  For custom IMAP providers, you must call this method to supply basic information about how to connect to this provider _before_ you call `storeImapCredentials:andPassword:forProvider:`
  *
  *  @param host     The IMAP host name
  *  @param port     The IMAP server port number
@@ -163,7 +174,7 @@ typedef NS_ENUM(NSUInteger, BRSetupIMAPResult) {
 - (void)verifyImapCredentials:(void(^)(BOOL success, NSError *error))completion;
 
 /**
- *  Attempts to retrieve new (since last check) e-receipts from the stored e-mail account. You must have successfully authenticated an OAuth provider, or stored IMAP credentials prior to calling this method
+ *  Attempts to retrieve new (since last check) e-receipts from the stored e-mail account. You must have successfully authenticated an OAuth provider, or stored IMAP credentials (and setup IMAP if necessary) prior to calling this method
  *
  *  @param completion   The completion function will be invoked when e-receipt parsing has completed.
  *

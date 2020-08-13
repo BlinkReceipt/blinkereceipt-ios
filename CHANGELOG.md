@@ -1,3 +1,10 @@
+# 2.0.0
+- Beta release of Account Linking
+- Incorporate Amazon parsing into Account Linking
+- Support Amazon UK parsing
+- Support specific cutoff date for Account Linking and E-Receipts
+- Fix IMAP integration crash
+
 # 1.0.4
 - Add umbrella header for Swift interoperability with `BlinkEReceiptStatic`
 

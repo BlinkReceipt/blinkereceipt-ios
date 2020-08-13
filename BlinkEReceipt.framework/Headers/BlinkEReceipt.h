@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for MailTest.
 FOUNDATION_EXPORT double BlinkEReceiptVersionNumber;
 
-//! Project version string for MailTest.
 FOUNDATION_EXPORT const unsigned char BlinkEReceiptVersionString[];
 
-#import <BlinkEReceipt/BRAmazonManager.h>
+#import <BlinkEReceipt/BRAccountLinkingManager.h>
 #import <BlinkEReceipt/BREReceiptManager.h>

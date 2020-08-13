@@ -366,21 +366,25 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>Headers/BRAmazonManager.h</key>
+		<key>Headers/BRAccountLinkingCredentials.h</key>
 		<data>
-		fZnxFm4mEU4eXOoMCjK5NdgjeOM=
+		Z2kJb8WHg5fKYRVdcf5elvPB+SQ=
+		</data>
+		<key>Headers/BRAccountLinkingManager.h</key>
+		<data>
+		gekVIfx2Szk+P4nPq5jq1MkK9oc=
 		</data>
 		<key>Headers/BREReceiptManager.h</key>
 		<data>
-		i9xju1Yq/CJGNjSLfaUfJy7DJqs=
+		98rPkdC3q0IkBVmTY7j2K9NxOfY=
 		</data>
 		<key>Headers/BlinkEReceipt.h</key>
 		<data>
-		YyGwAAE4gyWHcJyV5dOULeSxr8I=
+		S7+XT4tRJs9c46oVWgILsm25PJE=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		N3xLK/wdAKUceS0g2dW2Ot2oKPk=
+		GigKDVCcvN5ALwurZRpal23xLXo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -938,37 +942,48 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>Headers/BRAmazonManager.h</key>
+		<key>Headers/BRAccountLinkingCredentials.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fZnxFm4mEU4eXOoMCjK5NdgjeOM=
+			Z2kJb8WHg5fKYRVdcf5elvPB+SQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			AYnFdj0nYfdyWe7IV+0STkro8+2DjEU7Hz8HN8taOHM=
+			HK6qIEOhAM8N3KdnApJlVkNZ57UCpdU7Zjn5EdzQ0JE=
+			</data>
+		</dict>
+		<key>Headers/BRAccountLinkingManager.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			gekVIfx2Szk+P4nPq5jq1MkK9oc=
+			</data>
+			<key>hash2</key>
+			<data>
+			9SWQPfNBbQpQ7gZxWRDHcjLut9rLDfjDZntperI+Wng=
 			</data>
 		</dict>
 		<key>Headers/BREReceiptManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			i9xju1Yq/CJGNjSLfaUfJy7DJqs=
+			98rPkdC3q0IkBVmTY7j2K9NxOfY=
 			</data>
 			<key>hash2</key>
 			<data>
-			vVUhyaju+VVRLOCl8473ZHwcQCcvaWRImBlJqu9rOvY=
+			b0ifpw+pqlae2G8d7c8VoP52fXNgEgCwgrZVaD2JRIw=
 			</data>
 		</dict>
 		<key>Headers/BlinkEReceipt.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			YyGwAAE4gyWHcJyV5dOULeSxr8I=
+			S7+XT4tRJs9c46oVWgILsm25PJE=
 			</data>
 			<key>hash2</key>
 			<data>
-			tCcTMyBOE+KARalQblRIjvIBlzfZEZQmswNaS80Pxgo=
+			Hx/IzZBvuMROxk6Cz5yiXw4FgpJdIrozwexnX+tDcdQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
