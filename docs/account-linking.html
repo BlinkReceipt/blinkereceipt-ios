@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Account Linking  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    <style> table {border: thin solid black; border-spacing: 0px} td {border: thin solid black; padding: 5px} </style>
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a title="Account Linking  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">BlinkEReceipt extension SDK 1.0.4 Docs</a></p>
+        <p class="header-right"><a href="https://github.com/BlinkReceipt/blinkereceipt-ios"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">BlinkEReceipt extension SDK Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Account Linking  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="account-linking.html">Account Linking</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="e-receipt-parsing.html">E-Receipt Parsing</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/BRAccountLinkingCredentials.html">BRAccountLinkingCredentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BRAccountLinkingManager.html">BRAccountLinkingManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BREReceiptManager.html">BREReceiptManager</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/BRAccountLinkingError.html">BRAccountLinkingError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/BREReceiptIMAPError.html">BREReceiptIMAPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/BREReceiptProvider.html">BREReceiptProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/BRSetupIMAPResult.html">BRSetupIMAPResult</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='account-linking' class='heading'>Account Linking</h1>
+
+<p>Here is an example of how to allow users to link their retailer accounts:</p>
+
+<ul>
+<li>Collect the user&rsquo;s credentials for a given retailer using your own UI</li>
+<li>Create a new <code><a href="Classes/BRAccountLinkingCredentials.html">BRAccountLinkingCredentials</a></code> object and populate the properties accordingly:</li>
+</ul>
+<pre class="highlight plaintext"><code>BRAccountLinkingCredentials *creds = [BRAccountLinkingCredentials  new];
+
+creds.username = @"user@domain.com";
+creds.password = @"secure-password";
+creds.retailer = BRAccountLinkingRetailerTarget; //set to the retailer you're linking
+</code></pre>
+
+<ul>
+<li>Link the account:</li>
+</ul>
+<pre class="highlight plaintext"><code>[[BRAccountLinkingManager  shared] linkAccountWithCredentials:creds];
+</code></pre>
+
+<ul>
+<li>Verify the account:</li>
+</ul>
+<pre class="highlight plaintext"><code>[[BRAccountLinkingManager shared] verifyAccountForRetailer:BRAccountLinkingRetailerTarget
+                                            withCompletion:^(BRAccountLinkingError error, UIViewController * _Nonnull vc) {
+    if (error == BRAccountLinkingErrorNone) {
+        NSLog(@"Successfully linked account!");
+    }
+}];
+</code></pre>
+
+<ul>
+<li>The above steps need to be completed only once. Afterwards, you can retrieve new messages as follows:</li>
+</ul>
+<pre class="highlight plaintext"><code>[[BRAccountLinkingManager shared] grabNewOrdersWithCompletion:^(BRAccountLinkingRetailer retailer,
+                                                                BRScanResults * _Nonnull results,
+                                                                NSInteger ordersRemainingInAccount,
+                                                                UIViewController * _Nonnull verificationViewController,
+                                                                BRAccountLinkingError error) {
+
+    NSLog(@"%ld orders remaining for retailer %@", (long)ordersRemainingInAccount, [BRAccountLinkingCredentials nameForRetailer:retailer);
+}];
+</code></pre>
+
+<blockquote>
+<p>Note: If you have linked multiple accounts, they will be searched concurrently and the callback will be invoked in an unpredictable order (e.g. 2 orders for retailer A, then 3 orders for retailer B, then another for retailer A, etc), but it is guaranteed that the callbacks will always be invoked on the main thread.</p>
+</blockquote>
+
+<p>The SDK will maintain an internal date of the last successful search for each retailer so that each time you attempt to retrieve new messages, you will only get messages since the last successful check, and subject to the day cutoff that you set (default is 15 days).</p>
+<h2 id='handling-2fa-and-other-scenarios-requiring-user-input' class='heading'>Handling 2FA and other scenarios requiring user input</h2>
+
+<p>Sometimes the user&rsquo;s input is required to successfully log in to a retailer account. This can happen when the user has 2FA enabled for an account, or when the retailer shows a CAPTCHA for extra verification, or in various other situations.</p>
+
+<p>For both <code>verifyAccountForRetailer</code> and <code>grabNewOrdersWithCompletion</code> this is handled in the same way:</p>
+
+<ul>
+<li><p>The <code><a href="Enums/BRAccountLinkingError.html">BRAccountLinkingError</a></code> will indicate the stages of this process</p></li>
+<li><p><code>BRAccountLinkingErrorVerificationNeeded</code> indicates that the SDK has encountered a page that requires the user&rsquo;s input. The <code>UIViewController</code> parameter of the callback will be populated with the view controller that you should display</p></li>
+<li><p><code>BRAccountLinkingErrorVerificationCompleted</code> indicates that the user successfully authenticated and you should now dismiss the view controller (note that the <code>UIViewController</code> callback parameter will be <code>nil</code> in this case but you do not need it to dismiss a presented modal, simply call, e.g. <code>[self  dismissViewControllerAnimated:YES completion:nil];</code>)</p></li>
+<li><p>Here is an example:</p></li>
+</ul>
+<pre class="highlight plaintext"><code>[[BRAccountLinkingManager shared] grabNewOrdersWithCompletion:^(BRAccountLinkingRetailer retailer,
+                                                                BRScanResults *results,
+                                                                NSInteger ordersRemainingInAccount,
+                                                                UIViewController *verificationViewController,
+                                                                BRAccountLinkingError error) {
+
+            if (error == BRAccountLinkingErrorVerificationNeeded) {
+                [self presentViewController:verificationViewController animated:YES completion:nil];
+
+            } else if (error == BRAccountLinkingErrorVerificationCompleted) {
+                [self dismissViewControllerAnimated:YES completion:nil];
+
+            } else {
+                //handle other errors + success case
+            }
+}];
+</code></pre>
+
+<p>If you have multiple accounts linked, it is theoretically possible that you will get multiple callbacks requiring user interaction, and you should stage these appropriately (i.e. queue them up and display one at a time).</p>
+<h2 id='migration-from-code-bramazonmanager-code' class='heading'>Migration from <code>BRAmazonManager</code></h2>
+
+<p>If you had previously integrated Amazon parsing, you will find that <code>BRAmazonManager</code> is no longer accessible in the BlinkEReceipt SDK. Instead, Amazon has been incorporated into Account Linking.</p>
+
+<p>Here is a table detailing the functionality from the previous Amazon integration and how to achieve the same thing in the new framework:</p>
+
+<table><thead>
+<tr>
+<th>Old Amazon Integration</th>
+<th>New Account Linking Integration</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>BRAmazonManager.amazonDayCutoff</code></td>
+<td><code><a href="Classes/BRAccountLinkingManager.html#/c:objc(cs)BRAccountLinkingManager(py)dayCutoff">BRAccountLinkingManager.dayCutoff</a></code></td>
+</tr>
+<tr>
+<td><code>[BRAmazonManager storeCredentials:password:]</code></td>
+<td>Create a <code><a href="Classes/BRAccountLinkingCredentials.html">BRAccountLinkingCredentials</a></code> object and link with <code><a href="Classes/BRAccountLinkingManager.html#/c:objc(cs)BRAccountLinkingManager(im)linkAccountWithCredentials:">-[BRAccountLinkingManager linkAccountWithCredentials:]</a></code></td>
+</tr>
+<tr>
+<td><code>[BRAmazonManager clearAmazonCredentials]</code></td>
+<td>Call <code><a href="Classes/BRAccountLinkingManager.html#/c:objc(cs)BRAccountLinkingManager(im)unlinkAccountForRetailer:">-[BRAccountLinkingManager unlinkAccountForRetailer:]</a></code> passing in <code>BRAccountLinkingRetailerAmazon</code></td>
+</tr>
+<tr>
+<td><code>[BRAmazonManager hasCredentials]</code></td>
+<td>Call <code><a href="Classes/BRAccountLinkingManager.html#/c:objc(cs)BRAccountLinkingManager(im)getLinkedRetailers">-[BRAccountLinkingManager getLinkedRetailers]</a></code> and iterate over the results looking for <code>BRAccountLinkingRetailerAmazon</code></td>
+</tr>
+<tr>
+<td><code>[BRAmazonManager resetAmazonOrders]</code></td>
+<td>Call <code><a href="Classes/BRAccountLinkingManager.html#/c:objc(cs)BRAccountLinkingManager(im)resetHistory">-[BRAccountLinkingManager resetHistory]</a></code> - note: currently not possible to reset history for one specific retailer</td>
+</tr>
+<tr>
+<td><code>[BRAmazonManager verifyAmazonAccount:]</code></td>
+<td>Call <code><a href="Classes/BRAccountLinkingManager.html#/c:objc(cs)BRAccountLinkingManager(im)verifyAccountForRetailer:withCompletion:">-[BRAccountLinkingManager verifyAccountForRetailer:withCompletion:]</a></code> and pass in <code>BRAccountLinkingRetailerAmazon</code></td>
+</tr>
+<tr>
+<td><code>[BRAmazonManager grabNewAmazonOrders:]</code></td>
+<td>Call <code><a href="Classes/BRAccountLinkingManager.html#/c:objc(cs)BRAccountLinkingManager(im)grabNewOrdersWithCompletion:">-[BRAccountLinkingManager grabNewOrdersWithCompletion:]</a></code> and ensure that the <code>retailer</code> in the callback is <code>BRAccountLinkingRetailerAmazon</code></td>
+</tr>
+</tbody></table>
+
+<p>As noted above, the method for handling 2FA and other user-input scenarios is slightly different now. Whereas previously you would trap the error code <code>BRAmazonErrorVerificationNeeded</code> and then invoke <code>[BRAmazonManager showBrowserFromViewController:withCompletion:]</code>, the new paradigm is that <code>[BRAccountLinkingManager verifyAccountForRetailer:withCompletion:]</code> and <code>[BRAccountLinkingManager grabNewOrdersWithCompletion:]</code> will return the error code <code>BRAccountLinkingErrorVerificationNeeded</code> <em>as well as</em> the actual view controller for you to display. Once the user has successfully authenticated, the same callback will be invoked with the code <code>BRAccountLinkingErrorVerificationCompleted</code> which is the trigger for you to dismiss the view controller.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2020-08-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -7,15 +7,23 @@
     <meta charset='utf-8'>
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
-    
+    <style> table {border: thin solid black; border-spacing: 0px} td {border: thin solid black; padding: 5px} </style>
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a name="//apple_ref/objc/Section/Classes" class="dashAnchor"></a>
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">BlinkEReceipt extension SDK Docs</a></p>
+        <p><a href="index.html">BlinkEReceipt extension SDK 1.0.4 Docs</a></p>
         <p class="header-right"><a href="https://github.com/BlinkReceipt/blinkereceipt-ios"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -32,6 +40,9 @@
             <a href="Guides.html">Guides</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="account-linking.html">Account Linking</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="e-receipt-parsing.html">E-Receipt Parsing</a>
               </li>
             </ul>
@@ -40,7 +51,10 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/BRAmazonManager.html">BRAmazonManager</a>
+                <a href="Classes/BRAccountLinkingCredentials.html">BRAccountLinkingCredentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BRAccountLinkingManager.html">BRAccountLinkingManager</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/BREReceiptManager.html">BREReceiptManager</a>
@@ -51,7 +65,10 @@
             <a href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Enums/BRAmazonError.html">BRAmazonError</a>
+                <a href="Enums/BRAccountLinkingError.html">BRAccountLinkingError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/BREReceiptIMAPError.html">BREReceiptIMAPError</a>
@@ -79,9 +96,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)BRAmazonManager"></a>
-                    <a name="//apple_ref/objc/Class/BRAmazonManager" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)BRAmazonManager">BRAmazonManager</a>
+                    <a name="/c:objc(cs)BRAccountLinkingCredentials"></a>
+                    <a name="//apple_ref/objc/Class/BRAccountLinkingCredentials" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BRAccountLinkingCredentials">BRAccountLinkingCredentials</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -89,41 +106,72 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Use this interface to manage Amazon parsing. Here are the basic steps to integrate:</p>
+                        <p>Instantiate a <code>BRAccountLinkingCredentials</code> object after collecting the credentials for a given retailer from the user</p>
 
-<ol>
-<li>Implement UI to capture the user&rsquo;s Amazon email and password</li>
-<li>Store these using <code><a href="Classes/BRAmazonManager.html#/c:objc(cs)BRAmazonManager(im)storeCredentials:password:">-[BRAmazonManager storeCredentials:password:]</a></code></li>
-<li>Call <code><a href="Classes/BRAmazonManager.html#/c:objc(cs)BRAmazonManager(im)verifyAmazonAccount:">-[BRAmazonManager verifyAmazonAccount:]</a></code> to ensure the credentials are valid</li>
-<li>If validation succeeds, call <code><a href="Classes/BRAmazonManager.html#/c:objc(cs)BRAmazonManager(im)grabNewAmazonOrders:">-[BRAmazonManager grabNewAmazonOrders:]</a></code></li>
-<li>The callback to this method will return all Amazon order details available since the most recent successful invocation</li>
-</ol>
-
-                        <a href="Classes/BRAmazonManager.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/BRAccountLinkingCredentials.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">BRAmazonManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">BRAccountLinkingCredentials</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BRAmazonManager</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BRAccountLinkingCredentials</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L35-L136">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h#L29-L51">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BRAccountLinkingManager"></a>
+                    <a name="//apple_ref/objc/Class/BRAccountLinkingManager" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BRAccountLinkingManager">BRAccountLinkingManager</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Use this interface to manage users&rsquo; linked retailer accounts for parsing e-receipts. Here is the basic flow:</p>
+
+<ol>
+<li>Implement UI to capture the user&rsquo;s credentials to one or more retailers from the supported list (see <code><a href="Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a></code> enum)</li>
+<li>Store these using <code><a href="Classes/BRAccountLinkingManager.html#/c:objc(cs)BRAccountLinkingManager(im)linkAccountWithCredentials:">-[BRAccountLinkingManager linkAccountWithCredentials:]</a></code></li>
+<li>Call <code><a href="Classes/BRAccountLinkingManager.html#/c:objc(cs)BRAccountLinkingManager(im)grabNewOrdersWithCompletion:">-[BRAccountLinkingManager grabNewOrdersWithCompletion:]</a></code></li>
+<li>The callback to this method will return all order details available since the most recent successful invocation</li>
+</ol>
+
+                        <a href="Classes/BRAccountLinkingManager.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">BRAccountLinkingManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BRAccountLinkingManager</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L35-L128">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -155,7 +203,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L44-L226">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L47-L237">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -165,8 +213,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2020-07-28)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2020-08-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

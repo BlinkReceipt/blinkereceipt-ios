@@ -7,15 +7,23 @@
     <meta charset='utf-8'>
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
-    
+    <style> table {border: thin solid black; border-spacing: 0px} td {border: thin solid black; padding: 5px} </style>
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a name="//apple_ref/objc/Class/BREReceiptManager" class="dashAnchor"></a>
     <a title="BREReceiptManager Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">BlinkEReceipt extension SDK Docs</a></p>
+        <p><a href="../index.html">BlinkEReceipt extension SDK 1.0.4 Docs</a></p>
         <p class="header-right"><a href="https://github.com/BlinkReceipt/blinkereceipt-ios"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -32,6 +40,9 @@
             <a href="../Guides.html">Guides</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../account-linking.html">Account Linking</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../e-receipt-parsing.html">E-Receipt Parsing</a>
               </li>
             </ul>
@@ -40,7 +51,10 @@
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/BRAmazonManager.html">BRAmazonManager</a>
+                <a href="../Classes/BRAccountLinkingCredentials.html">BRAccountLinkingCredentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BRAccountLinkingManager.html">BRAccountLinkingManager</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/BREReceiptManager.html">BREReceiptManager</a>
@@ -51,7 +65,10 @@
             <a href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums/BRAmazonError.html">BRAmazonError</a>
+                <a href="../Enums/BRAccountLinkingError.html">BRAccountLinkingError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/BREReceiptIMAPError.html">BREReceiptIMAPError</a>
@@ -72,21 +89,32 @@
             <h1>BREReceiptManager</h1>
               <div class="declaration">
                 <div class="language">
+                  <p class="aside-title">Objective-C</p>
                   <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">BREReceiptManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                </div>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BREReceiptManager</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                 </div>
               </div>
             <p>This class is the interface to manage e-receipt parsing</p>
 
+              <div class="slightly-smaller">
+                <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L47-L237">Show on GitHub</a>
+              </div>
           </section>
           <section class="section task-group-section">
             <div class="task-group">
               <div class="task-name-container">
                 <a name="/Properties"></a>
                 <a name="//apple_ref/objc/Section/Properties" class="dashAnchor"></a>
-                <a href="#/Properties">
-                  <h3 class="section-name">Properties</h3>
-                </a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Properties"></a>
+                  <h3 class="section-name"><p>Properties</p>
+</h3>
+                </div>
               </div>
               <ul>
                 <li class="item">
@@ -110,7 +138,7 @@ When you have done so, input the Client ID here before attempting to begin the O
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">googleClientId</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">googleClientId</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -120,7 +148,7 @@ When you have done so, input the Client ID here before attempting to begin the O
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L54">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L57">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -146,7 +174,7 @@ When you have done so, input that id here before attempting to begin the OAuth p
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">outlookClientId</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">outlookClientId</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -156,7 +184,7 @@ When you have done so, input that id here before attempting to begin the OAuth p
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L60">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L63">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -181,7 +209,7 @@ When you have done so, input that id here before attempting to begin the OAuth p
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">unsafe_unretained</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">userHasProvider</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">userHasProvider</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -191,7 +219,7 @@ When you have done so, input that id here before attempting to begin the OAuth p
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L65">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L68">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -216,8 +244,7 @@ When you have done so, input that id here before attempting to begin the OAuth p
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">unsafe_unretained</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span>
-    <span class="n"><a href="../Enums/BREReceiptProvider.html">BREReceiptProvider</a></span> <span class="n">currentProvider</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Enums/BREReceiptProvider.html">BREReceiptProvider</a></span> <span class="n">currentProvider</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -227,7 +254,7 @@ When you have done so, input that id here before attempting to begin the OAuth p
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L70">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L73">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -257,8 +284,7 @@ When you have done so, input that id here before attempting to begin the OAuth p
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span>
-    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSDictionary</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">whitelistedSenders</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSDictionary</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">whitelistedSenders</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -268,7 +294,7 @@ When you have done so, input that id here before attempting to begin the OAuth p
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L80">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L83">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -295,7 +321,7 @@ When you have done so, input that id here before attempting to begin the OAuth p
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">unsafe_unretained</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">dayCutoff</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">dayCutoff</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -305,7 +331,45 @@ When you have done so, input that id here before attempting to begin the OAuth p
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L88">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L91">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BREReceiptManager(py)dateCutoff"></a>
+                    <a name="//apple_ref/objc/Property/dateCutoff" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BREReceiptManager(py)dateCutoff">dateCutoff</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property is an alternative to <code><a href="../Classes/BREReceiptManager.html#/c:objc(cs)BREReceiptManager(py)dayCutoff">dayCutoff</a></code> which allows you to set a specific date/time that serves as the boundary of how far back to search.
+  If set, it will override <code><a href="../Classes/BREReceiptManager.html#/c:objc(cs)BREReceiptManager(py)dayCutoff">dayCutoff</a></code></p>
+
+<p>Default: nil</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">dateCutoff</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dateCutoff</span><span class="p">:</span> <span class="kt">Date</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L99">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -331,7 +395,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">userCurrentEmail</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">userCurrentEmail</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -341,7 +405,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L94">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L105">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -352,9 +416,11 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
               <div class="task-name-container">
                 <a name="/Class%20Methods"></a>
                 <a name="//apple_ref/objc/Section/Class Methods" class="dashAnchor"></a>
-                <a href="#/Class%20Methods">
-                  <h3 class="section-name">Class Methods</h3>
-                </a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Class%20Methods"></a>
+                  <h3 class="section-name"><p>Class Methods</p>
+</h3>
+                </div>
               </div>
               <ul>
                 <li class="item">
@@ -389,7 +455,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L100">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L111">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -400,9 +466,11 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
               <div class="task-name-container">
                 <a name="/Methods"></a>
                 <a name="//apple_ref/objc/Section/Methods" class="dashAnchor"></a>
-                <a href="#/Methods">
-                  <h3 class="section-name">Methods</h3>
-                </a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Methods"></a>
+                  <h3 class="section-name"><p>Methods</p>
+</h3>
+                </div>
               </div>
               <ul>
                 <li class="item">
@@ -410,7 +478,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                     <code>
                     <a name="/c:objc(cs)BREReceiptManager(im)beginOAuthForProvider:withViewController:andCompletion:"></a>
                     <a name="//apple_ref/objc/Method/-beginOAuthForProvider:withViewController:andCompletion:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)BREReceiptManager(im)beginOAuthForProvider:withViewController:andCompletion:">-beginOAuthForProvider:withViewController:andCompletion:</a>
+                    <a class="token" href="#/c:objc(cs)BREReceiptManager(im)beginOAuthForProvider:withViewController:andCompletion:">-beginOAuthForProvider:<wbr>withViewController:<wbr>andCompletion:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -484,7 +552,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L115-L117">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L126-L128">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -494,7 +562,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                     <code>
                     <a name="/c:objc(cs)BREReceiptManager(im)storeImapCredentials:andPassword:forProvider:"></a>
                     <a name="//apple_ref/objc/Method/-storeImapCredentials:andPassword:forProvider:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)BREReceiptManager(im)storeImapCredentials:andPassword:forProvider:">-storeImapCredentials:andPassword:forProvider:</a>
+                    <a class="token" href="#/c:objc(cs)BREReceiptManager(im)storeImapCredentials:andPassword:forProvider:">-storeImapCredentials:<wbr>andPassword:<wbr>forProvider:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -503,7 +571,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>For IMAP providers (AOL, Yahoo, Gmail if you prefer to connect to Gmail via IMAP, or a custom IMAP provider) you must store the credentials prior to calling <code><a href="../Classes/BREReceiptManager.html#/c:objc(cs)BREReceiptManager(im)getEReceiptsWithCompletion:">-[BREReceiptManager getEReceiptsWithCompletion:]</a></code>
-  In the case of Gmail, call this function before calling <code>-[BREReceiptManager setupGmailForIMAP:withCompletion:]</code></p>
+  In the case of Gmail, Yahoo, and AOL call this function before calling <code>-[BREReceiptManager setupGmailForIMAP:withCompletion:]</code></p>
 
 <p>Note: For a custom IMAP provider, you must call <code>setCustomIMAPHost:port:useTLS:</code> before calling this method</p>
 
@@ -528,7 +596,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                         <p><code>nil</code> on success, otherwise the error</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L127-L129">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L138-L140">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -538,7 +606,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                     <code>
                     <a name="/c:objc(cs)BREReceiptManager(im)setCustomIMAPHost:port:useTLS:"></a>
                     <a name="//apple_ref/objc/Method/-setCustomIMAPHost:port:useTLS:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)BREReceiptManager(im)setCustomIMAPHost:port:useTLS:">-setCustomIMAPHost:port:useTLS:</a>
+                    <a class="token" href="#/c:objc(cs)BREReceiptManager(im)setCustomIMAPHost:port:useTLS:">-setCustomIMAPHost:<wbr>port:<wbr>useTLS:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -546,7 +614,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>For custom IMAP providers, you must call this method to supply basic information about how to connect to this provider</p>
+                        <p>For custom IMAP providers, you must call this method to supply basic information about how to connect to this provider <em>before</em> you call <code>storeImapCredentials:andPassword:forProvider:</code></p>
 
                       </div>
                       <div class="declaration">
@@ -608,7 +676,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L139-L141">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L150-L152">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -618,7 +686,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                     <code>
                     <a name="/c:objc(cs)BREReceiptManager(im)setupIMAPForProvider:viewController:withCompletion:"></a>
                     <a name="//apple_ref/objc/Method/-setupIMAPForProvider:viewController:withCompletion:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)BREReceiptManager(im)setupIMAPForProvider:viewController:withCompletion:">-setupIMAPForProvider:viewController:withCompletion:</a>
+                    <a class="token" href="#/c:objc(cs)BREReceiptManager(im)setupIMAPForProvider:viewController:withCompletion:">-setupIMAPForProvider:<wbr>viewController:<wbr>withCompletion:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -680,7 +748,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L151-L153">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L162-L164">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -690,7 +758,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                     <code>
                     <a name="/c:objc(cs)BREReceiptManager(im)verifyImapCredentials:"></a>
                     <a name="//apple_ref/objc/Method/-verifyImapCredentials:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)BREReceiptManager(im)verifyImapCredentials:">-verifyImapCredentials:</a>
+                    <a class="token" href="#/c:objc(cs)BREReceiptManager(im)verifyImapCredentials:">-verifyImapCredentials:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -739,7 +807,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L163">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L174">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -749,7 +817,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                     <code>
                     <a name="/c:objc(cs)BREReceiptManager(im)getEReceiptsWithCompletion:"></a>
                     <a name="//apple_ref/objc/Method/-getEReceiptsWithCompletion:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)BREReceiptManager(im)getEReceiptsWithCompletion:">-getEReceiptsWithCompletion:</a>
+                    <a class="token" href="#/c:objc(cs)BREReceiptManager(im)getEReceiptsWithCompletion:">-getEReceiptsWithCompletion:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -757,7 +825,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Attempts to retrieve new (since last check) e-receipts from the stored e-mail account. You must have successfully authenticated an OAuth provider, or stored IMAP credentials prior to calling this method</p>
+                        <p>Attempts to retrieve new (since last check) e-receipts from the stored e-mail account. You must have successfully authenticated an OAuth provider, or stored IMAP credentials (and setup IMAP if necessary) prior to calling this method</p>
 
                       </div>
                       <div class="declaration">
@@ -827,7 +895,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L196">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L207">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -837,7 +905,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                     <code>
                     <a name="/c:objc(cs)BREReceiptManager(im)parseEReceiptFromSender:rawHTML:completion:"></a>
                     <a name="//apple_ref/objc/Method/-parseEReceiptFromSender:rawHTML:completion:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)BREReceiptManager(im)parseEReceiptFromSender:rawHTML:completion:">-parseEReceiptFromSender:rawHTML:completion:</a>
+                    <a class="token" href="#/c:objc(cs)BREReceiptManager(im)parseEReceiptFromSender:rawHTML:completion:">-parseEReceiptFromSender:<wbr>rawHTML:<wbr>completion:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -908,7 +976,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L205-L207">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L216-L218">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -943,7 +1011,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L212">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L223">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -978,7 +1046,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L217">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L228">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -988,7 +1056,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                     <code>
                     <a name="/c:objc(cs)BREReceiptManager(im)openURL:options:provider:"></a>
                     <a name="//apple_ref/objc/Method/-openURL:options:provider:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)BREReceiptManager(im)openURL:options:provider:">-openURL:options:provider:</a>
+                    <a class="token" href="#/c:objc(cs)BREReceiptManager(im)openURL:options:provider:">-openURL:<wbr>options:<wbr>provider:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1015,7 +1083,7 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L222-L224">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L233-L235">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1025,8 +1093,8 @@ Note: It is not guaranteed to be populated on subsequent app runs</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2020-07-28)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2020-08-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

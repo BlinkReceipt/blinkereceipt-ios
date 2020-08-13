@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>BRAmazonError Enumeration Reference</title>
+    <title>BRAccountLinkingError Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
-    
+    <style> table {border: thin solid black; border-spacing: 0px} td {border: thin solid black; padding: 5px} </style>
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/objc/Enum/BRAmazonError" class="dashAnchor"></a>
-    <a title="BRAmazonError Enumeration Reference"></a>
+    <a name="//apple_ref/objc/Enum/BRAccountLinkingError" class="dashAnchor"></a>
+    <a title="BRAccountLinkingError Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">BlinkEReceipt extension SDK Docs</a></p>
+        <p><a href="../index.html">BlinkEReceipt extension SDK 1.0.4 Docs</a></p>
         <p class="header-right"><a href="https://github.com/BlinkReceipt/blinkereceipt-ios"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
       <p id="breadcrumbs">
         <a href="../index.html">BlinkEReceipt extension SDK Reference</a>
         <img id="carat" src="../img/carat.png" />
-        BRAmazonError Enumeration Reference
+        BRAccountLinkingError Enumeration Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -32,6 +40,9 @@
             <a href="../Guides.html">Guides</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../account-linking.html">Account Linking</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../e-receipt-parsing.html">E-Receipt Parsing</a>
               </li>
             </ul>
@@ -40,7 +51,10 @@
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/BRAmazonManager.html">BRAmazonManager</a>
+                <a href="../Classes/BRAccountLinkingCredentials.html">BRAccountLinkingCredentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BRAccountLinkingManager.html">BRAccountLinkingManager</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/BREReceiptManager.html">BREReceiptManager</a>
@@ -51,7 +65,10 @@
             <a href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums/BRAmazonError.html">BRAmazonError</a>
+                <a href="../Enums/BRAccountLinkingError.html">BRAccountLinkingError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/BREReceiptIMAPError.html">BREReceiptIMAPError</a>
@@ -69,24 +86,23 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>BRAmazonError</h1>
+            <h1>BRAccountLinkingError</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">BRAmazonError</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">BRAmazonErrorNone</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="n">BRAmazonErrorNoCredentials</span><span class="p">,</span>
-    <span class="n">BRAmazonErrorInvalidEmail</span><span class="p">,</span>
-    <span class="n">BRAmazonErrorInvalidPassword</span><span class="p">,</span>
-    <span class="n">BRAmazonErrorInvalidCookie</span><span class="p">,</span>
-    <span class="n">BRAmazonErrorVerificationNeeded</span><span class="p">,</span>
-    <span class="n">BRAmazonErrorParsingFail</span><span class="p">,</span>
-    <span class="n">BRAmazonErrorLoginTimeout</span><span class="p">,</span>
-    <span class="n">BRAmazonErroriOS12</span>
-<span class="p">}</span></code></pre>
+                  <p class="aside-title">Objective-C</p>
+                  <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">BRAccountLinkingError</span> <span class="p">{}</span></code></pre>
+
+                </div>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">BRAccountLinkingError</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
 
                 </div>
               </div>
             
+              <div class="slightly-smaller">
+                <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L16-L25">Show on GitHub</a>
+              </div>
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -94,9 +110,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@BRAmazonError@BRAmazonErrorNone"></a>
-                    <a name="//apple_ref/objc/Case/BRAmazonErrorNone" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@BRAmazonError@BRAmazonErrorNone">BRAmazonErrorNone</a>
+                    <a name="/c:@E@BRAccountLinkingError@BRAccountLinkingErrorNone"></a>
+                    <a name="//apple_ref/objc/Case/BRAccountLinkingErrorNone" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@BRAccountLinkingError@BRAccountLinkingErrorNone">BRAccountLinkingErrorNone</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -110,17 +126,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">BRAmazonErrorNone</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">BRAccountLinkingErrorNone</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">errorNone</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="k">none</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -128,9 +144,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@BRAmazonError@BRAmazonErrorNoCredentials"></a>
-                    <a name="//apple_ref/objc/Case/BRAmazonErrorNoCredentials" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@BRAmazonError@BRAmazonErrorNoCredentials">BRAmazonErrorNoCredentials</a>
+                    <a name="/c:@E@BRAccountLinkingError@BRAccountLinkingErrorNoAccountsLinked"></a>
+                    <a name="//apple_ref/objc/Case/BRAccountLinkingErrorNoAccountsLinked" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@BRAccountLinkingError@BRAccountLinkingErrorNoAccountsLinked">BRAccountLinkingErrorNoAccountsLinked</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -144,17 +160,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">BRAmazonErrorNoCredentials</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">BRAccountLinkingErrorNoAccountsLinked</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">errorNoCredentials</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">noAccountsLinked</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -162,9 +178,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@BRAmazonError@BRAmazonErrorInvalidEmail"></a>
-                    <a name="//apple_ref/objc/Case/BRAmazonErrorInvalidEmail" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@BRAmazonError@BRAmazonErrorInvalidEmail">BRAmazonErrorInvalidEmail</a>
+                    <a name="/c:@E@BRAccountLinkingError@BRAccountLinkingErrorVerificationNeeded"></a>
+                    <a name="//apple_ref/objc/Case/BRAccountLinkingErrorVerificationNeeded" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@BRAccountLinkingError@BRAccountLinkingErrorVerificationNeeded">BRAccountLinkingErrorVerificationNeeded</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -178,17 +194,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">BRAmazonErrorInvalidEmail</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">BRAccountLinkingErrorVerificationNeeded</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">errorInvalidEmail</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">verificationNeeded</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -196,9 +212,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@BRAmazonError@BRAmazonErrorInvalidPassword"></a>
-                    <a name="//apple_ref/objc/Case/BRAmazonErrorInvalidPassword" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@BRAmazonError@BRAmazonErrorInvalidPassword">BRAmazonErrorInvalidPassword</a>
+                    <a name="/c:@E@BRAccountLinkingError@BRAccountLinkingErrorVerificationCompleted"></a>
+                    <a name="//apple_ref/objc/Case/BRAccountLinkingErrorVerificationCompleted" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@BRAccountLinkingError@BRAccountLinkingErrorVerificationCompleted">BRAccountLinkingErrorVerificationCompleted</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -212,17 +228,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">BRAmazonErrorInvalidPassword</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">BRAccountLinkingErrorVerificationCompleted</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">errorInvalidPassword</span> <span class="o">=</span> <span class="mi">3</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">verificationCompleted</span> <span class="o">=</span> <span class="mi">3</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -230,9 +246,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@BRAmazonError@BRAmazonErrorInvalidCookie"></a>
-                    <a name="//apple_ref/objc/Case/BRAmazonErrorInvalidCookie" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@BRAmazonError@BRAmazonErrorInvalidCookie">BRAmazonErrorInvalidCookie</a>
+                    <a name="/c:@E@BRAccountLinkingError@BRAccountLinkingErrorNoCredentials"></a>
+                    <a name="//apple_ref/objc/Case/BRAccountLinkingErrorNoCredentials" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@BRAccountLinkingError@BRAccountLinkingErrorNoCredentials">BRAccountLinkingErrorNoCredentials</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -246,17 +262,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">BRAmazonErrorInvalidCookie</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">BRAccountLinkingErrorNoCredentials</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">errorInvalidCookie</span> <span class="o">=</span> <span class="mi">4</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">noCredentials</span> <span class="o">=</span> <span class="mi">4</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -264,9 +280,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@BRAmazonError@BRAmazonErrorVerificationNeeded"></a>
-                    <a name="//apple_ref/objc/Case/BRAmazonErrorVerificationNeeded" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@BRAmazonError@BRAmazonErrorVerificationNeeded">BRAmazonErrorVerificationNeeded</a>
+                    <a name="/c:@E@BRAccountLinkingError@BRAccountLinkingErrorInternal"></a>
+                    <a name="//apple_ref/objc/Case/BRAccountLinkingErrorInternal" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@BRAccountLinkingError@BRAccountLinkingErrorInternal">BRAccountLinkingErrorInternal</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -280,17 +296,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">BRAmazonErrorVerificationNeeded</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">BRAccountLinkingErrorInternal</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">errorVerificationNeeded</span> <span class="o">=</span> <span class="mi">5</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="p">`</span><span class="nv">internal</span><span class="p">`</span> <span class="o">=</span> <span class="mi">5</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -298,9 +314,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@BRAmazonError@BRAmazonErrorParsingFail"></a>
-                    <a name="//apple_ref/objc/Case/BRAmazonErrorParsingFail" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@BRAmazonError@BRAmazonErrorParsingFail">BRAmazonErrorParsingFail</a>
+                    <a name="/c:@E@BRAccountLinkingError@BRAccountLinkingErrorParsingFail"></a>
+                    <a name="//apple_ref/objc/Case/BRAccountLinkingErrorParsingFail" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@BRAccountLinkingError@BRAccountLinkingErrorParsingFail">BRAccountLinkingErrorParsingFail</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -314,17 +330,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">BRAmazonErrorParsingFail</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">BRAccountLinkingErrorParsingFail</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">errorParsingFail</span> <span class="o">=</span> <span class="mi">6</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">parsingFail</span> <span class="o">=</span> <span class="mi">6</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -332,9 +348,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@BRAmazonError@BRAmazonErrorLoginTimeout"></a>
-                    <a name="//apple_ref/objc/Case/BRAmazonErrorLoginTimeout" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@BRAmazonError@BRAmazonErrorLoginTimeout">BRAmazonErrorLoginTimeout</a>
+                    <a name="/c:@E@BRAccountLinkingError@BRAccountLinkingErrorInvalidCredentials"></a>
+                    <a name="//apple_ref/objc/Case/BRAccountLinkingErrorInvalidCredentials" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@BRAccountLinkingError@BRAccountLinkingErrorInvalidCredentials">BRAccountLinkingErrorInvalidCredentials</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -348,51 +364,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">BRAmazonErrorLoginTimeout</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">BRAccountLinkingErrorInvalidCredentials</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">errorLoginTimeout</span> <span class="o">=</span> <span class="mi">7</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidCredentials</span> <span class="o">=</span> <span class="mi">7</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@E@BRAmazonError@BRAmazonErroriOS12"></a>
-                    <a name="//apple_ref/objc/Case/BRAmazonErroriOS12" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@BRAmazonError@BRAmazonErroriOS12">BRAmazonErroriOS12</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">BRAmazonErroriOS12</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">erroriOS12</span> <span class="o">=</span> <span class="mi">8</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BRAmazonManager.h#L">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -402,8 +384,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2020-07-28)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2020-08-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

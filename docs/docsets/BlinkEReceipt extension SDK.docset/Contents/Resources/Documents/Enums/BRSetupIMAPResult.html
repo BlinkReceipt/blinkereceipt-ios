@@ -7,15 +7,23 @@
     <meta charset='utf-8'>
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
-    
+    <style> table {border: thin solid black; border-spacing: 0px} td {border: thin solid black; padding: 5px} </style>
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a name="//apple_ref/objc/Enum/BRSetupIMAPResult" class="dashAnchor"></a>
     <a title="BRSetupIMAPResult Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">BlinkEReceipt extension SDK Docs</a></p>
+        <p><a href="../index.html">BlinkEReceipt extension SDK 1.0.4 Docs</a></p>
         <p class="header-right"><a href="https://github.com/BlinkReceipt/blinkereceipt-ios"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -32,6 +40,9 @@
             <a href="../Guides.html">Guides</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../account-linking.html">Account Linking</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../e-receipt-parsing.html">E-Receipt Parsing</a>
               </li>
             </ul>
@@ -40,7 +51,10 @@
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/BRAmazonManager.html">BRAmazonManager</a>
+                <a href="../Classes/BRAccountLinkingCredentials.html">BRAccountLinkingCredentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BRAccountLinkingManager.html">BRAccountLinkingManager</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/BREReceiptManager.html">BREReceiptManager</a>
@@ -51,7 +65,10 @@
             <a href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums/BRAmazonError.html">BRAmazonError</a>
+                <a href="../Enums/BRAccountLinkingError.html">BRAccountLinkingError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/BREReceiptIMAPError.html">BREReceiptIMAPError</a>
@@ -72,20 +89,20 @@
             <h1>BRSetupIMAPResult</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">BRSetupIMAPResult</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">BRSetupIMAPResultUserCancelled</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="n">BRSetupIMAPResultBadEmail</span><span class="p">,</span>
-    <span class="n">BRSetupIMAPResultBadPassword</span><span class="p">,</span>
-    <span class="n">BRSetupIMAPResultEnabledLSA</span><span class="p">,</span>
-    <span class="n">BRSetupIMAPResultRedirectToSafari</span><span class="p">,</span>
-    <span class="n">BRSetupIMAPResultCreatedAppPassword</span><span class="p">,</span>
-    <span class="n">BRSetupIMAPResultAdminNeeded</span><span class="p">,</span>
-    <span class="n">BRSetupIMAPResultUnknownFailure</span>
-<span class="p">}</span></code></pre>
+                  <p class="aside-title">Objective-C</p>
+                  <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">BRSetupIMAPResult</span> <span class="p">{}</span></code></pre>
+
+                </div>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">BRSetupIMAPResult</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
 
                 </div>
               </div>
             
+              <div class="slightly-smaller">
+                <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L33-L42">Show on GitHub</a>
+              </div>
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -119,7 +136,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -153,7 +170,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -187,7 +204,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -221,7 +238,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -255,7 +272,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -289,7 +306,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -323,7 +340,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -357,7 +374,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.3/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/1.0.4/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -367,8 +384,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2020-07-28)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2020-08-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
