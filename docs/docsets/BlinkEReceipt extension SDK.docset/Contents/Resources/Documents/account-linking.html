@@ -16,7 +16,7 @@
     <a title="Account Linking  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">BlinkEReceipt extension SDK 1.0.4 Docs</a></p>
+        <p><a href="index.html">BlinkEReceipt extension SDK 2.0.0 Docs</a></p>
         <p class="header-right"><a href="https://github.com/BlinkReceipt/blinkereceipt-ios"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right">
           <form role="search" action="search.json">
@@ -94,41 +94,41 @@
 <li>Collect the user&rsquo;s credentials for a given retailer using your own UI</li>
 <li>Create a new <code><a href="Classes/BRAccountLinkingCredentials.html">BRAccountLinkingCredentials</a></code> object and populate the properties accordingly:</li>
 </ul>
-<pre class="highlight plaintext"><code>BRAccountLinkingCredentials *creds = [BRAccountLinkingCredentials  new];
+<pre class="highlight objective_c"><code><span class="n">BRAccountLinkingCredentials</span> <span class="o">*</span><span class="n">creds</span> <span class="o">=</span> <span class="p">[</span><span class="n">BRAccountLinkingCredentials</span>  <span class="nf">new</span><span class="p">];</span>
 
-creds.username = @"user@domain.com";
-creds.password = @"secure-password";
-creds.retailer = BRAccountLinkingRetailerTarget; //set to the retailer you're linking
+<span class="n">creds</span><span class="p">.</span><span class="n">username</span> <span class="o">=</span> <span class="s">@"user@domain.com"</span><span class="p">;</span>
+<span class="n">creds</span><span class="p">.</span><span class="n">password</span> <span class="o">=</span> <span class="s">@"secure-password"</span><span class="p">;</span>
+<span class="n">creds</span><span class="p">.</span><span class="n">retailer</span> <span class="o">=</span> <span class="n">BRAccountLinkingRetailerTarget</span><span class="p">;</span> <span class="c1">//set to the retailer you're linking</span>
 </code></pre>
 
 <ul>
 <li>Link the account:</li>
 </ul>
-<pre class="highlight plaintext"><code>[[BRAccountLinkingManager  shared] linkAccountWithCredentials:creds];
+<pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">BRAccountLinkingManager</span>  <span class="nf">shared</span><span class="p">]</span> <span class="nf">linkAccountWithCredentials</span><span class="p">:</span><span class="n">creds</span><span class="p">];</span>
 </code></pre>
 
 <ul>
 <li>Verify the account:</li>
 </ul>
-<pre class="highlight plaintext"><code>[[BRAccountLinkingManager shared] verifyAccountForRetailer:BRAccountLinkingRetailerTarget
-                                            withCompletion:^(BRAccountLinkingError error, UIViewController * _Nonnull vc) {
-    if (error == BRAccountLinkingErrorNone) {
-        NSLog(@"Successfully linked account!");
-    }
-}];
+<pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">BRAccountLinkingManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">verifyAccountForRetailer</span><span class="p">:</span><span class="n">BRAccountLinkingRetailerTarget</span>
+                                            <span class="nf">withCompletion</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">BRAccountLinkingError</span> <span class="n">error</span><span class="p">,</span> <span class="n">UIViewController</span> <span class="o">*</span> <span class="n">_Nonnull</span> <span class="n">vc</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="n">BRAccountLinkingErrorNone</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">NSLog</span><span class="p">(</span><span class="s">@"Successfully linked account!"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}];</span>
 </code></pre>
 
 <ul>
 <li>The above steps need to be completed only once. Afterwards, you can retrieve new messages as follows:</li>
 </ul>
-<pre class="highlight plaintext"><code>[[BRAccountLinkingManager shared] grabNewOrdersWithCompletion:^(BRAccountLinkingRetailer retailer,
-                                                                BRScanResults * _Nonnull results,
-                                                                NSInteger ordersRemainingInAccount,
-                                                                UIViewController * _Nonnull verificationViewController,
-                                                                BRAccountLinkingError error) {
+<pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">BRAccountLinkingManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">grabNewOrdersWithCompletion</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">BRAccountLinkingRetailer</span> <span class="n">retailer</span><span class="p">,</span>
+                                                                <span class="n">BRScanResults</span> <span class="o">*</span> <span class="n">_Nonnull</span> <span class="n">results</span><span class="p">,</span>
+                                                                <span class="n">NSInteger</span> <span class="n">ordersRemainingInAccount</span><span class="p">,</span>
+                                                                <span class="n">UIViewController</span> <span class="o">*</span> <span class="n">_Nonnull</span> <span class="n">verificationViewController</span><span class="p">,</span>
+                                                                <span class="n">BRAccountLinkingError</span> <span class="n">error</span><span class="p">)</span> <span class="p">{</span>
 
-    NSLog(@"%ld orders remaining for retailer %@", (long)ordersRemainingInAccount, [BRAccountLinkingCredentials nameForRetailer:retailer);
-}];
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"%ld orders remaining for retailer %@"</span><span class="p">,</span> <span class="p">(</span><span class="kt">long</span><span class="p">)</span><span class="n">ordersRemainingInAccount</span><span class="p">,</span> <span class="p">[</span><span class="n">BRAccountLinkingCredentials</span> <span class="nf">nameForRetailer</span><span class="p">:</span><span class="n">retailer</span><span class="p">)</span><span class="err">;</span>
+<span class="p">}];</span>
 </code></pre>
 
 <blockquote>
@@ -148,22 +148,22 @@ creds.retailer = BRAccountLinkingRetailerTarget; //set to the retailer you're li
 <li><p><code>BRAccountLinkingErrorVerificationCompleted</code> indicates that the user successfully authenticated and you should now dismiss the view controller (note that the <code>UIViewController</code> callback parameter will be <code>nil</code> in this case but you do not need it to dismiss a presented modal, simply call, e.g. <code>[self  dismissViewControllerAnimated:YES completion:nil];</code>)</p></li>
 <li><p>Here is an example:</p></li>
 </ul>
-<pre class="highlight plaintext"><code>[[BRAccountLinkingManager shared] grabNewOrdersWithCompletion:^(BRAccountLinkingRetailer retailer,
-                                                                BRScanResults *results,
-                                                                NSInteger ordersRemainingInAccount,
-                                                                UIViewController *verificationViewController,
-                                                                BRAccountLinkingError error) {
+<pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">BRAccountLinkingManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">grabNewOrdersWithCompletion</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">BRAccountLinkingRetailer</span> <span class="n">retailer</span><span class="p">,</span>
+                                                                <span class="n">BRScanResults</span> <span class="o">*</span><span class="n">results</span><span class="p">,</span>
+                                                                <span class="n">NSInteger</span> <span class="n">ordersRemainingInAccount</span><span class="p">,</span>
+                                                                <span class="n">UIViewController</span> <span class="o">*</span><span class="n">verificationViewController</span><span class="p">,</span>
+                                                                <span class="n">BRAccountLinkingError</span> <span class="n">error</span><span class="p">)</span> <span class="p">{</span>
 
-            if (error == BRAccountLinkingErrorVerificationNeeded) {
-                [self presentViewController:verificationViewController animated:YES completion:nil];
+            <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="n">BRAccountLinkingErrorVerificationNeeded</span><span class="p">)</span> <span class="p">{</span>
+                <span class="p">[</span><span class="n">self</span> <span class="nf">presentViewController</span><span class="p">:</span><span class="n">verificationViewController</span> <span class="nf">animated</span><span class="p">:</span><span class="nb">YES</span> <span class="n">completion</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
 
-            } else if (error == BRAccountLinkingErrorVerificationCompleted) {
-                [self dismissViewControllerAnimated:YES completion:nil];
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="n">BRAccountLinkingErrorVerificationCompleted</span><span class="p">)</span> <span class="p">{</span>
+                <span class="p">[</span><span class="n">self</span> <span class="nf">dismissViewControllerAnimated</span><span class="p">:</span><span class="nb">YES</span> <span class="nf">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
 
-            } else {
-                //handle other errors + success case
-            }
-}];
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="c1">//handle other errors + success case</span>
+            <span class="p">}</span>
+<span class="p">}];</span>
 </code></pre>
 
 <p>If you have multiple accounts linked, it is theoretically possible that you will get multiple callbacks requiring user interaction, and you should stage these appropriately (i.e. queue them up and display one at a time).</p>
