@@ -33,7 +33,6 @@ After editing your Podfile, run `pod install` and then make sure to open the `.x
 ### Cartfile
 ```
 binary "https://raw.githubusercontent.com/BlinkReceipt/blinkereceipt-ios/master/BlinkEReceiptStatic.json" ~> 1.0
-binary "https://raw.githubusercontent.com/BlinkReceipt/BRMailCore/master/BRMailCore.json" ~> 0.0.3
 ```
 
 After editing your `Cartfile`, run `carthage update` and then add the frameworks to your project as described in the Quick Start above.
@@ -43,9 +42,8 @@ After editing your `Cartfile`, run `carthage update` and then add the frameworks
 If you do not use a dependency manager:
 
 - Download the latest BlinkEReceipt release from https://github.com/BlinkReceipt/blinkereceipt-ios/releases
-- Download the latest BRMailCore release from https://github.com/BlinkReceipt/BRMailCore/releases
-- Unzip and drag `BlinkEReceiptStatic.framework` and `MailCore.framework` into your XCode project
-- In your target's settings, in the General tab, scroll down to `Frameworks, Libraries, and Embedded Content` and change the `Embed` value for `BlinkEReceiptStatic.framework` and `MailCore.framework` to `Embed & Sign`
+- Unzip and drag `BlinkEReceiptStatic.framework` into your XCode project
+- In your target's settings, in the General tab, scroll down to `Frameworks, Libraries, and Embedded Content` and change the `Embed` value for `BlinkEReceiptStatic.framework` to `Embed & Sign`
 
 ## Duplicate Symbol Warning
 
