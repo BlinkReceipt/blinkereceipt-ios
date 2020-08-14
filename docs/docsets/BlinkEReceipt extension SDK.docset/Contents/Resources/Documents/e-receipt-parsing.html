@@ -183,9 +183,21 @@
 <li><p>Add an array key to your app&rsquo;s <code>Info.plist</code> file called <code>LSApplicationQueriesSchemes</code> and add 2 string values to it: <code>msauthv2</code> and <code>msauthv3</code></p></li>
 <li><p>Add a Keychain Group to your target (in your target&rsquo;s settings under Signing &amp; Capabilities -&gt; Keychain Sharing in XCode) named <code>com.microsoft.adalcache</code></p></li>
 </ul>
-<h2 id='yahoo-amp-aol-imap-integration' class='heading'>Yahoo &amp; AOL (IMAP Integration)</h2>
+<h2 id='yahoo-aol-gmail-imap-integration' class='heading'>Yahoo, AOL, Gmail (IMAP Integration)</h2>
 
-<p>In order to connect to Yahoo or AOL via IMAP, a user must create an &ldquo;app password&rdquo; (which is different than their regular account password). Our SDK automates this process for you:</p>
+<p>In order to connect to Yahoo or AOL via IMAP, or to connect to Gmail via IMAP (if the SDK integration above is not possible), some additional setup is required in the user&rsquo;s respective email account:</p>
+
+<ul>
+<li><p>For Yahoo/AOL, a user must create an &ldquo;App Password&rdquo; (which is different than their regular account password). </p></li>
+<li><p>For Gmail, there are 2 ways that a user can access their account through IMAP:</p>
+
+<ol>
+<li>If they have a special setting called &ldquo;Less Secure Apps&rdquo; enabled <strong>-OR-</strong></li>
+<li>If they generate an &ldquo;Application Password&rdquo; and use that to authenticate</li>
+</ol></li>
+</ul>
+
+<p>Our SDK attempts to automate this setup for all providers &ldquo;behind the scenes&rdquo;:</p>
 
 <ul>
 <li>Create your own UI to collect the user&rsquo;s email and regular account password, and set these values into the corresponding properties in the SDK:</li>
@@ -196,16 +208,17 @@
 </code></pre>
 
 <ul>
-<li>Then call the special IMAP setup method which will attempt to login to the user&rsquo;s account behind the scenes and create an app password:</li>
+<li>Then call the special IMAP setup method which will attempt to login to the user&rsquo;s account create an App Password (or in the case of Gmail, determine if Less Secure Apps is already enabled):</li>
 </ul>
 <pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">BREReceiptManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">setupIMAPForProvider</span><span class="p">:</span><span class="n">BREReceiptProviderYahoo</span>
                                   <span class="nf">viewController</span><span class="p">:</span><span class="n">self</span>
                                   <span class="n">withCompletion</span><span class="o">:^</span><span class="p">(</span><span class="n">BRSetupIMAPResult</span> <span class="n">result</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="n">result</span> <span class="o">==</span> <span class="n">BRSetupIMAPResultCreatedAppPassword</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">NSLog</span><span class="p">(</span><span class="s">@"Successfully created app password!"</span><span class="p">);</span>
+        <span class="n">NSLog</span><span class="p">(</span><span class="s">@"Successfully created app password."</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">result</span> <span class="o">==</span> <span class="n">BRSetupIMAPResultEnabledLSA</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">NSLog</span><span class="p">(</span><span class="s">@"Successfully enabled Gmail Less Secure Apps."</span><span class="p">);</span>
     <span class="p">}</span>
-
 <span class="p">}];</span>
 </code></pre>
 
@@ -222,6 +235,21 @@
 
 <span class="p">}];</span>
 </code></pre>
+<h2 id='custom-imap-server-integration' class='heading'>Custom IMAP server integration</h2>
+
+<p>If you would like to connect to an email provider through IMAP other than the ones supported out of the box, you may do so by setting the IMAP server details <em>before</em> you store credentials, which is then passed the special <code>BREReceiptProviderCustomIMAP</code> value:</p>
+<pre class="highlight objective_c"><code><span class="n">NSString</span> <span class="o">*</span><span class="n">host</span> <span class="o">=</span> <span class="s">@"imap.myserver.com"</span><span class="p">;</span>
+<span class="n">NSInteger</span> <span class="n">port</span> <span class="o">=</span> <span class="mi">993</span><span class="p">;</span>
+<span class="n">BOOL</span> <span class="n">useTLS</span> <span class="o">=</span> <span class="nb">YES</span><span class="p">;</span>
+
+<span class="p">[[</span><span class="n">BREReceiptManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">setCustomIMAPHost</span><span class="p">:</span><span class="n">host</span> <span class="nf">port</span><span class="p">:</span><span class="n">port</span> <span class="n">useTLS</span><span class="o">:</span><span class="n">useTLS</span><span class="p">];</span>
+
+<span class="p">[[</span><span class="n">BREReceiptManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">storeImapCredentials</span><span class="p">:</span><span class="n">email</span> <span class="nf">andPassword</span><span class="p">:</span><span class="n">pass</span> <span class="n">forProvider</span><span class="o">:</span><span class="n">BREReceiptProviderCustomIMAP</span><span class="p">];</span>
+</code></pre>
+
+<blockquote>
+<p>Note: For a custom IMAP server, you do not need to (and should not) call <code>setupIMAPForProvider:viewController:withCompletion:</code></p>
+</blockquote>
 <h2 id='retrieving-and-parsing-e-receipts' class='heading'>Retrieving and Parsing E-Receipts</h2>
 
 <p>Once you have successfully integrated one or more mail providers, and the user has successfully authenticated their account, you can begin retrieving and parsing e-receipts as follows:</p>
@@ -252,7 +280,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2020-08-13)</p>
+          <p>&copy; 2020 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2020-08-14)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
