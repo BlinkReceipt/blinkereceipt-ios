@@ -1,3 +1,6 @@
+# 2.0.1
+- Automatic migration of Amazon credentials for existing users to Account Linking
+
 # 2.0.0
 - Beta release of Account Linking
 - Incorporate Amazon parsing into Account Linking
