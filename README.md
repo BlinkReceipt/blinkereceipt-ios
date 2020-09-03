@@ -42,8 +42,8 @@ After editing your `Cartfile`, run `carthage update` and then add the frameworks
 If you do not use a dependency manager:
 
 - Download the latest BlinkEReceipt release from https://github.com/BlinkReceipt/blinkereceipt-ios/releases
-- Unzip and drag `BlinkEReceiptStatic.framework` into your XCode project
-- In your target's settings, in the General tab, scroll down to `Frameworks, Libraries, and Embedded Content` and change the `Embed` value for `BlinkEReceiptStatic.framework` to `Embed & Sign`
+- Unzip and drag `BlinkEReceiptStatic.framework`, `AccountLinking.framework` and `MailCore.framework` into your XCode project
+- In your target's settings, in the General tab, scroll down to `Frameworks, Libraries, and Embedded Content` and change the `Embed` value for all of these frameworks to `Embed & Sign`
 
 ## Duplicate Symbol Warning
 

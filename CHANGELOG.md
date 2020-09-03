@@ -1,3 +1,9 @@
+# 2.0.2
+- Make Gmail IMAP setup more reliable
+- Handle Amazon UK 2FA authentication
+- Fix bug in verification of Amazon credentials
+- Fix bug retrieving user email after Outlook authentication
+
 # 2.0.1
 - Automatic migration of Amazon credentials for existing users to Account Linking
 
