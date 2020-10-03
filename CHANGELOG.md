@@ -1,3 +1,10 @@
+# 2.1.0
+- Support day & date cutoff for Account Linking
+- Populate `BRScanResults.eReceiptEmailId` property correctly to enable deduplication of emails across multiple devices, or app uninstalls/reinstalls
+- Add `BRScanResults.eReceiptOrderStatus` property
+- Fix crash for existing AOL/Yahoo IMAP users migrating to new version
+- Add `BREReceiptManager.senderWhitelist` property to restrict e-receipt senders that are searched for, and speed up processing
+
 # 2.0.2
 - Make Gmail IMAP setup more reliable
 - Handle Amazon UK 2FA authentication

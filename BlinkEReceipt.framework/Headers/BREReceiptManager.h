@@ -72,16 +72,6 @@ typedef NS_ENUM(NSUInteger, BRSetupIMAPResult) {
  */
 @property (nonatomic) BREReceiptProvider currentProvider;
 
-/**
- *  Debug property to enable other sender emails to be parsed as ereceipts.
- *  Each element in this array should be a dictionary with the following keys:
- *
- *  `email` - The e-mail address to whitelist
- *
- *  `merchant` - The merchant to use for parsing emails from this sender. Values are: Peapod, Walmart, Target, Instacart, Jet, Costco, SamsClub
- */
-@property (strong, nonatomic) NSArray<NSDictionary*> *whitelistedSenders;
-
 
 /**
  *  How far back (in days) to search the user's inbox for e-receipts
@@ -103,6 +93,12 @@ typedef NS_ENUM(NSUInteger, BRSetupIMAPResult) {
  *  Note: It is not guaranteed to be populated on subsequent app runs
  */
 @property (strong, nonatomic) NSString *userCurrentEmail;
+
+/**
+ *  If populated, only senders in this list will be searched for e-receipts. Note: This array must be a subset of the supported e-receipt senders, which can be found at https://ereceipts.blinkreceipt.com
+ *  Default: nil
+ */
+@property (strong, nonatomic) NSArray<NSString*> *senderWhitelist;
 
 ///---------------------
 /// @name Class Methods

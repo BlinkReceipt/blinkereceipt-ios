@@ -376,7 +376,7 @@
 		</data>
 		<key>Headers/BREReceiptManager.h</key>
 		<data>
-		98rPkdC3q0IkBVmTY7j2K9NxOfY=
+		fAUnf/mJco+rgyDZOp8czkjkiV0=
 		</data>
 		<key>Headers/BlinkEReceipt.h</key>
 		<data>
@@ -384,7 +384,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		mHu5Kp7O13yPHlwne28TNZAycHc=
+		LwmnxNWDJkCdj7z6GtEEmk+6UH0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -968,11 +968,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			98rPkdC3q0IkBVmTY7j2K9NxOfY=
+			fAUnf/mJco+rgyDZOp8czkjkiV0=
 			</data>
 			<key>hash2</key>
 			<data>
-			b0ifpw+pqlae2G8d7c8VoP52fXNgEgCwgrZVaD2JRIw=
+			Bi2YtZ52++GegL3Y7Du/G6fH+cSedpa3ot5jOyZBXyU=
 			</data>
 		</dict>
 		<key>Headers/BlinkEReceipt.h</key>
