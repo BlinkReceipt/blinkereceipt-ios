@@ -31,48 +31,62 @@
     {
       "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 19,
-      "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerTarget",
+      "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerShipt",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 20,
-      "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerWalgreens",
+      "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerStarbucks",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 21,
-      "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerWalmart",
+      "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerTarget",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 22,
-      "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerWalmartGrocery",
+      "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerWalgreens",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 23,
+      "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerWalmart",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "line": 24,
+      "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerWalmartGrocery",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "line": 25,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerWegmans",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
-      "line": 37,
+      "line": 39,
       "symbol": "BRAccountLinkingCredentials.password",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
-      "line": 39,
+      "line": 41,
       "symbol": "BRAccountLinkingCredentials.retailer",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
