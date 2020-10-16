@@ -100,6 +100,12 @@ typedef NS_ENUM(NSUInteger, BRSetupIMAPResult) {
  */
 @property (strong, nonatomic) NSArray<NSString*> *senderWhitelist;
 
+/**
+ *  Controls whether or not to aggregate all emails relating to a given e-receipt order (such as shipping status updates) in the results structure
+ *  Default: NO
+*/
+@property (nonatomic) BOOL aggregateResults;
+
 ///---------------------
 /// @name Class Methods
 ///---------------------

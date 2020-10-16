@@ -1,3 +1,7 @@
+# 2.2.0
+- E-receipt aggregation mode
+- Add Shipt and Starbucks to Account Linking
+
 # 2.1.0
 - Support day & date cutoff for Account Linking
 - Populate `BRScanResults.eReceiptEmailId` property correctly to enable deduplication of emails across multiple devices, or app uninstalls/reinstalls
