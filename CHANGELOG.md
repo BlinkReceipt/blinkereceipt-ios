@@ -1,3 +1,6 @@
+# 2.3.0
+- Account linking login improvements
+
 # 2.2.0
 - E-receipt aggregation mode
 - Add Shipt and Starbucks to Account Linking
