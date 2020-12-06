@@ -1,3 +1,13 @@
+# 2.4.0
+- Fix bug detecting the end of 2FA enrollment for Gmail setup
+- Add main SDK version check for standalone build
+- Fix bug for certain IMAP accounts failing to return results
+- Fix retain cycle in Outlook authentication provider via private fork
+- Enable testing of e-receipt scraping using arbitrary senders
+- Add `searchUntilDate` property to restrict e-reeipt scraping to specific window
+- Fix bug displaying Amazon login page to users in case of verification needed
+- Support new Prime Now order detail format
+
 # 2.3.0
 - Account linking login improvements
 

@@ -112,6 +112,7 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
 /**
  *  Grab new orders across all linked accounts
  *  @note If there is more than one account linked, they will be searched in parallel, so to determine when the whole process is done, you should wait until you get a callback indicating 0 orders remaining for every linked account
+ *  @note You must have a valid license key set in `[BRScanManager sharedManager].licenseKey` as well as a valid prod intel key set in `[BRScanManager sharedManager].prodIntelKey` in order to receive any results
  *  @param completion Callback will be executed as soon as each order is ready to be returned
  *
  *      * `BRAccountLinkingRetailer retailer` - the retailer for this order

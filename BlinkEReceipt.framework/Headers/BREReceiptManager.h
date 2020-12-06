@@ -89,16 +89,23 @@ typedef NS_ENUM(NSUInteger, BRSetupIMAPResult) {
 @property (strong, nonatomic) NSDate *dateCutoff;
 
 /**
+ *  This property works in tandem with `dateCutoff` and allows you to set the later boundary (i.e. until when) for the search period
+ *
+ *  Default: nil
+ */
+@property (strong, nonatomic) NSDate *searchUntilDate;
+
+/**
  *  If the OAuth provider supports returning the logged-in email, it will be populated into this property after OAuth or silent authentications
  *  Note: It is not guaranteed to be populated on subsequent app runs
  */
 @property (strong, nonatomic) NSString *userCurrentEmail;
 
 /**
- *  If populated, only senders in this list will be searched for e-receipts. Note: This array must be a subset of the supported e-receipt senders, which can be found at https://ereceipts.blinkreceipt.com
+ *  If populated, the keys in this dictionary will be used as the senders to search the user's inbox for, and the corresponding values will be used as the merchant sender address for parsing purposes
  *  Default: nil
  */
-@property (strong, nonatomic) NSArray<NSString*> *senderWhitelist;
+@property (strong, nonatomic) NSDictionary<NSString*, NSString*> *senderWhitelist;
 
 /**
  *  Controls whether or not to aggregate all emails relating to a given e-receipt order (such as shipping status updates) in the results structure
@@ -177,6 +184,7 @@ typedef NS_ENUM(NSUInteger, BRSetupIMAPResult) {
 
 /**
  *  Attempts to retrieve new (since last check) e-receipts from the stored e-mail account. You must have successfully authenticated an OAuth provider, or stored IMAP credentials (and setup IMAP if necessary) prior to calling this method
+ *  @note You must have a valid license key set in `[BRScanManager sharedManager].licenseKey` as well as a valid prod intel key set in `[BRScanManager sharedManager].prodIntelKey` in order to receive any results
  *
  *  @param completion   The completion function will be invoked when e-receipt parsing has completed.
  *
