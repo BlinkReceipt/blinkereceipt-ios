@@ -1,5 +1,5 @@
 # 2.4.0
-- Fix bug detecting the end of 2FA enrollment for Gmail setup
+- Fix bug detecting the end of 2FA enrollment for Gmail IMAP setup
 - Add main SDK version check for standalone build
 - Fix bug for certain IMAP accounts failing to return results
 - Fix retain cycle in Outlook authentication provider via private fork
