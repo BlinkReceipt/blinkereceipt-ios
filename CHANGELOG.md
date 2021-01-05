@@ -1,3 +1,6 @@
+# 2.4.1
+- Support internal interface changes in BlinkReceipt SDK v1.15.0
+
 # 2.4.0
 - Fix bug detecting the end of 2FA enrollment for Gmail IMAP setup
 - Add main SDK version check for standalone build
