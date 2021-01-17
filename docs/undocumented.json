@@ -155,6 +155,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h",
+      "line": 26,
+      "symbol": "BRAccountLinkingError.BRAccountLinkingErrorRetailerNotFound",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
       "line": 16,
       "symbol": "BREReceiptProvider.BREReceiptProviderNone",
