@@ -22,7 +22,8 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
     BRAccountLinkingErrorNoCredentials,
     BRAccountLinkingErrorInternal,
     BRAccountLinkingErrorParsingFail,
-    BRAccountLinkingErrorInvalidCredentials
+    BRAccountLinkingErrorInvalidCredentials,
+    BRAccountLinkingErrorRetailerNotFound
 };
 
 /**
@@ -126,6 +127,16 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
                                              NSInteger ordersRemainingInAccount,
                                              UIViewController * _Nullable verificationViewController,
                                              BRAccountLinkingError error))completion;
+
+/**
+ *  Same as above except allows you to grab orders only for a single retailer
+ */
+- (void)grabNewOrdersForRetailer:(BRAccountLinkingRetailer)retailer
+                  withCompletion:(void(^)(BRAccountLinkingRetailer retailer,
+                                          BRScanResults * _Nullable results,
+                                          NSInteger ordersRemainingInAccount,
+                                          UIViewController * _Nullable verificationViewController,
+                                          BRAccountLinkingError error))completion;
 
 @end
 

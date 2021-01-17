@@ -1,3 +1,8 @@
+# 2.5.0
+- Add method in `BRAccountLinkingManager` to grab orders for a specific retailer
+- Fix bug using incorrect date serialization for computing e-receipt parsing cutoff date
+- Fix bug passing back incorrect `ordersRemaining` property in account linking callback
+
 # 2.4.1
 - Support internal interface changes in BlinkReceipt SDK v1.15.0
 
