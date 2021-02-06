@@ -10,13 +10,25 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+//lowes, best buy, kohls, csv, chewy, sephora, macys, staples, grubhub
+
 ///
 typedef NS_ENUM(NSUInteger, BRAccountLinkingRetailer) {
     BRAccountLinkingRetailerAmazon = 8643,
+    BRAccountLinkingRetailerBestBuy = 177,
+    BRAccountLinkingRetailerCVS = 3,
+    BRAccountLinkingRetailerChewy = 9947,
+    BRAccountLinkingRetailerGrubhub = 10208,
+    BRAccountLinkingRetailerHomeDepot = 15,
     BRAccountLinkingRetailerInstacart = 8652,
+    BRAccountLinkingRetailerKohls = 5929,
     BRAccountLinkingRetailerKroger = 6,
+    BRAccountLinkingRetailerLowes = 16,
+    BRAccountLinkingRetailerMacys = 6802,
     BRAccountLinkingRetailerPublix = 7,
+    BRAccountLinkingRetailerSephora = 171,
     BRAccountLinkingRetailerShipt = 9016,
+    BRAccountLinkingRetailerStaples = 12,
     BRAccountLinkingRetailerStarbucks = 6677,
     BRAccountLinkingRetailerTarget = 1,
     BRAccountLinkingRetailerWalgreens = 10,

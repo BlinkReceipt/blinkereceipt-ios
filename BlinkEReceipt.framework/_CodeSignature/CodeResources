@@ -368,7 +368,7 @@
 		</dict>
 		<key>Headers/BRAccountLinkingCredentials.h</key>
 		<data>
-		iRvU7QR0236juBbm4+7aq0QZWFs=
+		jLoq+WyW8MePlCyVKrZKWyC6+OQ=
 		</data>
 		<key>Headers/BRAccountLinkingManager.h</key>
 		<data>
@@ -384,7 +384,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		BmjGCNnOvDVuAW9MlV8SBEAhn/M=
+		HgNO7OIRx/hFZDIjWy621+QXtXY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -946,11 +946,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			iRvU7QR0236juBbm4+7aq0QZWFs=
+			jLoq+WyW8MePlCyVKrZKWyC6+OQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			iEqwF2f2RVwl/L91gtugp9S4F+SL3UZ2QmrG3Q81n6A=
+			RyK9VlAs4V6v5BhDNV6ZsvhGaKUoTbL/lfCL5IUqlyU=
 			</data>
 		</dict>
 		<key>Headers/BRAccountLinkingManager.h</key>

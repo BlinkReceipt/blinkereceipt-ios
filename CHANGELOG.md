@@ -1,3 +1,14 @@
+# 2.6.0
+- Fix date formatting issue in cutoff date for Gmail and Outlook SDK integrations
+- Detect CAPTCHA page in Yahoo IMAP setup
+- Account Linking: Fix wrong # remaining in `grabNewOrdersWithCompletion:` callback
+- Account Linking: Add method to grab orders for a single account
+- Account Linking: Fix duplicate data bug
+- Account Linking: Better support for parsing subtotal + taxes
+- Account Linking: Add many additional retailers
+- Account Linking: Fix bug when encountering CAPTCHA during Walmart login
+- Account Linking: Improved login speed for most retailers
+
 # 2.5.0
 - Add method in `BRAccountLinkingManager` to grab orders for a specific retailer
 - Fix bug using incorrect date serialization for computing e-receipt parsing cutoff date
