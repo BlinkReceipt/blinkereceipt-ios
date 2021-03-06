@@ -95,6 +95,11 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
 - (NSArray<NSNumber*>*)getLinkedRetailers;
 
 /**
+ *  Resets order history for a particular retailer
+ */
+- (void)resetHistoryForRetailer:(BRAccountLinkingRetailer)retailer;
+
+/**
  *  Resets order history for all linked accounts
  */
 - (void)resetHistory;
@@ -102,13 +107,15 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
 /**
  *  Unlink a retailer online account
  *  @param retailer The retailer for which to unlink the account
+ *  @param completion Unlinking an account involves async operations involving cookies, so this completion indicates when those operations have completed
  */
-- (void)unlinkAccountForRetailer:(BRAccountLinkingRetailer)retailer;
+- (void)unlinkAccountForRetailer:(BRAccountLinkingRetailer)retailer withCompletion:(void(^)(void))completion;
 
 /**
  *  Unlink all accounts
+ *  @param completion Unlinking accounts involves async operations involving cookies, so this completion indicates when those operations have completed
  */
-- (void)unlinkAllAccounts;
+- (void)unlinkAllAccountsWithCompletion:(void(^)(void))completion;
 
 /**
  *  Grab new orders across all linked accounts

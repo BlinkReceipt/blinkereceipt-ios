@@ -192,7 +192,7 @@ typedef NS_ENUM(NSUInteger, BRSetupIMAPResult) {
  *
  *          * `BRScanResults.total`
  *          * `BRScanResults.receiptDate`
- *          * `BRScanResults.ereceiptOrderNum`
+ *          * `BRScanResults.ereceiptOrderNumber`
  *
  *          For products in an e-receipt, you can expect the following properties to be populated:
  *

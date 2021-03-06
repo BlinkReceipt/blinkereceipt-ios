@@ -1,3 +1,11 @@
+# 2.7.0
+- Rename `ereceiptOrderNum` -> `ereceiptOrderNumber` for consistency with Android
+- Add `ereceiptEmailProvider` property
+- Account Linking: add new retailers
+- Account Linking: add method to reset history for individual retailers
+- Account Linking: fix to OTA update process
+- Account Linking: unlinking methods are now asynchronous to properly account for removal of cookies
+
 # 2.6.0
 - Fix date formatting issue in cutoff date for Gmail and Outlook SDK integrations
 - Detect CAPTCHA page in Yahoo IMAP setup
