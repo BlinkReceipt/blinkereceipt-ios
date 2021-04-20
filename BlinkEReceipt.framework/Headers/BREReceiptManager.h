@@ -216,6 +216,7 @@ typedef NS_ENUM(NSUInteger, BRSetupIMAPResult) {
  */
 - (void)getEReceiptsWithCompletion:(void(^)(NSArray<BRScanResults*> *receipts, NSError *error))completion;
 
+
 /**
 *  For debugging the parsing of e-receipt HTML
 *

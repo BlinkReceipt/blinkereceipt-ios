@@ -1,3 +1,9 @@
+# 2.8.1
+- Add new e-receipt properties: `ereceiptEmailSubject`, `ereceiptMerchantEmail`, `ereceiptShippingCosts`, `currencyCode`
+- Internal logging to capture unexpected date formats in email headers
+- Support parsing Amazon e-gift cards
+- Fix Yahoo/AOL IMAP setup
+
 # 2.7.0
 - Rename `ereceiptOrderNum` -> `ereceiptOrderNumber` for consistency with Android
 - Add `ereceiptEmailProvider` property
