@@ -503,6 +503,111 @@
       "symbol": "BRSetupIMAPResult.BRSetupIMAPResultUnknownFailure",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "line": 46,
+      "symbol": "BREReceiptRemoteError.BREReceiptRemoteErrorNone",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "line": 47,
+      "symbol": "BREReceiptRemoteError.BREReceiptRemoteErrorNoProvider",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "line": 48,
+      "symbol": "BREReceiptRemoteError.BREReceiptRemoteErrorInvalidProvider",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "line": 49,
+      "symbol": "BREReceiptRemoteError.BREReceiptRemoteErrorNoCredentials",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "line": 50,
+      "symbol": "BREReceiptRemoteError.BREReceiptRemoteErrorCantObtainToken",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "line": 51,
+      "symbol": "BREReceiptRemoteError.BREReceiptRemoteErrorInvalidCredentials",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "line": 52,
+      "symbol": "BREReceiptRemoteError.BREReceiptRemoteErrorExpiredToken",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "line": 53,
+      "symbol": "BREReceiptRemoteError.BREReceiptRemoteErrorNoClientConfig",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "line": 54,
+      "symbol": "BREReceiptRemoteError.BREReceiptRemoteErrorBadInput",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "line": 55,
+      "symbol": "BREReceiptRemoteError.BREReceiptRemoteErrorTimeout",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "line": 56,
+      "symbol": "BREReceiptRemoteError.BREReceiptRemoteErrorIMAPNoBoxes",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "line": 57,
+      "symbol": "BREReceiptRemoteError.BREReceiptRemoteErrorInvalidReceiptIDs",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "line": 58,
+      "symbol": "BREReceiptRemoteError.BREReceiptRemoteErrorClientEndpointErrors",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "line": 59,
+      "symbol": "BREReceiptRemoteError.BREReceiptRemoteErrorJobInProgress",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "line": 60,
+      "symbol": "BREReceiptRemoteError.BREReceiptRemoteErrorUnknown",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
     }
   ],
   "source_directory": "/Users/dpanzer/Projects/blinkereceipt-ios"
