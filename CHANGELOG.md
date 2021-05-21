@@ -1,3 +1,8 @@
+# 2.9.0
+- Account Linking: Improvements to Starbucks, Walgreens, and Home Depot integrations
+- Fix for AOL IMAP setup
+- Fix for scenario where prod intel data overwrites original fields parsed from retailer order history
+
 # 2.8.1
 - Add new e-receipt properties: `ereceiptEmailSubject`, `ereceiptMerchantEmail`, `ereceiptShippingCosts`, `currencyCode`
 - Internal logging to capture unexpected date formats in email headers

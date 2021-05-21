@@ -41,6 +41,25 @@ typedef NS_ENUM(NSUInteger, BRSetupIMAPResult) {
     BRSetupIMAPResultUnknownFailure
 };
 
+///
+typedef NS_ENUM(NSUInteger, BREReceiptRemoteError) {
+    BREReceiptRemoteErrorNone                   = 0,
+    BREReceiptRemoteErrorNoProvider             = 1,
+    BREReceiptRemoteErrorInvalidProvider        = 2,
+    BREReceiptRemoteErrorNoCredentials          = 3,
+    BREReceiptRemoteErrorCantObtainToken        = 4,
+    BREReceiptRemoteErrorInvalidCredentials     = 5,
+    BREReceiptRemoteErrorExpiredToken           = 6,
+    BREReceiptRemoteErrorNoClientConfig         = 7,
+    BREReceiptRemoteErrorBadInput               = 8,
+    BREReceiptRemoteErrorTimeout                = 9,
+    BREReceiptRemoteErrorIMAPNoBoxes            = 10,
+    BREReceiptRemoteErrorInvalidReceiptIDs      = 11,
+    BREReceiptRemoteErrorClientEndpointErrors   = 12,
+    BREReceiptRemoteErrorJobInProgress          = 13,
+    BREReceiptRemoteErrorUnknown                = 999
+};
+
 /**
  *  This class is the interface to manage e-receipt parsing
  */
@@ -216,6 +235,16 @@ typedef NS_ENUM(NSUInteger, BRSetupIMAPResult) {
  */
 - (void)getEReceiptsWithCompletion:(void(^)(NSArray<BRScanResults*> *receipts, NSError *error))completion;
 
+/**
+ *  Initiates a remote asynchronous scrape. You must have successfully authenticated an OAuth provider, or stored IMAP credentials (and setup IMAP if necessary) prior to calling this method
+ *
+ *  @param completion   The completion function will be invoked when the attempt to queue the remote scrape job has completed
+ *
+ *      * `NSInteger jobId` - on success this will contain the job_id which will be used to POST results to your pre-configured results endpoint
+ *
+ *      * `NSError *error` - `nil` on success, otherwise contains the error
+ */
+- (void)startRemoteEReceiptScrapeWithCompletion:(void(^)(NSInteger jobId, NSError *error))completion;
 
 /**
 *  For debugging the parsing of e-receipt HTML
