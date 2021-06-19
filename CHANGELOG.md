@@ -1,3 +1,6 @@
+# 2.10.0
+- Better parsing of dates from Gmail headers
+
 # 2.9.0
 - Account Linking: Improvements to Starbucks, Walgreens, and Home Depot integrations
 - Fix for AOL IMAP setup
