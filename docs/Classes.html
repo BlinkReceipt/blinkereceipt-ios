@@ -17,7 +17,7 @@
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">BlinkEReceipt extension SDK 2.10.0 Docs</a></p>
+        <p><a href="index.html">BlinkEReceipt extension SDK 2.11.1 Docs</a></p>
         <p class="header-right"><a href="https://github.com/BlinkReceipt/blinkereceipt-ios"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right">
           <form role="search" action="search.json">
@@ -58,6 +58,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/BREReceiptManager.html">BREReceiptManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BREmailAccount.html">BREmailAccount</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BRIMAPAccount.html">BRIMAPAccount</a>
               </li>
             </ul>
           </li>
@@ -127,7 +133,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.10.0/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h#L64-L86">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.11.1/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h#L64-L86">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -170,7 +176,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.10.0/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L37-L148">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.11.1/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L37-L148">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -206,7 +212,79 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.10.0/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L66-L277">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.11.1/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L59-L281">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BREmailAccount"></a>
+                    <a name="//apple_ref/objc/Class/BREmailAccount" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BREmailAccount">BREmailAccount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This class represents a user email account</p>
+
+                        <a href="Classes/BREmailAccount.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">BREmailAccount</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BREmailAccount</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.11.1/BlinkEReceipt.framework/Headers/BREmailAccount.h#L27-L39">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BRIMAPAccount"></a>
+                    <a name="//apple_ref/objc/Class/BRIMAPAccount" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BRIMAPAccount">BRIMAPAccount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This class represents an IMAP account that should be instantiated with the user&rsquo;s credentials prior to beginning IMAP setup in <code><a href="Classes/BREReceiptManager.html">BREReceiptManager</a></code></p>
+
+                        <a href="Classes/BRIMAPAccount.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">BRIMAPAccount</span> <span class="p">:</span> <span class="nc"><a href="Classes/BREmailAccount.html">BREmailAccount</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BRIMAPAccount</span> <span class="p">:</span> <span class="kt"><a href="Classes/BREmailAccount.html">BREmailAccount</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.11.1/BlinkEReceipt.framework/Headers/BRIMAPAccount.h#L17-L42">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -216,8 +294,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2021-06-19)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2021 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2021-08-08)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

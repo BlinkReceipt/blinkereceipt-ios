@@ -16,7 +16,7 @@
     <a title="E-Receipt Parsing  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">BlinkEReceipt extension SDK 2.10.0 Docs</a></p>
+        <p><a href="index.html">BlinkEReceipt extension SDK 2.11.1 Docs</a></p>
         <p class="header-right"><a href="https://github.com/BlinkReceipt/blinkereceipt-ios"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right">
           <form role="search" action="search.json">
@@ -57,6 +57,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/BREReceiptManager.html">BREReceiptManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BREmailAccount.html">BREmailAccount</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BRIMAPAccount.html">BRIMAPAccount</a>
               </li>
             </ul>
           </li>
@@ -112,8 +118,8 @@
 <li><p>Gmail uses OAuth to authenticate user accounts via a modal view controller provided by Google&rsquo;s SDK. Here is how you invoke it from within your own view controller:</p></li>
 </ul>
 <pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">BREReceiptManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">beginOAuthForProvider</span><span class="p">:</span><span class="n">BREReceiptProviderGmail</span>
-                               <span class="nf">withViewController</span><span class="p">:</span><span class="n">self</span>
-                                    <span class="n">andCompletion</span><span class="o">:^</span><span class="p">(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+                               <span class="nl">withViewController:</span><span class="n">self</span>
+                                    <span class="nl">andCompletion:</span><span class="o">^</span><span class="p">(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
 
                                         <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
                                             <span class="c1">//Account successfully authenticated</span>
@@ -159,8 +165,8 @@
 <li><p>Outlook uses OAuth to authenticate user accounts via a modal view controller provided by Microsoft&rsquo;s SDK. Here is how you invoke it from within your own view controller:</p></li>
 </ul>
 <pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">BREReceiptManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">beginOAuthForProvider</span><span class="p">:</span><span class="n">BREReceiptProviderOutlook</span>
-                               <span class="nf">withViewController</span><span class="p">:</span><span class="n">self</span>
-                                    <span class="n">andCompletion</span><span class="o">:^</span><span class="p">(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+                               <span class="nl">withViewController:</span><span class="n">self</span>
+                                    <span class="nl">andCompletion:</span><span class="o">^</span><span class="p">(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
 
                                         <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
                                             <span class="c1">//Account successfully authenticated</span>
@@ -210,16 +216,16 @@
 <li>Create your own UI to collect the user&rsquo;s email and regular account password, and set these values into the corresponding properties in the SDK:</li>
 </ul>
 <pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">BREReceiptManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">storeImapCredentials</span><span class="p">:</span><span class="n">email</span>
-                                     <span class="nf">andPassword</span><span class="p">:</span><span class="n">password</span>
-                                     <span class="n">forProvider</span><span class="o">:</span><span class="n">BREReceiptProviderYahoo</span><span class="p">];</span>
+                                     <span class="nl">andPassword:</span><span class="n">password</span>
+                                     <span class="nl">forProvider:</span><span class="n">BREReceiptProviderYahoo</span><span class="p">];</span>
 </code></pre>
 
 <ul>
 <li>Then call the special IMAP setup method which will attempt to login to the user&rsquo;s account create an App Password (or in the case of Gmail, determine if Less Secure Apps is already enabled):</li>
 </ul>
 <pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">BREReceiptManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">setupIMAPForProvider</span><span class="p">:</span><span class="n">BREReceiptProviderYahoo</span>
-                                  <span class="nf">viewController</span><span class="p">:</span><span class="n">self</span>
-                                  <span class="n">withCompletion</span><span class="o">:^</span><span class="p">(</span><span class="n">BRSetupIMAPResult</span> <span class="n">result</span><span class="p">)</span> <span class="p">{</span>
+                                  <span class="nl">viewController:</span><span class="n">self</span>
+                                  <span class="nl">withCompletion:</span><span class="o">^</span><span class="p">(</span><span class="n">BRSetupIMAPResult</span> <span class="n">result</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="n">result</span> <span class="o">==</span> <span class="n">BRSetupIMAPResultCreatedAppPassword</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">NSLog</span><span class="p">(</span><span class="s">@"Successfully created app password."</span><span class="p">);</span>
@@ -287,8 +293,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2021-06-19)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2021 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2021-08-08)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
