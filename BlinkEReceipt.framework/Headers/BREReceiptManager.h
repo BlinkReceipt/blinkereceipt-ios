@@ -10,17 +10,8 @@
 #import <UIKit/UIKit.h>
 
 #import <BlinkReceipt/BRScanResults.h>
-
-///
-typedef NS_ENUM(NSUInteger, BREReceiptProvider) {
-    BREReceiptProviderNone = 0,
-    BREReceiptProviderGmail,
-    BREReceiptProviderOutlook,
-    BREReceiptProviderYahoo,
-    BREReceiptProviderAOL,
-    BREReceiptProviderGmailIMAP,
-    BREReceiptProviderCustomIMAP
-};
+#import "BREmailAccount.h"
+#import "BRIMAPAccount.h"
 
 ///
 typedef NS_ENUM(NSUInteger, BREReceiptIMAPError) {
@@ -38,6 +29,8 @@ typedef NS_ENUM(NSUInteger, BRSetupIMAPResult) {
     BRSetupIMAPResultRedirectToSafari,
     BRSetupIMAPResultCreatedAppPassword,
     BRSetupIMAPResultAdminNeeded,
+    BRSetupIMAPResultDuplicateEmail,
+    BRSetupIMAPResultSaved,
     BRSetupIMAPResultUnknownFailure
 };
 
@@ -87,12 +80,6 @@ typedef NS_ENUM(NSUInteger, BREReceiptRemoteError) {
 @property (nonatomic) BOOL userHasProvider;
 
 /**
- *  If there is a stored provider, this property will indicate which provider it is
- */
-@property (nonatomic) BREReceiptProvider currentProvider;
-
-
-/**
  *  How far back (in days) to search the user's inbox for e-receipts
  *
  *  Default: 14
@@ -115,12 +102,6 @@ typedef NS_ENUM(NSUInteger, BREReceiptRemoteError) {
 @property (strong, nonatomic) NSDate *searchUntilDate;
 
 /**
- *  If the OAuth provider supports returning the logged-in email, it will be populated into this property after OAuth or silent authentications
- *  Note: It is not guaranteed to be populated on subsequent app runs
- */
-@property (strong, nonatomic) NSString *userCurrentEmail;
-
-/**
  *  If populated, the keys in this dictionary will be used as the senders to search the user's inbox for, and the corresponding values will be used as the merchant sender address for parsing purposes
  *  Default: nil
  */
@@ -132,6 +113,12 @@ typedef NS_ENUM(NSUInteger, BREReceiptRemoteError) {
 */
 @property (nonatomic) BOOL aggregateResults;
 
+/**
+ * If set, overrides the client endpoint configured server side to which results will be POSTed following a remote scrape
+ * Default: nil
+ */
+@property (strong, nonatomic) NSString *remoteScrapeClientEndpoint;
+
 ///---------------------
 /// @name Class Methods
 ///---------------------
@@ -141,6 +128,11 @@ typedef NS_ENUM(NSUInteger, BREReceiptRemoteError) {
 ///---------------
 /// @name Methods
 ///---------------
+
+/**
+ * Retrieves all the currently linked accounts
+ */
+- (NSArray<BREmailAccount*>*)getLinkedAccounts;
 
 /**
  *  Begins the OAuth process for the given provider (currently only Gmail and Outlook supported). If the completion is called with no error, you may then invoke `-[BREReceiptManager getEReceiptsWithCompletion:]`
@@ -156,53 +148,32 @@ typedef NS_ENUM(NSUInteger, BREReceiptRemoteError) {
                 andCompletion:(void(^)(NSError *error))completion;
 
 /**
- *  For IMAP providers (AOL, Yahoo, Gmail if you prefer to connect to Gmail via IMAP, or a custom IMAP provider) you must store the credentials prior to calling `-[BREReceiptManager getEReceiptsWithCompletion:]`
- *  In the case of Gmail, Yahoo, and AOL call this function before calling `-[BREReceiptManager setupGmailForIMAP:withCompletion:]`
- *
- *  Note: For a custom IMAP provider, you must call `setCustomIMAPHost:port:useTLS:` before calling this method
- *
- *  @return `nil` on success, otherwise the error
- */
-- (NSError *)storeImapCredentials:(NSString*)user
-                      andPassword:(NSString*)password
-                      forProvider:(BREReceiptProvider)provider;
-
-/**
- *  For custom IMAP providers, you must call this method to supply basic information about how to connect to this provider _before_ you call `storeImapCredentials:andPassword:forProvider:`
- *
- *  @param host     The IMAP host name
- *  @param port     The IMAP server port number
- *  @param useTLS   Whether to connect via TLS
- *
- */
-- (void)setCustomIMAPHost:(NSString*)host
-                     port:(NSInteger)port
-                   useTLS:(BOOL)useTLS;
-
-/**
 *  To connect to Gmail, Yahoo, or AOL accounts via IMAP, the user will have to enable certain account settings. Call this function to start the process
 *
+*  @param account  Instantiate an instance of `BRIMAPAccount` and optionally set custom values for host, port, and TLS
 *  @param viewController   The view controller from which to present the controller that manages the account settings
 *  @param completion       The completion is invoked after the attempt to configure the account has finished
 *
 *      * `BRSetupIMAPResult result` - The result of the attempt to configure the account. A successful result is `BRSetupIMAPResultEnabledLSA` or `BRSetupIMAPResultCreatedAppPassword`
 */
-- (void)setupIMAPForProvider:(BREReceiptProvider)provider
-              viewController:(UIViewController*)viewController
-              withCompletion:(void(^)(BRSetupIMAPResult result))completion;
+- (void)setupIMAPForAccount:(BRIMAPAccount*)account
+             viewController:(UIViewController*)viewController
+             withCompletion:(void(^)(BRSetupIMAPResult result))completion;
 
 /**
  *  Verifies that stored IMAP credentials are valid
  *
+ *  @param account The account you would like to verify (must be one of the members of `getLinkedAccount`
  *  @param completion   The completion is invoked after the attempt to verify IMAP credentials completes
  *
  *      * `BOOL success` - indicates whether verification succeeded or not
  *      * `NSError *error` - `nil` on success, otherwise contains error information
  */
-- (void)verifyImapCredentials:(void(^)(BOOL success, NSError *error))completion;
+- (void)verifyImapAccount:(BRIMAPAccount*)account
+           withCompletion:(void (^)(BOOL success, NSError *error))completion;
 
 /**
- *  Attempts to retrieve new (since last check) e-receipts from the stored e-mail account. You must have successfully authenticated an OAuth provider, or stored IMAP credentials (and setup IMAP if necessary) prior to calling this method
+ *  Attempts to retrieve new (since last check) e-receipts from all linked e-mail accounts. You must have successfully authenticated an OAuth provider, or stored IMAP credentials (and setup IMAP if necessary) prior to calling this method
  *  @note You must have a valid license key set in `[BRScanManager sharedManager].licenseKey` as well as a valid prod intel key set in `[BRScanManager sharedManager].prodIntelKey` in order to receive any results
  *
  *  @param completion   The completion function will be invoked when e-receipt parsing has completed.
@@ -231,20 +202,43 @@ typedef NS_ENUM(NSUInteger, BREReceiptRemoteError) {
  *          * `BRProduct.upc`
  *          * `BRProduct.imgUrl`
  *
+ *      * `BREmailAccount *account` - the account that the current array of results are for
  *      * `NSError *error` - `nil` on success, otherwise contains the error
  */
-- (void)getEReceiptsWithCompletion:(void(^)(NSArray<BRScanResults*> *receipts, NSError *error))completion;
+- (void)getEReceiptsWithCompletion:(void(^)(NSArray<BRScanResults*> *receipts,
+                                            BREmailAccount *account,
+                                            NSError *error))completion;
 
 /**
- *  Initiates a remote asynchronous scrape. You must have successfully authenticated an OAuth provider, or stored IMAP credentials (and setup IMAP if necessary) prior to calling this method
+ * Same as above method, just for a single linked account
+ */
+- (void)getEReceiptsForAccount:(BREmailAccount*)account
+                withCompletion:(void(^)(NSArray<BRScanResults*> *receipts,
+                                            BREmailAccount *account,
+                                            NSError *error))completion;
+
+/**
+ *  Initiates a remote asynchronous scrape for all linked accounts. You must have successfully authenticated an OAuth provider, or stored IMAP credentials (and setup IMAP if necessary) prior to calling this method
  *
  *  @param completion   The completion function will be invoked when the attempt to queue the remote scrape job has completed
  *
  *      * `NSInteger jobId` - on success this will contain the job_id which will be used to POST results to your pre-configured results endpoint
  *
+ *      * `BREmailAccount *account` - on success this will contain the account which the current `jobId` relates to
+ *
  *      * `NSError *error` - `nil` on success, otherwise contains the error
  */
-- (void)startRemoteEReceiptScrapeWithCompletion:(void(^)(NSInteger jobId, NSError *error))completion;
+- (void)startRemoteEReceiptScrapeWithCompletion:(void(^)(NSInteger jobId,
+                                                         BREmailAccount *account,
+                                                         NSError *error))completion;
+
+/**
+ * Same as above method, just for a single linked account
+ */
+- (void)startRemoteEReceiptScrapeForAccount:(BREmailAccount*)account
+                             withCompletion:(void(^)(NSInteger jobId,
+                                                         BREmailAccount *account,
+                                                         NSError *error))completion;
 
 /**
 *  For debugging the parsing of e-receipt HTML
@@ -258,12 +252,22 @@ typedef NS_ENUM(NSUInteger, BREReceiptRemoteError) {
                      completion:(void(^)(NSArray<BRScanResults*> *receipts, NSError *error))completion;
 
 /**
- *  Signs out of any stored email account and stored e-receipt info. For OAuth providers this signs out of the provider and invalidates the access token. For IMAP providers this removes stored credentails.
+ *  Signs out of all linked email accounts and stored e-receipt info. For OAuth providers this signs out of the provider and invalidates the access token. For IMAP providers this removes stored credentails.
+ *
+ *  @param completion   The completion function will be invoked when the sign out is complete
+ *
+ *      * `NSError *error` - `nil` on success, otherwise contains the error
  */
-- (void)signOut;
+- (void)signOutWithCompletion:(void(^)(NSError *error))completion;
 
 /**
- *  Resets emails so you don't need to log out and log in during testing
+ * Same as above method, just for a single linked account
+ */
+- (void)signOutFromAccount:(BREmailAccount*)account
+            withCompletion:(void(^)(NSError *error))completion;
+
+/**
+ *  Resets emails for all linked email accounts so you don't need to log out and log in during testing
  */
 - (void)resetEmailsChecked;
 

@@ -376,15 +376,23 @@
 		</data>
 		<key>Headers/BREReceiptManager.h</key>
 		<data>
-		nLDJsbe11IplTRqeT2WLPAXzzF0=
+		gjymJeyPn4lx6mnLbOtyicQquas=
+		</data>
+		<key>Headers/BREmailAccount.h</key>
+		<data>
+		e1PW7rS/P6vD/3vVFvonZPmOxXs=
+		</data>
+		<key>Headers/BRIMAPAccount.h</key>
+		<data>
+		Re4+HspPCMxHQZoeaowJfA1regs=
 		</data>
 		<key>Headers/BlinkEReceipt.h</key>
 		<data>
-		S7+XT4tRJs9c46oVWgILsm25PJE=
+		w+9KN82fp9OoLH/5b+wchkTUXto=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		0heUW3vJAiOQ+mDwVZ7QHPh8Ht0=
+		gl3loNzO1ZMiJP9yt9QZWvW35Sw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -968,22 +976,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nLDJsbe11IplTRqeT2WLPAXzzF0=
+			gjymJeyPn4lx6mnLbOtyicQquas=
 			</data>
 			<key>hash2</key>
 			<data>
-			QRI8GH8U5lRCyhg1jWkYDw4JbZJiPR/ZSMQCQ4KLZCg=
+			rEpdT4lNXlWVhaxa8D7qZjD9cNUVtGuxrTQu0HzQy40=
+			</data>
+		</dict>
+		<key>Headers/BREmailAccount.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			e1PW7rS/P6vD/3vVFvonZPmOxXs=
+			</data>
+			<key>hash2</key>
+			<data>
+			ze4cvxbtWsnJjvPfLaRv5tG6QQhlha79DVYHFZBk5mk=
+			</data>
+		</dict>
+		<key>Headers/BRIMAPAccount.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Re4+HspPCMxHQZoeaowJfA1regs=
+			</data>
+			<key>hash2</key>
+			<data>
+			1s50IGcezBa2YVOT+HHqkN2M/ohJ4yv4DC8oLQY5JK0=
 			</data>
 		</dict>
 		<key>Headers/BlinkEReceipt.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			S7+XT4tRJs9c46oVWgILsm25PJE=
+			w+9KN82fp9OoLH/5b+wchkTUXto=
 			</data>
 			<key>hash2</key>
 			<data>
-			Hx/IzZBvuMROxk6Cz5yiXw4FgpJdIrozwexnX+tDcdQ=
+			BF+aYrRw1rObbp6/ghXUdgGc2dMC/kBiZkTmaPKHZG8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

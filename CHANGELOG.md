@@ -1,3 +1,6 @@
+# 2.11.1
+- E-Receipts: Support multiple linked accounts (breaking change)
+
 # 2.10.0
 - Better parsing of dates from Gmail headers
 
