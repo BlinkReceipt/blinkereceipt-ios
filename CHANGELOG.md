@@ -1,3 +1,6 @@
+# 2.11.2
+- Fix crash when scraping or starting remote scrape for single `BREmailAccount`
+
 # 2.11.1
 - E-Receipts: Support multiple linked accounts (breaking change)
 
