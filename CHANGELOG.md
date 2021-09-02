@@ -1,3 +1,6 @@
+# 2.12.0
+- Add property `BREReceiptManager.remoteScrapeUserDateCutoff` that allows setting a user-specific cutoff date for remote e-receipt scraping
+
 # 2.11.2
 - Fix crash when scraping or starting remote scrape for single `BREmailAccount`
 

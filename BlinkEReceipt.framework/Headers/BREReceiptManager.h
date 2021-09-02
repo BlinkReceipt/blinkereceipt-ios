@@ -119,6 +119,12 @@ typedef NS_ENUM(NSUInteger, BREReceiptRemoteError) {
  */
 @property (strong, nonatomic) NSString *remoteScrapeClientEndpoint;
 
+/**
+ * If set, overrides the default date cutoff for the current user in remote scrapes
+ * Default: nil
+ */
+@property (strong, nonatomic) NSDate *remoteScrapeUserDateCutoff;
+
 ///---------------------
 /// @name Class Methods
 ///---------------------
