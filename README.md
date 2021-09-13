@@ -20,7 +20,7 @@ platform :ios, '10.0'
 target 'YourTarget' do
   use_frameworks!
 
-  pod 'BlinkEReceipt', '~> 1.0'
+  pod 'BlinkEReceipt', '~> 2.0'
 end
 ```
 
