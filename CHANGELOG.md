@@ -1,3 +1,7 @@
+# 2.13.0
+- Merchant Connection updated to v1.2.7, see: https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md
+- Support for Gmail IMAP setup for German language accounts
+
 # 2.12.1
 - Fix Amazon scraping hang due to shutdown of Prime Now service
 
