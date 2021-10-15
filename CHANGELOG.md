@@ -1,3 +1,9 @@
+# 2.14.0
+- Migrate to XCFramework packaging
+- Switch to private fork of `GoogleSignIn` to maintain current UX
+- Gmail IMAP setup: Handle case of different account already signed in via cookies
+- Merchant Connection update to v1.2.9, see: https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md
+
 # 2.13.0
 - Merchant Connection updated to v1.2.7, see: https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md
 - Support for Gmail IMAP setup for German language accounts
