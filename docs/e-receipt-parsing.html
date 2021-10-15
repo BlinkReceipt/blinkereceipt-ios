@@ -16,7 +16,7 @@
     <a title="E-Receipt Parsing  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">BlinkEReceipt extension SDK 2.13.0 Docs</a></p>
+        <p><a href="index.html">BlinkEReceipt extension SDK 2.14.0 Docs</a></p>
         <p class="header-right"><a href="https://github.com/BlinkReceipt/blinkereceipt-ios"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right">
           <form role="search" action="search.json">
@@ -61,31 +61,21 @@
               <li class="nav-group-task">
                 <a href="Classes/BREmailAccount.html">BREmailAccount</a>
               </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/BRIMAPAccount.html">BRIMAPAccount</a>
+                <a href="Constants.html#/c:@NS_ASSUME_NONNULL_BEGIN">NS_ASSUME_NONNULL_BEGIN</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Enums.html">Enumerations</a>
+            <a href="Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Enums/BRAccountLinkingError.html">BRAccountLinkingError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/BREReceiptIMAPError.html">BREReceiptIMAPError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/BREReceiptProvider.html">BREReceiptProvider</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/BREReceiptRemoteError.html">BREReceiptRemoteError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/BRSetupIMAPResult.html">BRSetupIMAPResult</a>
+                <a href="Functions.html#/c:@F@NS_ENUM">NS_ENUM</a>
               </li>
             </ul>
           </li>
@@ -99,16 +89,25 @@
 
 <p>The BlinkReceipt SDK supports parsing e-receipts from a growing list of retailers and a specific set of mail providers: Gmail, Outlook, Yahoo, and AOL. The procedure for integrating each of these providers is slightly different. This guide will outline the steps necessary to integrate and authenticate a user account for each mail provider, and then the common methods that you will use to invoke the e-receipt parsing functionality.</p>
 
+<p>The SDK supports having multiple accounts linked simultaneously with the restriction that at most 1 Gmail account authenticated via OAuth and at most 1 Outlook account authenticated via OAuth can be linked at any time.</p>
+
 <blockquote>
 <p>Note: You must provide both <code>[BRScanManager sharedManager].licenseKey</code> (which can be obtained on a trial basis at <a href="http://www.microblink.com">www.microblink.com</a>) as well as <code>[BRScanManager sharedManager].prodIntelKey</code> (email your point of contact or <a href="mailto:blinkreceipt@microblink.com">blinkreceipt@microblink.com</a> if you do not have one) in order for E-Receipt Parsing to function correctly</p>
 </blockquote>
-<h2 id='gmail' class='heading'>Gmail</h2>
+<h2 id='gmail-oauth' class='heading'>Gmail (OAuth)</h2>
 
 <ul>
 <li><p>Create a new Project in the <a href="https://console.developers.google.com">Google API Console</a></p></li>
 <li><p>Enable the Gmail API for your project</p></li>
 <li><p>Create new credentials for the API, and choose the iOS option. This should lead you through the process to create an OAuth 2.0 client ID. You will have to complete the setup of an OAuth Consent Screen.</p></li>
-<li><p>Once you have successfully completed the process, find the Client ID for your app&rsquo;s bundle identifier</p></li>
+</ul>
+
+<blockquote>
+<p>Warning: In order to use a Gmail OAuth integration in production you must obtain Google&rsquo;s review and approval of your application</p>
+</blockquote>
+
+<ul>
+<li>Once you have successfully completed the process, find the Client ID for your app&rsquo;s bundle identifier</li>
 </ul>
 
 <p><img src="img/gmail.png" alt="Google API Console"></p>
@@ -147,7 +146,7 @@
 <ul>
 <li>Lastly, follow <a href="https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project">Google&rsquo;s instructions</a> to add the necessary URL scheme to your app</li>
 </ul>
-<h2 id='outlook' class='heading'>Outlook</h2>
+<h2 id='outlook-oauth' class='heading'>Outlook (OAuth)</h2>
 
 <ul>
 <li><p>Go to the <a href="https://portal.azure.com/">Azure Portal</a>, choose Manage Azure Active Directory, then App Registrations from the left menu, and click New Registration.</p></li>
@@ -213,19 +212,19 @@
 <p>Our SDK attempts to automate this setup for all providers &ldquo;behind the scenes&rdquo;:</p>
 
 <ul>
-<li>Create your own UI to collect the user&rsquo;s email and regular account password, and set these values into the corresponding properties in the SDK:</li>
+<li>Create your own UI to collect the user&rsquo;s email and regular account password, and instantiate a <code>BRIMAPAccount</code> object with the credentials:</li>
 </ul>
-<pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">BREReceiptManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">storeImapCredentials</span><span class="p">:</span><span class="n">email</span>
-                                     <span class="nl">andPassword:</span><span class="n">password</span>
-                                     <span class="nl">forProvider:</span><span class="n">BREReceiptProviderYahoo</span><span class="p">];</span>
+<pre class="highlight objective_c"><code><span class="n">BRIMAPAccount</span> <span class="o">*</span><span class="n">imapAcct</span> <span class="o">=</span> <span class="p">[[</span><span class="n">BRIMAPAccount</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithProvider</span><span class="p">:</span><span class="n">BREReceiptProviderYahoo</span>
+                                                            <span class="nl">email:</span><span class="n">userEmail</span>
+                                                         <span class="nl">password:</span><span class="n">userPassword</span><span class="p">];</span>
 </code></pre>
 
 <ul>
 <li>Then call the special IMAP setup method which will attempt to login to the user&rsquo;s account create an App Password (or in the case of Gmail, determine if Less Secure Apps is already enabled):</li>
 </ul>
-<pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">BREReceiptManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">setupIMAPForProvider</span><span class="p">:</span><span class="n">BREReceiptProviderYahoo</span>
-                                  <span class="nl">viewController:</span><span class="n">self</span>
-                                  <span class="nl">withCompletion:</span><span class="o">^</span><span class="p">(</span><span class="n">BRSetupIMAPResult</span> <span class="n">result</span><span class="p">)</span> <span class="p">{</span>
+<pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">BREReceiptManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">setupIMAPForAccount</span><span class="p">:</span><span class="n">imapAcct</span>
+                                 <span class="nl">viewController:</span><span class="n">self</span>
+                                 <span class="nl">withCompletion:</span><span class="o">^</span><span class="p">(</span><span class="n">BRSetupIMAPResult</span> <span class="n">result</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="n">result</span> <span class="o">==</span> <span class="n">BRSetupIMAPResultCreatedAppPassword</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">NSLog</span><span class="p">(</span><span class="s">@"Successfully created app password."</span><span class="p">);</span>
@@ -238,7 +237,7 @@
 <ul>
 <li>If this succeeds, you can then verify the connection to the IMAP server:</li>
 </ul>
-<pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">BREReceiptManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">verifyImapCredentials</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">BOOL</span> <span class="n">success</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+<pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">BREReceiptManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">verifyImapAccount</span><span class="p">:</span><span class="n">imapAcct</span> <span class="nf">withCompletion</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">BOOL</span> <span class="n">success</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="n">success</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">//Credentials verified</span>
@@ -248,25 +247,10 @@
 
 <span class="p">}];</span>
 </code></pre>
-<h2 id='custom-imap-server-integration' class='heading'>Custom IMAP server integration</h2>
-
-<p>If you would like to connect to an email provider through IMAP other than the ones supported out of the box, you may do so by setting the IMAP server details <em>before</em> you store credentials, which is then passed the special <code>BREReceiptProviderCustomIMAP</code> value:</p>
-<pre class="highlight objective_c"><code><span class="n">NSString</span> <span class="o">*</span><span class="n">host</span> <span class="o">=</span> <span class="s">@"imap.myserver.com"</span><span class="p">;</span>
-<span class="n">NSInteger</span> <span class="n">port</span> <span class="o">=</span> <span class="mi">993</span><span class="p">;</span>
-<span class="n">BOOL</span> <span class="n">useTLS</span> <span class="o">=</span> <span class="nb">YES</span><span class="p">;</span>
-
-<span class="p">[[</span><span class="n">BREReceiptManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">setCustomIMAPHost</span><span class="p">:</span><span class="n">host</span> <span class="nf">port</span><span class="p">:</span><span class="n">port</span> <span class="n">useTLS</span><span class="o">:</span><span class="n">useTLS</span><span class="p">];</span>
-
-<span class="p">[[</span><span class="n">BREReceiptManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">storeImapCredentials</span><span class="p">:</span><span class="n">email</span> <span class="nf">andPassword</span><span class="p">:</span><span class="n">pass</span> <span class="n">forProvider</span><span class="o">:</span><span class="n">BREReceiptProviderCustomIMAP</span><span class="p">];</span>
-</code></pre>
-
-<blockquote>
-<p>Note: For a custom IMAP server, you do not need to (and should not) call <code>setupIMAPForProvider:viewController:withCompletion:</code></p>
-</blockquote>
 <h2 id='retrieving-and-parsing-e-receipts' class='heading'>Retrieving and Parsing E-Receipts</h2>
 
-<p>Once you have successfully integrated one or more mail providers, and the user has successfully authenticated their account, you can begin retrieving and parsing e-receipts as follows:</p>
-<pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">BREReceiptManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">getEReceiptsWithCompletion</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">NSArray</span> <span class="o">*</span><span class="n">scanResults</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+<p>Once you have successfully integrated one or more mail providers, and the user has successfully authenticated their account(s), you can begin retrieving and parsing e-receipts as follows:</p>
+<pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">BREReceiptManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">getEReceiptsWithCompletion</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">BRScanResults</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">receipts</span><span class="p">,</span> <span class="n">BREmailAccount</span> <span class="o">*</span><span class="n">account</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">NSLog</span><span class="p">(</span><span class="s">@"Found %lu new e-receipt orders"</span><span class="p">,</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">long</span><span class="p">)</span><span class="n">scanResults</span><span class="p">.</span><span class="n">count</span><span class="p">);</span>
@@ -277,7 +261,7 @@
 <span class="p">}];</span>
 </code></pre>
 
-<p>This will connect to the user&rsquo;s email account and search for new e-receipts from all supported retailers <em>since the most recent successful retrieval of e-receipts</em>.</p>
+<p>This will connect to the user&rsquo;s linked email account(s) and search for new e-receipts from all supported retailers <em>since the most recent successful retrieval of e-receipts</em>.</p>
 
 <p>If any orders are found, they will be returned as an array of <code>BRScanResults</code> objects. These objects contain many of the standard fields that are populated when scanning a physical receipt, but also contain certain properties that are unique to e-receipts such as:</p>
 
@@ -293,7 +277,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2021-09-19)</p>
+          <p>&copy; 2021 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2021-10-15)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
