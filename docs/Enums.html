@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Classes  Reference</title>
+    <title>Enumerations  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/objc/Section/Classes" class="dashAnchor"></a>
-    <a title="Classes  Reference"></a>
+    <a name="//apple_ref/objc/Section/Enumerations" class="dashAnchor"></a>
+    <a title="Enumerations  Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="index.html">BlinkEReceipt extension SDK 2.14.0 Docs</a></p>
@@ -30,7 +30,7 @@
       <p id="breadcrumbs">
         <a href="index.html">BlinkEReceipt extension SDK Reference</a>
         <img id="carat" src="img/carat.png" />
-        Classes  Reference
+        Enumerations  Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -95,8 +95,8 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Classes</h1>
-            <p>The following classes are available globally.</p>
+            <h1>Enumerations</h1>
+            <p>The following enumerations are available globally.</p>
 
           </section>
           <section class="section task-group-section">
@@ -105,9 +105,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)BRAccountLinkingCredentials"></a>
-                    <a name="//apple_ref/objc/Class/BRAccountLinkingCredentials" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)BRAccountLinkingCredentials">BRAccountLinkingCredentials</a>
+                    <a name="/c:@E@BRAccountLinkingRetailer"></a>
+                    <a name="//apple_ref/objc/Enum/BRAccountLinkingRetailer" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@BRAccountLinkingRetailer">BRAccountLinkingRetailer</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -115,25 +115,24 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Instantiate a <code>BRAccountLinkingCredentials</code> object after collecting the credentials for a given retailer from the user</p>
-
-                        <a href="Classes/BRAccountLinkingCredentials.html" class="slightly-smaller">See more</a>
+                        
+                        <a href="Enums/BRAccountLinkingRetailer.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">BRAccountLinkingCredentials</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">BRAccountLinkingRetailer</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BRAccountLinkingCredentials</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">BRAccountLinkingRetailer</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.14.0/BlinkEReceipt.xcframework/ios-arm64_armv7/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h#L63-L85">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.14.0/BlinkEReceipt.xcframework/ios-arm64_armv7/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h#L16-L58">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -141,9 +140,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)BRAccountLinkingManager"></a>
-                    <a name="//apple_ref/objc/Class/BRAccountLinkingManager" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)BRAccountLinkingManager">BRAccountLinkingManager</a>
+                    <a name="/c:@E@BRAccountLinkingError"></a>
+                    <a name="//apple_ref/objc/Enum/BRAccountLinkingError" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@BRAccountLinkingError">BRAccountLinkingError</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -151,32 +150,24 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Use this interface to manage users&rsquo; linked retailer accounts for parsing e-receipts. Here is the basic flow:</p>
-
-<ol>
-<li>Implement UI to capture the user&rsquo;s credentials to one or more retailers from the supported list (see <code><a href="Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a></code> enum)</li>
-<li>Store these using <code><a href="Classes/BRAccountLinkingManager.html#/c:objc(cs)BRAccountLinkingManager(im)linkAccountWithCredentials:">-[BRAccountLinkingManager linkAccountWithCredentials:]</a></code></li>
-<li>Call <code><a href="Classes/BRAccountLinkingManager.html#/c:objc(cs)BRAccountLinkingManager(im)grabNewOrdersWithCompletion:">-[BRAccountLinkingManager grabNewOrdersWithCompletion:]</a></code></li>
-<li>The callback to this method will return all order details available since the most recent successful invocation</li>
-</ol>
-
-                        <a href="Classes/BRAccountLinkingManager.html" class="slightly-smaller">See more</a>
+                        
+                        <a href="Enums/BRAccountLinkingError.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">BRAccountLinkingManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">BRAccountLinkingError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BRAccountLinkingManager</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">BRAccountLinkingError</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.14.0/BlinkEReceipt.xcframework/ios-arm64_armv7/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L37-L148">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.14.0/BlinkEReceipt.xcframework/ios-arm64_armv7/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L16-L27">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -184,9 +175,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)BREReceiptManager"></a>
-                    <a name="//apple_ref/objc/Class/BREReceiptManager" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)BREReceiptManager">BREReceiptManager</a>
+                    <a name="/c:@E@BREReceiptIMAPError"></a>
+                    <a name="//apple_ref/objc/Enum/BREReceiptIMAPError" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@BREReceiptIMAPError">BREReceiptIMAPError</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -194,25 +185,24 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This class is the interface to manage e-receipt parsing</p>
-
-                        <a href="Classes/BREReceiptManager.html" class="slightly-smaller">See more</a>
+                        
+                        <a href="Enums/BREReceiptIMAPError.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">BREReceiptManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">BREReceiptIMAPError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BREReceiptManager</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">BREReceiptIMAPError</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.14.0/BlinkEReceipt.xcframework/ios-arm64_armv7/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L59-L287">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.14.0/BlinkEReceipt.xcframework/ios-arm64_armv7/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L17-L21">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -220,9 +210,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)BREmailAccount"></a>
-                    <a name="//apple_ref/objc/Class/BREmailAccount" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)BREmailAccount">BREmailAccount</a>
+                    <a name="/c:@E@BRSetupIMAPResult"></a>
+                    <a name="//apple_ref/objc/Enum/BRSetupIMAPResult" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@BRSetupIMAPResult">BRSetupIMAPResult</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -230,25 +220,24 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This class represents a user email account</p>
-
-                        <a href="Classes/BREmailAccount.html" class="slightly-smaller">See more</a>
+                        
+                        <a href="Enums/BRSetupIMAPResult.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">BREmailAccount</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">BRSetupIMAPResult</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BREmailAccount</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">BRSetupIMAPResult</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.14.0/BlinkEReceipt.xcframework/ios-arm64_armv7/BlinkEReceipt.framework/Headers/BREmailAccount.h#L27-L39">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.14.0/BlinkEReceipt.xcframework/ios-arm64_armv7/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L24-L35">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -256,9 +245,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)BRIMAPAccount"></a>
-                    <a name="//apple_ref/objc/Class/BRIMAPAccount" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)BRIMAPAccount">BRIMAPAccount</a>
+                    <a name="/c:@E@BREReceiptRemoteError"></a>
+                    <a name="//apple_ref/objc/Enum/BREReceiptRemoteError" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@BREReceiptRemoteError">BREReceiptRemoteError</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -266,25 +255,59 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This class represents an IMAP account that should be instantiated with the user&rsquo;s credentials prior to beginning IMAP setup in <code><a href="Classes/BREReceiptManager.html">BREReceiptManager</a></code></p>
-
-                        <a href="Classes/BRIMAPAccount.html" class="slightly-smaller">See more</a>
+                        
+                        <a href="Enums/BREReceiptRemoteError.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">BRIMAPAccount</span> <span class="p">:</span> <span class="nc"><a href="Classes/BREmailAccount.html">BREmailAccount</a></span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">BREReceiptRemoteError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BRIMAPAccount</span> <span class="p">:</span> <span class="kt"><a href="Classes/BREmailAccount.html">BREmailAccount</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">BREReceiptRemoteError</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.14.0/BlinkEReceipt.xcframework/ios-arm64_armv7/BlinkEReceipt.framework/Headers/BRIMAPAccount.h#L17-L42">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.14.0/BlinkEReceipt.xcframework/ios-arm64_armv7/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L38-L54">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@BREReceiptProvider"></a>
+                    <a name="//apple_ref/objc/Enum/BREReceiptProvider" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@BREReceiptProvider">BREReceiptProvider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Enums/BREReceiptProvider.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">BREReceiptProvider</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">BREReceiptProvider</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.14.0/BlinkEReceipt.xcframework/ios-arm64_armv7/BlinkEReceipt.framework/Headers/BREmailAccount.h#L14-L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
