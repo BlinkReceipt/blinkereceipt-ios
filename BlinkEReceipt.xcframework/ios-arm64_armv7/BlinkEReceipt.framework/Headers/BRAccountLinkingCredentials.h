@@ -26,6 +26,7 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingRetailer) {
     BRAccountLinkingRetailerDollarTree = 5,
     BRAccountLinkingRetailerDominosPizza = 8366,
     BRAccountLinkingRetailerDoordash = 10241,
+    BRAccountLinkingRetailerDrizly = 10934,
     BRAccountLinkingRetailerFamilyDollar = 165,
     BRAccountLinkingRetailerFoodLion = 142,
     BRAccountLinkingRetailerGiantEagle = 144,
@@ -44,6 +45,7 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingRetailer) {
     BRAccountLinkingRetailerPublix = 7,
     BRAccountLinkingRetailerRiteAid = 143,
     BRAccountLinkingRetailerSamsClub = 9,
+    BRAccountLinkingRetailerSeamless = 10068,
     BRAccountLinkingRetailerSephora = 171,
     BRAccountLinkingRetailerShipt = 9016,
     BRAccountLinkingRetailerShoprite = 22,
@@ -54,6 +56,7 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingRetailer) {
     BRAccountLinkingRetailerTjMaxx = 5921,
     BRAccountLinkingRetailerWalgreens = 10,
     BRAccountLinkingRetailerWalmart = 11,
+    BRAccountLinkingRetailerWalmartCA = 5849,
     BRAccountLinkingRetailerWegmans = 52
 };
 

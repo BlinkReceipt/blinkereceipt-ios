@@ -245,6 +245,26 @@ typedef NS_ENUM(NSUInteger, BREReceiptRemoteError) {
                              withCompletion:(void(^)(NSInteger jobId,
                                                          BREmailAccount *account,
                                                          NSError *error))completion;
+/**
+ *  Initiates a remote asynchronous scrape of provided email data (for cases where inbox scraping is done outside of the BlinkEReceipt SDK)
+ *
+ *  @param email The email address from which the message was obtained
+ *  @param provider The email provider from which the message was obtained
+ *  @param emlBase64 The base 64-encoded EML data
+ *  @param completion   The completion function will be invoked when the attempt to queue the remote scrape job has completed
+ *
+ *      * `NSInteger jobId` - on success this will contain the job_id which will be used to POST results to your pre-configured results endpoint
+ *
+ *      * `BREmailAccount *account` - always `nil` in this context since no account is passed in
+ *
+ *      * `NSError *error` - `nil` on success, otherwise contains the error
+ */
+- (void)startRemoteEReceiptScrapeForEmail:(NSString*)email
+                              andProvider:(BREReceiptProvider)provider
+                               andEMLFile:(NSString*)emlBase64
+                           withCompletion:(void(^)(NSInteger jobId,
+                                                   BREmailAccount *account,
+                                                   NSError *error))completion;
 
 /**
 *  For debugging the parsing of e-receipt HTML

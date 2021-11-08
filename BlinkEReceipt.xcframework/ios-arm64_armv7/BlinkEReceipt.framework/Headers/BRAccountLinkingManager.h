@@ -84,9 +84,13 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
  *  @param completion Callback will be executed after verification has been attempted
  *
  *      * `BRAccountLinkingError error` - any error that was encountered while attempting to verify the account
+ *      * `UIViewController *vc` - for 2FA and other scenarios requiring user interaction, this will contain a reference to a view controller that should be shown or dismissed depending on the particular `error` value
+ *      * `NSString *sessionId` - a unique session GUID that can be reported for debugging purposes
  */
 - (void)verifyAccountForRetailer:(BRAccountLinkingRetailer)retailer
-                  withCompletion:(void(^)(BRAccountLinkingError error, UIViewController * _Nullable vc))completion;
+                  withCompletion:(void(^)(BRAccountLinkingError error,
+                                          UIViewController * _Nullable vc,
+                                          NSString *sessionId))completion;
 
 /**
  *  Returns all retailers for which there is a linked account
@@ -109,7 +113,8 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
  *  @param retailer The retailer for which to unlink the account
  *  @param completion Unlinking an account involves async operations involving cookies, so this completion indicates when those operations have completed
  */
-- (void)unlinkAccountForRetailer:(BRAccountLinkingRetailer)retailer withCompletion:(void(^)(void))completion;
+- (void)unlinkAccountForRetailer:(BRAccountLinkingRetailer)retailer
+                  withCompletion:(void(^)(void))completion;
 
 /**
  *  Unlink all accounts
@@ -128,12 +133,14 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
  *      * `NSInteger ordersRemainingInAccount` - the number of orders remaining in the current account
  *      * `UIViewController *verificationViewController` - UIViewController for additional user input like 2FA when required
  *      * `BRAccountLinkingError error` - any error that was encountered while attempting to grab orders
+ *      * `NSString *sessionId` - a unique session GUID that can be reported for debugging purposes
  */
 - (void)grabNewOrdersWithCompletion:(void(^)(BRAccountLinkingRetailer retailer,
                                              BRScanResults * _Nullable results,
                                              NSInteger ordersRemainingInAccount,
                                              UIViewController * _Nullable verificationViewController,
-                                             BRAccountLinkingError error))completion;
+                                             BRAccountLinkingError error,
+                                             NSString *sessionId))completion;
 
 /**
  *  Same as above except allows you to grab orders only for a single retailer
@@ -143,7 +150,8 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
                                           BRScanResults * _Nullable results,
                                           NSInteger ordersRemainingInAccount,
                                           UIViewController * _Nullable verificationViewController,
-                                          BRAccountLinkingError error))completion;
+                                          BRAccountLinkingError error,
+                                          NSString *sessionId))completion;
 
 @end
 

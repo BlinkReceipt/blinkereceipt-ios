@@ -1,3 +1,9 @@
+# 2.15.0
+- Merchant Connection update to v2.0.0, see: https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md
+- Add `clientMerchantName` property for client-specific variations of merchant names
+- Support Amazon.ca parsing
+- Add method to pass in .eml data for remote e-receipt scrape
+
 # 2.14.0
 - Migrate to XCFramework packaging
 - Switch to private fork of `GoogleSignIn` to maintain current UX
