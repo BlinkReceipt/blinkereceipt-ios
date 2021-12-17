@@ -62,6 +62,14 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
 @property (strong, nonatomic, nullable) NSDate *dateCutoff;
 
 /**
+ *  When set to YES, the first scrape will attempt to retrieve orders back to the `dayCutoff` or `dateCutoff` but all subsequent scrapes will only go as far back as the last scrape date regardless of whether the first scrape completed
+ *  When set to NO, subsequent scrapes will continue to fetch historical orders until `dayCutoff` or `dateCutoff` is reached, and after that, scrapes will only go back to the last scrape date
+ *
+ *  Default: YES
+ */
+@property (nonatomic) BOOL returnLatestOrdersOnly;
+
+/**
 *  Set this to a different country to access the correct version of the retailer's site, if it exists for that country (currently only supports Amazon UK)
 *
 *  Default: @"US"

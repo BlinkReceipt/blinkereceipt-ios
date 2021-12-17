@@ -57,7 +57,8 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingRetailer) {
     BRAccountLinkingRetailerWalgreens = 10,
     BRAccountLinkingRetailerWalmart = 11,
     BRAccountLinkingRetailerWalmartCA = 5849,
-    BRAccountLinkingRetailerWegmans = 52
+    BRAccountLinkingRetailerWegmans = 52,
+    BRAccountLinkingRetailerUberEats = 9137
 };
 
 /**

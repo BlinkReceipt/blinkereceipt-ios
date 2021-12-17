@@ -1,3 +1,8 @@
+# 2.16.0
+- Merchant Connection update to v2.1.0, see: https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md
+- Fix timing issue preventing Amazon scraping in certain rare cases
+- Better differentiation of unlinking accounts and clearing order history
+
 # 2.15.0
 - Merchant Connection update to v2.0.0, see: https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md
 - Add `clientMerchantName` property for client-specific variations of merchant names
