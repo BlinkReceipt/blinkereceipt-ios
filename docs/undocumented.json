@@ -310,14 +310,21 @@
     },
     {
       "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64_armv7/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
-      "line": 74,
+      "line": 61,
+      "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerUberEats",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64_armv7/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "line": 75,
       "symbol": "BRAccountLinkingCredentials.password",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64_armv7/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
-      "line": 76,
+      "line": 77,
       "symbol": "BRAccountLinkingCredentials.retailer",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
