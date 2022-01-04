@@ -1,3 +1,7 @@
+# 2.17.0
+- Improved logging for Merchant Connections
+- Fix bug preventing product intelligence data from populating for certain merchants
+
 # 2.16.0
 - Merchant Connection update to v2.1.0, see: https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md
 - Fix timing issue preventing Amazon scraping in certain rare cases
