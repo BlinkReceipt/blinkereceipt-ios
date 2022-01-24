@@ -1,3 +1,8 @@
+# 2.18.0
+- Fix bug detecting login page for Amazon.ca
+- Merchant Connection update to v2.1.1 see: https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md
+- Update minimum supported iOS version to iOS 11
+
 # 2.17.0
 - Improved logging for Merchant Connections
 - Fix bug preventing product intelligence data from populating for certain merchants

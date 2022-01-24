@@ -30,21 +30,25 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		YBMC/lYcEG7q+wYgM5yklHb1iAE=
+		DrtB94C6YQrDjRg7YU8uyYyCfcY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		q4xMsW+409zGnKAdmalmLP3VN3k=
+		</data>
+		<key>amazon-scrape.alp</key>
+		<data>
+		KwGo9XYdCv8PpK7hqvYNaDakrcQ=
+		</data>
+		<key>gmail-imap.alp</key>
+		<data>
+		ja/sWZFUAYT0jYVtBxLu0cPeeoo=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>Headers/BRAccountLinkingCredentials.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			3K//j4T/b2YILqdSRJotccoLFP0=
-			</data>
 			<key>hash2</key>
 			<data>
 			HEp7/WlB7zhdqpLtT7nK6FKJnj/TCSgeoCS1JGM/hFg=
@@ -52,10 +56,6 @@
 		</dict>
 		<key>Headers/BRAccountLinkingManager.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			qXew/oUTSx+QnaaOPyCJT7A2nIU=
-			</data>
 			<key>hash2</key>
 			<data>
 			5doeC72D84C3U1WhqXnr5ql6+wenGd90trlahzG0VMw=
@@ -63,10 +63,6 @@
 		</dict>
 		<key>Headers/BREReceiptManager.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			A0ch4fH9hIN2Y08Sq7Q8nUa9f5U=
-			</data>
 			<key>hash2</key>
 			<data>
 			AP/ejDLLftB5PTCd/g94JtUfW818UCsDzUmdJuO/V84=
@@ -74,10 +70,6 @@
 		</dict>
 		<key>Headers/BREmailAccount.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			e1PW7rS/P6vD/3vVFvonZPmOxXs=
-			</data>
 			<key>hash2</key>
 			<data>
 			ze4cvxbtWsnJjvPfLaRv5tG6QQhlha79DVYHFZBk5mk=
@@ -85,10 +77,6 @@
 		</dict>
 		<key>Headers/BRIMAPAccount.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Re4+HspPCMxHQZoeaowJfA1regs=
-			</data>
 			<key>hash2</key>
 			<data>
 			1s50IGcezBa2YVOT+HHqkN2M/ohJ4yv4DC8oLQY5JK0=
@@ -96,10 +84,6 @@
 		</dict>
 		<key>Headers/BlinkEReceipt.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			w+9KN82fp9OoLH/5b+wchkTUXto=
-			</data>
 			<key>hash2</key>
 			<data>
 			BF+aYrRw1rObbp6/ghXUdgGc2dMC/kBiZkTmaPKHZG8=
@@ -107,13 +91,23 @@
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			q4xMsW+409zGnKAdmalmLP3VN3k=
-			</data>
 			<key>hash2</key>
 			<data>
 			qwxqIg8+ZtSzzPGOfW1R3OFLy12Y3mpeq56602AKTu8=
+			</data>
+		</dict>
+		<key>amazon-scrape.alp</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			B+v4/N+RvozF0GAy5MvMtQ/6DEI00V43HQXkpDMx9no=
+			</data>
+		</dict>
+		<key>gmail-imap.alp</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			kIi3PdhlUI9fdXSw8uvMZgP8fwkceKdQvI7iU09NhPE=
 			</data>
 		</dict>
 	</dict>
