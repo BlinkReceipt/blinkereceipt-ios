@@ -1,3 +1,7 @@
+# 2.19.0
+- Merchant Connection update to v2.2.0, see: https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md
+- Fix bug in prod intel for Merchant Connections
+
 # 2.18.0
 - Fix bug detecting login page for Amazon.ca
 - Merchant Connection update to v2.1.1 see: https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md
