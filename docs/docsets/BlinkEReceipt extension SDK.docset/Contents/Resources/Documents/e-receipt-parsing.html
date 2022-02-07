@@ -261,7 +261,10 @@
 </code></pre>
 <h2 id='retrieving-and-parsing-e-receipts' class='heading'>Retrieving and Parsing E-Receipts</h2>
 
-<p>Once you have successfully integrated one or more mail providers, and the user has successfully authenticated their account(s), you can begin retrieving and parsing e-receipts as follows:</p>
+<p>Once you have successfully integrated one or more mail providers, and the user has successfully authenticated their account(s), you can begin retrieving and parsing e-receipts either locally or remotely:</p>
+<h3 id='local' class='heading'>Local</h3>
+
+<p>In this method, the user&rsquo;s device initiates the search of the user&rsquo;s inbox directly (i.e. requests are made from the user&rsquo;s device directly to the respective email provider) and the results are parsed immediately and returned to the client app in a callback:</p>
 <pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">BREReceiptManager</span> <span class="nf">shared</span><span class="p">]</span> <span class="nf">getEReceiptsWithCompletion</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">BRScanResults</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">receipts</span><span class="p">,</span> <span class="n">BREmailAccount</span> <span class="o">*</span><span class="n">account</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
@@ -284,12 +287,37 @@
 
 <p>The <code>BRScanResults.products</code> array is composed of <code>BRProduct</code> objects as usual, but with 1 additional property: <code>BRProduct.shippingStatus</code></p>
 
-<p>Finally, you can control how far back to search in the user&rsquo;s email for e-receipts via the <code><a href="Classes/BREReceiptManager.html#/c:objc(cs)BREReceiptManager(py)dayCutoff">BREReceiptManager.dayCutoff</a></code> property. The default is 14 days.</p>
+<p>You can control how far back to search in the user&rsquo;s email for e-receipts via the <code><a href="Classes/BREReceiptManager.html#/c:objc(cs)BREReceiptManager(py)dayCutoff">BREReceiptManager.dayCutoff</a></code> and <code><a href="Classes/BREReceiptManager.html#/c:objc(cs)BREReceiptManager(py)dateCutoff">BREReceiptManager.dateCutoff</a></code> properties. The <code><a href="Classes/BREReceiptManager.html#/c:objc(cs)BREReceiptManager(py)searchUntilDate">BREReceiptManager.searchUntilDate</a></code> controls how recently to search until (i.e. if you do not want to search until the present day). The default setting is to search the previous 14 days.</p>
+<h3 id='remote' class='heading'>Remote</h3>
+
+<p>Searching a user&rsquo;s inbox and parsing results can take some time, and if the user exits the app during this process, no results will be received. As a result we have created a method to perform the searching and parsing remotely in an asynchronous fashion.</p>
+
+<p>The authentication for each email provider remains on device, since we do not warehouse any user credentials server side. However instead of invoking <code><a href="Classes/BREReceiptManager.html#/c:objc(cs)BREReceiptManager(im)getEReceiptsWithCompletion:">-[BREReceiptManager getEReceiptsWithCompletion:]</a></code>, you will call <code><a href="Classes/BREReceiptManager.html#/c:objc(cs)BREReceiptManager(im)startRemoteEReceiptScrapeForAccount:withCompletion:">-[BREReceiptManager startRemoteEReceiptScrapeForAccount:withCompletion:]</a></code>.</p>
+
+<p>This method queues up a scraping job remotely and returns a job ID (or an error if the job could not be succesfully queued). This job ID will be included in the results payload that is posted to the results endpoint that you have configured for remote scraping (see below).</p>
+
+<p>For ease of debugging, the <code><a href="Classes/BREReceiptManager.html#/c:objc(cs)BREReceiptManager(py)remoteScrapeClientEndpoint">BREReceiptManager.remoteScrapeClientEndpoint</a></code> can be used to override the results endpoint that you have configured server side using the configuration API.</p>
+
+<p>If you would like to override the cutoff date on a user-by-user basis, this can be achieved with the <code><a href="Classes/BREReceiptManager.html#/c:objc(cs)BREReceiptManager(py)remoteScrapeUserDateCutoff">BREReceiptManager.remoteScrapeUserDateCutoff</a></code> propery.</p>
+<h4 id='configuration-api' class='heading'>Configuration API</h4>
+
+<p>In order to use the remote scraping method, you will need to configure your server side setup using our configuration API: <a href="https://app.swaggerhub.com/apis-docs/blinkreceipt/ereceipts">https://app.swaggerhub.com/apis-docs/blinkreceipt/ereceipts</a></p>
+
+<p>Please reach out to your account point of contact to initiate this process.</p>
+<h3 id='aggregation' class='heading'>Aggregation</h3>
+
+<p>A single online (or in-store) order can generate a series of emails - order confirmation, shipping update, item substitution, delivery confirmation, etc.</p>
+
+<p>You can makes use of our aggregation system in order to receive scrape results in which e-receipts pertaining to the same order are returned together.</p>
+
+<p>This is as simple as enabling the <code><a href="Classes/BREReceiptManager.html#/c:objc(cs)BREReceiptManager(py)aggregateResults">BREReceiptManager.aggregateResults</a></code> property (there is a corresponding property in the Configuration API for remote scraping).</p>
+
+<p>When aggregation is turned on, the top level results in each <code>BRScanResults</code> object that is returned are the aggregated, most recent results for a given order. Inside this object, you will find the <code>BRScanResults.ereceiptComponentEmails</code> array populated with all of the component emails that our system determined are part of this order. Each item is itself a <code>BRScanResults</code> object. If some of the emails from this order were initially parsed during a previous scrape session, you won&rsquo;t find all the data from those emails populated in the component results structure, rather just the <code>blinkReceiptId</code> will appear (so that you would be able to correlate that with results from the earlier scrape sessions if it is important to be able to see the component results).</p>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2022-02-04)</p>
+          <p>&copy; 2022 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2022-02-07)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
