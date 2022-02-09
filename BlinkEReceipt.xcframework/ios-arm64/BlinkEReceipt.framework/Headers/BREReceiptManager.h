@@ -36,20 +36,49 @@ typedef NS_ENUM(NSUInteger, BRSetupIMAPResult) {
 
 ///
 typedef NS_ENUM(NSUInteger, BREReceiptRemoteError) {
+    
     BREReceiptRemoteErrorNone                   = 0,
+    
+    /// Remote scrape was attempted but no providers have been linked
     BREReceiptRemoteErrorNoProvider             = 1,
+
+    /// Remote scrape was attempted with a provider that is not supported
     BREReceiptRemoteErrorInvalidProvider        = 2,
+
+    /// Remote scrape was attempted but no valid credentials were found on disk for the specified provider
     BREReceiptRemoteErrorNoCredentials          = 3,
+
+    /// Remote scrape was attempted for an OAuth provider but a new access token could not be obtained
     BREReceiptRemoteErrorCantObtainToken        = 4,
+
+    /// The supplied credentials failed to authenticate againt the specified provider server side
     BREReceiptRemoteErrorInvalidCredentials     = 5,
+
+    /// For OAuth providers this indicates the access token has expired
     BREReceiptRemoteErrorExpiredToken           = 6,
+
+    /// No client configuration for the remote scrape service was found server side
     BREReceiptRemoteErrorNoClientConfig         = 7,
+
+    /// Remote scrape worker could not locate all required parameters to initiate scrape (Unexpected)
     BREReceiptRemoteErrorBadInput               = 8,
+
+    /// Remote scrape worker timed out trying to connect to email provider
     BREReceiptRemoteErrorTimeout                = 9,
+
+    /// Remote scrape worker connected to IMAP account but found no mailboxes (Unexpected)
     BREReceiptRemoteErrorIMAPNoBoxes            = 10,
+
+    /// Indicates that one or more receipt IDs passed in to a reprocessing job was invalid (will not be returned client side)
     BREReceiptRemoteErrorInvalidReceiptIDs      = 11,
+
+    /// Indicates failure to connect to the results endpoint configured server side (will not be returned client side) 
     BREReceiptRemoteErrorClientEndpointErrors   = 12,
+    
+    /// Could not queue up a remote scrape job because there is already one queued or in progress for this email address
     BREReceiptRemoteErrorJobInProgress          = 13,
+
+    /// An unknown error was encountered attempting to queue up the remote scrape job
     BREReceiptRemoteErrorUnknown                = 999
 };
 
