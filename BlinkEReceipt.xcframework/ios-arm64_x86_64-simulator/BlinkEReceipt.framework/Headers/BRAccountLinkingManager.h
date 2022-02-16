@@ -15,14 +15,32 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
     BRAccountLinkingErrorNone,
+
+    /// An attempt was made to grab orders for all merchants or for a specific merchant, but no merchant accounts had been linked
     BRAccountLinkingErrorNoAccountsLinked,
+
+    /// Login encountered a scenario requiring manual user intervention (CAPTCHA, 2FA, etc)
     BRAccountLinkingErrorVerificationNeeded,
+
+    /// The user successfully completed the authentication manually
     BRAccountLinkingErrorVerificationCompleted,
+
+    /// The user cancelled the manual authentication
     BRAccountLinkingErrorVerificationCancelled,
+
+    /// An attempt was made to grab orders from Amazon (legacy parser) but no Amazon credentials were found
     BRAccountLinkingErrorNoCredentials,
+
+    /// An unexpected error occurred during login or parsing
     BRAccountLinkingErrorInternal,
+
+    /// The structure of the merchant's website or data feed that was encountered during parsing was unexpected
     BRAccountLinkingErrorParsingFail,
+
+    /// Login failed on the merchant's site due to invalid credentials
     BRAccountLinkingErrorInvalidCredentials,
+
+    /// An attempt was made to grab orders for a particular merchant but no linked account for that merchant was found
     BRAccountLinkingErrorRetailerNotFound
 };
 

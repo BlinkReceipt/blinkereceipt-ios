@@ -196,6 +196,18 @@ typedef NS_ENUM(NSUInteger, BREReceiptRemoteError) {
              withCompletion:(void(^)(BRSetupIMAPResult result))completion;
 
 /**
+ * If users have already generated an App Password for a Gmail / Yahoo / AOL IMAP account, use this method to link the account
+ *
+ * @param account   Instantiate an instance of `BRIMAPAccount`, setting the App Password as the `password` property
+ * @param completion       The completion is invoked after the attempt to configure the account has finished
+ *
+ *      * `BRSetupIMAPResult result` - The result of the attempt to configure the account. A successful result is `BRSetupIMAPResultEnabledLSA` or `BRSetupIMAPResultCreatedAppPassword`
+
+ */
+- (void)linkIMAPAccountWithoutSetup:(BRIMAPAccount*)account
+                     withCompletion:(void(^)(BRSetupIMAPResult result))completion;
+
+/**
  *  Verifies that stored IMAP credentials are valid
  *
  *  @param account The account you would like to verify (must be one of the members of `getLinkedAccount`

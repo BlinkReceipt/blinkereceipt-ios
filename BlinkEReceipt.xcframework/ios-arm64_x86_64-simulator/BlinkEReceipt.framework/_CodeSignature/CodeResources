@@ -10,11 +10,11 @@
 		</data>
 		<key>Headers/BRAccountLinkingManager.h</key>
 		<data>
-		qXew/oUTSx+QnaaOPyCJT7A2nIU=
+		ZjBxbzQkhupf2TcII0o19mzuxtw=
 		</data>
 		<key>Headers/BREReceiptManager.h</key>
 		<data>
-		A0ch4fH9hIN2Y08Sq7Q8nUa9f5U=
+		fXBk/W+WBXRNz+6L6yYa47pPo8w=
 		</data>
 		<key>Headers/BREmailAccount.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		7gktu6dmJd8mutB2GIpwLlJuxcM=
+		es8vSsjgKJbwE5Bmdtln0A7+3kU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>amazon-scrape.alp</key>
 		<data>
-		KwGo9XYdCv8PpK7hqvYNaDakrcQ=
+		Kb0ExD3xdQtJ8+hJj9OMqJ9eHvw=
 		</data>
 		<key>gmail-imap.alp</key>
 		<data>
@@ -58,14 +58,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5doeC72D84C3U1WhqXnr5ql6+wenGd90trlahzG0VMw=
+			NadRz6TAgslD5VT25GvVegHk+HY7DG6czewjJQadj28=
 			</data>
 		</dict>
 		<key>Headers/BREReceiptManager.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AP/ejDLLftB5PTCd/g94JtUfW818UCsDzUmdJuO/V84=
+			PAFAitfTCPlYAbiHGZyAYLHyT4LnM9L58C1Nx0DRZ/k=
 			</data>
 		</dict>
 		<key>Headers/BREmailAccount.h</key>
@@ -100,7 +100,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			B+v4/N+RvozF0GAy5MvMtQ/6DEI00V43HQXkpDMx9no=
+			faFYbM+ae7bCbsWNgf36KGssH4yUX9A8ZqSvguQfG3k=
 			</data>
 		</dict>
 		<key>gmail-imap.alp</key>
