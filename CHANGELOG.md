@@ -1,3 +1,7 @@
+# 2.20.1
+- Merchant Connection update to v2.3.0, see: https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md
+- Fix bug linking multiple IMAP accounts
+
 # 2.20.0
 - Merchant Connection update to v2.2.2, see: https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md
 - Ability to link IMAP account with existing App Password

@@ -201,7 +201,7 @@ typedef NS_ENUM(NSUInteger, BREReceiptRemoteError) {
  * @param account   Instantiate an instance of `BRIMAPAccount`, setting the App Password as the `password` property
  * @param completion       The completion is invoked after the attempt to configure the account has finished
  *
- *      * `BRSetupIMAPResult result` - The result of the attempt to configure the account. A successful result is `BRSetupIMAPResultEnabledLSA` or `BRSetupIMAPResultCreatedAppPassword`
+ *      * `BRSetupIMAPResult result` - The result of the attempt to configure the account. A successful result is `BRSetupIMAPResultSaved`
 
  */
 - (void)linkIMAPAccountWithoutSetup:(BRIMAPAccount*)account

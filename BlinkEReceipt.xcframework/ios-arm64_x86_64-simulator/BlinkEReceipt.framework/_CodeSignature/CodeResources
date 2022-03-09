@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/BRAccountLinkingCredentials.h</key>
 		<data>
-		XlbyILubq2ULw2djauVCIJHfzWM=
+		+8qn6f9OoqvQ0ibSSgWLDL1SnZE=
 		</data>
 		<key>Headers/BRAccountLinkingManager.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/BREReceiptManager.h</key>
 		<data>
-		fXBk/W+WBXRNz+6L6yYa47pPo8w=
+		Wzg12R+DEQi64FlSTjeRSHD2Quw=
 		</data>
 		<key>Headers/BREmailAccount.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		es8vSsjgKJbwE5Bmdtln0A7+3kU=
+		J4ef2LlLnOiHZbKaqjJ1/SNSD0g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,7 +51,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			w3W6eu1eCQCyBfgZqfhclEAUpZ6AKYsxLE9CvuSx8vQ=
+			d0ARrVd7RJRIZfefF62LKe85JU+t2ep6dPHww/KleOA=
 			</data>
 		</dict>
 		<key>Headers/BRAccountLinkingManager.h</key>
@@ -65,7 +65,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PAFAitfTCPlYAbiHGZyAYLHyT4LnM9L58C1Nx0DRZ/k=
+			wOfRTW30Nf6XNBsQVa23TUYofqC6paHZov0ypSMztpk=
 			</data>
 		</dict>
 		<key>Headers/BREmailAccount.h</key>
