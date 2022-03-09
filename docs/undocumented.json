@@ -338,14 +338,35 @@
     },
     {
       "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
-      "line": 78,
+      "line": 65,
+      "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerSprouts",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "line": 66,
+      "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerGap",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "line": 67,
+      "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerUlta",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "line": 81,
       "symbol": "BRAccountLinkingCredentials.password",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
-      "line": 80,
+      "line": 83,
       "symbol": "BRAccountLinkingCredentials.retailer",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
