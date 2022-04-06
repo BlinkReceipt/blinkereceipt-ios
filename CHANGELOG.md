@@ -1,3 +1,12 @@
+# 2.21.0
+- Merchant Connection update to v2.3.8, see: https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md
+- Allow linking IMAP accounts with pre-existing App Passwords
+- Better documentation of e-receipt remote scraping + Merchant Connection errors
+- Fix wrong key name when saving e-receipt store addresses
+- Add `BREReceiptManager.countryCode` property to improve parsing of non-US e-receipts
+- Populate more properties on `BRScanResults` object even when parsing fails
+- Add `BRScanResults.ereceiptIsValid` property to provide determination of whether a given email that was scraped is an e-receipt (as opposed to promotional or marketing material)
+
 # 2.20.1
 - Merchant Connection update to v2.3.0, see: https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md
 - Fix bug linking multiple IMAP accounts

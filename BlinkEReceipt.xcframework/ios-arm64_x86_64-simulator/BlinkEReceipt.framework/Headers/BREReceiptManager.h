@@ -154,6 +154,12 @@ typedef NS_ENUM(NSUInteger, BREReceiptRemoteError) {
  */
 @property (strong, nonatomic) NSDate *remoteScrapeUserDateCutoff;
 
+/**
+ * If the e-receipts being scraped are known to be from a specific country, set this property to the ISO 2 character country code to improve parsing
+ * Deafult: nil
+ */
+@property (strong, nonatomic) NSString *countryCode;
+
 ///---------------------
 /// @name Class Methods
 ///---------------------
