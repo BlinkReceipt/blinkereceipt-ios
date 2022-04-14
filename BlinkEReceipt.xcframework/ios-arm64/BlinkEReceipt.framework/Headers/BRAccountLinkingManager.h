@@ -18,6 +18,9 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
 
     /// An attempt was made to grab orders for all merchants or for a specific merchant, but no merchant accounts had been linked
     BRAccountLinkingErrorNoAccountsLinked,
+    
+    /// An attempt was made to link a merchant, but the same had been linked already
+    BRAccountLinkingErrorAccountLinkedAlready,
 
     /// Login encountered a scenario requiring manual user intervention (CAPTCHA, 2FA, etc)
     BRAccountLinkingErrorVerificationNeeded,
@@ -102,7 +105,7 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
  *  Link a retailer online account
  *  @param credentials The credentials for this account
  */
-- (void)linkAccountWithCredentials:(BRAccountLinkingCredentials*)credentials;
+- (BRAccountLinkingError)linkAccountWithCredentials:(BRAccountLinkingCredentials*)credentials;
 
 /**
  *  Verify account for a given retailer

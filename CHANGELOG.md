@@ -1,3 +1,7 @@
+# 2.21.1
+- Fix crash in on-device e-receipt scraping
+- Fix bug preventing prod intel results for certain items in Merchant Connection results
+
 # 2.21.0
 - Merchant Connection update to v2.3.8, see: https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md
 - Allow linking IMAP accounts with pre-existing App Passwords
