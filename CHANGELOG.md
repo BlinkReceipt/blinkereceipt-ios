@@ -1,3 +1,6 @@
+# 2.22.0
+- Merchant Connection update to v2.3.13, see: https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md
+
 # 2.21.1
 - Fix crash in on-device e-receipt scraping
 - Fix bug preventing prod intel results for certain items in Merchant Connection results
