@@ -1,3 +1,8 @@
+# 2.23.0
+- Merchant Connection update to v2.3.22, see: https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md
+- Revert to official `GoogleSignIn` pod since they reinstated support for adding scope during authentication
+- Properly return sub-products in e-receipt scrape results
+
 # 2.22.0
 - Merchant Connection update to v2.3.13, see: https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md
 
