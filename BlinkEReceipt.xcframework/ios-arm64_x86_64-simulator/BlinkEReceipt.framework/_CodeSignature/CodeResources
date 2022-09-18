@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/BRAccountLinkingCredentials.h</key>
 		<data>
-		+8qn6f9OoqvQ0ibSSgWLDL1SnZE=
+		OICgrjJ9bqNDEgIv85upFJf5fsU=
 		</data>
 		<key>Headers/BRAccountLinkingManager.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		HQFmnf1J7vrqxCnv/t+H6UXgcw0=
+		k2aNzzFMH8itFukyhzmck0z4gWQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,7 +51,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			d0ARrVd7RJRIZfefF62LKe85JU+t2ep6dPHww/KleOA=
+			06ZEPrY4xU3g6e3iE9ZB4DMZQGU+mR4dnImSeJzUEFw=
 			</data>
 		</dict>
 		<key>Headers/BRAccountLinkingManager.h</key>

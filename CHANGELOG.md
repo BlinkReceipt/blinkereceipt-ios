@@ -1,3 +1,7 @@
+# 2.25.0
+- Merchant Connection update to v2.4.1, see: https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md
+- Add defensive code for crash in `BREReceipManager` related to sub-products
+
 # 2.24.0
 - Support new Gmail IMAP setup flow
 

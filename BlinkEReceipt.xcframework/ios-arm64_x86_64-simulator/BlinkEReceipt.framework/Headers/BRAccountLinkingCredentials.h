@@ -65,6 +65,15 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingRetailer) {
     BRAccountLinkingRetailerSprouts = 54,
     BRAccountLinkingRetailerGap = 6457,
     BRAccountLinkingRetailerUlta = 8662,
+    BRAccountLinkingRetailerFood4Less = 31,
+    BRAccountLinkingRetailerFredMeyer = 53,
+    BRAccountLinkingRetailerHarrisTeeter = 33,
+    BRAccountLinkingRetailerRalphs = 40,
+    BRAccountLinkingRetailerAlbertsons = 20,
+    BRAccountLinkingRetailerJewelOsco = 23,
+    BRAccountLinkingRetailerSafeway = 8,
+    BRAccountLinkingRetailerVons = 63,
+    BRAccountLinkingRetailerAcmeMarkets = 17,
 };
 
 /**
