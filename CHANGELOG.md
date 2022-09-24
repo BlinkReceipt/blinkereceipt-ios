@@ -1,3 +1,6 @@
+# 2.25.1
+- Fix iOS 16 crash in IMAP library
+
 # 2.25.0
 - Merchant Connection update to v2.4.1, see: https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md
 - Add defensive code for crash in `BREReceipManager` related to sub-products
