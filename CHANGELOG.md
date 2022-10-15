@@ -1,3 +1,6 @@
+# 2.25.2
+- Fix initial IMAP setup URL for AOL
+
 # 2.25.1
 - Fix iOS 16 crash in IMAP library
 
