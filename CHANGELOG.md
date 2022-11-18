@@ -1,3 +1,6 @@
+# 2.26.0
+- Stability improvements
+
 # 2.25.2
 - Fix initial IMAP setup URL for AOL
 
