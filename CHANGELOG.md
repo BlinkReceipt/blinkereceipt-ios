@@ -1,3 +1,6 @@
+# 2.26.1
+- Remove `SimpleKeychain` dependency
+
 # 2.26.0
 - Stability improvements
 
