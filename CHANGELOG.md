@@ -1,3 +1,6 @@
+# 2.27.0
+- Parsing improvements
+
 # 2.26.1
 - Remove `SimpleKeychain` dependency
 

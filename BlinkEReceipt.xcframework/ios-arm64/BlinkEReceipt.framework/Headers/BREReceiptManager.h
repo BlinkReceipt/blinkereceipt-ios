@@ -77,6 +77,9 @@ typedef NS_ENUM(NSUInteger, BREReceiptRemoteError) {
     
     /// Could not queue up a remote scrape job because there is already one queued or in progress for this email address
     BREReceiptRemoteErrorJobInProgress          = 13,
+    
+    /// Could not connect to or authenticate with the IMAP server
+    BREReceiptRemoteErrorIMAPFailedConnection   = 16,
 
     /// An unknown error was encountered attempting to queue up the remote scrape job
     BREReceiptRemoteErrorUnknown                = 999
