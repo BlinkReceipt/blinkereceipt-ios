@@ -4,13 +4,25 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/BRAccountLinkingConfiguration.h</key>
+		<data>
+		14fPfVO9E35aCBcsU0igXcbg7Xk=
+		</data>
+		<key>Headers/BRAccountLinkingConnection.h</key>
+		<data>
+		EZIAunXSbyB7OwFpgBUTdc8SVYM=
+		</data>
+		<key>Headers/BRAccountLinkingConnectionIdentifier.h</key>
+		<data>
+		/aTUiEuFsjCEAD6ToqoReSEuSN8=
+		</data>
 		<key>Headers/BRAccountLinkingCredentials.h</key>
 		<data>
 		OICgrjJ9bqNDEgIv85upFJf5fsU=
 		</data>
 		<key>Headers/BRAccountLinkingManager.h</key>
 		<data>
-		O2HxskG+iwd6PLCJHzZL191+ZGU=
+		Zs00P0pBcPWpn4BfqeeVsN7eMTk=
 		</data>
 		<key>Headers/BREReceiptManager.h</key>
 		<data>
@@ -30,7 +42,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		8qYt8Egt3Tukn6l8FuLVA1shyzM=
+		ipSDCJGel9zT89cOfn3uUTInEIQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -42,11 +54,32 @@
 		</data>
 		<key>gmail-imap.alp</key>
 		<data>
-		cPwefeU1pStEcAjEuzYv9FlzsLg=
+		cCNWjm5uAMqx99pNWBoMj/60jMY=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/BRAccountLinkingConfiguration.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LIHCilG6aTIqx2OhePQEX4g/6tBZgRnV/SCQBNpbDvc=
+			</data>
+		</dict>
+		<key>Headers/BRAccountLinkingConnection.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7QVvkgH80ywS5a9Ohd0EtWMCsEONDB2cOFSwKadzd9Q=
+			</data>
+		</dict>
+		<key>Headers/BRAccountLinkingConnectionIdentifier.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5lRng6Rjr1m1Bswn3nwDje9vaCkiuyn8TlNH8BJW7SU=
+			</data>
+		</dict>
 		<key>Headers/BRAccountLinkingCredentials.h</key>
 		<dict>
 			<key>hash2</key>
@@ -58,7 +91,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HoLuY/uvqpCTCKgVbho0iI6MoJlqR82NDUFwsN9f+LA=
+			4XTQ57Kw9NiBhaNlnKsTqkTN1x4zpmP9Ce4HYiGhqbI=
 			</data>
 		</dict>
 		<key>Headers/BREReceiptManager.h</key>
@@ -107,7 +140,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0n7Fw3ZVJ/tG5pRmJ31whKn9SrU7P2dSDxcMkLQ0eQc=
+			HNcrxueUaSTAHOaemqy7XmDhnfcKGicPdzW61SYJMgg=
 			</data>
 		</dict>
 	</dict>
