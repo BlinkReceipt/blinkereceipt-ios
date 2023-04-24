@@ -1,593 +1,684 @@
 {
   "warnings": [
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConfiguration.h",
+      "line": 13,
+      "symbol": "BRAccountLinkingConfiguration",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h",
+      "line": 15,
+      "symbol": "BRAccountLinkingConnection",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h",
+      "line": 17,
+      "symbol": "BRAccountLinkingConnection.retailer",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h",
+      "line": 18,
+      "symbol": "BRAccountLinkingConnection.username",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h",
+      "line": 19,
+      "symbol": "BRAccountLinkingConnection.password",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h",
+      "line": 20,
+      "symbol": "BRAccountLinkingConnection.lastExecutionTime",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h",
+      "line": 21,
+      "symbol": "BRAccountLinkingConnection.lastExecutionCode",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h",
+      "line": 24,
+      "symbol": "BRAccountLinkingConnection.configuration",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h",
+      "line": 27,
+      "symbol": "BRAccountLinkingConnection.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h",
+      "line": 28,
+      "symbol": "BRAccountLinkingConnection.-initWithRetailer:username:password:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnectionIdentifier.h",
+      "line": 13,
+      "symbol": "BRAccountLinkingConnectionIdentifier",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnectionIdentifier.h",
+      "line": 15,
+      "symbol": "BRAccountLinkingConnectionIdentifier.rawValue",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnectionIdentifier.h",
+      "line": 17,
+      "symbol": "BRAccountLinkingConnectionIdentifier.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 17,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerAmazon",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 18,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerBedBath",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 19,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerBestBuy",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 20,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerBJs",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 21,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerCVS",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 22,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerChewy",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 23,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerCostco",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 24,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerDicksSportingGoods",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 25,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerDollarGeneral",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 26,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerDollarTree",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 27,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerDominosPizza",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 28,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerDoordash",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 29,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerDrizly",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 30,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerFamilyDollar",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 31,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerFoodLion",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 32,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerGiantEagle",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 33,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerGrubhub",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 34,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerHEB",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 35,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerHyVee",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 36,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerHomeDepot",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 37,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerInstacart",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 38,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerKohls",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 39,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerKroger",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 40,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerLowes",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 41,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerMacys",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 42,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerMarshalls",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 43,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerMeijer",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 44,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerNike",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 45,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerPublix",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 46,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerRiteAid",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 47,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerSamsClub",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 48,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerSeamless",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 49,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerSephora",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 50,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerShipt",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 51,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerShoprite",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 52,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerStaples",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 53,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerStarbucks",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 54,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerTacoBell",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 55,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerTarget",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 56,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerTjMaxx",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 57,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerWalgreens",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 58,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerWalmart",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 59,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerWalmartCA",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 60,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerWegmans",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 61,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerUberEats",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 62,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerAmazonBeta",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 63,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerAmazonBetaCA",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 64,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerAmazonBetaUK",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 65,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerSprouts",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 66,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerGap",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 67,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerUlta",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 68,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerFood4Less",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 69,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerFredMeyer",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 70,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerHarrisTeeter",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 71,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerRalphs",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 72,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerAlbertsons",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 73,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerJewelOsco",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 74,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerSafeway",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 75,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerVons",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 76,
       "symbol": "BRAccountLinkingRetailer.BRAccountLinkingRetailerAcmeMarkets",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 90,
       "symbol": "BRAccountLinkingCredentials.password",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h",
       "line": 92,
       "symbol": "BRAccountLinkingCredentials.retailer",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h",
-      "line": 17,
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h",
+      "line": 20,
       "symbol": "BRAccountLinkingError.BRAccountLinkingErrorNone",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
       "line": 18,
       "symbol": "BREReceiptIMAPError.BREReceiptIMAPErrorInvalidCredentials",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
       "line": 19,
       "symbol": "BREReceiptIMAPError.BREReceiptIMAPErrorGmailIMAPDisabled",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
       "line": 20,
       "symbol": "BREReceiptIMAPError.BREReceiptIMAPErrorGmailTwoFactor",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
       "line": 25,
       "symbol": "BRSetupIMAPResult.BRSetupIMAPResultUserCancelled",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
       "line": 26,
       "symbol": "BRSetupIMAPResult.BRSetupIMAPResultBadEmail",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
       "line": 27,
       "symbol": "BRSetupIMAPResult.BRSetupIMAPResultBadPassword",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
       "line": 28,
       "symbol": "BRSetupIMAPResult.BRSetupIMAPResultEnabledLSA",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
       "line": 29,
       "symbol": "BRSetupIMAPResult.BRSetupIMAPResultRedirectToSafari",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
       "line": 30,
       "symbol": "BRSetupIMAPResult.BRSetupIMAPResultCreatedAppPassword",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
       "line": 31,
       "symbol": "BRSetupIMAPResult.BRSetupIMAPResultAdminNeeded",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
       "line": 32,
       "symbol": "BRSetupIMAPResult.BRSetupIMAPResultDuplicateEmail",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
       "line": 33,
       "symbol": "BRSetupIMAPResult.BRSetupIMAPResultSaved",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
       "line": 34,
       "symbol": "BRSetupIMAPResult.BRSetupIMAPResultUnknownFailure",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h",
       "line": 40,
       "symbol": "BREReceiptRemoteError.BREReceiptRemoteErrorNone",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREmailAccount.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREmailAccount.h",
       "line": 15,
       "symbol": "BREReceiptProvider.BREReceiptProviderNone",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREmailAccount.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREmailAccount.h",
       "line": 16,
       "symbol": "BREReceiptProvider.BREReceiptProviderGmail",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREmailAccount.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREmailAccount.h",
       "line": 17,
       "symbol": "BREReceiptProvider.BREReceiptProviderOutlook",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREmailAccount.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREmailAccount.h",
       "line": 18,
       "symbol": "BREReceiptProvider.BREReceiptProviderYahoo",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREmailAccount.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREmailAccount.h",
       "line": 19,
       "symbol": "BREReceiptProvider.BREReceiptProviderAOL",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREmailAccount.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREmailAccount.h",
       "line": 20,
       "symbol": "BREReceiptProvider.BREReceiptProviderGmailIMAP",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/dpanzer/Projects/blinkereceipt-ios/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREmailAccount.h",
+      "file": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREmailAccount.h",
       "line": 21,
       "symbol": "BREReceiptProvider.BREReceiptProviderCustomIMAP",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/dpanzer/Projects/blinkereceipt-ios"
+  "source_directory": "/Users/stanislav/Microblink/blinkEreceipt-ios/blinkereceipt-jazzy"
 }

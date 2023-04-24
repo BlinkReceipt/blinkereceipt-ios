@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BRAccountLinkingConfiguration Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    <style> table {border: thin solid black; border-spacing: 0px} td {border: thin solid black; padding: 5px} </style>
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/BRAccountLinkingConfiguration" class="dashAnchor"></a>
+    <a title="BRAccountLinkingConfiguration Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">BlinkEReceipt extension SDK 2.28.0 Docs</a></p>
+        <p class="header-right"><a href="https://github.com/BlinkReceipt/blinkereceipt-ios"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">BlinkEReceipt extension SDK Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        BRAccountLinkingConfiguration Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../account-linking.html">Account Linking</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../e-receipt-parsing.html">E-Receipt Parsing</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BRAccountLinkingConfiguration.html">BRAccountLinkingConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BRAccountLinkingConnection.html">BRAccountLinkingConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BRAccountLinkingConnectionIdentifier.html">BRAccountLinkingConnectionIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BRAccountLinkingCredentials.html">BRAccountLinkingCredentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BRAccountLinkingManager.html">BRAccountLinkingManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BREReceiptManager.html">BREReceiptManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BREmailAccount.html">BREmailAccount</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BRIMAPAccount.html">BRIMAPAccount</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/BRAccountLinkingError.html">BRAccountLinkingError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BREReceiptIMAPError.html">BREReceiptIMAPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BREReceiptProvider.html">BREReceiptProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BREReceiptRemoteError.html">BREReceiptRemoteError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/BRSetupIMAPResult.html">BRSetupIMAPResult</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>BRAccountLinkingConfiguration</h1>
+              <div class="declaration">
+                <div class="language">
+                  <p class="aside-title">Objective-C</p>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">BRAccountLinkingConfiguration</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="cm">/**
+ *  Set this property to control how far back in the user's history to search for orders
+ *
+ *  Default: 15
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">dayCutoff</span><span class="p">;</span>
+
+<span class="cm">/**
+ *  This property is an alternative to `dayCutoff` which allows you to set a specific date/time that serves as the boundary of how far back to search.
+ *  If set, it will override `dayCutoff`
+ *
+ *  Default: nil
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">dateCutoff</span><span class="p">;</span>
+
+<span class="cm">/**
+ *  When set to YES, the first scrape will attempt to retrieve orders back to the `dayCutoff` or `dateCutoff` but all subsequent scrapes will only go as far back as the last scrape date regardless of whether the first scrape completed
+ *  When set to NO, subsequent scrapes will continue to fetch historical orders until `dayCutoff` or `dateCutoff` is reached, and after that, scrapes will only go back to the last scrape date
+ *
+ *  Default: YES
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">returnLatestOrdersOnly</span><span class="p">;</span>
+
+<span class="cm">/**
+*  Set this to a different country to access the correct version of the retailer's site, if it exists for that country (currently only supports Amazon UK)
+*
+*  Default: @"US"
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">countryCode</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                </div>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BRAccountLinkingConfiguration</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            
+              <div class="slightly-smaller">
+                <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.28.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConfiguration.h#L13-L45">Show on GitHub</a>
+              </div>
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BRAccountLinkingConfiguration(py)dayCutoff"></a>
+                    <a name="//apple_ref/objc/Property/dayCutoff" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BRAccountLinkingConfiguration(py)dayCutoff">dayCutoff</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set this property to control how far back in the user&rsquo;s history to search for orders</p>
+
+<p>Default: 15</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">dayCutoff</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dayCutoff</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.28.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConfiguration.h#L20">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BRAccountLinkingConfiguration(py)dateCutoff"></a>
+                    <a name="//apple_ref/objc/Property/dateCutoff" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BRAccountLinkingConfiguration(py)dateCutoff">dateCutoff</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This property is an alternative to <code><a href="../Classes/BRAccountLinkingConfiguration.html#/c:objc(cs)BRAccountLinkingConfiguration(py)dayCutoff">dayCutoff</a></code> which allows you to set a specific date/time that serves as the boundary of how far back to search.
+  If set, it will override <code><a href="../Classes/BRAccountLinkingConfiguration.html#/c:objc(cs)BRAccountLinkingConfiguration(py)dayCutoff">dayCutoff</a></code></p>
+
+<p>Default: nil</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">dateCutoff</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dateCutoff</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.28.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConfiguration.h#L28">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BRAccountLinkingConfiguration(py)returnLatestOrdersOnly"></a>
+                    <a name="//apple_ref/objc/Property/returnLatestOrdersOnly" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BRAccountLinkingConfiguration(py)returnLatestOrdersOnly">returnLatestOrdersOnly</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When set to YES, the first scrape will attempt to retrieve orders back to the <code><a href="../Classes/BRAccountLinkingConfiguration.html#/c:objc(cs)BRAccountLinkingConfiguration(py)dayCutoff">dayCutoff</a></code> or <code><a href="../Classes/BRAccountLinkingConfiguration.html#/c:objc(cs)BRAccountLinkingConfiguration(py)dateCutoff">dateCutoff</a></code> but all subsequent scrapes will only go as far back as the last scrape date regardless of whether the first scrape completed
+  When set to NO, subsequent scrapes will continue to fetch historical orders until <code><a href="../Classes/BRAccountLinkingConfiguration.html#/c:objc(cs)BRAccountLinkingConfiguration(py)dayCutoff">dayCutoff</a></code> or <code><a href="../Classes/BRAccountLinkingConfiguration.html#/c:objc(cs)BRAccountLinkingConfiguration(py)dateCutoff">dateCutoff</a></code> is reached, and after that, scrapes will only go back to the last scrape date</p>
+
+<p>Default: YES</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">returnLatestOrdersOnly</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">returnLatestOrdersOnly</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.28.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConfiguration.h#L36">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BRAccountLinkingConfiguration(py)countryCode"></a>
+                    <a name="//apple_ref/objc/Property/countryCode" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BRAccountLinkingConfiguration(py)countryCode">countryCode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set this to a different country to access the correct version of the retailer&rsquo;s site, if it exists for that country (currently only supports Amazon UK)</p>
+
+<p>Default: @&ldquo;US&rdquo;</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">countryCode</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">countryCode</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.28.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConfiguration.h#L43">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2023 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2023-04-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

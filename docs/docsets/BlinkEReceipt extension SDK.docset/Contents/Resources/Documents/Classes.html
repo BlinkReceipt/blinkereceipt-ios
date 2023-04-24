@@ -17,7 +17,7 @@
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">BlinkEReceipt extension SDK 2.26.0 Docs</a></p>
+        <p><a href="index.html">BlinkEReceipt extension SDK 2.28.0 Docs</a></p>
         <p class="header-right"><a href="https://github.com/BlinkReceipt/blinkereceipt-ios"><img src="img/gh.png" alt="GitHub"/>View on GitHub</a></p>
         <div class="header-right">
           <form role="search" action="search.json">
@@ -50,6 +50,15 @@
           <li class="nav-group-name">
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/BRAccountLinkingConfiguration.html">BRAccountLinkingConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BRAccountLinkingConnection.html">BRAccountLinkingConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BRAccountLinkingConnectionIdentifier.html">BRAccountLinkingConnectionIdentifier</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Classes/BRAccountLinkingCredentials.html">BRAccountLinkingCredentials</a>
               </li>
@@ -105,6 +114,164 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)BRAccountLinkingConfiguration"></a>
+                    <a name="//apple_ref/objc/Class/BRAccountLinkingConfiguration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BRAccountLinkingConfiguration">BRAccountLinkingConfiguration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Classes/BRAccountLinkingConfiguration.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">BRAccountLinkingConfiguration</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="cm">/**
+ *  Set this property to control how far back in the user's history to search for orders
+ *
+ *  Default: 15
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">dayCutoff</span><span class="p">;</span>
+
+<span class="cm">/**
+ *  This property is an alternative to `dayCutoff` which allows you to set a specific date/time that serves as the boundary of how far back to search.
+ *  If set, it will override `dayCutoff`
+ *
+ *  Default: nil
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">dateCutoff</span><span class="p">;</span>
+
+<span class="cm">/**
+ *  When set to YES, the first scrape will attempt to retrieve orders back to the `dayCutoff` or `dateCutoff` but all subsequent scrapes will only go as far back as the last scrape date regardless of whether the first scrape completed
+ *  When set to NO, subsequent scrapes will continue to fetch historical orders until `dayCutoff` or `dateCutoff` is reached, and after that, scrapes will only go back to the last scrape date
+ *
+ *  Default: YES
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">returnLatestOrdersOnly</span><span class="p">;</span>
+
+<span class="cm">/**
+*  Set this to a different country to access the correct version of the retailer's site, if it exists for that country (currently only supports Amazon UK)
+*
+*  Default: @"US"
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">countryCode</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BRAccountLinkingConfiguration</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.28.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConfiguration.h#L13-L45">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BRAccountLinkingConnection"></a>
+                    <a name="//apple_ref/objc/Class/BRAccountLinkingConnection" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BRAccountLinkingConnection">BRAccountLinkingConnection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Classes/BRAccountLinkingConnection.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">BRAccountLinkingConnection</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a></span> <span class="n">retailer</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">username</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">password</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSTimeInterval</span> <span class="n">lastExecutionTime</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">lastExecutionCode</span><span class="p">;</span>
+
+<span class="c1">// A configuration object that defines the behavior when searching for new orders</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n"><a href="Classes/BRAccountLinkingConfiguration.html">BRAccountLinkingConfiguration</a></span> <span class="o">*</span><span class="n">configuration</span><span class="p">;</span>
+
+
+<span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithRetailer</span><span class="p">:(</span><span class="n"><a href="Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a></span><span class="p">)</span><span class="nv">retailer</span> <span class="nf">username</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">username</span> <span class="nf">password</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">password</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BRAccountLinkingConnection</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.28.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h#L15-L30">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BRAccountLinkingConnectionIdentifier"></a>
+                    <a name="//apple_ref/objc/Class/BRAccountLinkingConnectionIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BRAccountLinkingConnectionIdentifier">BRAccountLinkingConnectionIdentifier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Classes/BRAccountLinkingConnectionIdentifier.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">BRAccountLinkingConnectionIdentifier</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">rawValue</span><span class="p">;</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BRAccountLinkingConnectionIdentifier</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.28.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnectionIdentifier.h#L13-L19">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)BRAccountLinkingCredentials"></a>
                     <a name="//apple_ref/objc/Class/BRAccountLinkingCredentials" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)BRAccountLinkingCredentials">BRAccountLinkingCredentials</a>
@@ -133,7 +300,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.26.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h#L82-L104">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.28.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h#L82-L104">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -176,7 +343,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.26.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L58-L185">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.28.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L73-L271">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -212,7 +379,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.26.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L88-L354">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.28.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L91-L357">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -248,7 +415,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.26.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREmailAccount.h#L27-L39">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.28.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREmailAccount.h#L27-L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -284,7 +451,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.26.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRIMAPAccount.h#L17-L42">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.28.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRIMAPAccount.h#L17-L42">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -294,7 +461,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2022-11-28)</p>
+          <p>&copy; 2023 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2023-04-24)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
