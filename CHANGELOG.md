@@ -1,3 +1,7 @@
+
+## 2.28.1
+* Fixed an issue with `updateConnection` function that was causing a merchant to be linked automatically
+
 # 2.28.0
 * Account Linking v2.5.0
     * Add ability to cancel active Account Linking operation
