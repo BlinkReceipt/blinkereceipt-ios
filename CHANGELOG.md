@@ -1,3 +1,5 @@
+# 2.29.0
+* Account Linking stability improvements
 
 ## 2.28.1
 * Fixed an issue with `updateConnection` function that was causing a merchant to be linked automatically
