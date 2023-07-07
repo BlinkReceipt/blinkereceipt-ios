@@ -87,7 +87,7 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
  *
  *  Default: 15
  */
-@property (nonatomic) NSInteger dayCutoff DEPRECATED_MSG_ATTRIBUTE("Use BRAccount.dayCutoff instead.");
+@property (nonatomic) NSInteger dayCutoff DEPRECATED_MSG_ATTRIBUTE("Use BRAccountLinkingConfiguration.dayCutoff instead.");
 
 /**
  *  This property is an alternative to `dayCutoff` which allows you to set a specific date/time that serves as the boundary of how far back to search.
@@ -95,7 +95,7 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
  *
  *  Default: nil
  */
-@property (strong, nonatomic, nullable) NSDate *dateCutoff DEPRECATED_MSG_ATTRIBUTE("Use BRAccount.dateCutoff instead.");
+@property (strong, nonatomic, nullable) NSDate *dateCutoff DEPRECATED_MSG_ATTRIBUTE("Use BRAccountLinkingConfiguration.dateCutoff instead.");
 
 /**
  *  When set to YES, the first scrape will attempt to retrieve orders back to the `dayCutoff` or `dateCutoff` but all subsequent scrapes will only go as far back as the last scrape date regardless of whether the first scrape completed
@@ -103,14 +103,14 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
  *
  *  Default: YES
  */
-@property (nonatomic) BOOL returnLatestOrdersOnly DEPRECATED_MSG_ATTRIBUTE("Use BRAccount.returnLatestOrdersOnly instead.");
+@property (nonatomic) BOOL returnLatestOrdersOnly DEPRECATED_MSG_ATTRIBUTE("Use BRAccountLinkingConfiguration.returnLatestOrdersOnly instead.");
 
 /**
 *  Set this to a different country to access the correct version of the retailer's site, if it exists for that country (currently only supports Amazon UK)
 *
 *  Default: @"US"
 */
-@property (strong, nonatomic) NSString *countryCode DEPRECATED_MSG_ATTRIBUTE("Use BRAccount.countryCode instead.");
+@property (strong, nonatomic) NSString *countryCode DEPRECATED_MSG_ATTRIBUTE("Use BRAccountLinkingConfiguration.countryCode instead.");
 
 /**
 *  Returns current version
@@ -137,7 +137,7 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
  *  @param credentials The credentials for this account
  *  @return Any `BRAccountLinkingError` error  that was encountered while attempting to link this retailer
  */
-- (BRAccountLinkingError)linkAccountWithCredentials:(BRAccountLinkingCredentials*)credentials DEPRECATED_MSG_ATTRIBUTE("Use linkAccount instead");
+- (BRAccountLinkingError)linkAccountWithCredentials:(BRAccountLinkingCredentials*)credentials DEPRECATED_MSG_ATTRIBUTE("Use linkRetailerWithConnection instead");
 
 /**
  *  Link a retailer connection
@@ -173,7 +173,7 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
  */
 - (BRAccountLinkingConnectionIdentifier * _Nullable)verifyRetailerWithConnection:(BRAccountLinkingConnection *)connection
                                                                   withCompletion:(void(^)(BRAccountLinkingError error,
-                                                                                          UIViewController *vc,
+                                                                                          UIViewController * _Nullable vc,
                                                                                           NSString *sessionId))completion;
 /**
  *  Returns all retailers for which there is a linked account

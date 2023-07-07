@@ -1,18 +1,21 @@
+# 2.29.1
+- Account Linking [v2.5.19](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
+
 # 2.29.0
-* Account Linking stability improvements
+- Account Linking stability improvements
 
 ## 2.28.1
-* Fixed an issue with `updateConnection` function that was causing a merchant to be linked automatically
+- Fixed an issue with `updateConnection` function that was causing a merchant to be linked automatically
 
 # 2.28.0
-* Account Linking v2.5.0
-    * Add ability to cancel active Account Linking operation
-    * Add ability to see current Account Linking version
-    * Add ability to fetch orders in a background task
-    * Linking account is no longer needed to verify its credentials
-    * General flow improvements and bug fixes
-    * More info: https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md
-* Fix detection of wrong gmail password in IMAP linking
+- Account Linking v2.5.0
+    - Add ability to cancel active Account Linking operation
+    - Add ability to see current Account Linking version
+    - Add ability to fetch orders in a background task
+    - Linking account is no longer needed to verify its credentials
+    - General flow improvements and bug fixes
+    - More info: https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md
+- Fix detection of wrong gmail password in IMAP linking
 
 # 2.27.0
 - Parsing improvements
