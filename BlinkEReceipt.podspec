@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "BlinkEReceipt"
-  s.version      = "2.29.1"
+  s.version      = "2.29.2"
   s.summary      = "BlinkEReceipt SDK"
 
   s.description  = <<-DESC
@@ -32,6 +32,6 @@ This is the BlinkEReceipt extension for the BlinkReceipt SDK
   # MailCore has an iOS pod but it is > 200mb so we wrapped it in this dynamic framework which pulls in only the functionality we require in less than 3mb
   s.dependency 'BRMailCore', '~> 0.1'
 
-  s.dependency 'AccountLinking', '~> 2.5.19'
+  s.dependency 'AccountLinking', '~> 2.5.23'
 
 end

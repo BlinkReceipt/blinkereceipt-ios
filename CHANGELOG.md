@@ -1,3 +1,7 @@
+# 2.29.2
+- Support new Gmail IMAP setup flow
+- Account Linking [v2.5.23](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
+
 # 2.29.1
 - Account Linking [v2.5.19](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
 
