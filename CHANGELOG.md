@@ -1,3 +1,7 @@
+# 2.30.0
+- Account Linking [v2.6.0](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
+    - Add `Postmates` support
+
 # 2.29.2
 - Support new Gmail IMAP setup flow
 - Account Linking [v2.5.23](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)

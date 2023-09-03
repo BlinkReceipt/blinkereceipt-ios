@@ -74,6 +74,7 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingRetailer) {
     BRAccountLinkingRetailerSafeway = 8,
     BRAccountLinkingRetailerVons = 63,
     BRAccountLinkingRetailerAcmeMarkets = 17,
+    BRAccountLinkingRetailerPostmates = 19671,
 };
 
 /**
