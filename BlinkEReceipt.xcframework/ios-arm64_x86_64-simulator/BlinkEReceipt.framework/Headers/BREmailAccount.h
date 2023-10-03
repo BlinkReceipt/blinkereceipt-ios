@@ -18,7 +18,8 @@ typedef NS_ENUM(NSUInteger, BREReceiptProvider) {
     BREReceiptProviderYahoo,
     BREReceiptProviderAOL,
     BREReceiptProviderGmailIMAP,
-    BREReceiptProviderCustomIMAP
+    BREReceiptProviderCustomIMAP,
+    BREReceiptProviderYahooV2
 };
 
 /**
