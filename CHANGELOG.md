@@ -1,3 +1,6 @@
+# 2.32.0
+- Added Gmail IMAP stability improvements
+
 # 2.31.0
 - Account Linking [v2.6.5](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
 - Added support for a new YahooV2 email provider 
