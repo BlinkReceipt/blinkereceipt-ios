@@ -75,6 +75,20 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingRetailer) {
     BRAccountLinkingRetailerVons = 63,
     BRAccountLinkingRetailerAcmeMarkets = 17,
     BRAccountLinkingRetailerPostmates = 19671,
+    BRAccountLinkingRetailerTemuUK = 12819,
+    BRAccountLinkingRetailerUberEatsUK = 12850,
+    BRAccountLinkingRetailerSheinUS = 12882,
+    BRAccountLinkingRetailerSheinUK = 12848,
+    BRAccountLinkingRetailerSheinES = 12691,
+    BRAccountLinkingRetailerAliExpress = 12849,
+    BRAccountLinkingRetailerCostcoCA = 5718,
+    BRAccountLinkingRetailerAsdaUK = 6036,
+    BRAccountLinkingRetailerSainsburyUK = 6048,
+    BRAccountLinkingRetailerTescoUK = 6051,
+    BRAccountLinkingRetailerCarrefourUK = 6059,
+    BRAccountLinkingRetailerPcExpressCA = 12749,
+    BRAccountLinkingRetailerAmazonBetaFR = 12688,
+    BRAccountLinkingRetailerAmazonBetaES = 12686,
 };
 
 /**

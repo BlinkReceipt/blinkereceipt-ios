@@ -1,3 +1,6 @@
+## 2.33.0
+- Account Linking [v2.7.0](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
+
 # 2.32.0
 - Added Gmail IMAP stability improvements
 
