@@ -1,3 +1,6 @@
+## 2.37.0
+* Account Linking [v2.10.0](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
+
 ## 2.36.0
 * Binary optimizations
 
