@@ -1,11 +1,15 @@
+## 2.38.0
+- Account Linking [v2.11.0](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
+- Add `Amazon (AU)` support
+
 ## 2.37.0
-* Account Linking [v2.10.0](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
+- Account Linking [v2.10.0](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
 
 ## 2.36.0
-* Binary optimizations
+- Binary optimizations
 
 ## 2.35.0
-* Account Linking [v2.9.0](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
+- Account Linking [v2.9.0](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
 
 ## 2.34.0
 - Account Linking [v2.8.0](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
@@ -22,7 +26,7 @@
 
 # 2.30.0
 - Account Linking [v2.6.0](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
-    - Add `Postmates` support
+- Add `Postmates` support
 
 # 2.29.2
 - Support new Gmail IMAP setup flow

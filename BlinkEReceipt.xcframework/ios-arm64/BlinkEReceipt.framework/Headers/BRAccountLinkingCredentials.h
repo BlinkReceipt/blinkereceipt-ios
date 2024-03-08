@@ -89,7 +89,8 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingRetailer) {
     BRAccountLinkingRetailerPcExpressCA = 12749,
     BRAccountLinkingRetailerAmazonBetaFR = 12688,
     BRAccountLinkingRetailerAmazonBetaES = 12686,
-    BRAccountLinkingRetailerAmazonBetaDE = 12687
+    BRAccountLinkingRetailerAmazonBetaDE = 12687,
+    BRAccountLinkingRetailerAmazonBetaAU = 12948
 };
 
 /**
