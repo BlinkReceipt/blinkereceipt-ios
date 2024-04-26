@@ -1,3 +1,7 @@
+## 2.39.0
+- Resolved an issue with Gmail IMAP authentication
+- Added Privacy Manifest
+
 ## 2.38.0
 - Account Linking [v2.11.0](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
 - Add `Amazon (AU)` support
