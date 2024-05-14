@@ -1,3 +1,6 @@
+## 2.39.1
+- Support new Gmail IMAP 2FA flow
+
 ## 2.39.0
 - Resolved an issue with Gmail IMAP authentication
 - Added Privacy Manifest

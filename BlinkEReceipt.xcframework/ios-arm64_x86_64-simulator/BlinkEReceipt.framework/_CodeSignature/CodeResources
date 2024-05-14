@@ -42,11 +42,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		HpQwZhCDfoKjYcKN2eM7TUYQMeE=
+		ZtfocwiN/cJ7BogBNXtiVhW2fvI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		cW8RrrRSTVKuz8IsiPteK9C77/s=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		frYtrwqUQevTI5XEHTU+R2QDRHI=
 		</data>
 		<key>amazon-scrape.alp</key>
 		<data>
@@ -54,7 +58,7 @@
 		</data>
 		<key>gmail-imap.alp</key>
 		<data>
-		yOHenPcdLR2utmqupqCJPLdL4lc=
+		iDhpHJcFsVmoXpuckn54A/YydRU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -129,6 +133,13 @@
 			W6eMKUoTgkg/mGIbMHGBQours/rAMeIB8gQ/j1wH63A=
 			</data>
 		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Q63hQ/oCWFW7a/aLBAtmBHHBSUK1SuYdfM/qXD0UU2Y=
+			</data>
+		</dict>
 		<key>amazon-scrape.alp</key>
 		<dict>
 			<key>hash2</key>
@@ -140,7 +151,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xdpvrR6G4i9xkQR08mnpqT6ogxXER3LkeAdUfFjs82E=
+			PwhMz13E3LdJJW2XsRvRCK4X1d3n1CQvH3JW2H/LVlw=
 			</data>
 		</dict>
 	</dict>
