@@ -1,3 +1,6 @@
+## 2.40.0
+- Binary optimizations
+
 ## 2.39.1
 - Support new Gmail IMAP 2FA flow
 

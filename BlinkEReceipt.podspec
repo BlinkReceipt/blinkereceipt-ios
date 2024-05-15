@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "BlinkEReceipt"
-  s.version      = "2.39.1"
+  s.version      = "2.40.0"
   s.summary      = "BlinkEReceipt SDK"
 
   s.description  = <<-DESC
@@ -20,7 +20,7 @@ This is the BlinkEReceipt extension for the BlinkReceipt SDK
 
   s.vendored_frameworks = ["BlinkEReceipt.xcframework"]
   
-  s.dependency 'BlinkReceipt', '~> 1.47.0'
+  s.dependency 'BlinkReceipt', '~> 1.48.0'
 
   s.dependency 'GoogleSignIn', '~> 6.2.0'
   s.dependency 'GoogleAPIClientForREST/Gmail', '~> 1.3'
