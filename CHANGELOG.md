@@ -1,3 +1,6 @@
+## 2.41.0
+- Binary optimizations
+
 ## 2.40.0
 - Binary optimizations
 
