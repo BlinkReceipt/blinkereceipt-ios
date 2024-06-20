@@ -1,3 +1,12 @@
+## 2.42.0
+- Account Linking [v2.90.0](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
+- A new way to connect retailer accounts, via the retailer’s web page (`Retailer Webview Authentication`)
+- Added support for `Coles (AU)` and `Woolworths (AU)`
+- Fixed
+  * `BRAccountLinkingRetailerCarrefourUK` -> `BRAccountLinkingRetailerCarrefourES`
+  * `BRAccountLinkingRetailerAliExpress` -> `BRAccountLinkingRetailerAliExpressUK`
+- Removed all deprecated logic from BRAccountLinkingManager.
+
 ## 2.41.0
 - Binary optimizations
 

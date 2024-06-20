@@ -28,8 +28,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) NSDate *dateCutoff;
 
 /**
- *  When set to YES, the first scrape will attempt to retrieve orders back to the `dayCutoff` or `dateCutoff` but all subsequent scrapes will only go as far back as the last scrape date regardless of whether the first scrape completed
- *  When set to NO, subsequent scrapes will continue to fetch historical orders until `dayCutoff` or `dateCutoff` is reached, and after that, scrapes will only go back to the last scrape date
+ *  This property controls how far back in the user's history to search for orders, if a previously returned order has been found
+ *
+ *  When set to YES, the first scrape will attempt to retrieve orders back to the dayCutoff or dateCutoff. All subsequent scrapes will only go as far back as the last scrape date regardless of whether the first scrape completed.
+ *
+ *  ex) If the dayCutoff was set to 365 days but the first scrape only went as far back as day 100, then any subsequent scrapes will only return the latest orders within that 100 days.
+ *
+ *  When set to NO, subsequent scrapes will continue to fetch historical orders until dayCutoff or dateCutoff is reached, and after that, scrapes will only go back to the last scrape date
+ *
+ *  ex) if the dayCutoff was set to 365 days but the first scrape only went as far back as 100 days, then subsequent scrapes would still attempt to get all of the orders within that 365 day window before starting to grab latest orders.
  *
  *  Default: YES
  */
