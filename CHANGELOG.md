@@ -1,3 +1,6 @@
+## 2.42.1
+- Account Linking [v2.90.7](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
+
 ## 2.42.0
 - Account Linking [v2.90.0](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
 - A new way to connect retailer accounts, via the retailer’s web page (`Retailer Webview Authentication`)
