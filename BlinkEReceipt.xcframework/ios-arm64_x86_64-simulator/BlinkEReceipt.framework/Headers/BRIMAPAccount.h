@@ -17,6 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BRIMAPAccount : BREmailAccount
 
 /**
+*  Use this method to setup Gmail IMAP provider directly
+*/
+- (instancetype)initWithGmailIMAP;
+
+/**
 *  The first step in linking a user's IMAP account is instantiating this class with the user's credentials.
 *
 *  @param provider  The provider for this IMAP account

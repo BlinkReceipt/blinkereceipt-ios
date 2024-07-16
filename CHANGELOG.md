@@ -1,3 +1,8 @@
+## 2.43.0
+* New, simplified authentication flow for Gmail IMAP that automates the enabling of two-factor authentication and app-password creation.
+CHANGED
+* Improved Samples Response page
+
 ## 2.42.1
 - Account Linking [v2.90.7](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
 
