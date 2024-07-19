@@ -17,6 +17,14 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BRIMAPAccount : BREmailAccount
 
 /**
+ *  Set this property to YES, if you want users to provide input for each step from the authentication process directly in a webview
+ *
+ *  @note Only affects the BREReceiptProviderGmailIMAP provider
+ *  Default: NO
+ */
+@property (nonatomic) BOOL webviewAuthEnabled;
+
+/**
 *  Use this method to setup Gmail IMAP provider directly
 */
 - (instancetype)initWithGmailIMAP;

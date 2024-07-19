@@ -1,7 +1,10 @@
+## 2.43.1
+- New flow for Gmail IMAP that allows e2e authentication inside a WebView
+
 ## 2.43.0
-* New, simplified authentication flow for Gmail IMAP that automates the enabling of two-factor authentication and app-password creation.
+- New, simplified authentication flow for Gmail IMAP that automates the enabling of two-factor authentication and app-password creation.
 CHANGED
-* Improved Samples Response page
+- Improved Samples Response page
 
 ## 2.42.1
 - Account Linking [v2.90.7](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
