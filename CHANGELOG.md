@@ -1,3 +1,7 @@
+## 2.44.0
+`CHANGED`
+* Binary optimizations
+
 ## 2.43.1
 - New flow for Gmail IMAP that allows e2e authentication inside a WebView
 
