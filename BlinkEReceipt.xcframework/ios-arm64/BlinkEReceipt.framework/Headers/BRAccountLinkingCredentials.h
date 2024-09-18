@@ -15,7 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 typedef NS_ENUM(NSUInteger, BRAccountLinkingRetailer) {
     BRAccountLinkingRetailerAmazon = 8643,
-    BRAccountLinkingRetailerBedBath = 6074,
     BRAccountLinkingRetailerBestBuy = 177,
     BRAccountLinkingRetailerBJs = 45,
     BRAccountLinkingRetailerCVS = 3,
@@ -29,31 +28,21 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingRetailer) {
     BRAccountLinkingRetailerDrizly = 10934,
     BRAccountLinkingRetailerFamilyDollar = 165,
     BRAccountLinkingRetailerFoodLion = 142,
-    BRAccountLinkingRetailerGiantEagle = 144,
     BRAccountLinkingRetailerGrubhub = 10208,
-    BRAccountLinkingRetailerHEB = 44,
-    BRAccountLinkingRetailerHyVee = 56,
     BRAccountLinkingRetailerHomeDepot = 15,
     BRAccountLinkingRetailerInstacart = 8652,
-    BRAccountLinkingRetailerKohls = 5929,
     BRAccountLinkingRetailerKroger = 6,
     BRAccountLinkingRetailerLowes = 16,
-    BRAccountLinkingRetailerMacys = 6802,
-    BRAccountLinkingRetailerMarshalls = 5917,
     BRAccountLinkingRetailerMeijer = 19,
-    BRAccountLinkingRetailerNike = 8712,
     BRAccountLinkingRetailerPublix = 7,
-    BRAccountLinkingRetailerRiteAid = 143,
     BRAccountLinkingRetailerSamsClub = 9,
     BRAccountLinkingRetailerSeamless = 10068,
     BRAccountLinkingRetailerSephora = 171,
     BRAccountLinkingRetailerShipt = 9016,
     BRAccountLinkingRetailerShoprite = 22,
-    BRAccountLinkingRetailerStaples = 12,
     BRAccountLinkingRetailerStarbucks = 6677,
     BRAccountLinkingRetailerTacoBell = 8598,
     BRAccountLinkingRetailerTarget = 1,
-    BRAccountLinkingRetailerTjMaxx = 5921,
     BRAccountLinkingRetailerWalgreens = 10,
     BRAccountLinkingRetailerWalmart = 11,
     BRAccountLinkingRetailerWalmartCA = 5849,
@@ -93,7 +82,6 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingRetailer) {
     BRAccountLinkingRetailerAmazonBetaAU = 12948,
     BRAccountLinkingRetailerColesAU = 7610,
     BRAccountLinkingRetailerWoolworthsAU = 8646,
-    BRAccountLinkingRetailerStaplesCA = 6127
 };
 
 /**

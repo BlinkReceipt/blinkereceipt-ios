@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Set this property to YES, if you want users to authenticate with merchant's webpage directly
  *
- *  Default: NO
+ *  Default: YES
  */
 @property (nonatomic) BOOL webviewAuthEnabled;
 

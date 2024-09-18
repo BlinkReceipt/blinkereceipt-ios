@@ -63,7 +63,13 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
     BRAccountLinkingErrorFeatureNotAvailable,
     
     /// Login failed on the merchant's site
-    BRAccountLinkingErrorAuthenticationFail
+    BRAccountLinkingErrorAuthenticationFail,
+    
+    /// Authentication failed due to WebView being terminated by user
+    BRAccountLinkingErrorWebViewClosed,
+    
+    /// This retailer is not currently supported
+    BRAccountLinkingErrorUnsupportedRetailer
 };
 
 /**

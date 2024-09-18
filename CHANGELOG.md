@@ -1,19 +1,44 @@
-## 2.44.0
-`CHANGED`
-* Binary optimizations
+# 2.45.0
+#### ADDED
+New error types:
+1. BRAccountLinkingErrorWebViewClosed
+2. BRAccountLinkingErrorUnsupportedRetailer
 
-## 2.43.1
+#### FIXED
+A random crash when executing in background
+
+#### CHANGED  
+Increase minimum  target to iOS13
+The default value of webviewAuthEnabled (BRAccountLinkingConnection) is now true
+Removed following merchants:
+1. Bed Bath & Beyond
+2. Giant Eagle
+3. H-E-B
+4. HyVee
+5. Kohls
+6. Macy’s
+7. Marshalls
+8. Nike
+9. Rite Aid
+10. TJ Maxx
+11. Staples
+
+# 2.44.0
+#### CHANGED
+- Binary optimizations
+
+# 2.43.1
 - New flow for Gmail IMAP that allows e2e authentication inside a WebView
 
-## 2.43.0
+# 2.43.0
 - New, simplified authentication flow for Gmail IMAP that automates the enabling of two-factor authentication and app-password creation.
 CHANGED
 - Improved Samples Response page
 
-## 2.42.1
+# 2.42.1
 - Account Linking [v2.90.7](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
 
-## 2.42.0
+# 2.42.0
 - Account Linking [v2.90.0](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
 - A new way to connect retailer accounts, via the retailer’s web page (`Retailer Webview Authentication`)
 - Added support for `Coles (AU)` and `Woolworths (AU)`
@@ -22,36 +47,36 @@ CHANGED
   * `BRAccountLinkingRetailerAliExpress` -> `BRAccountLinkingRetailerAliExpressUK`
 - Removed all deprecated logic from BRAccountLinkingManager.
 
-## 2.41.0
+# 2.41.0
 - Binary optimizations
 
-## 2.40.0
+# 2.40.0
 - Binary optimizations
 
-## 2.39.1
+# 2.39.1
 - Support new Gmail IMAP 2FA flow
 
-## 2.39.0
+# 2.39.0
 - Resolved an issue with Gmail IMAP authentication
 - Added Privacy Manifest
 
-## 2.38.0
+# 2.38.0
 - Account Linking [v2.11.0](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
 - Add `Amazon (AU)` support
 
-## 2.37.0
+# 2.37.0
 - Account Linking [v2.10.0](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
 
-## 2.36.0
+# 2.36.0
 - Binary optimizations
 
-## 2.35.0
+# 2.35.0
 - Account Linking [v2.9.0](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
 
-## 2.34.0
+# 2.34.0
 - Account Linking [v2.8.0](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
 
-## 2.33.0
+# 2.33.0
 - Account Linking [v2.7.0](https://github.com/BlinkReceipt/br_account_linking/blob/master/CHANGELOG.md)
 
 # 2.32.0
