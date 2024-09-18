@@ -401,3 +401,11 @@ form[role=search] .tt-suggestion.tt-cursor {
 form[role=search] .tt-suggestion:hover .doc-parent-name,
 form[role=search] .tt-suggestion.tt-cursor .doc-parent-name {
   color: #fff; }
+
+.bullet {
+  width: 6px;
+  height: 6px;
+  background-color: #333;
+  border-radius: 3px;
+  display: inline-block;
+  margin-bottom: 2px; }

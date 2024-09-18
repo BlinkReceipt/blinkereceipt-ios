@@ -37,7 +37,7 @@
       </p>
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          BlinkEReceipt extension SDK 2.44.0 Docs
+          BlinkEReceipt extension SDK 2.45.0 Docs
         </a>
         
       </p>
@@ -240,15 +240,12 @@
 <span class="k">let</span> <span class="nv">password</span> <span class="o">=</span> <span class="s">"secure-password"</span>
 <span class="k">let</span> <span class="nv">connection</span> <span class="o">=</span> <span class="kt">BRAccountLinkingConnection</span><span class="p">(</span><span class="nv">retailer</span><span class="p">:</span> <span class="o">.</span><span class="n">walmart</span><span class="p">,</span> <span class="nv">username</span><span class="p">:</span> <span class="n">username</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="n">password</span><span class="p">)</span>
 <span class="n">connection</span><span class="o">.</span><span class="n">configuration</span><span class="o">.</span><span class="n">dayCutoff</span> <span class="o">=</span> <span class="mi">30</span>
-
 <span class="k">let</span> <span class="nv">taskId</span> <span class="o">=</span> <span class="kt">BRAccountLinkingManager</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">verifyRetailer</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">connection</span><span class="p">,</span> <span class="nv">withCompletion</span><span class="p">:</span> <span class="p">{</span> <span class="n">error</span><span class="p">,</span> <span class="n">viewController</span><span class="p">,</span> <span class="n">sessionId</span> <span class="k">in</span>
-
   <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="o">.</span><span class="n">verificationNeeded</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Display UIViewController for 2FA verification, CAPTCHA or other user input</span>
   <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="o">.</span><span class="n">verificationCompleted</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Dismiss the previously presented UIViewController</span>
   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-
     <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="o">.</span><span class="n">noCredentials</span><span class="p">)</span> <span class="p">{</span>
       <span class="c1">// Error: Credentials have not been provided</span>
     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="o">.</span><span class="kd">internal</span><span class="p">)</span> <span class="p">{</span>
@@ -260,12 +257,16 @@
     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="o">.</span><span class="n">cancelled</span><span class="p">)</span> <span class="p">{</span>
       <span class="c1">// Operation has been cancelled.</span>
       <span class="c1">// Dismiss any previously presented user input UIViewController</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="o">.</span><span class="n">webViewClosed</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Operation has been terminated due to dismissing of the webview.</span>
+      <span class="c1">// Dismiss any previously presented user input UIViewController</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="o">.</span><span class="n">unsupportedRetailer</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Error: An attempt to verify account with invalid retailer</span>
     <span class="p">}</span>
     <span class="c1">// Verification completed successfully</span>
     <span class="c1">// Account can be linked</span>
     <span class="kt">BRAccountLinkingManager</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">linkRetailer</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">connection</span><span class="p">)</span>
   <span class="p">}</span>
-
 <span class="p">})</span>
 </code></pre>
 
@@ -274,7 +275,6 @@
 
 <p>Once credentials are verified and a retailer is linked, we will search for purchases in a user&rsquo;s account.</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">taskId</span> <span class="o">=</span> <span class="kt">BRAccountLinkingManager</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">grabNewOrders</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="o">.</span><span class="n">walmart</span><span class="p">)</span> <span class="p">{</span> <span class="n">retailer</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">remaining</span><span class="p">,</span> <span class="n">viewController</span><span class="p">,</span> <span class="n">errorCode</span><span class="p">,</span> <span class="n">sessionID</span> <span class="k">in</span>
-
   <span class="k">if</span> <span class="p">(</span><span class="n">errorCode</span> <span class="o">==</span> <span class="o">.</span><span class="n">verificationNeeded</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Display UIViewController for 2FA verification, CAPTCHA or other user input</span>
   <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="n">errorCode</span> <span class="o">==</span> <span class="o">.</span><span class="n">verificationCompleted</span> <span class="p">{</span>
@@ -285,6 +285,11 @@
       <span class="c1">// Grab Orders completed successfully</span>
       <span class="c1">// No more orders to fetch</span>
     <span class="p">}</span>            
+  <span class="p">}</span>  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="o">.</span><span class="n">webViewClosed</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Operation has been terminated due to dismissing of the webview.</span>
+    <span class="c1">// Dismiss any previously presented user input UIViewController</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="o">.</span><span class="n">unsupportedRetailer</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Error: An attempt to verify account with invalid retailer</span>
   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
     <span class="c1">// Grab Orders Failed. Check error for more info</span>
   <span class="p">}</span>
@@ -387,7 +392,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2024 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2024-08-20)</p>
+      <p>&copy; 2024 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2024-09-17)</p>
       
     </section>
   </body>
