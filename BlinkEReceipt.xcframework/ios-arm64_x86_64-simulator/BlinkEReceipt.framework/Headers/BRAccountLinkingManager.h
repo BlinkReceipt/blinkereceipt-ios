@@ -106,7 +106,7 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
 * `NSString *sessionId` - a unique session GUID that can be reported for debugging purposes
 */
 
-@property (nonatomic, copy, nullable) void (^backgroundFetchCompletion)(BRAccountLinkingRetailer, BRAccountLinkingError, NSString * _Nonnull, BRScanResults * _Nullable);
+@property (nonatomic, copy, nullable) void (^backgroundFetchCompletion)(BRAccountLinkingRetailer, BRAccountLinkingError, NSString * _Nullable, BRScanResults * _Nullable);
 
 ///---------------
 /// @name Methods

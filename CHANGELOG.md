@@ -1,6 +1,10 @@
+# 2.45.3
+#### CHANGED
+- Binary optimizations
+
 # 2.45.1
 #### CHANGED
-- [BRMailCore v1.0](https://github.com/BlinkReceipt/BRMailCore/releases/tag/1.0.0)
+- `BRMailCore` version change
 
 # 2.45.0
 #### ADDED
