@@ -2,24 +2,10 @@
 <html lang="en">
   <head>
     <title>BREReceiptManager Class Reference</title>
-    <link rel="icon" href="https://microblink.com/wp-content/uploads/2022/01/cropped-Microblink_Favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" href="https://microblink.com/wp-content/uploads/2022/01/cropped-Microblink_Favicon-192x192.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="https://microblink.com/wp-content/uploads/2022/01/cropped-Microblink_Favicon-180x180.png" />
-    <link rel="preload" as="font"
-        href="https://microblink.com/wp-content/themes/microblink/assets/fonts/satoshi-bold-webfont.woff2" crossorigin>
-    <link rel="preload" as="font"
-        href="https://microblink.com/wp-content/themes/microblink/assets/fonts/satoshi-regular-webfont.woff2"
-        crossorigin>
-    <link rel="preload" as="font"
-        href="https://microblink.com/wp-content/themes/microblink/assets/fonts/satoshi-medium-webfont.woff2"
-        crossorigin>
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
-    <link rel="stylesheet" type="text/css" href="../css/prism.css" />
-    <meta charset="utf-8">
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/bootstrap.bundle.min.js"></script>
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     <style> table {border: thin solid black; border-spacing: 0px} td {border: thin solid black; padding: 5px} </style>
     <script src="../js/lunr.min.js" defer></script>
@@ -27,129 +13,99 @@
     <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-
     <a name="//apple_ref/objc/Class/BREReceiptManager" class="dashAnchor"></a>
-
     <a title="BREReceiptManager Class Reference"></a>
-
-    <header class="header">
-      <p class="header-col">
-        <img weight="20" height="20" src="https://microblink.com/wp-content/themes/microblink/assets/images/microblink-logo-animated.webp"/>
-      </p>
-      <p class="header-col header-col--primary">
-        <a class="header-link" href="../index.html">
-          BlinkEReceipt extension SDK 2.45.1 Docs
-        </a>
-        
-      </p>
-    
-      <div class="header-col--secondary">
-        <form role="search" action="../search.json">
-          <input type="text" placeholder="Search documentation" data-typeahead>
-        </form>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">BlinkEReceipt extension SDK 2.45.3 Docs</a></p>
+        <p class="header-right"><a href="https://github.com/BlinkReceipt/blinkereceipt-ios"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
       </div>
-    
-        <p class="header-col header-col--secondary">
-          <a class="header-link" href="https://github.com/BlinkReceipt/blinkereceipt-ios">
-            <img class="header-icon" src="../img/gh.png" alt="GitHub"/>
-            View on GitHub
-          </a>
-        </p>
-    
     </header>
-
-    <p class="breadcrumbs">
-      <a class="breadcrumb" href="../index.html">BlinkEReceipt extension SDK</a>
-      <img class="carat" src="../img/carat.png" alt=""/>
-      <a class="breadcrumb" href="../Classes.html">Classes</a>
-      <img class="carat" src="../img/carat.png" alt=""/>
-      BREReceiptManager Class Reference
-    </p>
-
     <div class="content-wrapper">
-      <nav class="navigation">
+      <p id="breadcrumbs">
+        <a href="../index.html">BlinkEReceipt extension SDK</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        <a href="../Classes.html">Classes</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        BREReceiptManager Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Guides.html">Guides</a>
+            <a href="../Guides.html">Guides</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../account-linking.html">Account Linking</a>
+                <a href="../account-linking.html">Account Linking</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../account-linking-faq.html">Account Linking FAQ</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../account-linking-retailers.html">Account Linking Retailers</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../e-receipt-parsing.html">E-Receipt Parsing</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../release-notes.html">Release Notes</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../sample-responses.html">Sample Responses</a>
+                <a href="../e-receipt-parsing.html">E-Receipt Parsing</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/BRAccountLinkingConfiguration.html">BRAccountLinkingConfiguration</a>
+                <a href="../Classes/BRAccountLinkingConfiguration.html">BRAccountLinkingConfiguration</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/BRAccountLinkingConnection.html">BRAccountLinkingConnection</a>
+                <a href="../Classes/BRAccountLinkingConnection.html">BRAccountLinkingConnection</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/BRAccountLinkingConnectionIdentifier.html">BRAccountLinkingConnectionIdentifier</a>
+                <a href="../Classes/BRAccountLinkingConnectionIdentifier.html">BRAccountLinkingConnectionIdentifier</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/BRAccountLinkingCredentials.html">BRAccountLinkingCredentials</a>
+                <a href="../Classes/BRAccountLinkingCredentials.html">BRAccountLinkingCredentials</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/BRAccountLinkingManager.html">BRAccountLinkingManager</a>
+                <a href="../Classes/BRAccountLinkingManager.html">BRAccountLinkingManager</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/BREReceiptManager.html">BREReceiptManager</a>
+                <a href="../Classes/BREReceiptManager.html">BREReceiptManager</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/BREmailAccount.html">BREmailAccount</a>
+                <a href="../Classes/BREmailAccount.html">BREmailAccount</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/BRIMAPAccount.html">BRIMAPAccount</a>
+                <a href="../Classes/BRIMAPAccount.html">BRIMAPAccount</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <a href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/BRAccountLinkingError.html">BRAccountLinkingError</a>
+                <a href="../Enums/BRAccountLinkingError.html">BRAccountLinkingError</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a>
+                <a href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/BREReceiptIMAPError.html">BREReceiptIMAPError</a>
+                <a href="../Enums/BREReceiptIMAPError.html">BREReceiptIMAPError</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/BREReceiptProvider.html">BREReceiptProvider</a>
+                <a href="../Enums/BREReceiptProvider.html">BREReceiptProvider</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/BREReceiptRemoteError.html">BREReceiptRemoteError</a>
+                <a href="../Enums/BREReceiptRemoteError.html">BREReceiptRemoteError</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/BRSetupIMAPResult.html">BRSetupIMAPResult</a>
+                <a href="../Enums/BRSetupIMAPResult.html">BRSetupIMAPResult</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-
-        <section class="section">
-          <div class="section-content top-matter">
+        <section>
+          <section class="section">
             <h1>BREReceiptManager</h1>
               <div class="declaration">
                 <div class="language">
@@ -166,13 +122,10 @@
             <p>This class is the interface to manage e-receipt parsing</p>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L91-L357">Show on GitHub</a>
+                <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L91-L357">Show on GitHub</a>
               </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="section-content">
+          </section>
+          <section class="section task-group-section">
             <div class="task-group">
               <div class="task-name-container">
                 <a name="/Properties"></a>
@@ -183,7 +136,7 @@
 </h3>
                 </div>
               </div>
-              <ul class="item-container">
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -215,7 +168,7 @@ When you have done so, input the Client ID here before attempting to begin the O
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L101">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L101">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -251,7 +204,7 @@ When you have done so, input that id here before attempting to begin the OAuth p
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L107">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L107">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -286,7 +239,7 @@ When you have done so, input that id here before attempting to begin the OAuth p
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L112">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L112">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -323,7 +276,7 @@ When you have done so, input that id here before attempting to begin the OAuth p
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L119">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L119">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -361,7 +314,7 @@ When you have done so, input that id here before attempting to begin the OAuth p
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L127">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L127">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -398,7 +351,7 @@ When you have done so, input that id here before attempting to begin the OAuth p
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L134">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L134">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -434,7 +387,7 @@ Default: nil</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L140">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L140">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -470,7 +423,7 @@ Default: NO</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L146">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L146">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -506,7 +459,7 @@ Default: nil</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L152">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L152">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -542,7 +495,7 @@ Default: nil</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L158">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L158">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -578,7 +531,7 @@ Deafult: nil</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L164">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L164">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -595,7 +548,7 @@ Deafult: nil</p>
 </h3>
                 </div>
               </div>
-              <ul class="item-container">
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -628,7 +581,7 @@ Deafult: nil</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L170">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L170">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -645,7 +598,7 @@ Deafult: nil</p>
 </h3>
                 </div>
               </div>
-              <ul class="item-container">
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -676,7 +629,7 @@ Deafult: nil</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L179">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L179">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -708,7 +661,7 @@ Deafult: nil</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">beginOAuth</span><span class="p">(</span><span class="k">for</span> <span class="nv">provider</span><span class="p">:</span> <span class="kt"><a href="../Enums/BREReceiptProvider.html">BREReceiptProvider</a></span><span class="p">,</span> <span class="n">with</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="o">!</span><span class="p">)</span> <span class="k">async</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">beginOAuth</span><span class="p">(</span><span class="k">for</span> <span class="nv">provider</span><span class="p">:</span> <span class="kt"><a href="../Enums/BREReceiptProvider.html">BREReceiptProvider</a></span><span class="p">,</span> <span class="n">with</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="o">!</span><span class="p">)</span> <span class="n">async</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -760,7 +713,7 @@ Deafult: nil</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L190-L192">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L190-L192">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -792,7 +745,7 @@ Deafult: nil</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setupIMAP</span><span class="p">(</span><span class="k">for</span> <span class="nv">account</span><span class="p">:</span> <span class="kt"><a href="../Classes/BRIMAPAccount.html">BRIMAPAccount</a></span><span class="o">!</span><span class="p">,</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="o">!</span><span class="p">)</span> <span class="k">async</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/BRSetupIMAPResult.html">BRSetupIMAPResult</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setupIMAP</span><span class="p">(</span><span class="k">for</span> <span class="nv">account</span><span class="p">:</span> <span class="kt"><a href="../Classes/BRIMAPAccount.html">BRIMAPAccount</a></span><span class="o">!</span><span class="p">,</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="o">!</span><span class="p">)</span> <span class="n">async</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/BRSetupIMAPResult.html">BRSetupIMAPResult</a></span></code></pre>
 
                         </div>
                       </div>
@@ -844,7 +797,7 @@ Deafult: nil</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L203-L205">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L203-L205">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -875,7 +828,7 @@ Deafult: nil</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">linkIMAPAccountWithoutSetup</span><span class="p">(</span><span class="n">_</span> <span class="nv">account</span><span class="p">:</span> <span class="kt"><a href="../Classes/BRIMAPAccount.html">BRIMAPAccount</a></span><span class="o">!</span><span class="p">)</span> <span class="k">async</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/BRSetupIMAPResult.html">BRSetupIMAPResult</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">linkIMAPAccountWithoutSetup</span><span class="p">(</span><span class="n">_</span> <span class="nv">account</span><span class="p">:</span> <span class="kt"><a href="../Classes/BRIMAPAccount.html">BRIMAPAccount</a></span><span class="o">!</span><span class="p">)</span> <span class="n">async</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/BRSetupIMAPResult.html">BRSetupIMAPResult</a></span></code></pre>
 
                         </div>
                       </div>
@@ -915,7 +868,7 @@ Deafult: nil</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L216-L217">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L216-L217">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -946,7 +899,7 @@ Deafult: nil</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">verifyImapAccount</span><span class="p">(</span><span class="n">_</span> <span class="nv">account</span><span class="p">:</span> <span class="kt"><a href="../Classes/BRIMAPAccount.html">BRIMAPAccount</a></span><span class="o">!</span><span class="p">)</span> <span class="k">async</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">verifyImapAccount</span><span class="p">(</span><span class="n">_</span> <span class="nv">account</span><span class="p">:</span> <span class="kt"><a href="../Classes/BRIMAPAccount.html">BRIMAPAccount</a></span><span class="o">!</span><span class="p">)</span> <span class="n">async</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -987,7 +940,7 @@ Deafult: nil</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L228-L229">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L228-L229">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1024,7 +977,7 @@ Deafult: nil</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">eReceipts</span><span class="p">()</span> <span class="k">async</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">([</span><span class="kt">BRScanResults</span><span class="p">]?,</span> <span class="kt"><a href="../Classes/BREmailAccount.html">BREmailAccount</a></span><span class="p">?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">eReceipts</span><span class="p">()</span> <span class="n">async</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">([</span><span class="kt">BRScanResults</span><span class="p">]?,</span> <span class="kt"><a href="../Classes/BREmailAccount.html">BREmailAccount</a></span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -1082,7 +1035,7 @@ Deafult: nil</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L264-L266">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L264-L266">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1115,12 +1068,12 @@ Deafult: nil</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">eReceipts</span><span class="p">(</span><span class="k">for</span> <span class="nv">account</span><span class="p">:</span> <span class="kt"><a href="../Classes/BREmailAccount.html">BREmailAccount</a></span><span class="o">!</span><span class="p">)</span> <span class="k">async</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">([</span><span class="kt">BRScanResults</span><span class="p">]?,</span> <span class="kt"><a href="../Classes/BREmailAccount.html">BREmailAccount</a></span><span class="p">?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">eReceipts</span><span class="p">(</span><span class="k">for</span> <span class="nv">account</span><span class="p">:</span> <span class="kt"><a href="../Classes/BREmailAccount.html">BREmailAccount</a></span><span class="o">!</span><span class="p">)</span> <span class="n">async</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">([</span><span class="kt">BRScanResults</span><span class="p">]?,</span> <span class="kt"><a href="../Classes/BREmailAccount.html">BREmailAccount</a></span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L271-L274">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L271-L274">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1151,7 +1104,7 @@ Deafult: nil</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startRemoteEReceiptScrape</span><span class="p">()</span> <span class="k">async</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="kt"><a href="../Classes/BREmailAccount.html">BREmailAccount</a></span><span class="p">?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startRemoteEReceiptScrape</span><span class="p">()</span> <span class="n">async</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="kt"><a href="../Classes/BREmailAccount.html">BREmailAccount</a></span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -1181,7 +1134,7 @@ Deafult: nil</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L287-L289">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L287-L289">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1214,12 +1167,12 @@ Deafult: nil</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startRemoteEReceiptScrape</span><span class="p">(</span><span class="k">for</span> <span class="nv">account</span><span class="p">:</span> <span class="kt"><a href="../Classes/BREmailAccount.html">BREmailAccount</a></span><span class="o">!</span><span class="p">)</span> <span class="k">async</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="kt"><a href="../Classes/BREmailAccount.html">BREmailAccount</a></span><span class="p">?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startRemoteEReceiptScrape</span><span class="p">(</span><span class="k">for</span> <span class="nv">account</span><span class="p">:</span> <span class="kt"><a href="../Classes/BREmailAccount.html">BREmailAccount</a></span><span class="o">!</span><span class="p">)</span> <span class="n">async</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="kt"><a href="../Classes/BREmailAccount.html">BREmailAccount</a></span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L294-L297">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L294-L297">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1253,7 +1206,7 @@ Deafult: nil</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startRemoteEReceiptScrape</span><span class="p">(</span><span class="n">forEmail</span> <span class="nv">email</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="n">andProvider</span> <span class="nv">provider</span><span class="p">:</span> <span class="kt"><a href="../Enums/BREReceiptProvider.html">BREReceiptProvider</a></span><span class="p">,</span> <span class="n">andEMLFile</span> <span class="nv">emlBase64</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span> <span class="k">async</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="kt"><a href="../Classes/BREmailAccount.html">BREmailAccount</a></span><span class="p">?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startRemoteEReceiptScrape</span><span class="p">(</span><span class="n">forEmail</span> <span class="nv">email</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="n">andProvider</span> <span class="nv">provider</span><span class="p">:</span> <span class="kt"><a href="../Enums/BREReceiptProvider.html">BREReceiptProvider</a></span><span class="p">,</span> <span class="n">andEMLFile</span> <span class="nv">emlBase64</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span> <span class="n">async</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="kt"><a href="../Classes/BREmailAccount.html">BREmailAccount</a></span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -1319,7 +1272,7 @@ Deafult: nil</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L312-L317">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L312-L317">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1352,7 +1305,7 @@ Deafult: nil</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">parseEReceipt</span><span class="p">(</span><span class="n">fromSender</span> <span class="nv">senderAddress</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="nv">rawHTML</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span> <span class="k">async</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">BRScanResults</span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">parseEReceipt</span><span class="p">(</span><span class="n">fromSender</span> <span class="nv">senderAddress</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="nv">rawHTML</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span> <span class="n">async</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">BRScanResults</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -1400,7 +1353,7 @@ Deafult: nil</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L326-L328">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L326-L328">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1430,7 +1383,7 @@ Deafult: nil</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">signOut</span><span class="p">()</span> <span class="k">async</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">signOut</span><span class="p">()</span> <span class="n">async</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -1458,7 +1411,7 @@ Deafult: nil</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L337">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L337">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1489,12 +1442,12 @@ Deafult: nil</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">signOut</span><span class="p">(</span><span class="n">from</span> <span class="nv">account</span><span class="p">:</span> <span class="kt"><a href="../Classes/BREmailAccount.html">BREmailAccount</a></span><span class="o">!</span><span class="p">)</span> <span class="k">async</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">signOut</span><span class="p">(</span><span class="n">from</span> <span class="nv">account</span><span class="p">:</span> <span class="kt"><a href="../Classes/BREmailAccount.html">BREmailAccount</a></span><span class="o">!</span><span class="p">)</span> <span class="n">async</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L342-L343">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L342-L343">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1529,7 +1482,7 @@ Deafult: nil</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L348">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L348">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1566,21 +1519,20 @@ Deafult: nil</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.1/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L353-L355">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h#L353-L355">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
-          </div>
+          </section>
         </section>
-
+        <section id="footer">
+          <p>&copy; 2024 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2024-11-07)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
       </article>
     </div>
-    <section class="footer">
-      <p>&copy; 2024 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2024-10-17)</p>
-      
-    </section>
   </body>
 </html>
