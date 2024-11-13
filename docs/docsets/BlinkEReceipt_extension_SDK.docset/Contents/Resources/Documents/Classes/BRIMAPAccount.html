@@ -2,10 +2,24 @@
 <html lang="en">
   <head>
     <title>BRIMAPAccount Class Reference</title>
+    <link rel="icon" href="https://microblink.com/wp-content/uploads/2022/01/cropped-Microblink_Favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://microblink.com/wp-content/uploads/2022/01/cropped-Microblink_Favicon-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://microblink.com/wp-content/uploads/2022/01/cropped-Microblink_Favicon-180x180.png" />
+    <link rel="preload" as="font"
+        href="https://microblink.com/wp-content/themes/microblink/assets/fonts/satoshi-bold-webfont.woff2" crossorigin>
+    <link rel="preload" as="font"
+        href="https://microblink.com/wp-content/themes/microblink/assets/fonts/satoshi-regular-webfont.woff2"
+        crossorigin>
+    <link rel="preload" as="font"
+        href="https://microblink.com/wp-content/themes/microblink/assets/fonts/satoshi-medium-webfont.woff2"
+        crossorigin>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
-    <meta charset='utf-8'>
-    <script src="../js/jquery.min.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="../css/prism.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/jazzy.js" defer></script>
     <style> table {border: thin solid black; border-spacing: 0px} td {border: thin solid black; padding: 5px} </style>
     <script src="../js/lunr.min.js" defer></script>
@@ -13,99 +27,129 @@
     <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
+
     <a name="//apple_ref/objc/Class/BRIMAPAccount" class="dashAnchor"></a>
+
     <a title="BRIMAPAccount Class Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="../index.html">BlinkEReceipt extension SDK 2.45.3 Docs</a></p>
-        <p class="header-right"><a href="https://github.com/BlinkReceipt/blinkereceipt-ios"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
-        <div class="header-right">
-          <form role="search" action="../search.json">
-            <input type="text" placeholder="Search documentation" data-typeahead>
-          </form>
-        </div>
-      </div>
-    </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="../index.html">BlinkEReceipt extension SDK</a>
-        <img id="carat" src="../img/carat.png" alt=""/>
-        <a href="../Classes.html">Classes</a>
-        <img id="carat" src="../img/carat.png" alt=""/>
-        BRIMAPAccount Class Reference
+
+    <header class="header">
+      <p class="header-col">
+        <img weight="20" height="20" src="https://microblink.com/wp-content/themes/microblink/assets/images/microblink-logo-animated.webp"/>
       </p>
-    </div>
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          BlinkEReceipt extension SDK 2.45.3 Docs
+        </a>
+        
+      </p>
+    
+      <div class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </div>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/BlinkReceipt/blinkereceipt-ios">
+            <img class="header-icon" src="../img/gh.png" alt="GitHub"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">BlinkEReceipt extension SDK</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      <a class="breadcrumb" href="../Classes.html">Classes</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      BRIMAPAccount Class Reference
+    </p>
+
     <div class="content-wrapper">
-      <nav class="sidebar">
+      <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Guides.html">Guides</a>
+            <a class="nav-group-name-link" href="../Guides.html">Guides</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../account-linking.html">Account Linking</a>
+                <a class="nav-group-task-link" href="../account-linking.html">Account Linking</a>
               </li>
               <li class="nav-group-task">
-                <a href="../e-receipt-parsing.html">E-Receipt Parsing</a>
+                <a class="nav-group-task-link" href="../account-linking-faq.html">Account Linking FAQ</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../account-linking-retailers.html">Account Linking Retailers</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../e-receipt-parsing.html">E-Receipt Parsing</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../release-notes.html">Release Notes</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../sample-responses.html">Sample Responses</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Classes.html">Classes</a>
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/BRAccountLinkingConfiguration.html">BRAccountLinkingConfiguration</a>
+                <a class="nav-group-task-link" href="../Classes/BRAccountLinkingConfiguration.html">BRAccountLinkingConfiguration</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/BRAccountLinkingConnection.html">BRAccountLinkingConnection</a>
+                <a class="nav-group-task-link" href="../Classes/BRAccountLinkingConnection.html">BRAccountLinkingConnection</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/BRAccountLinkingConnectionIdentifier.html">BRAccountLinkingConnectionIdentifier</a>
+                <a class="nav-group-task-link" href="../Classes/BRAccountLinkingConnectionIdentifier.html">BRAccountLinkingConnectionIdentifier</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/BRAccountLinkingCredentials.html">BRAccountLinkingCredentials</a>
+                <a class="nav-group-task-link" href="../Classes/BRAccountLinkingCredentials.html">BRAccountLinkingCredentials</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/BRAccountLinkingManager.html">BRAccountLinkingManager</a>
+                <a class="nav-group-task-link" href="../Classes/BRAccountLinkingManager.html">BRAccountLinkingManager</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/BREReceiptManager.html">BREReceiptManager</a>
+                <a class="nav-group-task-link" href="../Classes/BREReceiptManager.html">BREReceiptManager</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/BREmailAccount.html">BREmailAccount</a>
+                <a class="nav-group-task-link" href="../Classes/BREmailAccount.html">BREmailAccount</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/BRIMAPAccount.html">BRIMAPAccount</a>
+                <a class="nav-group-task-link" href="../Classes/BRIMAPAccount.html">BRIMAPAccount</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Enums.html">Enumerations</a>
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums/BRAccountLinkingError.html">BRAccountLinkingError</a>
+                <a class="nav-group-task-link" href="../Enums/BRAccountLinkingError.html">BRAccountLinkingError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a>
+                <a class="nav-group-task-link" href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/BREReceiptIMAPError.html">BREReceiptIMAPError</a>
+                <a class="nav-group-task-link" href="../Enums/BREReceiptIMAPError.html">BREReceiptIMAPError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/BREReceiptProvider.html">BREReceiptProvider</a>
+                <a class="nav-group-task-link" href="../Enums/BREReceiptProvider.html">BREReceiptProvider</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/BREReceiptRemoteError.html">BREReceiptRemoteError</a>
+                <a class="nav-group-task-link" href="../Enums/BREReceiptRemoteError.html">BREReceiptRemoteError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/BRSetupIMAPResult.html">BRSetupIMAPResult</a>
+                <a class="nav-group-task-link" href="../Enums/BRSetupIMAPResult.html">BRSetupIMAPResult</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-        <section>
-          <section class="section">
+
+        <section class="section">
+          <div class="section-content top-matter">
             <h1>BRIMAPAccount</h1>
               <div class="declaration">
                 <div class="language">
@@ -122,88 +166,15 @@
             <p>This class represents an IMAP account that should be instantiated with the user&rsquo;s credentials prior to beginning IMAP setup in <code><a href="../Classes/BREReceiptManager.html">BREReceiptManager</a></code></p>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRIMAPAccount.h#L17-L55">Show on GitHub</a>
+                <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRIMAPAccount.h#L17-L42">Show on GitHub</a>
               </div>
-          </section>
-          <section class="section task-group-section">
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
             <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)BRIMAPAccount(py)webviewAuthEnabled"></a>
-                    <a name="//apple_ref/objc/Property/webviewAuthEnabled" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)BRIMAPAccount(py)webviewAuthEnabled">webviewAuthEnabled</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Set this property to YES, if you want users to provide input for each step from the authentication process directly in a webview</p>
-<div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    Only affects the BREReceiptProviderGmailIMAP provider
-Default: NO
-
-</div>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">webviewAuthEnabled</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">webviewAuthEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRIMAPAccount.h#L25">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)BRIMAPAccount(im)initWithGmailIMAP"></a>
-                    <a name="//apple_ref/objc/Method/-initWithGmailIMAP" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)BRIMAPAccount(im)initWithGmailIMAP">-initWithGmailIMAP</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Use this method to setup Gmail IMAP provider directly</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">initWithGmailIMAP</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">gmailIMAP</span><span class="p">:</span> <span class="p">())</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRIMAPAccount.h#L30">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -279,7 +250,7 @@ Default: NO
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRIMAPAccount.h#L39-L41">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRIMAPAccount.h#L26-L28">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -359,20 +330,21 @@ Default: NO
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRIMAPAccount.h#L50-L52">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRIMAPAccount.h#L37-L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
-          </section>
+          </div>
         </section>
-        <section id="footer">
-          <p>&copy; 2024 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2024-11-07)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
-        </section>
+
       </article>
     </div>
+    <section class="footer">
+      <p>&copy; 2024 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2024-11-12)</p>
+      
+    </section>
   </body>
 </html>

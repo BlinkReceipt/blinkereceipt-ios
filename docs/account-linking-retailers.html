@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Account Linking Retailers  Reference</title>
+    <link rel="icon" href="https://microblink.com/wp-content/uploads/2022/01/cropped-Microblink_Favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://microblink.com/wp-content/uploads/2022/01/cropped-Microblink_Favicon-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://microblink.com/wp-content/uploads/2022/01/cropped-Microblink_Favicon-180x180.png" />
+    <link rel="preload" as="font"
+        href="https://microblink.com/wp-content/themes/microblink/assets/fonts/satoshi-bold-webfont.woff2" crossorigin>
+    <link rel="preload" as="font"
+        href="https://microblink.com/wp-content/themes/microblink/assets/fonts/satoshi-regular-webfont.woff2"
+        crossorigin>
+    <link rel="preload" as="font"
+        href="https://microblink.com/wp-content/themes/microblink/assets/fonts/satoshi-medium-webfont.woff2"
+        crossorigin>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <link rel="stylesheet" type="text/css" href="css/prism.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jazzy.js" defer></script>
+    <style> table {border: thin solid black; border-spacing: 0px} td {border: thin solid black; padding: 5px} </style>
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="Account Linking Retailers  Reference"></a>
+
+    <header class="header">
+      <p class="header-col">
+        <img weight="20" height="20" src="https://microblink.com/wp-content/themes/microblink/assets/images/microblink-logo-animated.webp"/>
+      </p>
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          BlinkEReceipt extension SDK 2.45.3 Docs
+        </a>
+        
+      </p>
+    
+      <div class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </div>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/BlinkReceipt/blinkereceipt-ios">
+            <img class="header-icon" src="img/gh.png" alt="GitHub"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">BlinkEReceipt extension SDK</a>
+      <img class="carat" src="img/carat.png" alt=""/>
+      <a class="breadcrumb" href="Guides.html">Guides</a>
+      <img class="carat" src="img/carat.png" alt=""/>
+      Account Linking Retailers  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="account-linking.html">Account Linking</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="account-linking-faq.html">Account Linking FAQ</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="account-linking-retailers.html">Account Linking Retailers</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="e-receipt-parsing.html">E-Receipt Parsing</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="release-notes.html">Release Notes</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="sample-responses.html">Sample Responses</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/BRAccountLinkingConfiguration.html">BRAccountLinkingConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/BRAccountLinkingConnection.html">BRAccountLinkingConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/BRAccountLinkingConnectionIdentifier.html">BRAccountLinkingConnectionIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/BRAccountLinkingCredentials.html">BRAccountLinkingCredentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/BRAccountLinkingManager.html">BRAccountLinkingManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/BREReceiptManager.html">BREReceiptManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/BREmailAccount.html">BREmailAccount</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/BRIMAPAccount.html">BRIMAPAccount</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/BRAccountLinkingError.html">BRAccountLinkingError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/BREReceiptIMAPError.html">BREReceiptIMAPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/BREReceiptProvider.html">BREReceiptProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/BREReceiptRemoteError.html">BREReceiptRemoteError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/BRSetupIMAPResult.html">BRSetupIMAPResult</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            
+            <style>
+    .retailers-list {
+        /* border: 1px solid red; */
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        list-style-type: none;
+    }
+
+    .retailer-row {
+        float: left;
+        width: 100%;
+        height: 50px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    .retailer-row:not(:last-child) {
+        border-bottom: 1px solid rgb(240, 240, 240);
+    }
+
+    .retailer-row>span {
+        float: left;
+        /* width: 100%; */
+    }
+
+    .retailer-row a {
+        float: left;
+        width: 40px;
+        margin-left: 10px;
+        padding-top: 7px;
+        cursor: pointer;
+    }
+
+    .retailer-name {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .retailer-channel {
+        font-size: 14px;
+        color: rgb(138, 138, 138);
+        float: left;
+        width: 100%;
+    }
+
+    .locales {
+        margin-left: 20px;
+    }
+
+</style>
+<h1 id='supported-retailers' class='heading'>Supported Retailers</h1>
+
+<div class="row" style="margin-top: 25px;padding-bottom: 10px;border-bottom: 1px solid rgb(192, 192, 193);">
+    <div class="col-auto">
+        <div class="input-group input-group-sm mb-3">
+            <input type="text" id="retailer-search" class="form-control" placeholder="Search...">
+        </div>
+    </div>
+    <div class="col-auto">
+        <select id="country-dropdown" class="form-select form-select-sm">
+            <option value="" selected>Country</option>
+            <option value="us">US</option>
+            <option value="ca">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <option value="fr">France</option>
+            <option value="es">Spain</option>
+            <option value="de">Germany</option>
+            <option value="au">Australia</option>
+        </select>
+    </div>
+</div>
+
+<ul class="row retailers-list"></ul>
+
+<script>
+    const retailers = [
+        { "name": "Target", "channel": "Mass", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerTarget"
+        }},
+        { "name": "Costco Wholesale Corp.", "channel": "Club", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerCostco", 
+            "CA": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerCostcoCA"
+        }},
+        {"name": "CVS", "channel": "Drug", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerCVS"
+        }},
+        {"name": "Dollar General", "channel": "Dollar", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerDollarGeneral"
+        }},
+        {"name": "Dollar Tree", "channel": "Dollar", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerDollarTree"
+        }},
+        {"name": "Kroger", "channel": "Grocery", "locales": {
+            "US": 6
+        }},
+        {"name": "Publix Super Markets", "channel": "Grocery", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerPublix"
+        }},
+        {"name": "Safeway", "channel": "Grocery", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerSafeway"
+        }},
+        {"name": "Sam's Club", "channel": "Club", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerSamsClub"
+        }},
+        {"name": "Walgreens", "channel": "Drug", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerWalgreens"
+        }},
+        {"name": "Walmart", "channel": "Mass", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerWalmart", 
+            "CA": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerWalmartCA"
+        }},
+        {"name": "Home Depot", "channel": "Home Improvement", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerHomeDepot"
+        }},
+        {"name": "Lowe's Home Improvement", "channel": "Home Improvement", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerLowes"
+        }},
+        {"name": "Acme Markets", "channel": "Grocery", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerAcmeMarkets"
+        }},
+        {"name": "Meijer", "channel": "Grocery", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerMeijer"
+        }},
+        {"name": "Albertsons", "channel": "Grocery", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerAlbertsons"
+        }},
+        {"name": "ShopRite", "channel": "Grocery", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerShoprite"
+        }},
+        {"name": "Jewel Osco", "channel": "Grocery", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerJewelOsco"
+        }},
+        {"name": "Food 4 Less", "channel": "Grocery", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerFood4Less"
+        }},
+        {"name": "Harris Teeter", "channel": "Grocery", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerHarrisTeeter"
+        }},
+        {"name": "Ralph's", "channel": "Grocery", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerRalphs"
+        }},
+        {"name": "BJ's Wholesale Club", "channel": "Club", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerBJs"
+        }},
+        {"name": "Wegmans Food Markets", "channel": "Grocery", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerWegmans"
+        }},
+        {"name": "Fred Meyer", "channel": "Grocery", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerFredMeyer"
+        }},
+        {"name": "Sprouts Farmers Market", "channel": "Grocery", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerSprouts"
+        }},
+        {"name": "Vons", "channel": "Grocery", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerVons"
+        }},
+        {"name": "Food Lion", "channel": "Grocery", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerFoodLion"
+        }},
+        {"name": "Family Dollar", "channel": "Dollar", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerFamilyDollar"
+        }},
+        {"name": "Sephora", "channel": "Beauty", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerSephora"
+        }},
+        {"name": "BestBuy", "channel": "Electronics", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerBestBuy"
+        }},
+        {"name": "ASDA", "channel": "Grocery", "locales": {
+            "UK": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerAsdaUK"
+        }},
+        {"name": "Sainsbury's", "channel": "Grocery", "locales": {
+            "UK": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerSainsburyUK"
+        }},
+        {"name": "Tesco Stores", "channel": "Mass", "locales": {
+            "UK": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerTescoUK"
+        }},
+        {"name": "Carrefour", "channel": "Mass", "locales": {
+            "ES": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerCarrefourES"
+        }},
+        {"name": "Dick's Sporting Goods", "channel": "Sporting Goods", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerDicksSportingGoods"
+        }},
+        {"name": "Gap", "channel": "", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerGap"
+        }},
+        {"name": "Starbucks", "channel": "Coffee & Café", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerStarbucks"
+        }},
+        {"name": "Domino's Pizza", "channel": "", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerDominosPizza"
+        }},
+        {"name": "Taco Bell", "channel": "Quick Service", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerTacoBell"
+        }},
+        {"name": "Amazon", "channel": "Mass", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerAmazonBeta", 
+            "UK": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerAmazonBetaUK", 
+            "CA": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerAmazonBetaCA", 
+            "FR": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerAmazonBetaFR", 
+            "ES": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerAmazonBetaES", 
+            "DE": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerAmazonBetaDE", 
+            "AU": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerAmazonBetaAU"
+        }},
+        {"name": "Instacart", "channel": "Food Delivery", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerInstacart"
+        }},
+        {"name": "Ulta", "channel": "Beauty", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerUlta"
+        }},
+        {"name": "Shipt", "channel": "Food Delivery", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerShipt"
+        }},
+        {"name": "Uber Eats", "channel": "Food Delivery", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerUberEats", 
+            "UK": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerUberEatsUK"
+        }},
+        {"name": "Chewy", "channel": "Pet", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerChewy"
+        }},
+        {"name": "Seamless", "channel": "Food Delivery", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerSeamless"
+        }},
+        {"name": "GrubHub", "channel": "Food Delivery", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerGrubhub"
+        }},
+        {"name": "DoorDash", "channel": "Food Delivery", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerDoordash"
+        }},
+        {"name": "Drizly", "channel": "Food Delivery", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerDrizly"
+        }},
+        {"name": "Temu", "channel": "Mass", "locales": {
+            "UK": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerTemuUK"
+        }},
+        {"name": "SHEIN", "channel": "Mass", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerSheinUS", 
+            "UK": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerSheinUK", 
+            "ES": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerSheinES"
+        }},
+        {"name": "PC Express", "channel": "Grocery", "locales": {
+            "CA": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerPcExpressCA"
+        }},
+        {"name": "AliExpress", "channel": "Mass", "locales": {
+            "UK": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerAliExpressUK"
+        }},
+        {"name": "Postmates", "channel": "Food Delivery", "locales": {
+            "US": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerPostmates"
+        }},
+        {"name": "Woolworths", "channel": "Grocery", "locales": {
+            "AU": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerWoolworthsAU"
+        }},
+        {"name": "Coles", "channel": "Grocery", "locales": {
+            "AU": "https://blinkreceipt.github.io/blinkereceipt-ios/Enums/BRAccountLinkingRetailer.html#/c:@E@BRAccountLinkingRetailer@BRAccountLinkingRetailerColesAU"
+        }}
+    ].sort((a, b) => a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1);
+
+    const localesMap = {
+        "US": "US",
+        "CA": "Canada",
+        "UK": "United Kingdom",
+        "FR": "France",
+        "ES": "Spain",
+        "DE": "Germany",
+        "AU": "Australia"
+    };
+
+    $('#retailer-search').on('input', (event) => {
+        loadRetailersList();
+    });
+    $('#country-dropdown').on('change', (event) => {
+        loadRetailersList();
+    });
+
+    function loadRetailersList() {
+        const country = $('#country-dropdown').val();
+        const searchFilter = $('#retailer-search').val();
+
+        let htmlRows = '';
+        for (const r of retailers) {
+
+            if (country != "") {
+                const locales = r.locales || {};
+                if (!Object.keys(locales).includes(country.toUpperCase())) {
+                    continue;
+                }
+            }
+
+            if (searchFilter != "") {
+                if (!r.name.toLowerCase().includes(searchFilter.toLowerCase())) {
+                    continue;
+                }
+            }
+
+            let localesRows = '';
+            for (const [key, value] of Object.entries(r.locales || [])) {
+                localesRows += `<a href="${value}">${key}</a>`;
+            }
+
+            htmlRows += `
+                <li class="retailer-row">
+                    <span class="retailer-name" style="float:left; height: 100%;">
+                       ${r.name}
+                    </span>
+                    <span style="float: right; height: 100%;">${localesRows}</span>
+                </li>
+            `
+        }
+        $('.retailers-list').html(htmlRows);
+
+    }
+    loadRetailersList();
+
+</script>
+   
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2024 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2024-11-12)</p>
+      
+    </section>
+  </body>
+</html>

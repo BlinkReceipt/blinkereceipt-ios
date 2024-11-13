@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Guides  Reference</title>
+    <title>Release Notes  Reference</title>
     <link rel="icon" href="https://microblink.com/wp-content/uploads/2022/01/cropped-Microblink_Favicon-32x32.png" sizes="32x32" />
     <link rel="icon" href="https://microblink.com/wp-content/uploads/2022/01/cropped-Microblink_Favicon-192x192.png" sizes="192x192" />
     <link rel="apple-touch-icon" href="https://microblink.com/wp-content/uploads/2022/01/cropped-Microblink_Favicon-180x180.png" />
@@ -28,9 +28,8 @@
   </head>
   <body>
 
-    <a name="//apple_ref/objc/Section/Guides" class="dashAnchor"></a>
 
-    <a title="Guides  Reference"></a>
+    <a title="Release Notes  Reference"></a>
 
     <header class="header">
       <p class="header-col">
@@ -61,7 +60,9 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="index.html">BlinkEReceipt extension SDK</a>
       <img class="carat" src="img/carat.png" alt=""/>
-      Guides  Reference
+      <a class="breadcrumb" href="Guides.html">Guides</a>
+      <img class="carat" src="img/carat.png" alt=""/>
+      Release Notes  Reference
     </p>
 
     <div class="content-wrapper">
@@ -148,74 +149,203 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>Guides</h1>
-            <p>The following guides are available globally.</p>
+            
+            <style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  ul {
+    list-style: none;
+   
+  }
+  .note {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .note p {
+    margin: 0;
+  }
+  .note-type {
+    width: 100px;
+  }
+
+  .note-content {
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  .note-type .added {
+    background-color: rgb(166, 255, 203);
+    color: rgb(42, 100, 71);
+    padding: 5px 10px;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+  .note-type .changed {
+    background-color: rgb(234, 183, 62);
+    color: white;
+    padding: 5px 10px;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+  .note-type .fixed {
+    background-color: rgb(202, 80, 64);
+    color: white;
+    padding: 5px 10px;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+</style>
+<h1 id='release-notes' class='heading'>Release Notes</h1>
+<h2 id='nov-07-2024' class='heading'>Nov 07, 2024</h2>
+
+<div class="note">
+  <div class="note-type">
+    <span class="changed">CHANGED</span>
+  </div>
+  <div class="note-content">Binary optimizations.</div>
+</div>
+<h2 id='oct-17-2024' class='heading'>Oct 17, 2024</h2>
+
+<div class="note">
+  <div class="note-type">
+    <span class="changed">CHANGED</span>
+  </div>
+  <div class="note-content">Upgrade to <strong>BRMailCore v1.0</strong>.</div>
+</div>
+<h2 id='sep-17-2024' class='heading'>Sep 17, 2024</h2>
+
+<div class="note">
+  <div class="note-type">
+    <span class="added">ADDED</span>
+  </div>
+  <div class="note-content">
+    <p>New error types:</p>
+    <p>1. BRAccountLinkingErrorWebViewClosed</p>
+    <p>2. BRAccountLinkingErrorUnsupportedRetailer</p>
+  </div>
+</div>
+
+<div class="note">
+  <div class="note-type">
+    <span class="fixed">FIXED</span>
+  </div>
+  <div class="note-content">
+    <p>A random crash when executing in background.</p>
+  </div>
+</div>
+
+<div class="note">
+  <div class="note-type">
+    <span class="changed">CHANGED</span>
+  </div>
+  <div class="note-content">
+    <p><div class="bullet"></div> Increase minimum  target to iOS13.</p>
+    <p><div class="bullet"></div> The default value of webviewAuthEnabled (BRAccountLinkingConnection) is now true.</p>
+    <p><div class="bullet"></div> Removed following merchants:</p>
+    <p>1. Bed Bath & Beyond</p>
+    <p>2. Giant Eagle</p>
+    <p>3. H-E-B</p>
+    <p>4. HyVee</p>
+    <p>5. Kohls</p>
+    <p>6. Macy&rsquo;s</p>
+    <p>7. Marshalls</p>
+    <p>8. Nike</p>
+    <p>9. Rite Aid</p>
+    <p>10. TJ Maxx</p>
+    <p>11. Staples</p>
+  </div>
+</div>
+<h2 id='aug-20-2024' class='heading'>Aug 20, 2024</h2>
+
+<div class="note">
+  <div class="note-type">
+    <span class="changed">CHANGED</span>
+  </div>
+  <div class="note-content">Binary optimizations.</div>
+</div>
+<h2 id='july-20-2024' class='heading'>July 20, 2024</h2>
+
+<div class="note">
+  <div class="note-type">
+    <span class="added">ADDED</span>
+  </div>
+  <div class="note-content">New flow for Gmail IMAP that allows e2e authentication inside a WebView.</div>
+</div>
+<h2 id='july-16-2024' class='heading'>July 16, 2024</h2>
+
+<div class="note">
+  <div class="note-type">
+    <span class="added">ADDED</span>
+  </div>
+  <div class="note-content">New, simplified authentication flow for Gmail IMAP that automates the enabling of two-factor authentication and app-password creation.</div>
+</div>
+
+<div class="note">
+  <div class="note-type">
+    <span class="changed">CHANGED</span>
+  </div>
+  <div class="note-content">Improved Samples Response page</div>
+</div>
+<h2 id='july-2-2024' class='heading'>July 2, 2024</h2>
+
+<p><div class="note">
+    <div class="note-type">
+      <span class="fixed">FIXED</span>
+    </div>
+    <div class="note-content">Fixed invalid privacy manifest error when submitting to App Store.</div>
+  </div></p>
+<h2 id='june-20-2024' class='heading'>June 20, 2024</h2>
+
+<p><div class="note">
+    <div class="note-type">
+      <span class="added">ADDED</span>
+    </div>
+    <div class="note-content">A new way to connect retailer accounts, via the retailer&rsquo;s web page.</div>
+  </div>
+  <div class="note">
+    <div class="note-type">
+      <span class="added">ADDED</span>
+    </div>
+    <div class="note-content">
+      Added support for new merchants:
+      <p>1. Coles (AU)</p>
+      <p>2. Woolworths (AU)</p>
+    </div>
+  </div></p>
+<pre class="highlight objective_c"><code>  <span class="k">typedef</span> <span class="nf">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">BRAccountLinkingRetailer</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">...</span>
+    <span class="n">BRAccountLinkingRetailerColesAU</span> <span class="o">=</span> <span class="mi">7610</span><span class="p">,</span>
+    <span class="n">BRAccountLinkingRetailerWoolworthsAU</span> <span class="o">=</span> <span class="mi">8646</span>
+  <span class="p">};</span>
+</code></pre>
+
+<p><div class="note">
+    <div class="note-type">
+      <span class="fixed">FIXED</span>
+    </div>
+    <div class="note-content">Fixed couple retailers so their name accurate represents their locale.</div>
+  </div></p>
+<pre class="highlight plaintext"><code>  BRAccountLinkingRetailerCarrefourUK -&gt; BRAccountLinkingRetailerCarrefourES
+  BRAccountLinkingRetailerAliExpress -&gt; BRAccountLinkingRetailerAliExpressUK
+</code></pre>
+
+<p><div class="note">
+    <div class="note-type">
+      <span class="changed">CHANGED</span>
+    </div>
+    <div class="note-content">Removed all deprecated logic from BRAccountLinkingManager.</div>
+  </div></p>
 
           </div>
         </section>
 
-        <section class="section">
-          <div class="section-content">
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/documentation.Sample Responses"></a>
-                    <a name="//apple_ref/objc/Guide/Sample Responses" class="dashAnchor"></a>
-                    <a class="direct-link" href="sample-responses.html">Sample Responses</a>
-                    </code>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/documentation.Account Linking"></a>
-                    <a name="//apple_ref/objc/Guide/Account Linking" class="dashAnchor"></a>
-                    <a class="direct-link" href="account-linking.html">Account Linking</a>
-                    </code>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/documentation.Account Linking FAQ"></a>
-                    <a name="//apple_ref/objc/Guide/Account Linking FAQ" class="dashAnchor"></a>
-                    <a class="direct-link" href="account-linking-faq.html">Account Linking FAQ</a>
-                    </code>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/documentation.Account Linking Retailers"></a>
-                    <a name="//apple_ref/objc/Guide/Account Linking Retailers" class="dashAnchor"></a>
-                    <a class="direct-link" href="account-linking-retailers.html">Account Linking Retailers</a>
-                    </code>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/documentation.E-Receipt Parsing"></a>
-                    <a name="//apple_ref/objc/Guide/E-Receipt Parsing" class="dashAnchor"></a>
-                    <a class="direct-link" href="e-receipt-parsing.html">E-Receipt Parsing</a>
-                    </code>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/documentation.Release Notes"></a>
-                    <a name="//apple_ref/objc/Guide/Release Notes" class="dashAnchor"></a>
-                    <a class="direct-link" href="release-notes.html">Release Notes</a>
-                    </code>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
 
       </article>
     </div>

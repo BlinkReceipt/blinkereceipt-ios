@@ -2,10 +2,24 @@
 <html lang="en">
   <head>
     <title>BRAccountLinkingConfiguration Class Reference</title>
+    <link rel="icon" href="https://microblink.com/wp-content/uploads/2022/01/cropped-Microblink_Favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://microblink.com/wp-content/uploads/2022/01/cropped-Microblink_Favicon-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://microblink.com/wp-content/uploads/2022/01/cropped-Microblink_Favicon-180x180.png" />
+    <link rel="preload" as="font"
+        href="https://microblink.com/wp-content/themes/microblink/assets/fonts/satoshi-bold-webfont.woff2" crossorigin>
+    <link rel="preload" as="font"
+        href="https://microblink.com/wp-content/themes/microblink/assets/fonts/satoshi-regular-webfont.woff2"
+        crossorigin>
+    <link rel="preload" as="font"
+        href="https://microblink.com/wp-content/themes/microblink/assets/fonts/satoshi-medium-webfont.woff2"
+        crossorigin>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
-    <meta charset='utf-8'>
-    <script src="../js/jquery.min.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="../css/prism.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/jazzy.js" defer></script>
     <style> table {border: thin solid black; border-spacing: 0px} td {border: thin solid black; padding: 5px} </style>
     <script src="../js/lunr.min.js" defer></script>
@@ -13,99 +27,129 @@
     <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
+
     <a name="//apple_ref/objc/Class/BRAccountLinkingConfiguration" class="dashAnchor"></a>
+
     <a title="BRAccountLinkingConfiguration Class Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="../index.html">BlinkEReceipt extension SDK 2.45.3 Docs</a></p>
-        <p class="header-right"><a href="https://github.com/BlinkReceipt/blinkereceipt-ios"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
-        <div class="header-right">
-          <form role="search" action="../search.json">
-            <input type="text" placeholder="Search documentation" data-typeahead>
-          </form>
-        </div>
-      </div>
-    </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="../index.html">BlinkEReceipt extension SDK</a>
-        <img id="carat" src="../img/carat.png" alt=""/>
-        <a href="../Classes.html">Classes</a>
-        <img id="carat" src="../img/carat.png" alt=""/>
-        BRAccountLinkingConfiguration Class Reference
+
+    <header class="header">
+      <p class="header-col">
+        <img weight="20" height="20" src="https://microblink.com/wp-content/themes/microblink/assets/images/microblink-logo-animated.webp"/>
       </p>
-    </div>
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          BlinkEReceipt extension SDK 2.45.3 Docs
+        </a>
+        
+      </p>
+    
+      <div class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </div>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/BlinkReceipt/blinkereceipt-ios">
+            <img class="header-icon" src="../img/gh.png" alt="GitHub"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">BlinkEReceipt extension SDK</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      <a class="breadcrumb" href="../Classes.html">Classes</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      BRAccountLinkingConfiguration Class Reference
+    </p>
+
     <div class="content-wrapper">
-      <nav class="sidebar">
+      <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Guides.html">Guides</a>
+            <a class="nav-group-name-link" href="../Guides.html">Guides</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../account-linking.html">Account Linking</a>
+                <a class="nav-group-task-link" href="../account-linking.html">Account Linking</a>
               </li>
               <li class="nav-group-task">
-                <a href="../e-receipt-parsing.html">E-Receipt Parsing</a>
+                <a class="nav-group-task-link" href="../account-linking-faq.html">Account Linking FAQ</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../account-linking-retailers.html">Account Linking Retailers</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../e-receipt-parsing.html">E-Receipt Parsing</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../release-notes.html">Release Notes</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../sample-responses.html">Sample Responses</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Classes.html">Classes</a>
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/BRAccountLinkingConfiguration.html">BRAccountLinkingConfiguration</a>
+                <a class="nav-group-task-link" href="../Classes/BRAccountLinkingConfiguration.html">BRAccountLinkingConfiguration</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/BRAccountLinkingConnection.html">BRAccountLinkingConnection</a>
+                <a class="nav-group-task-link" href="../Classes/BRAccountLinkingConnection.html">BRAccountLinkingConnection</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/BRAccountLinkingConnectionIdentifier.html">BRAccountLinkingConnectionIdentifier</a>
+                <a class="nav-group-task-link" href="../Classes/BRAccountLinkingConnectionIdentifier.html">BRAccountLinkingConnectionIdentifier</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/BRAccountLinkingCredentials.html">BRAccountLinkingCredentials</a>
+                <a class="nav-group-task-link" href="../Classes/BRAccountLinkingCredentials.html">BRAccountLinkingCredentials</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/BRAccountLinkingManager.html">BRAccountLinkingManager</a>
+                <a class="nav-group-task-link" href="../Classes/BRAccountLinkingManager.html">BRAccountLinkingManager</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/BREReceiptManager.html">BREReceiptManager</a>
+                <a class="nav-group-task-link" href="../Classes/BREReceiptManager.html">BREReceiptManager</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/BREmailAccount.html">BREmailAccount</a>
+                <a class="nav-group-task-link" href="../Classes/BREmailAccount.html">BREmailAccount</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/BRIMAPAccount.html">BRIMAPAccount</a>
+                <a class="nav-group-task-link" href="../Classes/BRIMAPAccount.html">BRIMAPAccount</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Enums.html">Enumerations</a>
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums/BRAccountLinkingError.html">BRAccountLinkingError</a>
+                <a class="nav-group-task-link" href="../Enums/BRAccountLinkingError.html">BRAccountLinkingError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a>
+                <a class="nav-group-task-link" href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/BREReceiptIMAPError.html">BREReceiptIMAPError</a>
+                <a class="nav-group-task-link" href="../Enums/BREReceiptIMAPError.html">BREReceiptIMAPError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/BREReceiptProvider.html">BREReceiptProvider</a>
+                <a class="nav-group-task-link" href="../Enums/BREReceiptProvider.html">BREReceiptProvider</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/BREReceiptRemoteError.html">BREReceiptRemoteError</a>
+                <a class="nav-group-task-link" href="../Enums/BREReceiptRemoteError.html">BREReceiptRemoteError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/BRSetupIMAPResult.html">BRSetupIMAPResult</a>
+                <a class="nav-group-task-link" href="../Enums/BRSetupIMAPResult.html">BRSetupIMAPResult</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-        <section>
-          <section class="section">
+
+        <section class="section">
+          <div class="section-content top-matter">
             <h1>BRAccountLinkingConfiguration</h1>
               <div class="declaration">
                 <div class="language">
@@ -128,8 +172,9 @@
 <span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">dateCutoff</span><span class="p">;</span>
 
 <span class="cm">/**
- *  This property controls how far back in the user's history to search for orders, if a previously returned order has been found
+ *  This property controls how far back in the user's history to search for orders if a previously returned order has been found
  *
+ *  @discussion
  *  When set to YES, the first scrape will attempt to retrieve orders back to the dayCutoff or dateCutoff. All subsequent scrapes will only go as far back as the last scrape date regardless of whether the first scrape completed.
  *
  *  ex) If the dayCutoff was set to 365 days but the first scrape only went as far back as day 100, then any subsequent scrapes will only return the latest orders within that 100 days.
@@ -160,12 +205,15 @@
               </div>
             
               <div class="slightly-smaller">
-                <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConfiguration.h#L13-L52">Show on GitHub</a>
+                <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConfiguration.h#L13-L53">Show on GitHub</a>
               </div>
-          </section>
-          <section class="section task-group-section">
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -254,9 +302,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This property controls how far back in the user&rsquo;s history to search for orders, if a previously returned order has been found</p>
+                        <p>This property controls how far back in the user&rsquo;s history to search for orders if a previously returned order has been found</p>
 
-<p>When set to YES, the first scrape will attempt to retrieve orders back to the dayCutoff or dateCutoff. All subsequent scrapes will only go as far back as the last scrape date regardless of whether the first scrape completed.</p>
+<p>@discussion
+  When set to YES, the first scrape will attempt to retrieve orders back to the dayCutoff or dateCutoff. All subsequent scrapes will only go as far back as the last scrape date regardless of whether the first scrape completed.</p>
 
 <p>ex) If the dayCutoff was set to 365 days but the first scrape only went as far back as day 100, then any subsequent scrapes will only return the latest orders within that 100 days.</p>
 
@@ -281,7 +330,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConfiguration.h#L43">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConfiguration.h#L44">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -318,20 +367,21 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConfiguration.h#L50">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.3/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConfiguration.h#L51">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
-          </section>
+          </div>
         </section>
-        <section id="footer">
-          <p>&copy; 2024 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2024-11-07)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
-        </section>
+
       </article>
     </div>
+    <section class="footer">
+      <p>&copy; 2024 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2024-11-12)</p>
+      
+    </section>
   </body>
 </html>
