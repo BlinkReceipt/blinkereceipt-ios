@@ -6,7 +6,7 @@
 	<dict>
 		<key>13343.alp</key>
 		<data>
-		a3kRi2tF8ocxYGLzCxFkdkPu/5I=
+		RGyjba3OOg0gtHdfdHMCGmagXAY=
 		</data>
 		<key>Headers/BRAccountLinkingConfiguration.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/BRAccountLinkingConnection.h</key>
 		<data>
-		Jm6oDqWPnTbkwJ7NjNM6/1yl/IQ=
+		KXkN4M6dohHokFYH54F+pFYWQ4g=
 		</data>
 		<key>Headers/BRAccountLinkingConnectionIdentifier.h</key>
 		<data>
@@ -22,11 +22,15 @@
 		</data>
 		<key>Headers/BRAccountLinkingCredentials.h</key>
 		<data>
-		94aIKlEeUM89IX0DZQhwov6bv6M=
+		6eOvwMac99mJdpYxkiumgYpgkYc=
 		</data>
 		<key>Headers/BRAccountLinkingManager.h</key>
 		<data>
-		WoBI3I3gW2hc6R7FhGvXEXGld+s=
+		CF/jNmJtuh92r3ncVb68A+xAErI=
+		</data>
+		<key>Headers/BRDigitalManager.h</key>
+		<data>
+		pxG6EkoIw1znW/2M4qgIZ6bDQ5U=
 		</data>
 		<key>Headers/BREReceiptManager.h</key>
 		<data>
@@ -42,11 +46,11 @@
 		</data>
 		<key>Headers/BlinkEReceipt.h</key>
 		<data>
-		w+9KN82fp9OoLH/5b+wchkTUXto=
+		EOmv+BOJzf14LZX1l4X+Qe/iAlU=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		8UR+pOtj8dH4V+IbWxTDncATTQo=
+		vsq18ec09+BG5RpoPb9HogmOChY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -62,7 +66,7 @@
 		</data>
 		<key>gmail-imap.alp</key>
 		<data>
-		1kjEeELbm+gtRXl4L2M8EaDdcIM=
+		Ev/TYCy2bOut3BBOxeBNlAiySBk=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -71,7 +75,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PKwF/FS7BCyQjjVLEEBkCIcyDD5lvQ52vaNV+1F4IAw=
+			es8PBFSioUY7PFnPR1/3zli8ba/UkS9agSzcs9n4nxE=
 			</data>
 		</dict>
 		<key>Headers/BRAccountLinkingConfiguration.h</key>
@@ -85,7 +89,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rDERB72+urQ8KS3bEpwi4i8m7ditANCAryj00ZDOSvU=
+			dw8SkVvuRUjjgNfcBPOGWE2wKVEmVEA+89FhqvYv2dU=
 			</data>
 		</dict>
 		<key>Headers/BRAccountLinkingConnectionIdentifier.h</key>
@@ -99,14 +103,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JheWePKMU1geUYhD1ODGqc3Dxv/rXJHMTJBDv0OX1bU=
+			ZAAWwu6wFidRANPOXhGwZ2rT/SndH2KHET4EIkhoSd4=
 			</data>
 		</dict>
 		<key>Headers/BRAccountLinkingManager.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VxH/A3/KnVY1VXW8H8jdsRJM1FmVbVJzdSjQcNw68VQ=
+			tCtPXaRfsQT9J/XIdpE3oeC57v+Errdg1jh6Hz9zLkk=
+			</data>
+		</dict>
+		<key>Headers/BRDigitalManager.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			sM9RUdCRb9IVwJ2gOJq2kKy4j0X1V6jqKd6VSs76Mxw=
 			</data>
 		</dict>
 		<key>Headers/BREReceiptManager.h</key>
@@ -134,7 +145,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BF+aYrRw1rObbp6/ghXUdgGc2dMC/kBiZkTmaPKHZG8=
+			GDSApg/GDJQf5oYNMgknIAu+0qb0P+VRKMyVv5ma+k4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -162,7 +173,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9NY/SXBQ9OXbtLm12OfysAUxSQJrZ+1nvdb75qOJBMo=
+			4fZmQ9JsXwQbYbVY/L7UAg62bSCOY8CoGuDkTRGVHAU=
 			</data>
 		</dict>
 	</dict>

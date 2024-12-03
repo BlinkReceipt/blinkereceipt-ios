@@ -69,7 +69,10 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
     BRAccountLinkingErrorWebViewClosed,
     
     /// This retailer is not currently supported
-    BRAccountLinkingErrorUnsupportedRetailer
+    BRAccountLinkingErrorUnsupportedRetailer,
+    
+    /// The operating system terminated the operation due to not enough time for the app to run in background
+    BRAccountLinkingErrorSystemTerminated
 };
 
 /**
@@ -111,29 +114,39 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
 ///---------------
 /// @name Methods
 ///---------------
-
 /**
- *  Link a retailer connection
- *  @param connection The retailer configuration
- *  @return Any `BRAccountLinkingError` error  that was encountered while attempting to link this retailer
- */
-- (BRAccountLinkingError)linkRetailerWithConnection:(BRAccountLinkingConnection*)connection;
-
+  *  Link an account for a given retailer
+  *  @param connection A retailer's configuration
+  *  @param completion Callback will be executed, if additional user input is needed or linking has completed
+  *
+  *      * `BRAccountLinkingError error` - any error that was encountered while attempting to verify the account
+  *      * `UIViewController *userInputViewController` - for 2FA and other scenarios requiring user interaction, this will contain a reference to a view controller that should be shown or dismissed depending on the particular `error` value
+  *      * `NSString *sessionId` - a unique session GUID that can be reported for debugging purposes
+  *
+  *  @return A BRAccountLinkingConnectionIdentifier that can be used to cancel the task
+  *
+  */
+ - (BRAccountLinkingConnectionIdentifier * _Nullable)linkAccountWithConnection:(BRAccountLinkingConnection * _Nonnull)connection
+                                                                withCompletion:(void(^)(BRAccountLinkingError error,
+                                                                                        UIViewController * _Nullable userInputViewController,
+                                                                                        NSString * _Nullable sessionId))completion;
 /**
- *  Verify connection for a given retailer
- *  @param connection The account connection you want to verify
- *  @param completion Callback will be executed after verification has been attempted
- *
- *      * `BRAccountLinkingError error` - any error that was encountered while attempting to verify the account
- *      * `UIViewController *vc` - for 2FA and other scenarios requiring user interaction, this will contain a reference to a view controller that should be shown or dismissed depending on the particular `error` value
- *      * `NSString *sessionId` - a unique session GUID that can be reported for debugging purposes
- *
- *   @return A BRAccountLinkingConnectionIdentifier that can be used to cancel the task
- */
-- (BRAccountLinkingConnectionIdentifier * _Nullable)verifyRetailerWithConnection:(BRAccountLinkingConnection *)connection
-                                                                  withCompletion:(void(^)(BRAccountLinkingError error,
-                                                                                          UIViewController * _Nullable vc,
-                                                                                          NSString *sessionId))completion;
+  *  Performs a login for the provided retailer
+  *  @param retailer An ID of a linked retailer
+  *  @param completion Callback will be executed, if additional user input is needed or linking has completed
+  *
+  *      * `BRAccountLinkingError error` - any error that was encountered while attempting to verify the account
+  *      * `UIViewController *userInputViewController` - for 2FA and other scenarios requiring user interaction, this will contain a reference to a view controller that should be shown or dismissed depending on the particular `error` value
+  *      * `NSString *sessionId` - a unique session GUID that can be reported for debugging purposes
+  *
+  *  @return A BRAccountLinkingConnectionIdentifier that can be used to cancel the task
+  *
+  */
+- (BRAccountLinkingConnectionIdentifier * _Nullable)loginUserForLinkedRetailer:(BRAccountLinkingRetailer)retailer 
+                                                                withCompletion:(void(^)(BRAccountLinkingError error,
+                                                                                        UIViewController * _Nullable userInputViewController,
+                                                                                        NSString * _Nullable sessionId))completion;
+
 /**
  *  Returns all retailers for which there is a linked account
  *  @return An array of `NSNumber*` wrapped values from the `BRAccountLinkingRetailer` enum
@@ -205,7 +218,7 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
  * @note You must enable background fetch inside your application delegate's didFinishLaunchingWithOptions: method. Attempting to enable it after launch or enabling it multiple times will cause a crash
  * @return Any `BRAccountLinkingError` error that was encountered while attempting to enable background fetch
  */
-- (BRAccountLinkingError)enableBackgroundFetchWithIdentifier:(NSString * _Nonnull)identifier API_AVAILABLE(ios(13.0));
+- (BRAccountLinkingError)enableBackgroundFetchWithIdentifier:(NSString * _Nonnull)identifier;
 
 @end
 

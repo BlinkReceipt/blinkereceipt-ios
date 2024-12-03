@@ -25,7 +25,6 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingRetailer) {
     BRAccountLinkingRetailerDollarTree = 5,
     BRAccountLinkingRetailerDominosPizza = 8366,
     BRAccountLinkingRetailerDoordash = 10241,
-    BRAccountLinkingRetailerDrizly = 10934,
     BRAccountLinkingRetailerFamilyDollar = 165,
     BRAccountLinkingRetailerFoodLion = 142,
     BRAccountLinkingRetailerGrubhub = 10208,

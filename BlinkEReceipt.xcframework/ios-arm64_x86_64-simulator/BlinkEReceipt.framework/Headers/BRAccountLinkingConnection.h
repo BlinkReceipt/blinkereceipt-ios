@@ -26,6 +26,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic) BOOL webviewAuthEnabled;
 
+/**
+ *  It represents the logged in status of the connection
+ *
+ * @note Check the `isAuthenticated` before calling `loginUserForLinkedRetailer`
+ *
+ */
+@property (nonatomic, readonly) BOOL isAuthenticated;
+
 // A configuration object that defines the behavior when searching for new orders
 @property (nonatomic, strong, nonnull) BRAccountLinkingConfiguration *configuration;
 
