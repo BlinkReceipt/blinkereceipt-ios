@@ -4,13 +4,17 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		NEy1h/mQ1O9pb1z5CZdB2SCuySQ=
+		</data>
 		<key>ios-arm64/BlinkEReceipt.framework/13343.alp</key>
 		<data>
-		a3kRi2tF8ocxYGLzCxFkdkPu/5I=
+		RGyjba3OOg0gtHdfdHMCGmagXAY=
 		</data>
 		<key>ios-arm64/BlinkEReceipt.framework/BlinkEReceipt</key>
 		<data>
-		wfv6PDiqrOoXc0h/NFxTFqthOmE=
+		r8XCFTAoVcSNKmHHRPX1Rw9wklQ=
 		</data>
 		<key>ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConfiguration.h</key>
 		<data>
@@ -18,19 +22,19 @@
 		</data>
 		<key>ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h</key>
 		<data>
-		Jm6oDqWPnTbkwJ7NjNM6/1yl/IQ=
+		3JMeh0o9OgBmBuF5w+FG0QRwvRA=
 		</data>
 		<key>ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnectionIdentifier.h</key>
 		<data>
 		/aTUiEuFsjCEAD6ToqoReSEuSN8=
 		</data>
-		<key>ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h</key>
-		<data>
-		94aIKlEeUM89IX0DZQhwov6bv6M=
-		</data>
 		<key>ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h</key>
 		<data>
-		tcImrFCdGUEWT1TkpnUQDTyiEX0=
+		Cciy0dV/mPir4dxs9Glb3PLTl2Y=
+		</data>
+		<key>ios-arm64/BlinkEReceipt.framework/Headers/BRDigitalManager.h</key>
+		<data>
+		pxG6EkoIw1znW/2M4qgIZ6bDQ5U=
 		</data>
 		<key>ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h</key>
 		<data>
@@ -38,7 +42,7 @@
 		</data>
 		<key>ios-arm64/BlinkEReceipt.framework/Headers/BREmailAccount.h</key>
 		<data>
-		gJ4ixG0gbvSF+tHQCnrEWaZRVnI=
+		74Qjjld2ATi+ARA4Y/rzfdDcOus=
 		</data>
 		<key>ios-arm64/BlinkEReceipt.framework/Headers/BRIMAPAccount.h</key>
 		<data>
@@ -46,11 +50,11 @@
 		</data>
 		<key>ios-arm64/BlinkEReceipt.framework/Headers/BlinkEReceipt.h</key>
 		<data>
-		w+9KN82fp9OoLH/5b+wchkTUXto=
+		EOmv+BOJzf14LZX1l4X+Qe/iAlU=
 		</data>
 		<key>ios-arm64/BlinkEReceipt.framework/Info.plist</key>
 		<data>
-		6ZK/T1rXgkMCqp4CN0+dQ58eIh0=
+		OGFPOrW/mt3NEfCLfgxP8CAiAns=
 		</data>
 		<key>ios-arm64/BlinkEReceipt.framework/Modules/module.modulemap</key>
 		<data>
@@ -66,15 +70,15 @@
 		</data>
 		<key>ios-arm64/BlinkEReceipt.framework/gmail-imap.alp</key>
 		<data>
-		1kjEeELbm+gtRXl4L2M8EaDdcIM=
+		Ev/TYCy2bOut3BBOxeBNlAiySBk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/13343.alp</key>
 		<data>
-		a3kRi2tF8ocxYGLzCxFkdkPu/5I=
+		RGyjba3OOg0gtHdfdHMCGmagXAY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/BlinkEReceipt</key>
 		<data>
-		RXKt1POeDpmhx9WIfdDXeOdTa64=
+		YVNaMCRyzhM9QIk39Zf+7mfMUKU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Headers/BRAccountLinkingConfiguration.h</key>
 		<data>
@@ -82,19 +86,19 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h</key>
 		<data>
-		Jm6oDqWPnTbkwJ7NjNM6/1yl/IQ=
+		3JMeh0o9OgBmBuF5w+FG0QRwvRA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Headers/BRAccountLinkingConnectionIdentifier.h</key>
 		<data>
 		/aTUiEuFsjCEAD6ToqoReSEuSN8=
 		</data>
-		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h</key>
-		<data>
-		94aIKlEeUM89IX0DZQhwov6bv6M=
-		</data>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h</key>
 		<data>
-		tcImrFCdGUEWT1TkpnUQDTyiEX0=
+		Cciy0dV/mPir4dxs9Glb3PLTl2Y=
+		</data>
+		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Headers/BRDigitalManager.h</key>
+		<data>
+		pxG6EkoIw1znW/2M4qgIZ6bDQ5U=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Headers/BREReceiptManager.h</key>
 		<data>
@@ -102,7 +106,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Headers/BREmailAccount.h</key>
 		<data>
-		gJ4ixG0gbvSF+tHQCnrEWaZRVnI=
+		74Qjjld2ATi+ARA4Y/rzfdDcOus=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Headers/BRIMAPAccount.h</key>
 		<data>
@@ -110,11 +114,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Headers/BlinkEReceipt.h</key>
 		<data>
-		w+9KN82fp9OoLH/5b+wchkTUXto=
+		EOmv+BOJzf14LZX1l4X+Qe/iAlU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Info.plist</key>
 		<data>
-		+OQN7EfiMBL9+XmoSqYRemlQESM=
+		BxE99jJ58dHLhPJKaqpwWfI7Qfo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Modules/module.modulemap</key>
 		<data>
@@ -126,7 +130,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/_CodeSignature/CodeResources</key>
 		<data>
-		VIMN6wwLZklJc4MTM5apVayib8E=
+		I8R61oaJxa+ebUHHPQWA13d0L7I=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/amazon-scrape.alp</key>
 		<data>
@@ -134,7 +138,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/gmail-imap.alp</key>
 		<data>
-		1kjEeELbm+gtRXl4L2M8EaDdcIM=
+		Ev/TYCy2bOut3BBOxeBNlAiySBk=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -143,22 +147,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			a3kRi2tF8ocxYGLzCxFkdkPu/5I=
+			RGyjba3OOg0gtHdfdHMCGmagXAY=
 			</data>
 			<key>hash2</key>
 			<data>
-			PKwF/FS7BCyQjjVLEEBkCIcyDD5lvQ52vaNV+1F4IAw=
+			es8PBFSioUY7PFnPR1/3zli8ba/UkS9agSzcs9n4nxE=
 			</data>
 		</dict>
 		<key>ios-arm64/BlinkEReceipt.framework/BlinkEReceipt</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wfv6PDiqrOoXc0h/NFxTFqthOmE=
+			r8XCFTAoVcSNKmHHRPX1Rw9wklQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			MQcOPUTw5MO+rYMj7XquE9PrFKIVuX1+f8mwK5fwcog=
+			V5yuAa5Bj9ghFKGHmWm6NEXfPr1ShpqeeERUxEsXR8E=
 			</data>
 		</dict>
 		<key>ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConfiguration.h</key>
@@ -176,11 +180,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Jm6oDqWPnTbkwJ7NjNM6/1yl/IQ=
+			3JMeh0o9OgBmBuF5w+FG0QRwvRA=
 			</data>
 			<key>hash2</key>
 			<data>
-			rDERB72+urQ8KS3bEpwi4i8m7ditANCAryj00ZDOSvU=
+			CcAqATCpm/Dxim7FnjZprOWig9R/YWcxHCFgmC5xw1g=
 			</data>
 		</dict>
 		<key>ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnectionIdentifier.h</key>
@@ -194,26 +198,26 @@
 			5lRng6Rjr1m1Bswn3nwDje9vaCkiuyn8TlNH8BJW7SU=
 			</data>
 		</dict>
-		<key>ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			94aIKlEeUM89IX0DZQhwov6bv6M=
-			</data>
-			<key>hash2</key>
-			<data>
-			JheWePKMU1geUYhD1ODGqc3Dxv/rXJHMTJBDv0OX1bU=
-			</data>
-		</dict>
 		<key>ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			tcImrFCdGUEWT1TkpnUQDTyiEX0=
+			Cciy0dV/mPir4dxs9Glb3PLTl2Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			dTnG2KSzwbCWTl3+a1yQPMawN88HUl26qdMrHYa/yVo=
+			LiBcEjATWicPXs+MMD7xZDg09Hc6+p3eok0tjKUFdXI=
+			</data>
+		</dict>
+		<key>ios-arm64/BlinkEReceipt.framework/Headers/BRDigitalManager.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			pxG6EkoIw1znW/2M4qgIZ6bDQ5U=
+			</data>
+			<key>hash2</key>
+			<data>
+			sM9RUdCRb9IVwJ2gOJq2kKy4j0X1V6jqKd6VSs76Mxw=
 			</data>
 		</dict>
 		<key>ios-arm64/BlinkEReceipt.framework/Headers/BREReceiptManager.h</key>
@@ -231,11 +235,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gJ4ixG0gbvSF+tHQCnrEWaZRVnI=
+			74Qjjld2ATi+ARA4Y/rzfdDcOus=
 			</data>
 			<key>hash2</key>
 			<data>
-			2q44jBuqAf5cN/VbPbbu6lUJgy1ULRhc6o9S13DBVQE=
+			A+7jA66J1jJbjNJfZwCVsgAE7E0KDN6AP/8Twq4Ky08=
 			</data>
 		</dict>
 		<key>ios-arm64/BlinkEReceipt.framework/Headers/BRIMAPAccount.h</key>
@@ -253,22 +257,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			w+9KN82fp9OoLH/5b+wchkTUXto=
+			EOmv+BOJzf14LZX1l4X+Qe/iAlU=
 			</data>
 			<key>hash2</key>
 			<data>
-			BF+aYrRw1rObbp6/ghXUdgGc2dMC/kBiZkTmaPKHZG8=
+			GDSApg/GDJQf5oYNMgknIAu+0qb0P+VRKMyVv5ma+k4=
 			</data>
 		</dict>
 		<key>ios-arm64/BlinkEReceipt.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6ZK/T1rXgkMCqp4CN0+dQ58eIh0=
+			OGFPOrW/mt3NEfCLfgxP8CAiAns=
 			</data>
 			<key>hash2</key>
 			<data>
-			uw8lPY3es1p2tEO+lCb3QOSA8LYnFrDL0F5MvjNyi3M=
+			XuVqZWyHmMYR2gWKAapADkj6ABv3x0wdUwUTs9OFTtg=
 			</data>
 		</dict>
 		<key>ios-arm64/BlinkEReceipt.framework/Modules/module.modulemap</key>
@@ -308,33 +312,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1kjEeELbm+gtRXl4L2M8EaDdcIM=
+			Ev/TYCy2bOut3BBOxeBNlAiySBk=
 			</data>
 			<key>hash2</key>
 			<data>
-			9NY/SXBQ9OXbtLm12OfysAUxSQJrZ+1nvdb75qOJBMo=
+			4fZmQ9JsXwQbYbVY/L7UAg62bSCOY8CoGuDkTRGVHAU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/13343.alp</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			a3kRi2tF8ocxYGLzCxFkdkPu/5I=
+			RGyjba3OOg0gtHdfdHMCGmagXAY=
 			</data>
 			<key>hash2</key>
 			<data>
-			PKwF/FS7BCyQjjVLEEBkCIcyDD5lvQ52vaNV+1F4IAw=
+			es8PBFSioUY7PFnPR1/3zli8ba/UkS9agSzcs9n4nxE=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/BlinkEReceipt</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RXKt1POeDpmhx9WIfdDXeOdTa64=
+			YVNaMCRyzhM9QIk39Zf+7mfMUKU=
 			</data>
 			<key>hash2</key>
 			<data>
-			aPsDYEpdIxLee+A7roELJAU8zK3l18qY/b80w+Ve6uE=
+			WQCFZkMLDkAsFppJ/qbZ4Nvddq5cUFe3P87GlgZvfH4=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Headers/BRAccountLinkingConfiguration.h</key>
@@ -352,11 +356,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Jm6oDqWPnTbkwJ7NjNM6/1yl/IQ=
+			3JMeh0o9OgBmBuF5w+FG0QRwvRA=
 			</data>
 			<key>hash2</key>
 			<data>
-			rDERB72+urQ8KS3bEpwi4i8m7ditANCAryj00ZDOSvU=
+			CcAqATCpm/Dxim7FnjZprOWig9R/YWcxHCFgmC5xw1g=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Headers/BRAccountLinkingConnectionIdentifier.h</key>
@@ -370,26 +374,26 @@
 			5lRng6Rjr1m1Bswn3nwDje9vaCkiuyn8TlNH8BJW7SU=
 			</data>
 		</dict>
-		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Headers/BRAccountLinkingCredentials.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			94aIKlEeUM89IX0DZQhwov6bv6M=
-			</data>
-			<key>hash2</key>
-			<data>
-			JheWePKMU1geUYhD1ODGqc3Dxv/rXJHMTJBDv0OX1bU=
-			</data>
-		</dict>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			tcImrFCdGUEWT1TkpnUQDTyiEX0=
+			Cciy0dV/mPir4dxs9Glb3PLTl2Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			dTnG2KSzwbCWTl3+a1yQPMawN88HUl26qdMrHYa/yVo=
+			LiBcEjATWicPXs+MMD7xZDg09Hc6+p3eok0tjKUFdXI=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Headers/BRDigitalManager.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			pxG6EkoIw1znW/2M4qgIZ6bDQ5U=
+			</data>
+			<key>hash2</key>
+			<data>
+			sM9RUdCRb9IVwJ2gOJq2kKy4j0X1V6jqKd6VSs76Mxw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Headers/BREReceiptManager.h</key>
@@ -407,11 +411,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gJ4ixG0gbvSF+tHQCnrEWaZRVnI=
+			74Qjjld2ATi+ARA4Y/rzfdDcOus=
 			</data>
 			<key>hash2</key>
 			<data>
-			2q44jBuqAf5cN/VbPbbu6lUJgy1ULRhc6o9S13DBVQE=
+			A+7jA66J1jJbjNJfZwCVsgAE7E0KDN6AP/8Twq4Ky08=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Headers/BRIMAPAccount.h</key>
@@ -429,22 +433,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			w+9KN82fp9OoLH/5b+wchkTUXto=
+			EOmv+BOJzf14LZX1l4X+Qe/iAlU=
 			</data>
 			<key>hash2</key>
 			<data>
-			BF+aYrRw1rObbp6/ghXUdgGc2dMC/kBiZkTmaPKHZG8=
+			GDSApg/GDJQf5oYNMgknIAu+0qb0P+VRKMyVv5ma+k4=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+OQN7EfiMBL9+XmoSqYRemlQESM=
+			BxE99jJ58dHLhPJKaqpwWfI7Qfo=
 			</data>
 			<key>hash2</key>
 			<data>
-			O9z0iDlA2Zs2k05pG0QzoTX4Y//Z+ZcIV5+CwOior1I=
+			TzrQb9cMdZJzUOZ8CYRTOukI3XH3blf5nNxdZQ4Sx+Q=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Modules/module.modulemap</key>
@@ -473,11 +477,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			VIMN6wwLZklJc4MTM5apVayib8E=
+			I8R61oaJxa+ebUHHPQWA13d0L7I=
 			</data>
 			<key>hash2</key>
 			<data>
-			7rQn1LUVbJtvaEwrK1a6S5Qt8TeDq8mVNs3SeICj5DQ=
+			qrJORUeeyVyTbYJak2gHjWjihlgOrhfQKSSB8plzsVE=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/amazon-scrape.alp</key>
@@ -495,11 +499,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1kjEeELbm+gtRXl4L2M8EaDdcIM=
+			Ev/TYCy2bOut3BBOxeBNlAiySBk=
 			</data>
 			<key>hash2</key>
 			<data>
-			9NY/SXBQ9OXbtLm12OfysAUxSQJrZ+1nvdb75qOJBMo=
+			4fZmQ9JsXwQbYbVY/L7UAg62bSCOY8CoGuDkTRGVHAU=
 			</data>
 		</dict>
 	</dict>
