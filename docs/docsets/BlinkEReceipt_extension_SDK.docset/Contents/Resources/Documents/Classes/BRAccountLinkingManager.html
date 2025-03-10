@@ -2,24 +2,10 @@
 <html lang="en">
   <head>
     <title>BRAccountLinkingManager Class Reference</title>
-    <link rel="icon" href="https://microblink.com/wp-content/uploads/2022/01/cropped-Microblink_Favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" href="https://microblink.com/wp-content/uploads/2022/01/cropped-Microblink_Favicon-192x192.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="https://microblink.com/wp-content/uploads/2022/01/cropped-Microblink_Favicon-180x180.png" />
-    <link rel="preload" as="font"
-        href="https://microblink.com/wp-content/themes/microblink/assets/fonts/satoshi-bold-webfont.woff2" crossorigin>
-    <link rel="preload" as="font"
-        href="https://microblink.com/wp-content/themes/microblink/assets/fonts/satoshi-regular-webfont.woff2"
-        crossorigin>
-    <link rel="preload" as="font"
-        href="https://microblink.com/wp-content/themes/microblink/assets/fonts/satoshi-medium-webfont.woff2"
-        crossorigin>
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
-    <link rel="stylesheet" type="text/css" href="../css/prism.css" />
-    <meta charset="utf-8">
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/bootstrap.bundle.min.js"></script>
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     <style> table {border: thin solid black; border-spacing: 0px} td {border: thin solid black; padding: 5px} </style>
     <script src="../js/lunr.min.js" defer></script>
@@ -27,129 +13,111 @@
     <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-
     <a name="//apple_ref/objc/Class/BRAccountLinkingManager" class="dashAnchor"></a>
-
     <a title="BRAccountLinkingManager Class Reference"></a>
-
-    <header class="header">
-      <p class="header-col">
-        <img weight="20" height="20" src="https://microblink.com/wp-content/themes/microblink/assets/images/microblink-logo-animated.webp"/>
-      </p>
-      <p class="header-col header-col--primary">
-        <a class="header-link" href="../index.html">
-          BlinkEReceipt extension SDK 2.45.4 Docs
-        </a>
-        
-      </p>
-    
-      <div class="header-col--secondary">
-        <form role="search" action="../search.json">
-          <input type="text" placeholder="Search documentation" data-typeahead>
-        </form>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">BlinkEReceipt extension SDK 2.45.5 Docs</a></p>
+        <p class="header-right"><a href="https://github.com/BlinkReceipt/blinkereceipt-ios"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
       </div>
-    
-        <p class="header-col header-col--secondary">
-          <a class="header-link" href="https://github.com/BlinkReceipt/blinkereceipt-ios">
-            <img class="header-icon" src="../img/gh.png" alt="GitHub"/>
-            View on GitHub
-          </a>
-        </p>
-    
     </header>
-
-    <p class="breadcrumbs">
-      <a class="breadcrumb" href="../index.html">BlinkEReceipt extension SDK</a>
-      <img class="carat" src="../img/carat.png" alt=""/>
-      <a class="breadcrumb" href="../Classes.html">Classes</a>
-      <img class="carat" src="../img/carat.png" alt=""/>
-      BRAccountLinkingManager Class Reference
-    </p>
-
     <div class="content-wrapper">
-      <nav class="navigation">
+      <p id="breadcrumbs">
+        <a href="../index.html">BlinkEReceipt extension SDK</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        <a href="../Classes.html">Classes</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        BRAccountLinkingManager Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Guides.html">Guides</a>
+            <a href="../Guides.html">Guides</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../account-linking.html">Account Linking</a>
+                <a href="../account-linking.html">Account Linking</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../account-linking-faq.html">Account Linking FAQ</a>
+                <a href="../account-linking-faq.html">Account Linking FAQ</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../account-linking-retailers.html">Account Linking Retailers</a>
+                <a href="../account-linking-retailers.html">Account Linking Retailers</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../e-receipt-parsing.html">E-Receipt Parsing</a>
+                <a href="../e-receipt-parsing.html">E-Receipt Parsing</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../release-notes.html">Release Notes</a>
+                <a href="../release-notes.html">Release Notes</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../sample-responses.html">Sample Responses</a>
+                <a href="../sample-responses.html">Sample Responses</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/BRAccountLinkingConfiguration.html">BRAccountLinkingConfiguration</a>
+                <a href="../Classes/BRAccountLinkingConfiguration.html">BRAccountLinkingConfiguration</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/BRAccountLinkingConnection.html">BRAccountLinkingConnection</a>
+                <a href="../Classes/BRAccountLinkingConnection.html">BRAccountLinkingConnection</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/BRAccountLinkingConnectionIdentifier.html">BRAccountLinkingConnectionIdentifier</a>
+                <a href="../Classes/BRAccountLinkingConnectionIdentifier.html">BRAccountLinkingConnectionIdentifier</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/BRAccountLinkingCredentials.html">BRAccountLinkingCredentials</a>
+                <a href="../Classes/BRAccountLinkingCredentials.html">BRAccountLinkingCredentials</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/BRAccountLinkingManager.html">BRAccountLinkingManager</a>
+                <a href="../Classes/BRAccountLinkingManager.html">BRAccountLinkingManager</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/BREReceiptManager.html">BREReceiptManager</a>
+                <a href="../Classes/BREReceiptManager.html">BREReceiptManager</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/BREmailAccount.html">BREmailAccount</a>
+                <a href="../Classes/BREmailAccount.html">BREmailAccount</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/BRIMAPAccount.html">BRIMAPAccount</a>
+                <a href="../Classes/BRIMAPAccount.html">BRIMAPAccount</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <a href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/BRAccountLinkingError.html">BRAccountLinkingError</a>
+                <a href="../Enums/BRAccountLinkingError.html">BRAccountLinkingError</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a>
+                <a href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/BREReceiptIMAPError.html">BREReceiptIMAPError</a>
+                <a href="../Enums/BREReceiptIMAPError.html">BREReceiptIMAPError</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/BREReceiptProvider.html">BREReceiptProvider</a>
+                <a href="../Enums/BREReceiptProvider.html">BREReceiptProvider</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/BREReceiptRemoteError.html">BREReceiptRemoteError</a>
+                <a href="../Enums/BREReceiptRemoteError.html">BREReceiptRemoteError</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/BRSetupIMAPResult.html">BRSetupIMAPResult</a>
+                <a href="../Enums/BRSetupIMAPResult.html">BRSetupIMAPResult</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-
-        <section class="section">
-          <div class="section-content top-matter">
+        <section>
+          <section class="section">
             <h1>BRAccountLinkingManager</h1>
               <div class="declaration">
                 <div class="language">
@@ -173,13 +141,10 @@
 </ol>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.4/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L83-L210">Show on GitHub</a>
+                <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.5/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L83-L210">Show on GitHub</a>
               </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="section-content">
+          </section>
+          <section class="section task-group-section">
             <div class="task-group">
               <div class="task-name-container">
                 <a name="/Class%20Methods"></a>
@@ -190,7 +155,7 @@
 </h3>
                 </div>
               </div>
-              <ul class="item-container">
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -223,7 +188,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.4/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L89">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.5/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L89">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -240,7 +205,7 @@
 </h3>
                 </div>
               </div>
-              <ul class="item-container">
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -271,7 +236,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.4/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L99">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.5/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L99">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -300,17 +265,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)</span> <span class="p">(</span><span class="n"><a href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a></span><span class="p">,</span> <span class="n"><a href="../Enums/BRAccountLinkingError.html">BRAccountLinkingError</a></span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span> <span class="n">BRScanResults</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span> <span class="n">backgroundFetchCompletion</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)</span> <span class="p">(</span><span class="n"><a href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a></span><span class="p">,</span> <span class="n"><a href="../Enums/BRAccountLinkingError.html">BRAccountLinkingError</a></span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span> <span class="n">backgroundFetchCompletion</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">backgroundFetchCompletion</span><span class="p">:</span> <span class="p">((</span><span class="kt"><a href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a></span><span class="p">,</span> <span class="kt"><a href="../Enums/BRAccountLinkingError.html">BRAccountLinkingError</a></span><span class="p">,</span> <span class="kt">String</span><span class="p">?,</span> <span class="kt">BRScanResults</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">backgroundFetchCompletion</span><span class="p">:</span> <span class="p">((</span><span class="kt"><a href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a></span><span class="p">,</span> <span class="kt"><a href="../Enums/BRAccountLinkingError.html">BRAccountLinkingError</a></span><span class="p">,</span> <span class="kt">String</span><span class="p">?,</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">Int32</span><span class="o">&gt;</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.4/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L109">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.5/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L109">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -327,7 +292,7 @@
 </h3>
                 </div>
               </div>
-              <ul class="item-container">
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -382,7 +347,7 @@
                         <p>Any <code><a href="../Enums/BRAccountLinkingError.html">BRAccountLinkingError</a></code> error  that was encountered while attempting to link this retailer</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.4/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L120">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.5/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L120">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -418,7 +383,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">verifyRetailer</span><span class="p">(</span><span class="n">with</span> <span class="nv">connection</span><span class="p">:</span> <span class="kt"><a href="../Classes/BRAccountLinkingConnection.html">BRAccountLinkingConnection</a></span><span class="p">,</span> <span class="n">withCompletion</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Enums/BRAccountLinkingError.html">BRAccountLinkingError</a></span><span class="p">,</span> <span class="kt">UIViewController</span><span class="p">?,</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/BRAccountLinkingConnectionIdentifier.html">BRAccountLinkingConnectionIdentifier</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">verifyRetailer</span><span class="p">(</span><span class="n">with</span> <span class="nv">connection</span><span class="p">:</span> <span class="kt"><a href="../Classes/BRAccountLinkingConnection.html">BRAccountLinkingConnection</a></span><span class="p">,</span> <span class="n">withCompletion</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Enums/BRAccountLinkingError.html">BRAccountLinkingError</a></span><span class="p">,</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">Int32</span><span class="o">&gt;</span><span class="p">?,</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/BRAccountLinkingConnectionIdentifier.html">BRAccountLinkingConnectionIdentifier</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -464,7 +429,7 @@
                         <p>A BRAccountLinkingConnectionIdentifier that can be used to cancel the task</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.4/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L133-L136">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.5/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L133-L136">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -503,7 +468,7 @@
                         <p>An array of <code>NSNumber*</code> wrapped values from the <code><a href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a></code> enum</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.4/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L141">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.5/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L141">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -562,7 +527,7 @@
                         <p>A <code>BRAccountLinkingConnection*</code> objects</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.4/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L148">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.5/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L148">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -616,7 +581,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.4/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L154">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.5/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L154">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -651,7 +616,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.4/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L159">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.5/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L159">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -682,7 +647,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">unlinkAccount</span><span class="p">(</span><span class="k">for</span> <span class="nv">retailer</span><span class="p">:</span> <span class="kt"><a href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a></span><span class="p">)</span> <span class="k">async</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">unlinkAccount</span><span class="p">(</span><span class="k">for</span> <span class="nv">retailer</span><span class="p">:</span> <span class="kt"><a href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a></span><span class="p">)</span> <span class="n">async</span></code></pre>
 
                         </div>
                       </div>
@@ -718,7 +683,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.4/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L166">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.5/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L166">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -748,7 +713,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">unlinkAllAccounts</span><span class="p">()</span> <span class="k">async</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">unlinkAllAccounts</span><span class="p">()</span> <span class="n">async</span></code></pre>
 
                         </div>
                       </div>
@@ -772,7 +737,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.4/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L172">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.5/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L172">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -800,8 +765,7 @@
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/BRAccountLinkingConnectionIdentifier.html">BRAccountLinkingConnectionIdentifier</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span>
     <span class="nf">grabNewOrdersForRetailer</span><span class="p">:(</span><span class="n"><a href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a></span><span class="p">)</span><span class="nv">retailer</span>
               <span class="nf">withCompletion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n"><a href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a></span><span class="p">,</span>
-                                               <span class="n">BRScanResults</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span>
-                                               <span class="n">NSInteger</span><span class="p">,</span>
+                                               <span class="kt">int</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span> <span class="n">NSInteger</span><span class="p">,</span>
                                                <span class="n">UIViewController</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span>
                                                <span class="n"><a href="../Enums/BRAccountLinkingError.html">BRAccountLinkingError</a></span><span class="p">,</span>
                                                <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">))</span><span class="n">completion</span><span class="p">;</span></code></pre>
@@ -809,7 +773,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">grabNewOrders</span><span class="p">(</span><span class="k">for</span> <span class="nv">retailer</span><span class="p">:</span> <span class="kt"><a href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a></span><span class="p">,</span> <span class="n">withCompletion</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a></span><span class="p">,</span> <span class="kt">BRScanResults</span><span class="p">?,</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">UIViewController</span><span class="p">?,</span> <span class="kt"><a href="../Enums/BRAccountLinkingError.html">BRAccountLinkingError</a></span><span class="p">,</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/BRAccountLinkingConnectionIdentifier.html">BRAccountLinkingConnectionIdentifier</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">grabNewOrders</span><span class="p">(</span><span class="k">for</span> <span class="nv">retailer</span><span class="p">:</span> <span class="kt"><a href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a></span><span class="p">,</span> <span class="n">withCompletion</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Enums/BRAccountLinkingRetailer.html">BRAccountLinkingRetailer</a></span><span class="p">,</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">Int32</span><span class="o">&gt;</span><span class="p">?,</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">Int32</span><span class="o">&gt;</span><span class="p">?,</span> <span class="kt"><a href="../Enums/BRAccountLinkingError.html">BRAccountLinkingError</a></span><span class="p">,</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/BRAccountLinkingConnectionIdentifier.html">BRAccountLinkingConnectionIdentifier</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -818,7 +782,7 @@
                         <p>A <code>BRAccountLinkingConnectionIdentifier*</code> object</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.4/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L178-L184">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.5/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L178-L184">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -873,7 +837,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.4/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L191">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.5/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L191">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -927,7 +891,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.4/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L198">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.5/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L198">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -999,21 +963,20 @@
                         <p>Any <code><a href="../Enums/BRAccountLinkingError.html">BRAccountLinkingError</a></code> error that was encountered while attempting to enable background fetch</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.4/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L208">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.45.5/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingManager.h#L208">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
-          </div>
+          </section>
         </section>
-
+        <section id="footer">
+          <p>&copy; 2025 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2025-03-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
       </article>
     </div>
-    <section class="footer">
-      <p>&copy; 2024 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2024-12-19)</p>
-      
-    </section>
   </body>
 </html>
