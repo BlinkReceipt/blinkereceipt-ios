@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "BlinkEReceipt"
-  s.version      = "2.45.5"
+  s.version      = "3.0.0-beta.3"
   s.summary      = "BlinkEReceipt SDK"
 
   s.description  = <<-DESC
@@ -20,7 +20,7 @@ This is the BlinkEReceipt extension for the BlinkReceipt SDK
 
   s.vendored_frameworks = ["BlinkEReceipt.xcframework"]
 
-  s.dependency 'BlinkReceipt', '~> 1.56.0'
+  s.dependency 'BlinkReceipt', '~> 1.57.0'
 
   s.dependency 'GoogleSignIn', '~> 6.2.0'
   s.dependency 'GoogleAPIClientForREST/Gmail', '~> 1.3'
@@ -32,6 +32,6 @@ This is the BlinkEReceipt extension for the BlinkReceipt SDK
   # MailCore has an iOS pod but it is > 200mb so we wrapped it in this dynamic framework which pulls in only the functionality we require in less than 3mb
   s.dependency 'BRMailCore', '~> 1.0'
 
-  s.dependency 'AccountLinking', '~> 2.90.30'
+  s.dependency 'AccountLinking', '~> 3.0.42'
 
 end
