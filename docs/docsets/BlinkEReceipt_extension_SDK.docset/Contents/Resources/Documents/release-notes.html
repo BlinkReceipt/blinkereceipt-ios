@@ -37,7 +37,7 @@
       </p>
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          BlinkEReceipt extension SDK 2.45.5 Docs
+          BlinkEReceipt extension SDK 2.46.0 Docs
         </a>
         
       </p>
@@ -212,6 +212,39 @@
   }
 </style>
 <h1 id='release-notes' class='heading'>Release Notes</h1>
+<h2 id='apr-11-2025' class='heading'>Apr 11, 2025</h2>
+
+<div class="note">
+  <div class="note-type">
+    <span class="added">ADDED</span>
+  </div>
+  <div class="note-content">
+    <p><div class="bullet"></div> <strong>isAuthenticated</strong> property in BRAccountLinkingConnection</p>
+    <p><div class="bullet"></div> New <strong>BRAccountLinkingErrorSystemTerminated</strong> error</p>
+    <p><div class="bullet"></div> Support for <strong>BRAccountLinkingRetailerTemu</strong> US retailer</p>
+    <p><div class="bullet"></div> Support for <strong>BRAccountLinkingRetailerAliExpress</strong> US retailer</p>
+    <p><div class="bullet"></div> Support for <strong>BRAccountLinkingRetailerThriveMarket</strong> US retailer</p>
+    <p><strong class="sub-title">BRAccountLinkingManager</strong></p>
+    <p><div class="bullet"></div> Added <span class="code-text">linkAccount(with:withCompletion:)</span> method</p>
+    <p><div class="bullet"></div> Added <span class="code-text">loginUser(forLinkedRetailer:withCompletion:)</span> method</p>
+    <p><strong class="sub-title">BRDigitalManager</strong></p>
+    <p><div class="bullet"></div> Added <span class="code-text">enableSilentPush(withToken:)</span> method for collecting push notification token</p>
+    <p><div class="bullet"></div> Added <span class="code-text">didReceiveRemoteNotification(userInfo:fetchCompletionHandler:)</span> method for executing Grab Orders Operation via silent push</p>
+  </div>
+</div>
+
+<div class="note">
+  <div class="note-type">
+    <span class="changed">CHANGED</span>
+  </div>
+  <div class="note-content">
+    <p><div class="bullet"></div> Removed support for <strong>BRAccountLinkingRetailerDrizly</strong> retailer.</p>
+     <p><div class="bullet"></div> Removed support for <strong>BRAccountLinkingRetailerTacoBell</strong> retailer.</p>
+    <p><strong class="sub-title">BRAccountLinkingManager</strong></p>
+    <p><div class="bullet"></div> Removed <span class="code-text">linkRetailerWithConnection</span> method.</p>
+    <p><div class="bullet"></div> Removed <span class="code-text">verifyRetailerWithConnection(with:withCompletion:)</span> method.</p>    
+  </div>
+</div>
 <h2 id='mar-10-2025' class='heading'>Mar 10, 2025</h2>
 
 <div class="note">
@@ -405,7 +438,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2025 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2025-04-04)</p>
+      <p>&copy; 2025 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2025-04-30)</p>
       
     </section>
   </body>
