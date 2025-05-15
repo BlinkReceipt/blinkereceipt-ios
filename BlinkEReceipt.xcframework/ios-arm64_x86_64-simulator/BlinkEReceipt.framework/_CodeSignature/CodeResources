@@ -6,7 +6,7 @@
 	<dict>
 		<key>13343.alp</key>
 		<data>
-		a3kRi2tF8ocxYGLzCxFkdkPu/5I=
+		8rGwp3OStcds3G1HFMKsNjdVL2E=
 		</data>
 		<key>Headers/BRAccountLinkingConfiguration.h</key>
 		<data>
@@ -14,19 +14,19 @@
 		</data>
 		<key>Headers/BRAccountLinkingConnection.h</key>
 		<data>
-		Jm6oDqWPnTbkwJ7NjNM6/1yl/IQ=
+		rZX6xo2HjnB4bMicODr4VoGEBPU=
 		</data>
 		<key>Headers/BRAccountLinkingConnectionIdentifier.h</key>
 		<data>
 		/aTUiEuFsjCEAD6ToqoReSEuSN8=
 		</data>
-		<key>Headers/BRAccountLinkingCredentials.h</key>
-		<data>
-		94aIKlEeUM89IX0DZQhwov6bv6M=
-		</data>
 		<key>Headers/BRAccountLinkingManager.h</key>
 		<data>
-		WoBI3I3gW2hc6R7FhGvXEXGld+s=
+		aqqPyQGpVTaEGJGcTXaJTbXu31s=
+		</data>
+		<key>Headers/BRDigitalManager.h</key>
+		<data>
+		pxG6EkoIw1znW/2M4qgIZ6bDQ5U=
 		</data>
 		<key>Headers/BREReceiptManager.h</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Headers/BREmailAccount.h</key>
 		<data>
-		gJ4ixG0gbvSF+tHQCnrEWaZRVnI=
+		74Qjjld2ATi+ARA4Y/rzfdDcOus=
 		</data>
 		<key>Headers/BRIMAPAccount.h</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Headers/BlinkEReceipt.h</key>
 		<data>
-		w+9KN82fp9OoLH/5b+wchkTUXto=
+		EOmv+BOJzf14LZX1l4X+Qe/iAlU=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		SNhDE6kyCydFOoS+Quazvejphwg=
+		dYR5ZUaxUPkvKKy/FIQ6xaGifSQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>gmail-imap.alp</key>
 		<data>
-		1kjEeELbm+gtRXl4L2M8EaDdcIM=
+		S/Ou3Ayj8L2OIeYqTUYOBk3Ves0=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -71,7 +71,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PKwF/FS7BCyQjjVLEEBkCIcyDD5lvQ52vaNV+1F4IAw=
+			MSkK11ud3cgvg5vw4sFLnLF6zvn2OmBw6B03MOXsQXE=
 			</data>
 		</dict>
 		<key>Headers/BRAccountLinkingConfiguration.h</key>
@@ -85,7 +85,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rDERB72+urQ8KS3bEpwi4i8m7ditANCAryj00ZDOSvU=
+			AQicsLbvEN7SAWHE+9m+JR6cCSdyJQVaqfXnXxldzNE=
 			</data>
 		</dict>
 		<key>Headers/BRAccountLinkingConnectionIdentifier.h</key>
@@ -95,18 +95,18 @@
 			5lRng6Rjr1m1Bswn3nwDje9vaCkiuyn8TlNH8BJW7SU=
 			</data>
 		</dict>
-		<key>Headers/BRAccountLinkingCredentials.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			JheWePKMU1geUYhD1ODGqc3Dxv/rXJHMTJBDv0OX1bU=
-			</data>
-		</dict>
 		<key>Headers/BRAccountLinkingManager.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VxH/A3/KnVY1VXW8H8jdsRJM1FmVbVJzdSjQcNw68VQ=
+			jJ+qhjA3RNCvWBdSoenQM4KPhoIaRo0yEIehX5zm5NU=
+			</data>
+		</dict>
+		<key>Headers/BRDigitalManager.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			sM9RUdCRb9IVwJ2gOJq2kKy4j0X1V6jqKd6VSs76Mxw=
 			</data>
 		</dict>
 		<key>Headers/BREReceiptManager.h</key>
@@ -120,7 +120,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2q44jBuqAf5cN/VbPbbu6lUJgy1ULRhc6o9S13DBVQE=
+			A+7jA66J1jJbjNJfZwCVsgAE7E0KDN6AP/8Twq4Ky08=
 			</data>
 		</dict>
 		<key>Headers/BRIMAPAccount.h</key>
@@ -134,7 +134,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BF+aYrRw1rObbp6/ghXUdgGc2dMC/kBiZkTmaPKHZG8=
+			GDSApg/GDJQf5oYNMgknIAu+0qb0P+VRKMyVv5ma+k4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -162,7 +162,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9NY/SXBQ9OXbtLm12OfysAUxSQJrZ+1nvdb75qOJBMo=
+			mj5KX22rB1yPrZv1hQMJUpr0x3gHjGyOGWZpNFgKqO0=
 			</data>
 		</dict>
 	</dict>

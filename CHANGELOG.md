@@ -1,22 +1,48 @@
+## 3.0.0-beta.4
+
+#### ADDED
+- Support for `BRAccountLinkingRetailerThriveMarket` (US) retailer
+
 ## 2.46.0
 #### CHANGED
 - Binary optimizations
+
+## 3.0.0-beta.3
+
+#### ADDED
+- `isAuthenticated` property in BRAccountLinkingConnection
+- New BRAccountLinkingErrorSystemTerminated error
+
+**BRAccountLinkingManager**
+- Added linkAccount(with:withCompletion:) method
+- Added loginUser(forLinkedRetailer:withCompletion:) method
+
+**BRDigitalManager**
+- Added enableSilentPush(withToken:) method for collecting push notification token
+- Added didReceiveRemoteNotification(userInfo:fetchCompletionHandler:) method for executing Grab Orders Operation via silent push
+
+#### CHANGED 
+- Removed support for `BRAccountLinkingRetailerDrizly` retailer
+
+**BRAccountLinkingManager**
+- Removed linkRetailerWithConnection method
+- Removed verifyRetailerWithConnection(with:withCompletion:) method
 
 ## 2.45.5
 #### CHANGED
 - Binary optimizations
 
-# 2.45.4
+## 2.45.4
 #### CHANGED
 - Binary optimizations
 
-# 2.45.3
+## 2.45.3
 #### CHANGED
 - Binary optimizations
 
-# 2.45.1
+## 2.45.1
 #### CHANGED
-- `BRMailCore` version change
+- [BRMailCore v1.0](https://github.com/BlinkReceipt/BRMailCore/releases/tag/1.0.0)
 
 # 2.45.0
 #### ADDED
