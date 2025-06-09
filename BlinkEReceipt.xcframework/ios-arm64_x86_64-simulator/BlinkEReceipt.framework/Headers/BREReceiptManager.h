@@ -31,7 +31,8 @@ typedef NS_ENUM(NSUInteger, BRSetupIMAPResult) {
     BRSetupIMAPResultAdminNeeded,
     BRSetupIMAPResultDuplicateEmail,
     BRSetupIMAPResultSaved,
-    BRSetupIMAPResultUnknownFailure
+    BRSetupIMAPResultUnknownFailure,
+    BRSetupIMAPResultEnabled2FAAccountRequired
 };
 
 ///
