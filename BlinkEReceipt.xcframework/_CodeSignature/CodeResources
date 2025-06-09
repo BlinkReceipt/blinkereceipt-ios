@@ -50,7 +50,7 @@
 		</data>
 		<key>ios-arm64/BlinkEReceipt.framework/Info.plist</key>
 		<data>
-		TnsvoXRXVNUubjJHPAnQbFNQBgo=
+		iXaHohBErJLk1fOR3Hny5Wm270Y=
 		</data>
 		<key>ios-arm64/BlinkEReceipt.framework/Modules/module.modulemap</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Info.plist</key>
 		<data>
-		/R6Zd8WQEFobY7dlF2xVqOqjx84=
+		BmnuBsBLYIZRl++g3b7jWm2D8zU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Modules/module.modulemap</key>
 		<data>
@@ -264,11 +264,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TnsvoXRXVNUubjJHPAnQbFNQBgo=
+			iXaHohBErJLk1fOR3Hny5Wm270Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			roWqHnpACRkKb+dFc0z/khDr3s5x0CkQ7Wr4n8KwDgw=
+			CUAwNAToBcoSUi2v913sy+uz5tYg9qGz2FUC/qoDhWQ=
 			</data>
 		</dict>
 		<key>ios-arm64/BlinkEReceipt.framework/Modules/module.modulemap</key>
@@ -440,11 +440,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/R6Zd8WQEFobY7dlF2xVqOqjx84=
+			BmnuBsBLYIZRl++g3b7jWm2D8zU=
 			</data>
 			<key>hash2</key>
 			<data>
-			CxMe5MC1OnmxCM5b98PZCZIXIutf0NrfpC1ewQYTMIA=
+			6E+uDIU7NKLRhSS7wgeFWgoiXd/vfkyedJWwQk7a1Gk=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/BlinkEReceipt.framework/Modules/module.modulemap</key>
