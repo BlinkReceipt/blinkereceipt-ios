@@ -1,3 +1,7 @@
+## 2.52.0
+#### CHANGED
+- Binary optimizations
+
 ## 2.51.0
 #### CHANGED
 - Binary optimizations
