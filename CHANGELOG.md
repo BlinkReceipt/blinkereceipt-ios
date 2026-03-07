@@ -1,36 +1,62 @@
-## 2.52.0
+# 3.0.0
+#### ADDED
+- `isAuthenticated` property to `BRAccountLinkingConnection`.
+- New error type `BRAccountLinkingErrorSystemTerminated`.
+- New error type `BRSetupIMAPResultEnabled2FAAccountRequired`.
+- Support for `BRAccountLinkingRetailerTemu` (US).
+- Support for `BRAccountLinkingRetailerAliExpress` (US).
+- Support for `BRAccountLinkingRetailerThriveMarket` (US).
+- `BRAccountLinkingManager`: `linkAccount(with:withCompletion:)` method.
+- `BRAccountLinkingManager`: `loginUser(forLinkedRetailer:withCompletion:)` method.
+
+#### CHANGED
+- Minimum iOS version raised to iOS 15. iOS 13 and 14 are no longer supported. This aligns with current Xcode toolchain requirements and improves long-term stability.
+- Removed all deprecated logic from `BRAccountLinkingManager`.
+
+#### FIXED
+- Intermittent crash when Account Linking is active, caused by non-JSON-safe types (e.g. `Date`) surfacing during serialization. Affects users with 1 or more linked accounts.
+- `dictionaryForSerializing()` now returns only JSON-safe types. Direct use with `JSONSerialization` no longer produces type errors.
+- Random crash when executing `grabNewOrdersForRetailer`.
+
+#### REMOVED
+- `BRAccountLinkingManager`: `linkRetailerWithConnection` method.
+- `BRAccountLinkingManager`: `verifyRetailerWithConnection(with:withCompletion:)` method.
+- Support for `BRAccountLinkingRetailerDrizly` retailer.
+- Support for `BRAccountLinkingRetailerTacoBell` retailer.
+
+# 2.52.0
 #### CHANGED
 - Binary optimizations
 
-## 2.51.0
+# 2.51.0
 #### CHANGED
 - Binary optimizations
 
-## 2.50.0
+# 2.50.0
 #### CHANGED
 - Binary optimizations
 
-## 2.49.0
+# 2.49.0
 #### CHANGED
 - Binary optimizations
 
-## 2.48.0
+# 2.48.0
 #### CHANGED
 - Binary optimizations
 
-## 3.0.0-beta.5
+# 3.0.0-beta.5
 
 #### ADDED
 - New error type `BRSetupIMAPResultEnabled2FAAccountRequired`
 #### FIXED
 - A random crash when executing `grabNewOrdersForRetailer`
 
-## 3.0.0-beta.4
+# 3.0.0-beta.4
 
 #### ADDED
 - Support for `BRAccountLinkingRetailerThriveMarket` (US) retailer
 
-## 3.0.0-beta.3
+# 3.0.0-beta.3
 
 #### ADDED
 - `isAuthenticated` property in BRAccountLinkingConnection
@@ -51,19 +77,19 @@
 - Removed linkRetailerWithConnection method
 - Removed verifyRetailerWithConnection(with:withCompletion:) method
 
-## 2.47.0
+# 2.47.0
 #### CHANGED
 - Binary optimizations
 
-## 2.46.0
+# 2.46.0
 #### CHANGED
 - Binary optimizations
 
-## 2.45.5
+# 2.45.5
 #### CHANGED
 - Binary optimizations
 
-## 3.0.0-beta.2
+# 3.0.0-beta.2
 
 #### ADDED
 - `isAuthenticated` property in BRAccountLinkingConnection
@@ -84,11 +110,11 @@
 - Removed linkRetailerWithConnection method
 - Removed verifyRetailerWithConnection(with:withCompletion:) method
 
-## 2.45.4
+# 2.45.4
 #### CHANGED
 - Binary optimizations
 
-## 3.0.0-beta.1
+# 3.0.0-beta.1
 
 #### ADDED
 - `isAuthenticated` property in BRAccountLinkingConnection

@@ -37,7 +37,7 @@
       </p>
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          BlinkEReceipt extension SDK 2.51.0 Docs
+          BlinkEReceipt extension SDK 3.0.0 Docs
         </a>
         
       </p>
@@ -104,10 +104,10 @@
                 <a class="nav-group-task-link" href="Classes/BRAccountLinkingConnectionIdentifier.html">BRAccountLinkingConnectionIdentifier</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/BRAccountLinkingCredentials.html">BRAccountLinkingCredentials</a>
+                <a class="nav-group-task-link" href="Classes/BRAccountLinkingManager.html">BRAccountLinkingManager</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/BRAccountLinkingManager.html">BRAccountLinkingManager</a>
+                <a class="nav-group-task-link" href="Classes/BRDigitalManager.html">BRDigitalManager</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/BREReceiptManager.html">BREReceiptManager</a>
@@ -212,29 +212,47 @@
   }
 </style>
 <h1 id='release-notes' class='heading'>Release Notes</h1>
-<h2 id='oct-31-2025' class='heading'>Oct 31, 2025</h2>
+<h2 id='mar-6-2026' class='heading'>Mar 6, 2026</h2>
 
 <div class="note">
   <div class="note-type">
-    <span class="changed">CHANGED</span>
+    <span class="added">ADDED</span>
   </div>
-  <div class="note-content">Binary optimizations.</div>
+  <div class="note-content">
+    <p><div class="bullet"></div> <strong>isAuthenticated</strong> property to <strong>BRAccountLinkingConnection</strong>.</p>
+    <p><div class="bullet"></div> New error type <strong>BRAccountLinkingErrorSystemTerminated</strong>.</p>
+    <p><div class="bullet"></div> New error type <strong>BRSetupIMAPResultEnabled2FAAccountRequired</strong>.</p>
+    <p><div class="bullet"></div> Support for <strong>BRAccountLinkingRetailerTemu</strong> (US).</p>
+    <p><div class="bullet"></div> Support for <strong>BRAccountLinkingRetailerAliExpress</strong> (US).</p>
+    <p><div class="bullet"></div> Support for <strong>BRAccountLinkingRetailerThriveMarket</strong> (US).</p>
+    <p><div class="bullet"></div> <strong>BRAccountLinkingManager</strong>: <strong>linkAccount(with:withCompletion:)</strong> method.</p>
+    <p><div class="bullet"></div> <strong>BRAccountLinkingManager</strong>: <strong>loginUser(forLinkedRetailer:withCompletion:)</strong> method.</p>
+  </div>
 </div>
-<h2 id='aug-22-2025' class='heading'>Aug 22, 2025</h2>
 
 <div class="note">
   <div class="note-type">
-    <span class="changed">CHANGED</span>
+      <span class="changed">CHANGED</span>
   </div>
-  <div class="note-content">Binary optimizations.</div>
+  <div class="note-content">
+    <p><div class="bullet"></div> Minimum iOS version raised to iOS 15. iOS 13 and 14 are no longer supported. This aligns with current Xcode toolchain requirements and improves long-term stability.</p>
+    <p><div class="bullet"></div> Removed all deprecated logic from <strong>BRAccountLinkingManager</strong>.</p> 
+    <p><div class="bullet"></div> <strong>BRAccountLinkingManager</strong>: <strong>linkRetailerWithConnection</strong> method.</strong>.</p> 
+    <p><div class="bullet"></div> <strong>BRAccountLinkingManager</strong>: <strong>verifyRetailerWithConnection(with:withCompletion:)</strong> method.</strong>.</p> 
+    <p><div class="bullet"></div> Support for <strong>BRAccountLinkingRetailerDrizly</strong> retailer.</p> 
+    <p><div class="bullet"></div> Support for <strong>BRAccountLinkingRetailerTacoBell</strong> retailer.</p>  
+  </div>
 </div>
-<h2 id='july-17-2025' class='heading'>July 17, 2025</h2>
 
 <div class="note">
   <div class="note-type">
-    <span class="changed">CHANGED</span>
+    <span class="fixed">FIXED</span>
   </div>
-  <div class="note-content">Binary optimizations.</div>
+  <div class="note-content">
+    <p><div class="bullet"></div> Intermittent crash when Account Linking is active, caused by non-JSON-safe types (e.g. <strong>Date</strong>) surfacing during serialization. Affects users with 1 or more linked accounts.</p>
+    <p><div class="bullet"></div> <strong>dictionaryForSerializing()</strong> now returns only JSON-safe types. Direct use with `JSONSerialization` no longer produces type errors.</p>
+    <p><div class="bullet"></div> Random crash when executing <strong>grabNewOrdersForRetailer</strong>.</p>
+  </div>
 </div>
 <h2 id='jun-9-2025' class='heading'>Jun 9, 2025</h2>
 
@@ -276,7 +294,6 @@
     <p><div class="bullet"></div> New <strong>BRAccountLinkingErrorSystemTerminated</strong> error</p>
     <p><div class="bullet"></div> Support for <strong>BRAccountLinkingRetailerTemu</strong> US retailer</p>
     <p><div class="bullet"></div> Support for <strong>BRAccountLinkingRetailerAliExpress</strong> US retailer</p>
-    <p><div class="bullet"></div> Support for <strong>BRAccountLinkingRetailerThriveMarket</strong> US retailer</p>
     <p><strong class="sub-title">BRAccountLinkingManager</strong></p>
     <p><div class="bullet"></div> Added <span class="code-text">linkAccount(with:withCompletion:)</span> method</p>
     <p><div class="bullet"></div> Added <span class="code-text">loginUser(forLinkedRetailer:withCompletion:)</span> method</p>
@@ -491,7 +508,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2025 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2025-10-31)</p>
+      <p>&copy; 2026 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2026-03-07)</p>
       
     </section>
   </body>

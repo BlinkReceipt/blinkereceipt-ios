@@ -38,7 +38,7 @@
       </p>
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          BlinkEReceipt extension SDK 2.51.0 Docs
+          BlinkEReceipt extension SDK 3.0.0 Docs
         </a>
         
       </p>
@@ -105,10 +105,10 @@
                 <a class="nav-group-task-link" href="../Classes/BRAccountLinkingConnectionIdentifier.html">BRAccountLinkingConnectionIdentifier</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/BRAccountLinkingCredentials.html">BRAccountLinkingCredentials</a>
+                <a class="nav-group-task-link" href="../Classes/BRAccountLinkingManager.html">BRAccountLinkingManager</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/BRAccountLinkingManager.html">BRAccountLinkingManager</a>
+                <a class="nav-group-task-link" href="../Classes/BRDigitalManager.html">BRDigitalManager</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/BREReceiptManager.html">BREReceiptManager</a>
@@ -168,6 +168,14 @@
  */</span>
 <span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">webviewAuthEnabled</span><span class="p">;</span>
 
+<span class="cm">/**
+ *  It represents the logged in status of the connection
+ *
+ * @note Check the `isAuthenticated` before calling `loginUserForLinkedRetailer`
+ *
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isAuthenticated</span><span class="p">;</span>
+
 <span class="c1">// A configuration object that defines the behavior when searching for new orders</span>
 <span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n"><a href="../Classes/BRAccountLinkingConfiguration.html">BRAccountLinkingConfiguration</a></span> <span class="o">*</span><span class="n">configuration</span><span class="p">;</span>
 
@@ -189,7 +197,7 @@
               </div>
             
               <div class="slightly-smaller">
-                <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.51.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h#L15-L39">Show on GitHub</a>
+                <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/3.0.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h#L84-L116">Show on GitHub</a>
               </div>
           </div>
         </section>
@@ -227,7 +235,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.51.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h#L17">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/3.0.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h#L86">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -261,7 +269,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.51.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h#L18">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/3.0.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h#L87">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -295,7 +303,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.51.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h#L19">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/3.0.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h#L88">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -329,7 +337,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.51.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h#L20">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/3.0.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h#L89">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -366,7 +374,47 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.51.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h#L27">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/3.0.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h#L96">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BRAccountLinkingConnection(py)isAuthenticated"></a>
+                    <a name="//apple_ref/objc/Property/isAuthenticated" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BRAccountLinkingConnection(py)isAuthenticated">isAuthenticated</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>It represents the logged in status of the connection</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Check the <code>isAuthenticated</code> before calling <code>loginUserForLinkedRetailer</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isAuthenticated</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isAuthenticated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/3.0.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h#L104">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -400,7 +448,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.51.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h#L30">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/3.0.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h#L107">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -433,7 +481,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.51.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h#L33">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/3.0.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h#L110">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -467,7 +515,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.51.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h#L35">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/3.0.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h#L112">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -501,7 +549,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/2.51.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h#L37">Show on GitHub</a>
+                        <a href="https://github.com/BlinkReceipt/blinkereceipt-ios/tree/3.0.0/BlinkEReceipt.xcframework/ios-arm64/BlinkEReceipt.framework/Headers/BRAccountLinkingConnection.h#L114">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -514,7 +562,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2025 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2025-10-31)</p>
+      <p>&copy; 2026 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2026-03-07)</p>
       
     </section>
   </body>

@@ -37,7 +37,7 @@
       </p>
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          BlinkEReceipt extension SDK 2.51.0 Docs
+          BlinkEReceipt extension SDK 3.0.0 Docs
         </a>
         
       </p>
@@ -104,10 +104,10 @@
                 <a class="nav-group-task-link" href="Classes/BRAccountLinkingConnectionIdentifier.html">BRAccountLinkingConnectionIdentifier</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/BRAccountLinkingCredentials.html">BRAccountLinkingCredentials</a>
+                <a class="nav-group-task-link" href="Classes/BRAccountLinkingManager.html">BRAccountLinkingManager</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/BRAccountLinkingManager.html">BRAccountLinkingManager</a>
+                <a class="nav-group-task-link" href="Classes/BRDigitalManager.html">BRDigitalManager</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/BREReceiptManager.html">BREReceiptManager</a>
@@ -228,19 +228,8 @@
 <span class="p">}</span>
 </code></pre>
 <h2 id='link-a-connection' class='heading'>Link a connection</h2>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">error</span> <span class="o">=</span> <span class="kt">BRAccountLinkingManager</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">linkRetailer</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">connection</span><span class="p">)</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="o">.</span><span class="k">none</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1">// Success</span>
-<span class="p">}</span>
-</code></pre>
-
-<p><hr style="height: 2px; margin-top: 40px; margin-bottom: 40px; background-color: rgba(121, 121, 121, 1);" /></p>
-<h2 id='verifying-a-connection' class='heading'>Verifying a connection</h2>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">username</span> <span class="o">=</span> <span class="s">"user@domain.com"</span>
-<span class="k">let</span> <span class="nv">password</span> <span class="o">=</span> <span class="s">"secure-password"</span>
-<span class="k">let</span> <span class="nv">connection</span> <span class="o">=</span> <span class="kt">BRAccountLinkingConnection</span><span class="p">(</span><span class="nv">retailer</span><span class="p">:</span> <span class="o">.</span><span class="n">walmart</span><span class="p">,</span> <span class="nv">username</span><span class="p">:</span> <span class="n">username</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="n">password</span><span class="p">)</span>
-<span class="n">connection</span><span class="o">.</span><span class="n">configuration</span><span class="o">.</span><span class="n">dayCutoff</span> <span class="o">=</span> <span class="mi">30</span>
-<span class="k">let</span> <span class="nv">taskId</span> <span class="o">=</span> <span class="kt">BRAccountLinkingManager</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">verifyRetailer</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">connection</span><span class="p">,</span> <span class="nv">withCompletion</span><span class="p">:</span> <span class="p">{</span> <span class="n">error</span><span class="p">,</span> <span class="n">viewController</span><span class="p">,</span> <span class="n">sessionId</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">connection</span> <span class="o">=</span> <span class="kt">BRAccountLinkingConnection</span><span class="p">(</span><span class="nv">retailer</span><span class="p">:</span> <span class="n">account</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">taskId</span> <span class="o">=</span> <span class="kt">BRAccountLinkingManager</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">linkAccount</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">connection</span><span class="p">,</span> <span class="nv">withCompletion</span><span class="p">:</span> <span class="p">{</span> <span class="n">error</span><span class="p">,</span> <span class="n">viewController</span><span class="p">,</span> <span class="n">sessionId</span> <span class="k">in</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="o">.</span><span class="n">verificationNeeded</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Display UIViewController for 2FA verification, CAPTCHA or other user input</span>
   <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="o">.</span><span class="n">verificationCompleted</span><span class="p">)</span> <span class="p">{</span>
@@ -263,9 +252,47 @@
     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="o">.</span><span class="n">unsupportedRetailer</span><span class="p">)</span> <span class="p">{</span>
       <span class="c1">// Error: An attempt to verify account with invalid retailer</span>
     <span class="p">}</span>
-    <span class="c1">// Verification completed successfully</span>
-    <span class="c1">// Account can be linked</span>
-    <span class="kt">BRAccountLinkingManager</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">linkRetailer</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">connection</span><span class="p">)</span>
+    <span class="c1">// Account has been linked successfully</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre>
+
+<p><hr style="height: 2px; margin-top: 40px; margin-bottom: 40px; background-color: rgba(121, 121, 121, 1);" /></p>
+<h2 id='re-authenticate-a-connection' class='heading'>Re-authenticate a connection</h2>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">retailer</span> <span class="o">=</span> <span class="kt">BRAccountLinkingRetailer</span><span class="o">.</span><span class="n">walmart</span>
+
+<span class="c1">// This is optional </span>
+<span class="c1">// You can check connection's isAuthenticated status to avoid unnecessary re-authentication</span>
+<span class="k">if</span> <span class="k">let</span> <span class="nv">connection</span> <span class="o">=</span> <span class="kt">BRAccountLinkingManager</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">getLinkedRetailerConnection</span><span class="p">(</span><span class="n">retailer</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="n">connection</span><span class="o">.</span><span class="n">isAuthenticated</span> <span class="p">{</span>
+    <span class="k">return</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">taskId</span> <span class="o">=</span> <span class="kt">BRAccountLinkingManager</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">loginUser</span><span class="p">(</span><span class="nv">forLinkedRetailer</span><span class="p">:</span> <span class="n">retailer</span><span class="p">,</span> <span class="nv">withCompletion</span><span class="p">:</span> <span class="p">{</span> <span class="n">error</span><span class="p">,</span> <span class="n">viewController</span><span class="p">,</span> <span class="n">sessionId</span> <span class="k">in</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="o">.</span><span class="n">verificationNeeded</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Display UIViewController for 2FA verification, CAPTCHA or other user input</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="o">.</span><span class="n">verificationCompleted</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Dismiss the previously presented UIViewController</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="o">.</span><span class="n">noCredentials</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Error: Credentials have not been provided</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="o">.</span><span class="kd">internal</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Error: Unexpected error</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="o">.</span><span class="n">parsingFail</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Error: General error</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="o">.</span><span class="n">invalidCredentials</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Error: Probable cause of the failure is invalid credentials</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="o">.</span><span class="n">cancelled</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Operation has been cancelled.</span>
+      <span class="c1">// Dismiss any previously presented user input UIViewController</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="o">.</span><span class="n">webViewClosed</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Operation has been terminated due to dismissing of the webview.</span>
+      <span class="c1">// Dismiss any previously presented user input UIViewController</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="o">.</span><span class="n">unsupportedRetailer</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Error: An attempt to verify account with invalid retailer</span>
+    <span class="p">}</span>
+    <span class="c1">// Re-authentication has been completed successfully</span>
   <span class="p">}</span>
 <span class="p">})</span>
 </code></pre>
@@ -305,16 +332,21 @@
 <h2 id='grab-new-orders-app-in-background' class='heading'>Grab New Orders (App In Background)</h2>
 
 <p>Account Linking also provides an option for apps to periodically check for new orders while the app is in background. Follow the steps below if you want to enable background fetch in your app.</p>
+<h4 id='1-ios-background-task' class='heading'>1. iOS Background Task</h4>
 
 <ul>
 <li><p>Create task identifier by adding background task support in your app. More info <a href="https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_background/using_background_tasks_to_update_your_app?language=objc">here</a></p></li>
-<li><p>Enable background fetch by using the task identifier from step 1</p>
-<pre class="highlight swift"><code><span class="kt">BRAccountLinkingManager</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">enableBackgroundFetch</span><span class="p">(</span><span class="nv">withIdentifier</span><span class="p">:</span> <span class="n">taskIdentifier</span><span class="p">)</span>
-</code></pre></li>
-<li><p>Implement <code>backgroundFetchCompletion</code> callback so the app can receive messages from the background job</p>
-<pre class="highlight swift"><code><span class="kt">BRAccountLinkingManager</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="n">backgroundFetchCompletion</span> <span class="o">=</span> <span class="p">{</span> <span class="n">retailer</span><span class="p">,</span> <span class="n">errorCode</span><span class="p">,</span> <span class="n">sessionId</span><span class="p">,</span> <span class="n">order</span> <span class="k">in</span> <span class="p">}</span>
-</code></pre></li>
+<li><p>Enable background fetch by using the task identifier from step 1</p></li>
 </ul>
+<pre class="highlight swift"><code><span class="kt">BRAccountLinkingManager</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">enableBackgroundFetch</span><span class="p">(</span><span class="nv">withIdentifier</span><span class="p">:</span> <span class="n">taskIdentifier</span><span class="p">)</span>
+</code></pre>
+<h4 id='2-receive-results-from-a-background-operation' class='heading'>2. Receive results from a background operation</h4>
+
+<ul>
+<li>Implement <code>backgroundFetchCompletion</code> callback so the app can receive messages from a background job that started via backogrund task</li>
+</ul>
+<pre class="highlight swift"><code><span class="kt">BRAccountLinkingManager</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="n">backgroundFetchCompletion</span> <span class="o">=</span> <span class="p">{</span> <span class="n">retailer</span><span class="p">,</span> <span class="n">errorCode</span><span class="p">,</span> <span class="n">sessionId</span><span class="p">,</span> <span class="n">order</span> <span class="k">in</span> <span class="p">}</span>
+</code></pre>
 
 <p>Example:</p>
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">UIKit</span>
@@ -328,62 +360,18 @@
         <span class="kt">BRScanManager</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="n">licenseKey</span> <span class="o">=</span> <span class="s">"YOUR-LICENSE-KEY"</span>
         <span class="kt">BRScanManager</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="n">prodIntelKey</span> <span class="o">=</span> <span class="s">"YOUR-PROD-INTEL-KEY"</span>
 
-        <span class="c1">// Enable background fetch</span>
+        <span class="c1">// Enable background refresh via background task</span>
         <span class="k">let</span> <span class="nv">taskIdentifier</span> <span class="o">=</span> <span class="s">"Host App Background Task Identifier"</span>
         <span class="kt">BRAccountLinkingManager</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">enableBackgroundFetch</span><span class="p">(</span><span class="nv">withIdentifier</span><span class="p">:</span> <span class="n">taskIdentifier</span><span class="p">)</span>
 
-        <span class="c1">// Background fetch callback </span>
+        <span class="c1">// A callback for background task sync operations</span>
         <span class="kt">BRAccountLinkingManager</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="n">backgroundFetchCompletion</span> <span class="o">=</span> <span class="p">{</span> <span class="n">retailer</span><span class="p">,</span> <span class="n">errorCode</span><span class="p">,</span> <span class="n">sessionId</span><span class="p">,</span> <span class="n">order</span> <span class="k">in</span>
           <span class="c1">// Same flow as Grab Orders above</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="kc">true</span>
     <span class="p">}</span>
-
 <span class="p">}</span>
 </code></pre>
-<h2 id='migration-from-code-bramazonmanager-code' class='heading'>Migration from <code>BRAmazonManager</code></h2>
-
-<p>If you had previously integrated Amazon parsing, you will find that <code>BRAmazonManager</code> is no longer accessible in the BlinkEReceipt SDK. Instead, Amazon has been incorporated into Account Linking.</p>
-
-<p>Here is a table detailing the functionality from the previous Amazon integration and how to achieve the same thing in the new framework:</p>
-
-<table><thead>
-<tr>
-<th>Old Amazon Integration</th>
-<th>New Account Linking Integration</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>BRAmazonManager.amazonDayCutoff</code></td>
-<td><code>BRAccountLinkingConnection.configuration.dayCutoff</code></td>
-</tr>
-<tr>
-<td><code>[BRAmazonManager storeCredentials:password:]</code></td>
-<td>Create a <code><a href="Classes/BRAccountLinkingConnection.html">BRAccountLinkingConnection</a></code> object and link with <code>BRAccountLinkingManager.shared().linkRetailer(with: connection)</code></td>
-</tr>
-<tr>
-<td><code>[BRAmazonManager clearAmazonCredentials]</code></td>
-<td>Call <code>BRAccountLinkingManager.shared().unlinkAccount(for: .amazon, withCompletion: {})</code></td>
-</tr>
-<tr>
-<td><code>[BRAmazonManager hasCredentials]</code></td>
-<td>Call <code>BRAccountLinkingManager.shared().getLinkedRetailers()</code> and iterate over the results looking for <code>BRAccountLinkingRetailerAmazon</code></td>
-</tr>
-<tr>
-<td><code>[BRAmazonManager resetAmazonOrders]</code></td>
-<td>Call <code>BRAccountLinkingManager.shared().resetHistory(for: .amazon)</code></td>
-</tr>
-<tr>
-<td><code>[BRAmazonManager verifyAmazonAccount:]</code></td>
-<td>Call <code>BRAccountLinkingManager.shared().verifyRetailer(with: connection, withCompletion: {}</code></td>
-</tr>
-<tr>
-<td><code>[BRAmazonManager grabNewAmazonOrders:]</code></td>
-<td>Call <code>BRAccountLinkingManager.shared().grabNewOrders(for: .amazonBeta) {}</code></td>
-</tr>
-</tbody></table>
-
-<p>As noted above, the method for handling 2FA and other user-input scenarios is slightly different now. Whereas previously you would trap the error code <code>BRAmazonErrorVerificationNeeded</code> and then invoke <code>[BRAmazonManager showBrowserFromViewController:withCompletion:]</code>, the new paradigm is that <code>verifyRetailer</code> and <code>grabNewOrders</code> will return the error code <code>BRAccountLinkingErrorVerificationNeeded</code> <em>as well as</em> the actual view controller for you to display. Once the user has successfully authenticated, the same callback will be invoked with the code <code>BRAccountLinkingErrorVerificationCompleted</code> which is the trigger for you to dismiss the view controller.</p>
 
           </div>
         </section>
@@ -392,7 +380,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2025 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2025-10-31)</p>
+      <p>&copy; 2026 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2026-03-07)</p>
       
     </section>
   </body>

@@ -37,6 +37,11 @@ typedef NS_ENUM(NSUInteger, BREReceiptProvider) {
  */
 @property (strong, nonatomic, readonly) NSString *email;
 
+/**
+ *  It represents the logged in status of the account
+ */
+@property (nonatomic, readonly) BOOL isAuthenticated;
+
 @end
 
 NS_ASSUME_NONNULL_END

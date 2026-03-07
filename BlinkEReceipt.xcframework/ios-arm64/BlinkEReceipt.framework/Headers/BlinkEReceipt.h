@@ -13,6 +13,7 @@ FOUNDATION_EXPORT double BlinkEReceiptVersionNumber;
 FOUNDATION_EXPORT const unsigned char BlinkEReceiptVersionString[];
 
 #import <BlinkEReceipt/BRAccountLinkingManager.h>
+#import <BlinkEReceipt/BRDigitalManager.h>
 #import <BlinkEReceipt/BREReceiptManager.h>
 #import <BlinkEReceipt/BREmailAccount.h>
 #import <BlinkEReceipt/BRIMAPAccount.h>
