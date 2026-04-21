@@ -1,3 +1,13 @@
+# 3.1.0
+#### CHANGED
+- Increased minimum supported iOS version to iOS 15
+- General extraction improvements for Asda, Grubhub, Home Depot
+- Improved authentication handling for Seamless, ShopRite, Food Lion and AliExpress.
+- Amazon: updated date handling
+- Enhancements to login and verification flows
+- Performance and reliability improvements
+- Improved compatibility across supported merchants
+
 # 3.0.0
 #### ADDED
 - `isAuthenticated` property to `BRAccountLinkingConnection`.
