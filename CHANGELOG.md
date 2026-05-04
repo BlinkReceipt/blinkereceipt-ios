@@ -1,3 +1,10 @@
+# 3.2.0
+#### CHANGED
+- Walmart Authentication Improvements
+	- Included updates to improve Walmart authentication reliability 
+- Background Processing Improvements
+	- Updates to background handling to improve stability and reliability
+
 # 3.1.0
 #### CHANGED
 - Increased minimum supported iOS version to iOS 15
