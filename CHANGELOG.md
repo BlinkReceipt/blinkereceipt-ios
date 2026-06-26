@@ -1,21 +1,4 @@
-# 3.2.0
-#### CHANGED
-- Walmart Authentication Improvements
-	- Included updates to improve Walmart authentication reliability 
-- Background Processing Improvements
-	- Updates to background handling to improve stability and reliability
-
-# 3.1.0
-#### CHANGED
-- Increased minimum supported iOS version to iOS 15
-- General extraction improvements for Asda, Grubhub, Home Depot
-- Improved authentication handling for Seamless, ShopRite, Food Lion and AliExpress.
-- Amazon: updated date handling
-- Enhancements to login and verification flows
-- Performance and reliability improvements
-- Improved compatibility across supported merchants
-
-# 3.0.0
+# 2.60.0
 #### ADDED
 - `isAuthenticated` property to `BRAccountLinkingConnection`.
 - New error type `BRAccountLinkingErrorSystemTerminated`.
@@ -29,6 +12,14 @@
 #### CHANGED
 - Minimum iOS version raised to iOS 15. iOS 13 and 14 are no longer supported. This aligns with current Xcode toolchain requirements and improves long-term stability.
 - Removed all deprecated logic from `BRAccountLinkingManager`.
+- General extraction improvements for Asda, Grubhub, and Home Depot
+- Improved authentication handling for Seamless, ShopRite, Food Lion, and AliExpress.
+- Amazon: updated date handling
+- Enhancements to login and verification flows
+- Performance and reliability improvements
+- Improved compatibility across supported merchants
+- Included updates to improve Walmart authentication reliability
+- Updates to background handling to improve stability and reliability
 
 #### FIXED
 - Intermittent crash when Account Linking is active, caused by non-JSON-safe types (e.g. `Date`) surfacing during serialization. Affects users with 1 or more linked accounts.
@@ -39,7 +30,7 @@
 - `BRAccountLinkingManager`: `linkRetailerWithConnection` method.
 - `BRAccountLinkingManager`: `verifyRetailerWithConnection(with:withCompletion:)` method.
 - Support for `BRAccountLinkingRetailerDrizly` retailer.
-- Support for `BRAccountLinkingRetailerTacoBell` retailer.
+- Support for `BRAccountLinkingRetailerTacoBell`
 
 # 2.52.0
 #### CHANGED

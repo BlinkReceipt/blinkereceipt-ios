@@ -77,12 +77,5 @@
   "2.50.0" : "https://github.com/BlinkReceipt/blinkereceipt-ios/releases/download/2.50.0/BlinkEReceiptStatic.xcframework-2.50.0.zip",
   "2.51.0" : "https://github.com/BlinkReceipt/blinkereceipt-ios/releases/download/2.51.0/BlinkEReceiptStatic.xcframework-2.51.0.zip",
   "2.52.0" : "https://github.com/BlinkReceipt/blinkereceipt-ios/releases/download/2.52.0/BlinkEReceiptStatic.xcframework-2.52.0.zip",
-  "3.0.0-beta.1" : "https://github.com/BlinkReceipt/blinkereceipt-ios/releases/download/3.0.0-beta.1/BlinkEReceiptStatic.xcframework-3.0.0-beta.1.zip",
-  "3.0.0-beta.2" : "https://github.com/BlinkReceipt/blinkereceipt-ios/releases/download/3.0.0-beta.2/BlinkEReceiptStatic.xcframework-3.0.0-beta.2.zip",
-  "3.0.0-beta.3" : "https://github.com/BlinkReceipt/blinkereceipt-ios/releases/download/3.0.0-beta.3/BlinkEReceiptStatic.xcframework-3.0.0-beta.3.zip",
-  "3.0.0-beta.4" : "https://github.com/BlinkReceipt/blinkereceipt-ios/releases/download/3.0.0-beta.4/BlinkEReceiptStatic.xcframework-3.0.0-beta.4.zip",
-  "3.0.0-beta.5" : "https://github.com/BlinkReceipt/blinkereceipt-ios/releases/download/3.0.0-beta.5/BlinkEReceiptStatic.xcframework-3.0.0-beta.5.zip",
-  "3.0.0" : "https://github.com/BlinkReceipt/blinkereceipt-ios/releases/download/3.0.0/BlinkEReceiptStatic.xcframework-3.0.0.zip",
-  "3.1.0" : "https://github.com/BlinkReceipt/blinkereceipt-ios/releases/download/3.1.0/BlinkEReceiptStatic.xcframework-3.1.0.zip",
-  "3.2.0" : "https://github.com/BlinkReceipt/blinkereceipt-ios/releases/download/3.2.0/BlinkEReceiptStatic.xcframework-3.2.0.zip"
+  "2.60.0" : "https://github.com/BlinkReceipt/blinkereceipt-ios/releases/download/2.60.0/BlinkEReceiptStatic.xcframework-2.60.0.zip"
 }
