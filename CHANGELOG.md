@@ -1,3 +1,7 @@
+# 2.60.1
+#### FIXED
+- Resolved a crash affecting the Account Linking experience.
+
 # 2.60.0
 #### ADDED
 - `isAuthenticated` property to `BRAccountLinkingConnection`.
@@ -51,39 +55,6 @@
 # 2.48.0
 #### CHANGED
 - Binary optimizations
-
-# 3.0.0-beta.5
-
-#### ADDED
-- New error type `BRSetupIMAPResultEnabled2FAAccountRequired`
-#### FIXED
-- A random crash when executing `grabNewOrdersForRetailer`
-
-# 3.0.0-beta.4
-
-#### ADDED
-- Support for `BRAccountLinkingRetailerThriveMarket` (US) retailer
-
-# 3.0.0-beta.3
-
-#### ADDED
-- `isAuthenticated` property in BRAccountLinkingConnection
-- New BRAccountLinkingErrorSystemTerminated error
-
-**BRAccountLinkingManager**
-- Added linkAccount(with:withCompletion:) method
-- Added loginUser(forLinkedRetailer:withCompletion:) method
-
-**BRDigitalManager**
-- Added enableSilentPush(withToken:) method for collecting push notification token
-- Added didReceiveRemoteNotification(userInfo:fetchCompletionHandler:) method for executing Grab Orders Operation via silent push
-
-#### CHANGED 
-- Removed support for `BRAccountLinkingRetailerDrizly` retailer
-
-**BRAccountLinkingManager**
-- Removed linkRetailerWithConnection method
-- Removed verifyRetailerWithConnection(with:withCompletion:) method
 
 # 2.47.0
 #### CHANGED
