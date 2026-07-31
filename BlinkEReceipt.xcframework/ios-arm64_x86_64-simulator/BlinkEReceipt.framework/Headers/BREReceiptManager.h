@@ -164,6 +164,64 @@ typedef NS_ENUM(NSUInteger, BREReceiptRemoteError) {
  */
 @property (strong, nonatomic) NSString *countryCode;
 
+///---------------------------------
+/// @name MScience Automated Scrape
+///---------------------------------
+
+/**
+ * Permission-delegation gate for automated scraping (off by default). While `NO`, no automatic
+ * background scrape runs even if a task is pending; setting it to `YES` authorizes the SDK to scrape
+ * linked Gmail IMAP accounts on the host's behalf, while setting it back to `NO` cancels the pending
+ * task. Persist the user's choice in the host app and apply it at launch after calling
+ * `enableAutoScrapeWithIdentifier:`.
+ *
+ * The background task itself follows the signed-in state: it is scheduled only while an in-scope
+ * account is linked — it starts when such an account signs in (if authorized) and is cancelled when
+ * the last one signs out — and only one task can ever be pending.
+ */
+@property (nonatomic) BOOL autoScrapeEnabled;
+
+/**
+ * The interval, in hours, at which the automatic background e-receipt scrape runs once enabled
+ * via `enableAutoScrapeWithIdentifier:` — the override for the default 24h refresh. The 12h floor
+ * is the only limitation: values below it (including 0 and negatives) fall back to 12 on
+ * assignment, anything at or above passes through uncapped, and the getter always reflects the
+ * scheduled value. Changing it while enabled reschedules the next run. Default: 24.
+ *
+ * Note: the OS treats the interval as the earliest time the task may run, not a guarantee — the
+ * actual cadence depends on system conditions and how often the app is used.
+ */
+@property (nonatomic) NSInteger autoScrapeInterval;
+
+/**
+ * A completion handler invoked once per account after each automatic background scrape, delivering
+ * the same parameters a manual remote scrape (`startRemoteEReceiptScrapeWithCompletion:`) reports:
+ * the scraped account, its `jobId`, and any error.
+ *
+ * This block is retained for the life of the SDK singleton and invoked from a background execution
+ * context, so capture host objects weakly and don't touch UIKit from it directly.
+ */
+@property (nonatomic, copy, nullable) void (^autoScrapeCompletion)(NSInteger jobId, BREmailAccount * _Nonnull account, NSError * _Nullable error);
+
+/**
+ * Registers the background app-refresh task under `identifier`. Each time the OS runs the task the
+ * SDK scrapes the linked Gmail IMAP accounts (the initial provider scope) one account at a time and
+ * reports each jobId through `autoScrapeCompletion`.
+ *
+ * Call this once, early in `application:didFinishLaunchingWithOptions:`, regardless of the user's
+ * opt-in state — `BGTaskScheduler` requires every launch handler to be registered before the app
+ * finishes launching, and only one registration per identifier is permitted per process. Calling it
+ * again is a safe no-op. Use `autoScrapeEnabled` to opt the user in or out at any later time.
+ *
+ * `identifier` must be UNIQUE to auto-scrape — distinct from every other `BGTaskScheduler` identifier
+ * the app registers (including `BRAccountLinkingManager`'s background fetch) — and must be listed under
+ * `BGTaskSchedulerPermittedIdentifiers` in the host Info.plist. A duplicate or missing identifier
+ * leaves auto-scrape inactive (the SDK logs and continues rather than crashing the host).
+ *
+ * @param identifier The background-task identifier to register and schedule under.
+ */
+- (void)enableAutoScrapeWithIdentifier:(NSString * _Nonnull)identifier;
+
 ///---------------------
 /// @name Class Methods
 ///---------------------

@@ -71,7 +71,15 @@ typedef NS_ENUM(NSUInteger, BRAccountLinkingError) {
     BRAccountLinkingErrorUnsupportedRetailer,
     
     /// The operating system terminated the operation due to not enough time for the app to run in background
-    BRAccountLinkingErrorSystemTerminated
+    BRAccountLinkingErrorSystemTerminated,
+
+    /// The account was linked before identity verification existed and must be re-verified
+    /// before orders can be fetched. Prompt the user to re-authenticate (for example via
+    /// `loginUserForLinkedRetailer:withCompletion:`). Reported through the
+    /// `grabNewOrdersForRetailer:` completion and through `backgroundFetchCompletion`;
+    /// foreground fetches from an active app attempt the re-verification automatically
+    /// and only report this when that is not possible.
+    BRAccountLinkingErrorReVerifyRequired
 };
 
 /**

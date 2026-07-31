@@ -1,3 +1,19 @@
+# 2.61.0
+#### ADDED
+- Automated e-receipt scrape: opt-in periodic background scrape of linked Gmail accounts. Each run creates the same backend scrape jobs as the manual remote scrape; receipts are parsed server-side and delivered to the configured client endpoint.
+- `BREReceiptManager`: `enableAutoScrapeWithIdentifier:` method — registers the background task handler at app launch.
+- `BREReceiptManager`: `autoScrapeEnabled` property — host-persisted opt-in gate; the schedule follows the Gmail sign-in state while enabled.
+- `BREReceiptManager`: `autoScrapeInterval` property — automated scrape interval override; default 24 hours, minimum 12 hours.
+- `BREReceiptManager`: `autoScrapeCompletion` — reports each account's created job (`jobId`, `account`, `error`) on the main queue.
+- `BRAccountLinkingErrorReVerifyRequired` error code — reported through the `grabNewOrdersForRetailer:` completion and `backgroundFetchCompletion` when a linked account requires re-verification; treat it as a prompt to re-authenticate the account.
+
+#### CHANGED
+- BlinkReceipt dependency raised to 1.73.0.
+
+#### FIXED
+- Accounts linked before 2.60.0 could silently stop background syncing after upgrading (surfacing as `error_internal`), with one affected account also blocking syncs for every other linked account on the device. Affected accounts now report `isAuthenticated == NO` so host apps can offer re-authentication, they no longer block other accounts, and the failure is recorded for backend visibility.
+- Fetching orders for such an account from an active app now automatically re-verifies it and resumes the fetch — a single sync both repairs the account and returns orders. When no login can be presented (background execution, inactive app, or another operation already running for the retailer), the fetch reports `BRAccountLinkingErrorReVerifyRequired` instead of a generic internal error, and `cancelConnection:` reaches the resumed fetch.
+
 # 2.60.1
 #### FIXED
 - Resolved a crash affecting the Account Linking experience.
