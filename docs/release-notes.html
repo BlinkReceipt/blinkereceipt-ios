@@ -37,7 +37,7 @@
       </p>
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          BlinkEReceipt extension SDK 2.60.1 Docs
+          BlinkEReceipt extension SDK 2.61.0 Docs
         </a>
         
       </p>
@@ -212,6 +212,40 @@
   }
 </style>
 <h1 id='release-notes' class='heading'>Release Notes</h1>
+<h2 id='july-30-2026' class='heading'>July 30, 2026</h2>
+
+<div class="note">
+  <div class="note-type">
+    <span class="fixed">FIXED</span>
+  </div>
+  <div class="note-content">
+    <p><div class="bullet"></div> Accounts linked before 2.60.0 could silently stop background syncing after upgrading (surfacing as <strong>error_internal</strong>), with one affected account also blocking syncs for every other linked account on the device. Affected accounts now report <strong>isAuthenticated == NO</strong> so host apps can offer re-authentication, they no longer block other accounts, and the failure is recorded for backend visibility.</p>
+    <p><div class="bullet"></div> Fetching orders for such an account from an active app now automatically re-verifies it and resumes the fetch — a single sync both repairs the account and returns orders. When no login can be presented, the fetch reports the new <strong>BRAccountLinkingErrorReVerifyRequired</strong> instead of a generic internal error.</p>
+  </div>
+</div>
+
+<div class="note">
+  <div class="note-type">
+    <span class="added">ADDED</span>
+  </div>
+  <div class="note-content">
+    <p><div class="bullet"></div> Automated e-receipt scrape: opt-in periodic background scrape of linked Gmail accounts. Each run creates the same backend scrape jobs as the manual remote scrape; receipts are parsed server-side and delivered to the configured client endpoint.</p>
+    <p><div class="bullet"></div> <strong>BREReceiptManager</strong>: <strong>enableAutoScrapeWithIdentifier:</strong> method — registers the background task handler at app launch.</p>
+    <p><div class="bullet"></div> <strong>BREReceiptManager</strong>: <strong>autoScrapeEnabled</strong> property — host-persisted opt-in gate; the schedule follows the Gmail sign-in state while enabled.</p>
+    <p><div class="bullet"></div> <strong>BREReceiptManager</strong>: <strong>autoScrapeInterval</strong> property — automated scrape interval override; default 24 hours, minimum 12 hours.</p>
+    <p><div class="bullet"></div> <strong>BREReceiptManager</strong>: <strong>autoScrapeCompletion</strong> — reports each account&rsquo;s created job (<strong>jobId</strong>, <strong>account</strong>, <strong>error</strong>) on the main queue.</p>
+    <p><div class="bullet"></div> <strong>BRAccountLinkingErrorReVerifyRequired</strong> error code — treat it as a prompt to re-authenticate the linked account.</p>
+  </div>
+</div>
+
+<div class="note">
+  <div class="note-type">
+    <span class="changed">CHANGED</span>
+  </div>
+  <div class="note-content">
+    <p><div class="bullet"></div> BlinkReceipt dependency raised to 1.73.0.</p>
+  </div>
+</div>
 <h2 id='july-14-2025' class='heading'>July 14, 2025</h2>
 
 <div class="note">
@@ -524,7 +558,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2026 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2026-07-16)</p>
+      <p>&copy; 2026 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2026-07-30)</p>
       
     </section>
   </body>
