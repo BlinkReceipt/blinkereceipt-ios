@@ -37,7 +37,7 @@
       </p>
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          BlinkEReceipt extension SDK 2.61.0 Docs
+          BlinkEReceipt extension SDK 2.62.0 Docs
         </a>
         
       </p>
@@ -212,6 +212,28 @@
   }
 </style>
 <h1 id='release-notes' class='heading'>Release Notes</h1>
+<h2 id='october-22-2026' class='heading'>October 22, 2026</h2>
+
+<div class="note">
+  <div class="note-type">
+    <span class="changed">CHANGED</span>
+  </div>
+  <div class="note-content">
+    <p><div class="bullet"></div> BlinkReceipt dependency raised to <strong>1.76.1</strong>.</p>
+    <p><div class="bullet"></div> AccountLinking dependency raised to <strong>3.1.33</strong>: the hidden web view keeps running while the app is in the background, page messages that arrive after an action has ended are ignored, and the SDK no longer signs in with stored credentials from the background (such actions end as an authentication failure so the host can ask the user to re-link).</p>
+  </div>
+</div>
+
+<div class="note">
+  <div class="note-type">
+    <span class="fixed">FIXED</span>
+  </div>
+  <div class="note-content">
+    <p><div class="bullet"></div> Background order fetch: the background refresh task now stays alive until the sync finishes instead of ending while the retailer page was still loading. Together with AccountLinking 3.1.33 this restores background syncing for retailers such as Costco.</p>
+    <p><div class="bullet"></div> Background refresh: a session that ends with any terminal error now completes the background task immediately instead of running into the 25 s watchdog, which iOS counted against future background refreshes.</p>
+    <p><div class="bullet"></div> Removed an unreachable push notification handler from <strong>BRDigitalManager</strong>.</p>
+  </div>
+</div>
 <h2 id='july-30-2026' class='heading'>July 30, 2026</h2>
 
 <div class="note">
@@ -558,7 +580,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2026 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2026-07-30)</p>
+      <p>&copy; 2026 <a class="link" href="https://www.blinkreceipt.com" target="_blank" rel="external noopener">BlinkReceipt LLC</a>. All rights reserved. (Last updated: 2026-10-22)</p>
       
     </section>
   </body>
