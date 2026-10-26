@@ -1,3 +1,13 @@
+# 2.62.0
+#### CHANGED
+- BlinkReceipt dependency raised to 1.76.1.
+- AccountLinking dependency raised to 3.1.33: the hidden web view keeps running while the app is in the background, page messages that arrive after an action has ended are ignored, and the SDK no longer signs in with stored credentials from the background (such actions end as an authentication failure so the host can ask the user to re-link).
+
+#### FIXED
+- Background order fetch: the background refresh task now stays alive until the sync finishes instead of ending while the retailer page was still loading. Together with AccountLinking 3.1.33 this restores background syncing for retailers such as Costco.
+- Background refresh: a session that ends with any terminal error now completes the background task immediately instead of running into the 25 s watchdog, which iOS counted against future background refreshes.
+- Removed an unreachable push notification handler from `BRDigitalManager`.
+
 # 2.61.0
 #### ADDED
 - Automated e-receipt scrape: opt-in periodic background scrape of linked Gmail accounts. Each run creates the same backend scrape jobs as the manual remote scrape; receipts are parsed server-side and delivered to the configured client endpoint.
